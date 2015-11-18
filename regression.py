@@ -55,6 +55,7 @@ from cclib.parser import NWChem
 from cclib.parser import ORCA
 from cclib.parser import Psi
 from cclib.parser import QChem
+from cclib.parser import Turbomole
 
 # This assume that the cclib-data repository is located at a specific location
 # within the cclib repository. It would be better to figure out a more natural
@@ -705,6 +706,9 @@ class GAMESSUSIRTest_ts(GenericIRTest):
     @unittest.skip('This is a transition state with different intensities')
     def testirintens(self):
         """This is a transition state with different intensities."""
+    @unittest.skip('This is a transition state with different atomcoords')
+    def testatomcoords(self):                                                   
+        """This is a transition state with different atomcoords"""
 
 class GAMESSUSCISTest_dets(GenericCISTest):
     nstates = 10
