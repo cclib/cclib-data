@@ -154,6 +154,10 @@ def testGAMESS_WinGAMESS_dvb_td_trplet_2007_03_24_r1_out(logfile):
 def testGAMESS_UK_GAMESS_UK8_0_dvb_gopt_hf_unconverged_out(logfile):
     assert hasattr(logfile.data, 'optdone') and not logfile.data.optdone
 
+def testGAMESS_UK_GAMESS_UK8_0_dvb_ir_out(logfile):
+    # Check atomcoords are converted from bohr to ang
+    assert abs(logfile.data.atomcoords[0, 0, 0] + 0.2719312) < 0.01
+
 # Gaussian #
 
 def testGaussian_Gaussian98_C_bigmult_log(logfile):
