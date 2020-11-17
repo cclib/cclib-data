@@ -1,0 +1,508 @@
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.3, Q-Chem, Inc., Pleasanton, CA (2020)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,  
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,  
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,  
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,  
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Alam,  B. Albrecht,  
+ A. Aldossary,  E. Alguire,  S. A. Baeppler,  D. Barton,  Z. Benda,  
+ Y. A. Bernard,  E. J. Berquist,  K. B. Bravaya,  H. Burton,  K. Carter-Fenk,  
+ D. Casanova,  Chun-Min Chang,  Yunqing Chen,  A. Chien,  K. D. Closser,  
+ M. P. Coons,  S. Coriani,  S. Dasgupta,  A. L. Dempwolff,  M. Diedenhofen,  
+ Hainam Do,  R. G. Edgar,  Po-Tung Fang,  S. Faraji,  S. Fatehi,  
+ Qingguo Feng,  J. Fosso-Tande,  J. Gayvert,  Qinghui Ge,  A. Ghysels,  
+ G. Gidofalvi,  J. Gomes,  J. Gonthier,  S. Gulania,  A. Gunina,  D. Hait,  
+ M. W. D. Hanson-Heine,  S. Hammes-Schiffer,  P. H. P. Harbach,  
+ A. W. Hauser,  M. F. Herbst,  J. E. Herr,  E. G. Hohenstein,  Z. C. Holden,  
+ S. Houck,  Kerwin Hui,  B. C. Huynh,  M. Ivanov,  T.-C. Jagau,  Hyunjun Ji,  
+ B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  K. Koh,  
+ D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  A. Kunitsa,  
+ Ka Un Lao,  A. Laurent,  K. V. Lawler,  Joonho Lee,  D. Lefrancois,  
+ S. Lehtola,  D. S. Levine,  Yi-Pei Li,  You-Sheng Lin,  Fenglai Liu,  
+ Kuan-Yu Liu,  E. Livshits,  M. Loipersberger,  A. Luenser,  P. Manohar,  
+ E. Mansoor,  S. F. Manzer,  Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  
+ A. V. Marenich,  T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  
+ N. J. Mayhall,  S. C. McKenzie,  J.-M. Mewes,  P. Morgante,  A. F. Morrison,  
+ J. W. Mullinax,  K. Nanda,  T. S. Nguyen-Beck,  R. Olivares-Amaya,  
+ K. J. Oosterbaan,  J. A. Parkhill,  S. K. Paul,  F. Pavosevic,  Zheng Pei,  
+ T. M. Perrine,  F. Plasser,  P. Pokhilko,  S. Prager,  A. Prociuk,  
+ E. Ramos,  B. Rana,  D. R. Rehn,  F. Rob,  E. Rossomme,  M. Scheurer,  
+ M. Schneider,  N. Sergueev,  S. M. Sharada,  S. Sharma,  W. Skomorowski,  
+ D. W. Small,  T. Stauch,  C. J. Stein,  T. Stein,  Yu-Chuan Su,  
+ S. P. Veccham,  Zhen Tao,  A. J. W. Thom,  A. Tkatchenko,  T. Tsuchimochi,  
+ N. M. Tubman,  L. Vogt,  M. L. Vidal,  O. Vydrov,  M. A. Watson,  J. Wenzel,  
+ M. de Wergifosse,  T. A. Wesolowski,  A. White,  J. Witte,  A. Yamada,  
+ Jun Yang,  K. Yao,  S. Yeganeh,  S. R. Yost,  Zhi-Qiang You,  A. Zech,  
+ Igor Ying Zhang,  Xing Zhang,  Yan Zhao,  Ying Zhu,  B. R. Brooks,  
+ G. K. L. Chan,  C. J. Cramer,  M. S. Gordon,  W. J. Hehre,  A. Klamt,  
+ M. W. Schmidt,  C. D. Sherrill,  D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  
+ A. T. Bell,  N. A. Besley,  Jeng-Da Chai,  A. E. DePrince, III,  
+ R. A. DiStasio Jr.,  A. Dreuw,  B. D. Dunietz,  T. R. Furlani,  
+ Chao-Ping Hsu,  Yousung Jung,  Jing Kong,  D. S. Lambrecht,  WanZhen Liang,  
+ C. Ochsenfeld,  V. A. Rassolov,  L. V. Slipchenko,  J. E. Subotnik,  
+ T. Van Voorhis,  J. M. Herbert,  A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,  
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,  
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,  
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,  
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,  
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,  
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,  
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,  
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,  
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,  
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.3.1 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 9.800.1 (Horizon Scraper).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Wed Oct 21 10:19:51 2020  
+
+Host: 
+0
+
+     Scratch files written to /scratch/tm162-92636/qchem9651//
+ Aug2920 |scratch|qcdevops|jenkins|workspace|build_RNUM 6877   
+Processing $rem in /cluster/apps/qchem/qchem_531/config/preferences:
+Processing $rem in /home/tm162/.qchemrc:
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+
+$molecule
+0 3
+O    0.0   0.0   1.21
+$end
+
+$rem
+EXCHANGE         B3lyp
+CIS_N_ROOTS      10
+RPA              FALSE
+BASIS            def2-tzvp
+XC_GRID          1
+PRINT_ORBITALS   TRUE
+CISTR_PRINT      TRUE
+$end
+
+task dft energy
+
+
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      O       0.0000000000     0.0000000000     0.0000000000
+ ----------------------------------------------------------------
+ Molecular Point Group                 Kh    NOp =***
+ Largest Abelian Subgroup              D2h   NOp =  1
+ Nuclear Repulsion Energy =           0.00000000 hartrees
+ There are        5 alpha and        3 beta electrons
+ Requested basis set is def2-TZVP
+ There are 11 shells and 31 basis functions
+
+ Total QAlloc Memory Limit   8000 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+ A cutoff of  1.0D-11 yielded     66 shell pairs
+ There are       546 function pairs (       750 Cartesian)
+ Smallest overlap matrix eigenvalue = 3.02E-02
+
+ Scale SEOQF with 1.000000e+00/1.000000e+00/1.000000e+00
+
+ Standard Electronic Orientation quadrupole field applied
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 8.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Exchange:     0.2000 Hartree-Fock + 0.0800 Slater + 0.7200 B88
+ Correlation:  0.1900 VWN1RPA + 0.8100 LYP
+ Using SG-1 standard quadrature grid
+ using 4 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ A unrestricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1     -74.9253455104      5.17e-03  
+    2     -75.0871408418      4.62e-03  
+    3     -75.0946484257      1.95e-03  
+    4     -75.0957510570      1.12e-03  
+    5     -75.0962677001      4.75e-05  
+    6     -75.0962691488      6.91e-06  
+    7     -75.0962691854      5.99e-07  
+    8     -75.0962691857      2.85e-08  
+    9     -75.0962691857      7.88e-10  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 2.25s  wall 1.00s 
+<S^2> =          2.003435729
+ SCF   energy in the final basis set =      -75.0962691857
+ Total energy in the final basis set =      -75.0962691857
+ 
+ Direct TDDFT/TDA calculation will be performed
+ Exchange:     0.2000 Hartree-Fock + 0.0800 Slater + 0.7200 B88
+ Correlation:  0.1900 VWN1RPA + 0.8100 LYP
+ Using SG-1 standard quadrature grid
+ CIS energy converged when residual is below 10e- 6
+ NRoots was altered as: 10 --> 11
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   1         0          11      0.080311    0.015822
+   2         0          11      0.011385    0.004837
+   3         0          11      0.001630    0.000925
+   4         8           3      0.000528    0.000407
+   5         8           3      0.000048    0.000042
+   6        10           1      0.000004    0.000003
+   7        11           0      0.000002    0.000001    Roots Converged
+ ---------------------------------------------------
+ 
+ ---------------------------------------------------
+         TDDFT/TDA Excitation Energies              
+ ---------------------------------------------------
+
+ Excited state   1: excitation energy (eV) =    0.3795
+ Total energy for state  1:                   -75.08232299 au
+    <S**2>     :  2.0069
+    Trans. Mom.:  0.0000 X  -0.0000 Y  -0.0000 Z
+    Strength   :     0.0000000000
+    D(    3) --> S(    1) amplitude =  0.9977 beta
+
+ Excited state   2: excitation energy (eV) =    0.3795
+ Total energy for state  2:                   -75.08232298 au
+    <S**2>     :  2.0069
+    Trans. Mom.: -0.0000 X  -0.0000 Y  -0.0000 Z
+    Strength   :     0.0000000000
+    D(    3) --> S(    2) amplitude =  0.9977 beta
+
+ Excited state   3: excitation energy (eV) =   15.8472
+ Total energy for state  3:                   -74.51389684 au
+    <S**2>     :  2.0044
+    Trans. Mom.:  0.0000 X  -0.0000 Y   0.6312 Z
+    Strength   :     0.1546738081
+    D(    3) --> V(    1) amplitude = -0.1894 alpha
+    D(    2) --> S(    1) amplitude =  0.9722 beta
+
+ Excited state   4: excitation energy (eV) =   15.8472
+ Total energy for state  4:                   -74.51389684 au
+    <S**2>     :  2.0044
+    Trans. Mom.: -0.6312 X   0.0000 Y   0.0000 Z
+    Strength   :     0.1546738085
+    S(    1) --> V(    1) amplitude =  0.1894 alpha
+    D(    2) --> S(    2) amplitude =  0.9722 beta
+
+ Excited state   5: excitation energy (eV) =   15.9767
+ Total energy for state  5:                   -74.50913576 au
+    <S**2>     :  3.9070
+    Trans. Mom.: -0.0000 X  -0.1686 Y  -0.0000 Z
+    Strength   :     0.0111288803
+    S(    2) --> V(    1) amplitude =  0.5377 alpha
+    D(    3) --> V(    1) amplitude =  0.8418 beta
+
+ Excited state   6: excitation energy (eV) =   17.2209
+ Total energy for state  6:                   -74.46341109 au
+    <S**2>     :  2.0948
+    Trans. Mom.:  0.0000 X   0.6750 Y   0.0000 Z
+    Strength   :     0.1922582579
+    S(    2) --> V(    1) amplitude =  0.8423 alpha
+    D(    3) --> V(    1) amplitude = -0.5385 beta
+
+ Excited state   7: excitation energy (eV) =   17.4497
+ Total energy for state  7:                   -74.45500633 au
+    <S**2>     :  3.8472
+    Trans. Mom.:  0.0000 X  -0.0000 Y  -0.0000 Z
+    Strength   :     0.0000000000
+    S(    2) --> V(    4) amplitude = -0.5255 alpha
+    D(    3) --> V(    2) amplitude =  0.8309 beta
+
+ Excited state   8: excitation energy (eV) =   18.2071
+ Total energy for state  8:                   -74.42716966 au
+    <S**2>     :  3.9668
+    Trans. Mom.: -0.0000 X  -0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    S(    2) --> V(    2) amplitude =  0.7614 alpha
+    D(    3) --> V(    3) amplitude = -0.6391 beta
+
+ Excited state   9: excitation energy (eV) =   18.2071
+ Total energy for state  9:                   -74.42716965 au
+    <S**2>     :  3.9668
+    Trans. Mom.: -0.0000 X  -0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    S(    2) --> V(    3) amplitude =  0.7614 alpha
+    D(    3) --> V(    4) amplitude = -0.6391 beta
+
+ Excited state  10: excitation energy (eV) =   18.6728
+ Total energy for state 10:                   -74.41005485 au
+    <S**2>     :  2.0161
+    Trans. Mom.: -0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    S(    2) --> V(    2) amplitude =  0.6458 alpha
+    D(    3) --> V(    3) amplitude =  0.7619 beta
+
+ Excited state  11: excitation energy (eV) =   18.6728
+ Total energy for state 11:                   -74.41005485 au
+    <S**2>     :  2.0161
+    Trans. Mom.:  0.0000 X  -0.0000 Y  -0.0000 Z
+    Strength   :     0.0000000000
+    S(    2) --> V(    3) amplitude =  0.6458 alpha
+    D(    3) --> V(    4) amplitude =  0.7619 beta
+ 
+ ---------------------------------------------------
+  SETman timing summary (seconds)
+  CPU time                 1.92s
+  System time              0.00s
+  Wall time                0.54s
+ 
+ --------------------------------------------------------------
+ 
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+ 
+ Alpha MOs
+ -- Occupied --
+-19.2758  -1.0203  -0.4623  -0.4623  -0.3872
+ -- Virtual --
+  0.3146   0.3773   0.3773   0.4028   1.3612   1.3612   1.4022   1.4022
+  1.4165   2.3884   2.3884   2.4466   2.4997   4.9664   4.9664   5.0091
+  5.0091   5.0350   5.0350   5.0440   5.9940   5.9941   6.0559   6.0559
+  6.0768  42.5631
+ 
+ Beta MOs
+ -- Occupied --
+-19.2244  -0.8619  -0.3368
+ -- Virtual --
+ -0.1841  -0.1841   0.3477   0.4165   0.4399   0.4399   1.4597   1.4597
+  1.4636   1.4739   1.4739   2.4835   2.5190   2.5190   2.5910   5.1019
+  5.1020   5.1051   5.1069   5.1069   5.1155   5.1155   6.1624   6.1624
+  6.1707   6.2016   6.2019  42.6176
+ --------------------------------------------------------------
+ 
+
+                        ALPHA MOLECULAR ORBITAL COEFFICIENTS
+                         1         2         3         4         5         6
+ eigenvalues:        -19.276    -1.020    -0.462    -0.462    -0.387     0.315
+   1  O     s        0.43448  -0.11192  -0.00000   0.00000   0.00000  -0.05752
+   2  O     s        0.64010  -0.26547  -0.00000  -0.00000   0.00000  -0.12180
+   3  O     s        0.03293   0.41046   0.00000   0.00000   0.00000  -0.04823
+   4  O     s       -0.01637   0.52580  -0.00000   0.00000  -0.00000   1.79108
+   5  O     s        0.00534   0.20141   0.00000   0.00000  -0.00000  -2.00059
+   6  O     px       0.00000   0.00000   0.00000   0.52881  -0.00000   0.00000
+   7  O     py      -0.00000  -0.00000  -0.00000  -0.00000  -0.51555   0.00000
+   8  O     pz       0.00000   0.00000   0.52881  -0.00000  -0.00000  -0.00000
+   9  O     px       0.00000   0.00000   0.00000   0.42794  -0.00000   0.00000
+  10  O     py      -0.00000  -0.00000  -0.00000  -0.00000  -0.41126   0.00000
+  11  O     pz      -0.00000   0.00000   0.42794  -0.00000  -0.00000  -0.00000
+  12  O     px      -0.00000  -0.00000   0.00000   0.24198  -0.00000  -0.00000
+  13  O     py      -0.00000  -0.00000  -0.00000  -0.00000  -0.28114   0.00000
+  14  O     pz       0.00000   0.00000   0.24198  -0.00000  -0.00000   0.00000
+  15  O     d 1     -0.00000  -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  16  O     d 2     -0.00000  -0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  17  O     d 3      0.00030   0.00366  -0.00000   0.00000  -0.00000   0.00272
+  18  O     d 4      0.00000  -0.00000   0.00000   0.00000  -0.00000   0.00000
+  19  O     d 5      0.00052   0.00634   0.00000  -0.00000  -0.00000   0.00472
+  20  O     d 1      0.00000  -0.00000   0.00000  -0.00000   0.00000   0.00000
+  21  O     d 2      0.00000  -0.00000   0.00000  -0.00000   0.00000   0.00000
+  22  O     d 3     -0.00009   0.00731   0.00000  -0.00000   0.00000  -0.00099
+  23  O     d 4     -0.00000   0.00000  -0.00000   0.00000   0.00000   0.00000
+  24  O     d 5     -0.00015   0.01265   0.00000  -0.00000  -0.00000  -0.00171
+  25  O     f 1      0.00000  -0.00000  -0.00000  -0.00000  -0.00650  -0.00000
+  26  O     f 2      0.00000   0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+  27  O     f 3     -0.00000  -0.00000  -0.00000  -0.00000  -0.00503  -0.00000
+  28  O     f 4     -0.00000   0.00000   0.00410   0.00000  -0.00000   0.00000
+  29  O     f 5      0.00000   0.00000   0.00000   0.00167  -0.00000   0.00000
+  30  O     f 6      0.00000   0.00000   0.00529   0.00000  -0.00000  -0.00000
+  31  O     f 7     -0.00000  -0.00000  -0.00000   0.00649  -0.00000  -0.00000
+                         7         8         9        10
+ eigenvalues:          0.377     0.377     0.403     1.361
+   1  O     s       -0.00000   0.00000  -0.00000   0.00000
+   2  O     s       -0.00000   0.00000  -0.00000   0.00000
+   3  O     s       -0.00000  -0.00000   0.00000  -0.00000
+   4  O     s        0.00000  -0.00000   0.00000   0.00000
+   5  O     s       -0.00000   0.00000   0.00000  -0.00000
+   6  O     px       0.00000   0.29630  -0.00000   0.00000
+   7  O     py      -0.00000  -0.00000  -0.30354   0.00000
+   8  O     pz       0.29630  -0.00000  -0.00000  -0.00000
+   9  O     px       0.00000   0.62525  -0.00000  -0.00000
+  10  O     py      -0.00000  -0.00000  -0.65297  -0.00000
+  11  O     pz       0.62525   0.00000  -0.00000   0.00000
+  12  O     px      -0.00000  -1.24402   0.00000   0.00000
+  13  O     py       0.00000   0.00000   1.24161   0.00000
+  14  O     pz      -1.24402  -0.00000   0.00000  -0.00000
+  15  O     d 1      0.00000   0.00000   0.00000  -0.00000
+  16  O     d 2      0.00000   0.00000   0.00000   0.00000
+  17  O     d 3      0.00000   0.00000   0.00000  -0.00094
+  18  O     d 4     -0.00000   0.00000   0.00000  -0.00000
+  19  O     d 5     -0.00000  -0.00000   0.00000   0.00054
+  20  O     d 1     -0.00000  -0.00000   0.00000  -0.00000
+  21  O     d 2     -0.00000  -0.00000  -0.00000   0.00000
+  22  O     d 3     -0.00000  -0.00000   0.00000  -0.86555
+  23  O     d 4     -0.00000   0.00000  -0.00000  -0.00000
+  24  O     d 5      0.00000  -0.00000  -0.00000   0.49972
+  25  O     f 1     -0.00000  -0.00000  -0.00269   0.00000
+  26  O     f 2     -0.00000  -0.00000  -0.00000   0.00000
+  27  O     f 3     -0.00000  -0.00000  -0.00209  -0.00000
+  28  O     f 4      0.00153   0.00000  -0.00000   0.00000
+  29  O     f 5      0.00000   0.00062  -0.00000   0.00000
+  30  O     f 6      0.00198  -0.00000  -0.00000  -0.00000
+  31  O     f 7     -0.00000   0.00242  -0.00000  -0.00000
+ 
+
+                        BETA  MOLECULAR ORBITAL COEFFICIENTS
+                         1         2         3         4         5         6
+ eigenvalues:        -19.224    -0.862    -0.337    -0.184    -0.184     0.348
+   1  O     s       -0.43561   0.10821  -0.00000   0.00000  -0.00000   0.05925
+   2  O     s       -0.64034   0.25465  -0.00000   0.00000   0.00000   0.12296
+   3  O     s       -0.02928  -0.38153  -0.00000  -0.00000  -0.00000   0.08062
+   4  O     s        0.01424  -0.50213   0.00000   0.00000   0.00000  -1.86978
+   5  O     s       -0.00453  -0.25548   0.00000   0.00000  -0.00000   2.01744
+   6  O     px      -0.00000   0.00000  -0.00000   0.00000   0.45999   0.00000
+   7  O     py      -0.00000  -0.00000  -0.49925   0.00000  -0.00000   0.00000
+   8  O     pz      -0.00000  -0.00000  -0.00000  -0.45999   0.00000   0.00000
+   9  O     px      -0.00000   0.00000  -0.00000   0.00000   0.37009   0.00000
+  10  O     py       0.00000  -0.00000  -0.39782   0.00000  -0.00000   0.00000
+  11  O     pz       0.00000  -0.00000  -0.00000  -0.37009   0.00000   0.00000
+  12  O     px      -0.00000  -0.00000  -0.00000  -0.00000   0.39545  -0.00000
+  13  O     py       0.00000   0.00000  -0.31811   0.00000  -0.00000  -0.00000
+  14  O     pz      -0.00000  -0.00000  -0.00000  -0.39545   0.00000  -0.00000
+  15  O     d 1     -0.00000  -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  16  O     d 2     -0.00000  -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  17  O     d 3      0.00028   0.00263  -0.00000  -0.00000   0.00000   0.00125
+  18  O     d 4      0.00000   0.00000   0.00000   0.00000  -0.00000   0.00000
+  19  O     d 5      0.00048   0.00455  -0.00000  -0.00000  -0.00000   0.00216
+  20  O     d 1      0.00000  -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  21  O     d 2      0.00000  -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  22  O     d 3     -0.00003   0.00335   0.00000   0.00000   0.00000   0.00100
+  23  O     d 4     -0.00000  -0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  24  O     d 5     -0.00005   0.00580   0.00000  -0.00000  -0.00000   0.00174
+  25  O     f 1      0.00000   0.00000   0.00070  -0.00000   0.00000  -0.00000
+  26  O     f 2      0.00000   0.00000  -0.00000  -0.00000   0.00000  -0.00000
+  27  O     f 3     -0.00000   0.00000   0.00054  -0.00000   0.00000   0.00000
+  28  O     f 4      0.00000  -0.00000   0.00000   0.00142  -0.00000  -0.00000
+  29  O     f 5      0.00000   0.00000   0.00000  -0.00000  -0.00059  -0.00000
+  30  O     f 6      0.00000   0.00000   0.00000   0.00184   0.00000   0.00000
+  31  O     f 7     -0.00000   0.00000   0.00000   0.00000  -0.00224  -0.00000
+                         7         8
+ eigenvalues:          0.416     0.440
+   1  O     s       -0.00000  -0.00000
+   2  O     s       -0.00000  -0.00000
+   3  O     s        0.00000  -0.00000
+   4  O     s       -0.00000   0.00000
+   5  O     s        0.00000  -0.00000
+   6  O     px      -0.00000  -0.00000
+   7  O     py      -0.31155  -0.00000
+   8  O     pz      -0.00000   0.33145
+   9  O     px      -0.00000  -0.00000
+  10  O     py      -0.67811  -0.00000
+  11  O     pz      -0.00000   0.72436
+  12  O     px       0.00000   0.00000
+  13  O     py       1.23709   0.00000
+  14  O     pz       0.00000  -1.22028
+  15  O     d 1      0.00000   0.00000
+  16  O     d 2     -0.00000   0.00000
+  17  O     d 3      0.00000  -0.00000
+  18  O     d 4      0.00000   0.00000
+  19  O     d 5     -0.00000   0.00000
+  20  O     d 1     -0.00000   0.00000
+  21  O     d 2      0.00000   0.00000
+  22  O     d 3     -0.00000   0.00000
+  23  O     d 4     -0.00000   0.00000
+  24  O     d 5      0.00000  -0.00000
+  25  O     f 1      0.00037   0.00000
+  26  O     f 2      0.00000   0.00000
+  27  O     f 3      0.00029   0.00000
+  28  O     f 4      0.00000  -0.00087
+  29  O     f 5      0.00000   0.00000
+  30  O     f 6      0.00000  -0.00113
+  31  O     f 7      0.00000  -0.00000
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)    Spin (a.u.)
+  --------------------------------------------------------
+      1 O                    -0.000000       2.000000
+  --------------------------------------------------------
+  Sum of atomic charges =    -0.000000
+  Sum of spin   charges =     2.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                -0.0000
+    Dipole Moment (Debye)
+         X       0.0000      Y       0.0000      Z      -0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX      -4.7059     XY      -0.0000     YY      -5.9450
+        XZ       0.0000     YZ      -0.0000     ZZ      -4.7059
+    Octopole Moments (Debye-Ang^2)
+       XXX       0.0000    XXY       0.0000    XYY       0.0000
+       YYY       0.0000    XXZ      -0.0000    XYZ       0.0000
+       YYZ      -0.0000    XZZ       0.0000    YZZ       0.0000
+       ZZZ      -0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX      -3.2668   XXXY      -0.0000   XXYY      -1.3853
+      XYYY      -0.0000   YYYY      -5.0458   XXXZ       0.0000
+      XXYZ      -0.0000   XYYZ      -0.0000   YYYZ      -0.0000
+      XXZZ      -1.0889   XYZZ      -0.0000   YYZZ      -1.3853
+      XZZZ      -0.0000   YZZZ      -0.0000   ZZZZ      -3.2668
+ -----------------------------------------------------------------
+
+ STANDARD THERMODYNAMIC QUANTITIES AT   298.15 K  AND     1.00 ATM
+
+   Translational Enthalpy:        0.889 kcal/mol
+   Rotational Enthalpy:           0.000 kcal/mol
+   Vibrational Enthalpy:          0.000 kcal/mol
+   gas constant (RT):             0.592 kcal/mol
+   Translational Entropy:        34.254  cal/mol.K
+   Rotational Entropy:            0.000  cal/mol.K
+   Vibrational Entropy:           0.000  cal/mol.K
+
+   Total Enthalpy:                1.481 kcal/mol
+   Total Entropy:                34.254  cal/mol.K
+
+ -----------------------------------------------------------------
+
+Archival summary:
+1\1\compute-1-1\SP\ProcedureUnspecified\BasisUnspecified\1(3)\tm162\WedOct2110:19:532020WedOct2110:19:532020\0\\#,ProcedureUnspecified,BasisUnspecified,\\0,3\O\\\@
+
+ Total job time:  1.73s(wall), 5.43s(cpu) 
+ Wed Oct 21 10:19:53 2020
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
