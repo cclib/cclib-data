@@ -1,0 +1,801 @@
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.2, Q-Chem, Inc., Pleasanton, CA (2019)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,  
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,  
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,  
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,  
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Alam,  B. Albrecht,  
+ E. Alguire,  S. A. Baeppler,  D. Barton,  Z. Benda,  Y. A. Bernard,  
+ E. J. Berquist,  K. B. Bravaya,  H. Burton,  K. Carter-Fenk,  D. Casanova,  
+ Chun-Min Chang,  Yunqing Chen,  A. Chien,  K. D. Closser,  M. P. Coons,  
+ S. Coriani,  S. Dasgupta,  A. L. Dempwolff,  M. Diedenhofen,  Hainam Do,  
+ R. G. Edgar,  Po-Tung Fang,  S. Faraji,  S. Fatehi,  Qingguo Feng,  
+ J. Fosso-Tande,  J. Gayvert,  Qinghui Ge,  A. Ghysels,  G. Gidofalvi,  
+ J. Gomes,  J. Gonthier,  A. Gunina,  D. Hait,  M. W. D. Hanson-Heine,  
+ P. H. P. Harbach,  A. W. Hauser,  M. F. Herbst,  J. E. Herr,  
+ E. G. Hohenstein,  Z. C. Holden,  Kerwin Hui,  B. C. Huynh,  T.-C. Jagau,  
+ Hyunjun Ji,  B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  K. Koh,  
+ D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  A. Kunitsa,  
+ Ka Un Lao,  A. Laurent,  K. V. Lawler,  Joonho Lee,  D. Lefrancois,  
+ S. Lehtola,  D. S. Levine,  Yi-Pei Li,  You-Sheng Lin,  Fenglai Liu,  
+ Kuan-Yu Liu,  E. Livshits,  M. Loipersberger,  A. Luenser,  P. Manohar,  
+ E. Mansoor,  S. F. Manzer,  Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  
+ A. V. Marenich,  T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  
+ N. J. Mayhall,  S. C. McKenzie,  J.-M. Mewes,  P. Morgante,  A. F. Morrison,  
+ J. W. Mullinax,  K. Nanda,  T. S. Nguyen-Beck,  R. Olivares-Amaya,  
+ J. A. Parkhill,  S. K. Paul,  Zheng Pei,  T. M. Perrine,  F. Plasser,  
+ P. Pokhilko,  S. Prager,  A. Prociuk,  E. Ramos,  B. Rana,  D. R. Rehn,  
+ F. Rob,  M. Scheurer,  M. Schneider,  N. Sergueev,  S. M. Sharada,  
+ S. Sharma,  D. W. Small,  T. Stauch,  C. J. Stein,  T. Stein,  Yu-Chuan Su,  
+ S. P. Veccham,  A. J. W. Thom,  A. Tkatchenko,  T. Tsuchimochi,  
+ N. M. Tubman,  L. Vogt,  M. L. Vidal,  O. Vydrov,  M. A. Watson,  J. Wenzel,  
+ M. de Wergifosse,  T. A. Wesolowski,  A. White,  J. Witte,  A. Yamada,  
+ Jun Yang,  K. Yao,  S. Yeganeh,  S. R. Yost,  Zhi-Qiang You,  A. Zech,  
+ Igor Ying Zhang,  Xing Zhang,  Yan Zhao,  Ying Zhu,  B. R. Brooks,  
+ G. K. L. Chan,  C. J. Cramer,  M. S. Gordon,  W. J. Hehre,  A. Klamt,  
+ M. W. Schmidt,  C. D. Sherrill,  D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  
+ A. T. Bell,  N. A. Besley,  Jeng-Da Chai,  A. E. DePrince, III,  
+ R. A. DiStasio Jr.,  A. Dreuw,  B. D. Dunietz,  T. R. Furlani,  
+ Chao-Ping Hsu,  Yousung Jung,  Jing Kong,  D. S. Lambrecht,  WanZhen Liang,  
+ C. Ochsenfeld,  V. A. Rassolov,  L. V. Slipchenko,  J. E. Subotnik,  
+ T. Van Voorhis,  J. M. Herbert,  A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,  
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,  
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,  
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,  
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,  
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,  
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,  
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,  
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,  
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,  
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.2.2 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 8.300.2 (Tropical Shenanigans).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Tue Nov 17 14:48:38 2020  
+
+Host: 
+0
+
+     Scratch files written to /scratch/qc_scratch/qchem203342//
+ Nov2519 |scratch|qcdevops|jenkins|workspace|build_RNUM 6899   
+Processing $rem in /usr/local/qc5.2sh_mem/config/preferences:
+	 MEM_TOTAL  8000 
+NAlpha2: 70
+NElect   70
+Mult     1
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$comment
+Divinylbenzene, single point, TD-DFT (5 singlets, 5 triplets), RB3LYP/STO-3G
+$end
+
+$rem
+method = b3lyp
+basis = sto-3g
+cis_n_roots = 5
+cis_ampl_print = 1
+rpa = true
+$end
+
+$molecule
+0 1
+C                  0.27867948   -1.36683162    0.00000000
+C                  1.32303041   -0.44173575    0.00000000
+C                  1.04434506    0.92484978    0.00000000
+C                 -0.27867948    1.36683162    0.00000000
+C                 -1.32303041    0.44173575    0.00000000
+C                 -1.04434506   -0.92484978    0.00000000
+H                  2.36595443   -0.79037726    0.00000000
+H                  1.86746094    1.65407997    0.00000000
+H                 -2.36595443    0.79037726    0.00000000
+H                 -1.86746094   -1.65407997    0.00000000
+C                 -0.58659169    2.87589931    0.00000000
+C                  0.36350188    3.80076420    0.00000000
+H                 -1.65647768    3.12394312    0.00000000
+H                  0.14429560    4.87693235    0.00000000
+H                  1.43338788    3.55272039    0.00000000
+C                  0.58659169   -2.87589931    0.00000000
+C                 -0.36350188   -3.80076420    0.00000000
+H                  1.65647768   -3.12394312    0.00000000
+H                 -0.14429560   -4.87693235    0.00000000
+H                 -1.43338788   -3.55272039    0.00000000
+$end
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       1.3668132833     0.2787694006    -0.0000000000
+    2      C       0.4416487095     1.3230594681    -0.0000000000
+    3      C      -0.9249184834     1.0442842137    -0.0000000000
+    4      C      -1.3668132833    -0.2787694006     0.0000000000
+    5      C      -0.4416487095    -1.3230594681     0.0000000000
+    6      C       0.9249184834    -1.0442842137     0.0000000000
+    7      H       0.7902216068     2.3660064222    -0.0000000000
+    8      H      -1.6542028230     1.8673521173    -0.0000000000
+    9      H      -0.7902216068    -2.3660064222     0.0000000000
+   10      H       1.6542028230    -1.8673521173     0.0000000000
+   11      C      -2.8758607131    -0.5867808885     0.0000000000
+   12      C      -3.8007881058     0.3632518344    -0.0000000000
+   13      H      -3.1238341368    -1.6566831945     0.0000000000
+   14      H      -4.8769418324     0.1439747559    -0.0000000000
+   15      H      -3.5528146821     1.4331541504    -0.0000000000
+   16      C       2.8758607131     0.5867808885    -0.0000000000
+   17      C       3.8007881058    -0.3632518344     0.0000000000
+   18      H       3.1238341368     1.6566831945    -0.0000000000
+   19      H       4.8769418324    -0.1439747559     0.0000000000
+   20      H       3.5528146821    -1.4331541504     0.0000000000
+ ----------------------------------------------------------------
+ Molecular Point Group                 C2h   NOp =  4
+ Largest Abelian Subgroup              C2h   NOp =  4
+ Nuclear Repulsion Energy =         450.00613820 hartrees
+ There are       35 alpha and       35 beta electrons
+ Requested basis set is STO-3G
+ There are 30 shells and 60 basis functions
+
+ Total QAlloc Memory Limit   8000 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+ A cutoff of  1.0D-11 yielded    402 shell pairs
+ There are      1776 function pairs
+ Smallest overlap matrix eigenvalue = 1.71E-01
+
+ Scale SEOQF with 1.000000e-01/1.000000e-01/1.000000e+00
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =     0.0000000194 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 70.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Exchange:     0.2000 Hartree-Fock + 0.0800 Slater + 0.7200 B88
+ Correlation:  0.1900 VWN1RPA + 0.8100 LYP
+ Using SG-1 standard quadrature grid
+ using 12 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1    -381.9237708745      1.39e-01  
+    2    -382.2936857005      3.10e-03  
+    3    -382.2938864949      3.37e-03  
+    4    -382.2996520620      1.12e-03  
+    5    -382.3003056220      3.23e-04  
+    6    -382.3003614589      3.18e-05  
+    7    -382.3003620709      4.08e-06  
+    8    -382.3003620823      8.07e-07  
+    9    -382.3003620825      2.35e-07  
+   10    -382.3003620826      1.01e-07  
+   11    -382.3003620825      8.88e-09  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 13.60s  wall 1.00s 
+ SCF   energy in the final basis set =     -382.3003620825
+ Total energy in the final basis set =     -382.3003620825
+ 
+ Direct TDDFT/TDA calculation will be performed
+ Exchange:     0.2000 Hartree-Fock + 0.0800 Slater + 0.7200 B88
+ Correlation:  0.1900 VWN1RPA + 0.8100 LYP
+ Using SG-1 standard quadrature grid
+ Triplet excitation energies requested
+ Singlet excitation energies requested
+ CIS energy converged when residual is below 10e- 6
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   1         0           5      0.003726    0.001289
+   2         0           5      0.000616    0.000297
+   3         0           5      0.001152    0.000794
+   4         0           5      0.000118    0.000072
+   5         1           4      0.000012    0.000007
+   6         5           0      0.000002    0.000001    Roots Converged
+ ---------------------------------------------------
+ Triplets done: starting singlet calculation
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   7         0           5      0.013668    0.004814
+   8         0           5      0.005755    0.002240
+   9         0           5      0.003426    0.001907
+  10         0           5      0.000835    0.000510
+  11         2           3      0.000333    0.000248
+  12         3           2      0.000088    0.000066
+  13         3           2      0.000015    0.000013
+  14         4           1      0.000002    0.000001
+  15         5           0      0.000001    0.000001    Roots Converged
+ ---------------------------------------------------
+ 
+ ---------------------------------------------------
+         TDDFT/TDA Excitation Energies              
+ ---------------------------------------------------
+
+ Excited state   1: excitation energy (eV) =    3.6052
+ Total energy for state  1:                  -382.16787224 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(   28) --> V(    5) amplitude = -0.0750
+    D(   32) --> V(    4) amplitude =  0.1414
+    D(   33) --> V(    3) amplitude =  0.2618
+    D(   34) --> V(    1) amplitude =  0.0142
+    D(   34) --> V(    2) amplitude = -0.2125
+    D(   35) --> V(    1) amplitude =  0.9266
+
+ Excited state   2: excitation energy (eV) =    4.5675
+ Total energy for state  2:                  -382.13250870 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(   28) --> V(    1) amplitude = -0.0354
+    D(   28) --> V(    4) amplitude = -0.0584
+    D(   32) --> V(    3) amplitude =  0.2631
+    D(   32) --> V(    5) amplitude =  0.0542
+    D(   33) --> V(    1) amplitude =  0.7012
+    D(   33) --> V(    4) amplitude =  0.2381
+    D(   35) --> V(    3) amplitude =  0.6096
+    D(   35) --> V(    5) amplitude =  0.0293
+
+ Excited state   3: excitation energy (eV) =    4.9905
+ Total energy for state  3:                  -382.11696603 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(   28) --> V(    3) amplitude =  0.0405
+    D(   28) --> V(    5) amplitude = -0.0290
+    D(   32) --> V(    1) amplitude = -0.1054
+    D(   32) --> V(    2) amplitude =  0.1167
+    D(   32) --> V(    4) amplitude = -0.0201
+    D(   33) --> V(    3) amplitude = -0.0789
+    D(   33) --> V(    5) amplitude = -0.0336
+    D(   34) --> V(    1) amplitude =  0.7005
+    D(   34) --> V(    2) amplitude = -0.2854
+    D(   34) --> V(    4) amplitude = -0.1100
+    D(   35) --> V(    1) amplitude = -0.0539
+    D(   35) --> V(    2) amplitude = -0.6085
+    D(   35) --> V(    4) amplitude = -0.0832
+
+ Excited state   4: excitation energy (eV) =    5.0940
+ Total energy for state  4:                  -382.11316091 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(   28) --> V(    3) amplitude =  0.0987
+    D(   28) --> V(    5) amplitude = -0.0846
+    D(   32) --> V(    1) amplitude = -0.2599
+    D(   32) --> V(    2) amplitude = -0.0573
+    D(   32) --> V(    4) amplitude = -0.0301
+    D(   33) --> V(    3) amplitude = -0.1714
+    D(   33) --> V(    5) amplitude = -0.0814
+    D(   34) --> V(    1) amplitude = -0.2206
+    D(   34) --> V(    2) amplitude = -0.8379
+    D(   34) --> V(    4) amplitude =  0.0416
+    D(   35) --> V(    1) amplitude = -0.1388
+    D(   35) --> V(    2) amplitude =  0.2449
+    D(   35) --> V(    4) amplitude = -0.2042
+
+ Excited state   5: excitation energy (eV) =    5.5401
+ Total energy for state  5:                  -382.09676681 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(   32) --> V(    2) amplitude = -0.0904
+    D(   34) --> V(    1) amplitude =  0.6650
+    D(   34) --> V(    2) amplitude =  0.0384
+    D(   34) --> V(    4) amplitude = -0.0595
+    D(   35) --> V(    2) amplitude =  0.7378
+
+ Excited state   6: excitation energy (eV) =    5.6388
+ Total energy for state  6:                  -382.09314107 au
+    Multiplicity: Singlet
+    Trans. Mom.: -0.1222 X   0.0442 Y  -0.0000 Z
+    Strength   :     0.0023322338
+    D(   32) --> V(    2) amplitude = -0.0678
+    D(   34) --> V(    1) amplitude =  0.7247
+    D(   34) --> V(    4) amplitude = -0.0500
+    D(   35) --> V(    1) amplitude = -0.0477
+    D(   35) --> V(    2) amplitude =  0.6819
+
+ Excited state   7: excitation energy (eV) =    6.0376
+ Total energy for state  7:                  -382.07848402 au
+    Multiplicity: Singlet
+    Trans. Mom.:  2.5216 X  -0.0404 Y   0.0000 Z
+    Strength   :     0.9407714760
+    D(   15) --> V(   11) amplitude =  0.0155
+    D(   17) --> V(   10) amplitude = -0.0157
+    D(   21) --> V(    9) amplitude =  0.0167
+    D(   21) --> V(   11) amplitude =  0.0144
+    D(   22) --> V(   16) amplitude = -0.0173
+    D(   23) --> V(   11) amplitude =  0.0159
+    D(   23) --> V(   21) amplitude =  0.0145
+    D(   23) --> V(   24) amplitude = -0.0190
+    D(   24) --> V(    7) amplitude = -0.0167
+    D(   25) --> V(    9) amplitude = -0.0144
+    D(   26) --> V(   15) amplitude =  0.0196
+    D(   26) --> V(   22) amplitude =  0.0223
+    D(   27) --> V(    7) amplitude = -0.0146
+    D(   27) --> V(   10) amplitude = -0.0178
+    D(   27) --> V(   17) amplitude = -0.0164
+    D(   28) --> V(    5) amplitude =  0.0464
+    D(   29) --> V(   16) amplitude =  0.0315
+    D(   30) --> V(    7) amplitude =  0.0314
+    D(   30) --> V(    8) amplitude = -0.0203
+    D(   30) --> V(   17) amplitude = -0.0268
+    D(   30) --> V(   20) amplitude = -0.0200
+    D(   31) --> V(   20) amplitude =  0.0143
+    D(   32) --> V(    1) amplitude =  0.0382
+    D(   32) --> V(    2) amplitude = -0.0167
+    D(   32) --> V(    4) amplitude = -0.0841
+    D(   33) --> V(    3) amplitude = -0.1237
+    D(   34) --> V(    1) amplitude =  0.0752
+    D(   34) --> V(    2) amplitude = -0.1279
+    D(   35) --> V(    1) amplitude =  0.9669
+    D(   35) --> V(    4) amplitude =  0.0307
+
+ Excited state   8: excitation energy (eV) =    6.6210
+ Total energy for state  8:                  -382.05704427 au
+    Multiplicity: Singlet
+    Trans. Mom.: -0.0000 X  -0.0000 Y  -0.0000 Z
+    Strength   :     0.0000000000
+    D(   32) --> V(    3) amplitude =  0.0404
+    D(   32) --> V(    5) amplitude = -0.0177
+    D(   33) --> V(    1) amplitude =  0.7612
+    D(   33) --> V(    4) amplitude = -0.0720
+    D(   35) --> V(    3) amplitude = -0.6427
+
+ Excited state   9: excitation energy (eV) =    7.3316
+ Total energy for state  9:                  -382.03092926 au
+    Multiplicity: Singlet
+    Trans. Mom.:  0.5413 X  -0.9349 Y   0.0000 Z
+    Strength   :     0.2096083769
+    D(   17) --> V(   12) amplitude =  0.0168
+    D(   19) --> V(    7) amplitude = -0.0188
+    D(   19) --> V(    8) amplitude =  0.0175
+    D(   19) --> V(   14) amplitude = -0.0149
+    D(   21) --> V(   13) amplitude =  0.0157
+    D(   22) --> V(   18) amplitude = -0.0205
+    D(   23) --> V(   13) amplitude =  0.0186
+    D(   23) --> V(   16) amplitude =  0.0285
+    D(   25) --> V(   16) amplitude = -0.0275
+    D(   26) --> V(   13) amplitude =  0.0266
+    D(   26) --> V(   16) amplitude =  0.0181
+    D(   29) --> V(   18) amplitude =  0.0194
+    D(   30) --> V(    8) amplitude = -0.0173
+    D(   30) --> V(   14) amplitude =  0.0231
+    D(   30) --> V(   19) amplitude = -0.0343
+    D(   30) --> V(   25) amplitude =  0.0246
+    D(   31) --> V(    7) amplitude =  0.0267
+    D(   31) --> V(   17) amplitude = -0.0277
+    D(   32) --> V(    1) amplitude = -0.0193
+    D(   32) --> V(    2) amplitude =  0.3718
+    D(   33) --> V(    3) amplitude = -0.0503
+    D(   34) --> V(    1) amplitude = -0.5918
+    D(   34) --> V(    2) amplitude = -0.0495
+    D(   34) --> V(    4) amplitude = -0.2492
+    D(   35) --> V(    1) amplitude =  0.0488
+    D(   35) --> V(    2) amplitude =  0.6527
+
+ Excited state  10: excitation energy (eV) =    7.5567
+ Total energy for state 10:                  -382.02265926 au
+    Multiplicity: Singlet
+    Trans. Mom.:  0.0000 X   0.0000 Y  -0.0000 Z
+    Strength   :     0.0000000000
+    D(   28) --> V(    2) amplitude =  0.0250
+    D(   32) --> V(    3) amplitude = -0.0175
+    D(   33) --> V(    1) amplitude =  0.0503
+    D(   33) --> V(    2) amplitude = -0.8857
+    D(   34) --> V(    3) amplitude = -0.4536
+    D(   34) --> V(    5) amplitude =  0.0366
+    D(   35) --> V(    3) amplitude =  0.0644
+ 
+ ---------------------------------------------------
+
+ Direct TDDFT calculation will be performed
+ Exchange:     0.2000 Hartree-Fock + 0.0800 Slater + 0.7200 B88
+ Correlation:  0.1900 VWN1RPA + 0.8100 LYP
+ Using SG-1 standard quadrature grid
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   1         0           5      0.000700    0.000265
+   2         0           5      0.000409    0.000196
+   3         0           5      0.000154    0.000059
+   4         0           5      0.000073    0.000050
+   5         0           5      0.000046    0.000017
+   6         0           5      0.000019    0.000008
+   7         0           5      0.000012    0.000005
+   8         3           2      0.000008    0.000005
+   9         3           2      0.000004    0.000001
+  10         5           0      0.000003    0.000001    Roots Converged
+ ---------------------------------------------------
+ Triplets done: starting singlet calculation
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  11         0           5      0.000249    0.000154
+  12         0           5      0.000563    0.000223
+  13         0           5      0.000431    0.000228
+  14         0           5      0.000160    0.000078
+  15         0           5      0.000056    0.000029
+  16         0           5      0.000027    0.000011
+  17         0           5      0.000013    0.000006
+  18         0           5      0.000009    0.000003
+  19         1           4      0.000011    0.000003
+  20         3           2      0.000005    0.000003
+  21         3           2      0.000004    0.000002
+  22         4           1      0.000004    0.000002
+  23         5           0      0.000002    0.000001    Roots Converged
+ ---------------------------------------------------
+ 
+ ---------------------------------------------------
+             TDDFT Excitation Energies              
+ ---------------------------------------------------
+
+ Excited state   1: excitation energy (eV) =    3.1318
+ Total energy for state  1:                  -382.18527032 au
+    Multiplicity: Triplet 
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    X: D(   12) --> V(   13) amplitude = -0.0162
+    X: D(   28) --> V(    5) amplitude = -0.1039
+    Y: D(   28) --> V(    5) amplitude = -0.0605
+    X: D(   31) --> V(    7) amplitude =  0.0156
+    X: D(   32) --> V(    1) amplitude =  0.0150
+    X: D(   32) --> V(    4) amplitude =  0.1817
+    Y: D(   32) --> V(    4) amplitude =  0.0899
+    X: D(   33) --> V(    3) amplitude =  0.3201
+    Y: D(   33) --> V(    3) amplitude =  0.1179
+    X: D(   34) --> V(    2) amplitude = -0.3122
+    Y: D(   34) --> V(    2) amplitude = -0.1134
+    X: D(   35) --> V(    1) amplitude =  0.9063
+    Y: D(   35) --> V(    1) amplitude =  0.1705
+
+ Excited state   2: excitation energy (eV) =    4.1373
+ Total energy for state  2:                  -382.14831833 au
+    Multiplicity: Triplet 
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    X: D(   18) --> V(   10) amplitude = -0.0163
+    X: D(   28) --> V(    1) amplitude = -0.0466
+    Y: D(   28) --> V(    1) amplitude = -0.0145
+    X: D(   28) --> V(    4) amplitude = -0.0693
+    Y: D(   28) --> V(    4) amplitude = -0.0284
+    X: D(   29) --> V(    7) amplitude = -0.0164
+    X: D(   32) --> V(    3) amplitude =  0.3029
+    Y: D(   32) --> V(    3) amplitude =  0.1014
+    X: D(   32) --> V(    5) amplitude =  0.0655
+    Y: D(   32) --> V(    5) amplitude =  0.0272
+    X: D(   33) --> V(    1) amplitude =  0.6931
+    Y: D(   33) --> V(    1) amplitude =  0.1116
+    X: D(   33) --> V(    4) amplitude =  0.2784
+    Y: D(   33) --> V(    4) amplitude =  0.0960
+    X: D(   35) --> V(    3) amplitude =  0.6185
+    Y: D(   35) --> V(    3) amplitude =  0.1184
+    X: D(   35) --> V(    5) amplitude =  0.0392
+
+ Excited state   3: excitation energy (eV) =    4.7036
+ Total energy for state  3:                  -382.12750902 au
+    Multiplicity: Triplet 
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    X: D(   14) --> V(   15) amplitude = -0.0171
+    X: D(   15) --> V(   13) amplitude =  0.0143
+    X: D(   28) --> V(    3) amplitude =  0.1279
+    Y: D(   28) --> V(    3) amplitude =  0.0426
+    X: D(   28) --> V(    5) amplitude = -0.0983
+    Y: D(   28) --> V(    5) amplitude = -0.0416
+    X: D(   32) --> V(    1) amplitude = -0.3731
+    Y: D(   32) --> V(    1) amplitude = -0.0761
+    X: D(   32) --> V(    4) amplitude = -0.0580
+    Y: D(   32) --> V(    4) amplitude = -0.0143
+    X: D(   33) --> V(    3) amplitude = -0.2888
+    Y: D(   33) --> V(    3) amplitude = -0.0596
+    X: D(   33) --> V(    5) amplitude = -0.1081
+    Y: D(   33) --> V(    5) amplitude = -0.0421
+    X: D(   34) --> V(    1) amplitude =  0.1427
+    X: D(   34) --> V(    2) amplitude = -0.7906
+    Y: D(   34) --> V(    2) amplitude = -0.1237
+    X: D(   34) --> V(    4) amplitude = -0.0168
+    X: D(   35) --> V(    1) amplitude = -0.1529
+    X: D(   35) --> V(    2) amplitude = -0.0939
+    X: D(   35) --> V(    4) amplitude = -0.3036
+    Y: D(   35) --> V(    4) amplitude = -0.0757
+
+ Excited state   4: excitation energy (eV) =    4.9660
+ Total energy for state  4:                  -382.11786440 au
+    Multiplicity: Triplet 
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    X: D(   28) --> V(    3) amplitude = -0.0163
+    X: D(   28) --> V(    5) amplitude =  0.0182
+    X: D(   32) --> V(    1) amplitude =  0.0495
+    X: D(   32) --> V(    2) amplitude =  0.1338
+    Y: D(   32) --> V(    2) amplitude =  0.0187
+    X: D(   33) --> V(    3) amplitude =  0.0295
+    X: D(   34) --> V(    1) amplitude =  0.7174
+    Y: D(   34) --> V(    1) amplitude =  0.0369
+    X: D(   34) --> V(    2) amplitude =  0.1538
+    Y: D(   34) --> V(    2) amplitude =  0.0206
+    X: D(   34) --> V(    4) amplitude = -0.1195
+    Y: D(   34) --> V(    4) amplitude = -0.0189
+    X: D(   35) --> V(    1) amplitude =  0.0307
+    X: D(   35) --> V(    2) amplitude = -0.6531
+    Y: D(   35) --> V(    2) amplitude = -0.0371
+    X: D(   35) --> V(    4) amplitude =  0.0397
+
+ Excited state   5: excitation energy (eV) =    5.5211
+ Total energy for state  5:                  -382.09746384 au
+    Multiplicity: Triplet 
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    X: D(   28) --> V(    3) amplitude =  0.0533
+    X: D(   32) --> V(    1) amplitude = -0.5004
+    Y: D(   32) --> V(    1) amplitude = -0.0544
+    X: D(   32) --> V(    4) amplitude = -0.0758
+    Y: D(   32) --> V(    4) amplitude = -0.0222
+    X: D(   33) --> V(    3) amplitude = -0.4711
+    Y: D(   33) --> V(    3) amplitude = -0.0714
+    X: D(   33) --> V(    5) amplitude = -0.0436
+    X: D(   34) --> V(    1) amplitude = -0.1605
+    X: D(   34) --> V(    2) amplitude =  0.4795
+    Y: D(   34) --> V(    2) amplitude =  0.0296
+    X: D(   34) --> V(    4) amplitude =  0.0192
+    X: D(   35) --> V(    1) amplitude =  0.3418
+    Y: D(   35) --> V(    1) amplitude = -0.0275
+    X: D(   35) --> V(    2) amplitude = -0.1316
+    X: D(   35) --> V(    4) amplitude = -0.3728
+    Y: D(   35) --> V(    4) amplitude = -0.0546
+
+ Excited state   6: excitation energy (eV) =    5.6306
+ Total energy for state  6:                  -382.09344110 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.2989 X   0.0490 Y   0.0000 Z
+    Strength   :     0.0126525401
+    X: D(   32) --> V(    2) amplitude = -0.0672
+    X: D(   34) --> V(    1) amplitude =  0.7214
+    X: D(   34) --> V(    2) amplitude =  0.0192
+    X: D(   34) --> V(    4) amplitude = -0.0516
+    X: D(   35) --> V(    1) amplitude = -0.1305
+    X: D(   35) --> V(    2) amplitude =  0.6747
+
+ Excited state   7: excitation energy (eV) =    5.7431
+ Total energy for state  7:                  -382.08930881 au
+    Multiplicity: Singlet 
+    Trans. Mom.:  2.2369 X  -0.0356 Y   0.0000 Z
+    Strength   :     0.7041890558
+    X: D(   23) --> V(   24) amplitude = -0.0151
+    X: D(   26) --> V(   15) amplitude =  0.0154
+    X: D(   26) --> V(   22) amplitude =  0.0178
+    X: D(   28) --> V(    5) amplitude =  0.0305
+    Y: D(   28) --> V(    5) amplitude =  0.0195
+    X: D(   29) --> V(   16) amplitude =  0.0241
+    X: D(   30) --> V(    7) amplitude =  0.0251
+    X: D(   30) --> V(    8) amplitude = -0.0157
+    X: D(   30) --> V(   17) amplitude = -0.0216
+    X: D(   30) --> V(   20) amplitude = -0.0160
+    X: D(   32) --> V(    2) amplitude = -0.0175
+    X: D(   32) --> V(    4) amplitude = -0.0530
+    Y: D(   32) --> V(    4) amplitude = -0.0225
+    X: D(   33) --> V(    3) amplitude = -0.0630
+    Y: D(   33) --> V(    3) amplitude = -0.0315
+    X: D(   34) --> V(    1) amplitude =  0.1330
+    X: D(   34) --> V(    2) amplitude = -0.1025
+    Y: D(   34) --> V(    2) amplitude = -0.0142
+    X: D(   35) --> V(    1) amplitude =  0.9836
+    Y: D(   35) --> V(    1) amplitude = -0.1011
+    X: D(   35) --> V(    2) amplitude =  0.0495
+
+ Excited state   8: excitation energy (eV) =    6.6142
+ Total energy for state  8:                  -382.05729624 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.0000 X  -0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    X: D(   32) --> V(    3) amplitude =  0.0417
+    X: D(   32) --> V(    5) amplitude = -0.0175
+    X: D(   33) --> V(    1) amplitude =  0.7866
+    X: D(   33) --> V(    4) amplitude = -0.0706
+    X: D(   35) --> V(    3) amplitude = -0.6117
+    Y: D(   35) --> V(    3) amplitude = -0.0153
+
+ Excited state   9: excitation energy (eV) =    7.0308
+ Total energy for state  9:                  -382.04198639 au
+    Multiplicity: Singlet 
+    Trans. Mom.:  0.5228 X  -0.8975 Y   0.0000 Z
+    Strength   :     0.1858456783
+    X: D(   17) --> V(   12) amplitude =  0.0144
+    X: D(   19) --> V(    7) amplitude = -0.0163
+    X: D(   19) --> V(    8) amplitude =  0.0154
+    X: D(   22) --> V(   18) amplitude = -0.0173
+    X: D(   23) --> V(   13) amplitude =  0.0169
+    X: D(   23) --> V(   16) amplitude =  0.0255
+    X: D(   25) --> V(   16) amplitude = -0.0241
+    X: D(   26) --> V(   13) amplitude =  0.0232
+    X: D(   26) --> V(   16) amplitude =  0.0163
+    X: D(   29) --> V(   18) amplitude =  0.0172
+    X: D(   30) --> V(    8) amplitude = -0.0165
+    X: D(   30) --> V(   14) amplitude =  0.0213
+    X: D(   30) --> V(   19) amplitude = -0.0300
+    Y: D(   30) --> V(   19) amplitude = -0.0158
+    X: D(   30) --> V(   25) amplitude =  0.0218
+    X: D(   31) --> V(    7) amplitude =  0.0244
+    X: D(   31) --> V(   17) amplitude = -0.0246
+    X: D(   32) --> V(    1) amplitude = -0.0179
+    X: D(   32) --> V(    2) amplitude =  0.2470
+    Y: D(   32) --> V(    2) amplitude =  0.0408
+    X: D(   33) --> V(    3) amplitude = -0.0379
+    X: D(   34) --> V(    1) amplitude = -0.6393
+    Y: D(   34) --> V(    1) amplitude =  0.0711
+    X: D(   34) --> V(    2) amplitude = -0.0383
+    X: D(   34) --> V(    4) amplitude = -0.1793
+    Y: D(   34) --> V(    4) amplitude = -0.0397
+    X: D(   35) --> V(    1) amplitude =  0.0496
+    X: D(   35) --> V(    2) amplitude =  0.7050
+    Y: D(   35) --> V(    2) amplitude = -0.0713
+
+ Excited state  10: excitation energy (eV) =    7.5406
+ Total energy for state 10:                  -382.02324841 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.0000 X  -0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    X: D(   28) --> V(    2) amplitude =  0.0241
+    X: D(   32) --> V(    3) amplitude = -0.0563
+    X: D(   33) --> V(    1) amplitude =  0.1868
+    Y: D(   33) --> V(    1) amplitude = -0.0237
+    X: D(   33) --> V(    2) amplitude = -0.8884
+    X: D(   33) --> V(    4) amplitude = -0.0392
+    X: D(   34) --> V(    3) amplitude = -0.3286
+    X: D(   34) --> V(    5) amplitude =  0.0340
+    X: D(   35) --> V(    3) amplitude =  0.2474
+    Y: D(   35) --> V(    3) amplitude = -0.0232
+ 
+ ---------------------------------------------------
+  SETman timing summary (seconds)
+  CPU time                55.56s
+  System time              0.00s
+  Wall time                4.66s
+ 
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+ 
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-10.018 -10.018 -10.008 -10.008 -10.007 -10.007 -10.006 -10.005
+  1 Bu    1 Ag    2 Bu    2 Ag    3 Bu    3 Ag    4 Bu    4 Ag                 
+ -9.992  -9.992  -0.818  -0.755  -0.721  -0.704  -0.670  -0.585
+  5 Ag    5 Bu    6 Ag    6 Bu    7 Ag    7 Bu    8 Bu    8 Ag                 
+ -0.561  -0.532  -0.512  -0.462  -0.439  -0.410  -0.400  -0.397
+  9 Ag    9 Bu   10 Ag   11 Ag   10 Bu   11 Bu   12 Bu   12 Ag                 
+ -0.376  -0.358  -0.349  -0.330  -0.305  -0.295  -0.281  -0.263
+ 13 Bu   14 Bu   13 Ag    1 Au   15 Bu   14 Ag   15 Ag    1 Bg                 
+ -0.216  -0.198  -0.160
+  2 Au    2 Bg    3 Bg                                                         
+ -- Virtual --                   
+  0.050   0.091   0.116   0.181   0.280   0.319   0.330   0.365
+  3 Au    4 Au    4 Bg    5 Au    5 Bg   16 Ag   16 Bu   17 Bu                 
+  0.370   0.413   0.416   0.422   0.446   0.469   0.496   0.539
+ 17 Ag   18 Bu   18 Ag   19 Bu   19 Ag   20 Bu   20 Ag   21 Ag                 
+  0.571   0.587   0.610   0.627   0.646   0.693   0.743   0.806
+ 21 Bu   22 Ag   22 Bu   23 Bu   23 Ag   24 Ag   24 Bu   25 Ag                 
+  0.816
+ 25 Bu                                                                         
+ 
+ Beta MOs, Restricted
+ -- Occupied --                  
+-10.018 -10.018 -10.008 -10.008 -10.007 -10.007 -10.006 -10.005
+  1 Bu    1 Ag    2 Bu    2 Ag    3 Bu    3 Ag    4 Bu    4 Ag                 
+ -9.992  -9.992  -0.818  -0.755  -0.721  -0.704  -0.670  -0.585
+  5 Ag    5 Bu    6 Ag    6 Bu    7 Ag    7 Bu    8 Bu    8 Ag                 
+ -0.561  -0.532  -0.512  -0.462  -0.439  -0.410  -0.400  -0.397
+  9 Ag    9 Bu   10 Ag   11 Ag   10 Bu   11 Bu   12 Bu   12 Ag                 
+ -0.376  -0.358  -0.349  -0.330  -0.305  -0.295  -0.281  -0.263
+ 13 Bu   14 Bu   13 Ag    1 Au   15 Bu   14 Ag   15 Ag    1 Bg                 
+ -0.216  -0.198  -0.160
+  2 Au    2 Bg    3 Bg                                                         
+ -- Virtual --                   
+  0.050   0.091   0.116   0.181   0.280   0.319   0.330   0.365
+  3 Au    4 Au    4 Bg    5 Au    5 Bg   16 Ag   16 Bu   17 Bu                 
+  0.370   0.413   0.416   0.422   0.446   0.469   0.496   0.539
+ 17 Ag   18 Bu   18 Ag   19 Bu   19 Ag   20 Bu   20 Ag   21 Ag                 
+  0.571   0.587   0.610   0.627   0.646   0.693   0.743   0.806
+ 21 Bu   22 Ag   22 Bu   23 Bu   23 Ag   24 Ag   24 Bu   25 Ag                 
+  0.816
+ 25 Bu                                                                         
+ --------------------------------------------------------------
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.004104
+      2 C                    -0.079244
+      3 C                    -0.077213
+      4 C                    -0.004104
+      5 C                    -0.079244
+      6 C                    -0.077213
+      7 H                     0.078761
+      8 H                     0.079722
+      9 H                     0.078761
+     10 H                     0.079722
+     11 C                    -0.075269
+     12 C                    -0.156380
+     13 H                     0.078811
+     14 H                     0.078363
+     15 H                     0.076553
+     16 C                    -0.075269
+     17 C                    -0.156380
+     18 H                     0.078811
+     19 H                     0.078363
+     20 H                     0.076553
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X      -0.0000      Y       0.0000      Z       0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX     -50.9644     XY      -0.1107     YY     -50.1432
+        XZ       0.0000     YZ      -0.0000     ZZ     -58.5742
+    Octopole Moments (Debye-Ang^2)
+       XXX      -0.0000    XXY      -0.0000    XYY       0.0000
+       YYY       0.0000    XXZ       0.0000    XYZ      -0.0000
+       YYZ       0.0000    XZZ       0.0000    YZZ       0.0000
+       ZZZ       0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX   -1811.1616   XXXY       0.4958   XXYY    -358.4243
+      XYYY       3.4692   YYYY    -329.5792   XXXZ       0.0000
+      XXYZ      -0.0000   XYYZ      -0.0000   YYYZ       0.0000
+      XXZZ    -356.7119   XYZZ      -0.0670   YYZZ     -72.1347
+      XZZZ      -0.0000   YZZZ       0.0000   ZZZZ     -47.5456
+ -----------------------------------------------------------------
+Archival summary:
+1\1\XXX\SP\ProcedureUnspecified\STO-3G\1010\XXX\TueNov1714:48:442020TueNov1714:48:442020\0\\#,ProcedureUnspecified,STO-3G,\\0,1\C\C,1,1.3949\H,2,1.09968,1,119.988\C,2,1.39471,1,119.999,3,-180,0\H,4,1.09966,2,120.011,1,-180,0\C,4,1.39516,2,120.009,1,-0,0\C,6,1.3949,4,119.992,2,0,0\H,7,1.09968,6,119.988,4,-180,0\C,7,1.39471,6,119.999,4,-0,0\H,9,1.09966,7,120.011,6,180,0\C,1,1.54016,2,120.005,3,-0,0\H,11,1.09826,1,114.585,2,-180,0\C,11,1.32592,1,122.697,2,0,0\H,13,1.09826,11,122.718,1,0,0\H,13,1.09827,11,122.716,1,180,0\C,6,1.54016,4,120.002,2,-180,0\H,16,1.09826,6,114.585,4,-0,0\C,16,1.32592,6,122.697,4,-180,0\H,18,1.09826,16,122.718,6,-0,0\H,18,1.09827,16,122.716,6,-180,0\\\@
+
+ Total job time:  5.93s(wall), 70.07s(cpu) 
+ Tue Nov 17 14:48:44 2020
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
