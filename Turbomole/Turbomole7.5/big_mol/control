@@ -1,0 +1,73 @@
+$title
+16_acene_Opt_PBE0_6_31G
+$symmetry c1
+$redundant    file=coord
+$user-defined bonds    file=coord
+$coord    file=coord
+$optimize
+ internal   on
+ redundant  on
+ cartesian  off
+ global     off
+ basis      off
+$atoms
+c  1-66                                                                        \
+   basis =c 6-31G
+h  67-102                                                                      \
+   basis =h 6-31G
+$basis    file=basis
+$scfmo   file=mos
+$closed shells
+ a       1-216                                  ( 2 )
+$scfiterlimit      100
+$thize     0.10000000E-04
+$thime        5
+$scfdamp   start=  0.300  step=  0.050  min=  0.100
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$maxcor  19073 MiB  per_core
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$energy    file=energy
+$grad    file=gradient
+$forceapprox    file=forceapprox
+$dft
+   functional pbe0
+   gridsize   m3
+$scfconv   7
+$denconv     0.10000000E-06
+$rundimensions
+   natoms=102
+   nbf(CAO)=666
+   nbf(AO)=666
+$last step     dscf
+$last SCF energy change = -.17243110E-07
+$charge from dscf
+         -0.000 (not to be modified here)
+$dipole from dscf
+  x     0.00034604298162    y    -0.00034797995340    z     0.00038381197464    a.u.
+   | dipole | =    0.0015835576  debye
+$optinfo       file=optinfo
+$hessapprox   file=hessapprox
+$orbital_max_rnorm 0.38578486451644E-04
+$end
