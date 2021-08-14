@@ -1,0 +1,79 @@
+$symmetry c1
+$redundant    file=coord
+$user-defined bonds    file=coord
+$coord    file=coord
+$optimize
+ internal   on
+ redundant  on
+ cartesian  off
+ global     off
+ basis      off
+$atoms
+c  1-6                                                                         \
+   basis =c cc-pVDZ                                                            \
+   cbas  =c cc-pVDZ
+h  7-12                                                                        \
+   basis =h cc-pVDZ                                                            \
+   cbas  =h cc-pVDZ
+$basis    file=basis
+$scfmo   file=mos
+$scfiterlimit      100
+$scfconv        7
+$thize     0.10000000E-04
+$thime        5
+$scfdamp   start=  0.300  step=  0.050  min=  0.100
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$maxcor    954 MiB  per_core
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$energy    file=energy
+$grad    file=gradient
+$forceapprox    file=forceapprox
+$denconv     0.10000000E-06
+$cbas    file=auxbasis
+$ricc2
+  adc(2)
+  geoopt model=adc(2)    state=(x)
+  scs   cos= 1.20000   css= 0.33333
+$rundimensions
+   natoms=12
+   nbf(CAO)=120
+   nbf(AO)=114
+$last SCF energy change = -.95099575E-05
+$charge from dscf
+         -0.000 (not to be modified here)
+$dipole from dscf
+  x    -0.00000004961699    y    -0.00000002491657    z    -0.00000006125586    a.u.
+   | dipole | =    0.0000002101  debye
+$last MP2 energy change= 0.22981617E-13
+$optinfo       file=optinfo
+$hessapprox   file=hessapprox
+$orbital_max_rnorm 0.41164182288024E-05
+$title
+Orbitals_Orbital_Cubes_for__Storage_oliver_Chemistry_St._Andrews_PhD_Test_Molecu
+$closed shells
+ a       1-21                                   ( 2 )
+$pointval mo 21-22 dens fmt=cub
+$last step     dscf
+$end
