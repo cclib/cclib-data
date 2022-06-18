@@ -1,0 +1,78 @@
+$title
+Naphthalene_Optimisation_ADC_2__cc_pVDZ
+$symmetry c1
+$redundant    file=coord
+$user-defined bonds    file=coord
+$coord    file=coord
+$optimize
+ internal   on
+ redundant  on
+ cartesian  off
+ global     off
+ basis      off
+$atoms
+c  1-10                                                                        \
+   basis =c cc-pVDZ                                                            \
+   cbas  =c cc-pVDZ
+h  11-18                                                                       \
+   basis =h cc-pVDZ                                                            \
+   cbas  =h cc-pVDZ
+$basis    file=basis
+$scfmo   file=mos
+$closed shells
+ a       1-34                                   ( 2 )
+$scfiterlimit      100
+$scfconv        7
+$thize     0.10000000E-04
+$thime        5
+$scfdamp   start=  0.300  step=  0.050  min=  0.100
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$maxcor   2384 MiB  per_core
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$energy    file=energy
+$grad    file=gradient
+$forceapprox    file=forceapprox
+$denconv     0.10000000E-06
+$cbas    file=auxbasis
+$ricc2
+  adc(2)
+  geoopt model=adc(2)    state=(x)
+  scs   cos= 1.20000   css= 0.33333
+$rundimensions
+   natoms=18
+   nbf(CAO)=190
+   nbf(AO)=180
+$last step     ricc2
+$last SCF energy change = 0.20093002E-05
+$charge from dscf
+          0.000 (not to be modified here)
+$dipole from ricc2
+  x     0.00001061370486    y    -0.00000000016257    z    -0.00000051852555    a.u.
+   | dipole | =    0.0000270097  debye
+$last MP2 energy change= 0.20827784E-12
+$optinfo       file=optinfo
+$hessapprox   file=hessapprox
+$orbital_max_rnorm 0.27909876271716E-05
+$end
