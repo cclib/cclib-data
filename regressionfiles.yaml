@@ -607,7 +607,12 @@ regressions:
 - loc_entry: ORCA/ORCA2.8/dvb_raman.out
 - loc_entry: ORCA/ORCA2.8/dvb_sp.out
   tests:
-  - GenericBasisTest
+  # TODO This was not being tested in the previous version of the code, and a
+  # new test would be need to be written that accounts for the missing basis
+  # information.  See the logic surrounding
+  # https://github.com/cclib/cclib/blob/cd908fd714c1d8e245c04c44600c0175bba5e095/test/regression.py#L3513
+  #
+  # - GenericBasisTest
   - OrcaSPTest_nobasis
 - loc_entry: ORCA/ORCA2.8/dvb_sp_un.out
   tests:
@@ -714,8 +719,6 @@ regressions:
   - OrcaTDDFTTest_pre5
 - loc_entry: ORCA/ORCA4.0/hydrogen_fluoride_numfreq.out
 - loc_entry: ORCA/ORCA4.0/hydrogen_fluoride_usesym_anfreq.out
-  tests:
-  - NOne
 - loc_entry: ORCA/ORCA4.0/invalid-literal-for-float.out
 - loc_entry: ORCA/ORCA4.1/725.out
 - loc_entry: ORCA/ORCA4.1/750.out
