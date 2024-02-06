@@ -1,3 +1,17 @@
+# Each entry in the `regressions` list corresponds to a single regression test.
+# An entry may be parsed and/or tested.
+# The keys in each entry are:
+#
+#  - loc_entry (required str): A path relative to this file pointing to
+#    a single output file or a directory where all files it contains
+#    should be read (such as for Turbomole).
+#
+#  - tests (optional list of str, default empty): Names of test classes (not functions)
+#    to run the entry through.
+#
+#  - parse (optional bool, default true): Should this entry be parsed?
+#    Usually used in conjunction with writing a `testnoparse` function that
+#    uses the `logfile` fixture.
 regressions:
 - loc_entry: ADF/ADF2004.01/Au2-fixed.adfout
 - loc_entry: ADF/ADF2004.01/Fe-ox3-final.out
