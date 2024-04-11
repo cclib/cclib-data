@@ -1,2 +1,0 @@
-# Formatted Checkpoint Files (FChk)
-
