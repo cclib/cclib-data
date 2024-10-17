@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-      - uses: pre-commit/action@v3.0.1
-      - run: |
+      - name: install dependencies for sorting regressionfiles.yaml
+        run: |
           python -m pip install 'ruamel.yaml'
-          ./sort_regressionfiles_yaml.sh
+      - uses: pre-commit/action@v3.0.1

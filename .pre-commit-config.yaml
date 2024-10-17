@@ -1,5 +1,10 @@
 ---
 fail_fast: false
+ci:
+  skip:
+    # The dependencies can't be installed on pre-commit.ci, but this runs in
+    # the normal GitHub Actions workflow.
+    - sort-regressionfiles-yaml
 repos:
   - repo: meta
     hooks:
@@ -9,6 +14,13 @@ repos:
     rev: "v5.0.0"
     hooks:
       - id: check-yaml
+  - repo: local
+    hooks:
+      - id: sort-regressionfiles-yaml
+        name: Sort regressionfiles.yaml
+        entry: ./sort_regressionfiles_yaml.sh
+        language: script
+        files: ^regressionfiles\.yaml$
   - repo: https://github.com/Mateusz-Grzelinski/actionlint-py
     rev: "v1.7.3.17"
     hooks:
