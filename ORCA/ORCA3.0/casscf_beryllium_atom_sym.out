@@ -1,0 +1,1041 @@
+
+                                 *****************
+                                 * O   R   C   A *
+                                 *****************
+
+           --- An Ab Initio, DFT and Semiempirical electronic structure package ---
+
+                  #######################################################
+                  #                        -***-                        #
+                  #  Department of molecular theory and spectroscopy    #
+                  #              Directorship: Frank Neese              #
+                  # Max Planck Institute for Chemical Energy Conversion #
+                  #                  D-45470 Muelheim/Ruhr              #
+                  #                       Germany                       #
+                  #                                                     #
+                  #                  All rights reserved                #
+                  #                        -***-                        #
+                  #######################################################
+
+
+                         Program Version 3.0.3 - RELEASE   -
+
+
+ With contributions from (in alphabetic order):
+   Ute Becker             : Parallelization
+   Dmytro Bykov           : SCF Hessian
+   Dmitry Ganyushin       : Spin-Orbit,Spin-Spin,Magnetic field MRCI
+   Andreas Hansen         : Spin unrestricted coupled pair/coupled cluster methods
+   Dimitrios Liakos       : Extrapolation schemes; parallel MDCI
+   Robert Izsak           : Overlap fitted RIJCOSX, COSX-SCS-MP3
+   Christian Kollmar      : KDIIS, OOCD, Brueckner-CCSD(T), CCSD density
+   Simone Kossmann        : Meta GGA functionals, TD-DFT gradient, OOMP2, MP2 Hessian
+   Taras Petrenko         : DFT Hessian,TD-DFT gradient, ASA and ECA modules, normal mode analysis, Resonance Raman, ABS, FL, XAS/XES, NRVS
+   Christoph Reimann      : Effective Core Potentials
+   Michael Roemelt        : Restricted open shell CIS
+   Christoph Riplinger    : Improved optimizer, TS searches, QM/MM, DLPNO-CCSD
+   Barbara Sandhoefer     : DKH picture change effects
+   Igor Schapiro          : Molecular dynamics
+   Kantharuban Sivalingam : CASSCF convergence, NEVPT2
+   Boris Wezisla          : Elementary symmetry handling
+   Frank Wennmohs         : Technical directorship
+
+
+ We gratefully acknowledge several colleagues who have allowed us to
+ interface, adapt or use parts of their codes:
+   Stefan Grimme, W. Hujo, H. Kruse, T. Risthaus : VdW corrections, initial TS optimization,
+                                                   DFT functionals, gCP
+   Ed Valeev                                     : LibInt (2-el integral package), F12 methods
+   Garnet Chan, S. Sharma, R. Olivares           : DMRG
+   Ulf Ekstrom                                   : XCFun DFT Library
+   Mihaly Kallay                                 : mrcc  (arbitrary order and MRCC methods)
+   Andreas Klamt, Michael Diedenhofen            : otool_cosmo (COSMO solvation model)
+   Frank Weinhold                                : gennbo (NPA and NBO analysis)
+   Christopher J. Cramer and Donald G. Truhlar   : smd solvation model
+
+
+ Your calculation uses the libint2 library for the computation of 2-el integrals
+ For citations please refer to: http://libint.valeyev.net
+
+ This ORCA versions uses:
+   CBLAS   interface :  Fast vector & matrix operations
+   LAPACKE interface :  Fast linear algebra routines
+   SCALAPACK package :  Parallel linear algebra routines
+
+
+Your calculation utilizes the basis: Ahlrichs-QZV
+Cite in your paper:
+
+================================================================================
+                                        WARNINGS
+                       Please study these warnings very carefully!
+================================================================================
+Now building the actual basis set
+
+
+INFO   : the flag for use of LIBINT has been found!
+
+================================================================================
+                                       INPUT FILE
+================================================================================
+NAME = casscf_beryllium_atom_sym.in
+|  1> ! def2-qzvpp verytightscf noautostart usesym
+|  2> 
+|  3> %casscf
+|  4>  nel 2
+|  5>  norb 4
+|  6>  end
+|  7> 
+|  8> * xyz 0 1
+|  9> Be 0 0 0
+| 10> *
+| 11> 
+| 12>                          ****END OF INPUT****
+================================================================================
+
+------------------------------------------------------------------------------
+                            SYMMETRY HANDLING SETUP
+------------------------------------------------------------------------------
+
+------------------
+SYMMETRY DETECTION
+------------------
+Preparing Data                    ... done
+Detection Threshold:    SymThresh ... 1.0000e-04
+
+Point Group will now be determined:
+Moving molecule to center of mass ... done
+
+POINT GROUP                       ... Kh
+
+The coordinates will now be cleaned:
+Structure cleanup requested       ... yes
+Selected point group              ... Kh
+Cleaning Tolerance      SymThresh ... 1.0000e-04
+
+Cleaning coordinates              ... done
+
+-----------------------------------------------
+SYMMETRY-PERFECTED CARTESIAN COORDINATES (A.U.)
+-----------------------------------------------
+Warning (ORCA_SYM): Coordinates were not cleaned so far!
+
+------------------
+SYMMETRY REDUCTION
+------------------
+ORCA supports only abelian point groups.
+It is now checked, if the determined point group is supported:
+Point Group ( Kh    ) is          ... NOT supported
+Reducing to abelian subgroup      ... D2h
+
+(Re)building abelian point group:
+Creating Character Table          ... done
+Making direct product table       ... done
+Constructing symmetry operations  ... done
+Creating atom transfer table      ... done
+Creating asymmetric unit          ... done
+
+----------------------
+ASYMMETRIC UNIT IN D2h
+----------------------
+  #  AT     MASS              COORDS (A.U.)             BAS
+   0 Be   9.0120   0.00000000   0.00000000   0.00000000   0
+
+----------------------
+SYMMETRY ADAPTED BASIS
+----------------------
+The coefficients for the symmetry adapted linear combinations (SALCS)
+of basis functions will now be computed:
+Number of basis functions         ...    36
+Preparing memory                  ... done
+Constructing Gamma(red)           ... done
+Reducing Gamma(red)               ... done
+Constructing SALCs                ... done
+Checking SALC integrity           ... nothing suspicious
+Normalizing SALCs                 ... done
+
+Storing the symmetry object:
+Symmetry file                     ... casscf_beryllium_atom_sym.sym.tmp
+Writing symmetry information      ... done
+
+                       ****************************
+                       * Single Point Calculation *
+                       ****************************
+
+---------------------------------
+CARTESIAN COORDINATES (ANGSTROEM)
+---------------------------------
+  Be     0.000000    0.000000    0.000000
+
+----------------------------
+CARTESIAN COORDINATES (A.U.)
+----------------------------
+  NO LB      ZA    FRAG    MASS        X           Y           Z
+   0 Be    4.0000    0     9.012          0.000000000000000          0.000000000000000          0.000000000000000
+
+--------------------------------
+INTERNAL COORDINATES (ANGSTROEM)
+--------------------------------
+ Be     0   0   0   0.000000     0.000     0.000
+
+---------------------------
+INTERNAL COORDINATES (A.U.)
+---------------------------
+ Be     0   0   0   0.000000     0.000     0.000
+
+---------------------
+BASIS SET INFORMATION
+---------------------
+There are 1 groups of distinct atoms
+
+ Group   1 Type Be  : 15s7p2d1f contracted to 7s4p2d1f pattern {8211111/4111/11/1}
+
+Atom   0Be   basis set group =>   1
+------------------------------------------------------------------------------
+                           ORCA GTO INTEGRAL CALCULATION
+------------------------------------------------------------------------------
+
+                         BASIS SET STATISTICS AND STARTUP INFO
+
+ # of primitive gaussian shells          ...   25
+ # of primitive gaussian functions       ...   53
+ # of contracted shell                   ...   14
+ # of contracted basis functions         ...   36
+ Highest angular momentum                ...    3
+ Maximum contraction depth               ...    8
+ Integral package used                   ... LIBINT
+ Integral threshhold            Thresh   ...  1.000e-12
+ Primitive cut-off              TCut     ...  1.000e-14
+
+
+                              INTEGRAL EVALUATION
+
+ One electron integrals                  ... done
+ Pre-screening matrix                    ... done
+ Shell pair data                         ... done (   0.000 sec)
+
+-------------------------------------------------------------------------------
+                                 ORCA SCF
+-------------------------------------------------------------------------------
+
+------------
+SCF SETTINGS
+------------
+Hamiltonian:
+ Ab initio Hamiltonian  Method          .... Hartree-Fock(GTOs)
+
+
+General Settings:
+ Integral files         IntName         .... casscf_beryllium_atom_sym
+ Hartree-Fock type      HFTyp           .... CASSCF
+ Total Charge           Charge          ....    0
+ Multiplicity           Mult            ....    1
+ Number of Electrons    NEL             ....    4
+ Basis Dimension        Dim             ....   36
+ Nuclear Repulsion      ENuc            ....      0.0000000000 Eh
+
+ Symmetry handling      UseSym         .... ON
+ Point group                           .... D2h
+ Used point group                      .... D2h
+ Number of irreps                      .... 8
+   Irrep   Ag has   11 symmetry adapted basis functions (ofs=   0)
+   Irrep  B1g has    2 symmetry adapted basis functions (ofs=  11)
+   Irrep  B2g has    2 symmetry adapted basis functions (ofs=  13)
+   Irrep  B3g has    2 symmetry adapted basis functions (ofs=  15)
+   Irrep   Au has    1 symmetry adapted basis functions (ofs=  17)
+   Irrep  B1u has    6 symmetry adapted basis functions (ofs=  18)
+   Irrep  B2u has    6 symmetry adapted basis functions (ofs=  24)
+   Irrep  B3u has    6 symmetry adapted basis functions (ofs=  30)
+
+
+Diagonalization of the overlap matrix:
+Smallest eigenvalue                        ... 6.741e-03
+Time for diagonalization                   ...    0.000 sec
+Threshold for overlap eigenvalues          ... 1.000e-08
+Number of eigenvalues below threshold      ... 0
+Time for construction of square roots      ...    0.000 sec
+Producing symmetrization matrix            ... done (   0.000 sec)
+Total time needed                          ...    0.001 sec
+
+-------------------
+DFT GRID GENERATION
+-------------------
+
+General Integration Accuracy     IntAcc      ...  4.340
+Radial Grid Type                 RadialGrid  ... Gauss-Chebyshev
+Angular Grid (max. acc.)         AngularGrid ... Lebedev-110
+Angular grid pruning method      GridPruning ... 3 (G Style)
+Weight generation scheme         WeightScheme... Becke
+Basis function cutoff            BFCut       ...    1.0000e-12
+Integration weight cutoff        WCut        ...    1.0000e-14
+Grids for H and He will be reduced by one unit
+
+# of grid points (after initial pruning)     ...   1678 (   0.0 sec)
+# of grid points (after weights+screening)   ...   1678 (   0.0 sec)
+Grid point division into batches done        ...    0.0 sec
+Reduced shell lists constructed in    0.0 sec
+
+Total number of grid points                  ...     1678
+Total number of batches                      ...       27
+Average number of points per batch           ...       62
+Average number of grid points per atom       ...     1678
+Average number of shells per batch           ...    11.54 (82.40%)
+Average number of basis functions per batch  ...    31.75 (88.19%)
+Average number of large shells per batch     ...    11.18 (96.90%)
+Average number of large basis fcns per batch ...    31.39 (98.88%)
+Maximum spatial batch extension              ...  21.83, 39.91, 39.91 au
+Average spatial batch extension              ...  10.49, 12.28, 14.05 au
+
+Time for grid setup =    0.004 sec
+
+------------------------------
+INITIAL GUESS: MODEL POTENTIAL
+------------------------------
+Loading Hartree-Fock densities                     ... done
+Calculating cut-offs                               ... done
+Setting up the integral package                    ... done
+Initializing the effective Hamiltonian             ... done
+Starting the Coulomb interaction                   ... done (   0.0 sec)
+Reading the grid                                   ... done
+Mapping shells                                     ... done
+Starting the XC term evaluation                    ... done (   0.0 sec)
+done (   0.0 sec)
+Diagonalizing the Hamiltonian                      ... done (   0.0 sec)
+Back transforming the eigenvectors                 ... done (   0.0 sec)
+Now organizing SCF variables                       ... done
+The symmetry of the initial guess is 1-Ag
+Irrep occupations for operator 0
+    Ag -    2
+   B1g -    0
+   B2g -    0
+   B3g -    0
+    Au -    0
+   B1u -    1
+   B2u -    1
+   B3u -    1
+                      ------------------
+                      INITIAL GUESS DONE (   0.1 sec)
+                      ------------------
+
+
+ ... the calculation is a CASSCF calculation -I'm leaving here GOOD LUCK!!!
+
+-------------------------------------------------------------------------------
+                              ORCA-CASSCF
+-------------------------------------------------------------------------------
+
+
+Symmetry handling      UseSym     ... ON
+Point group                       ... D2h
+Used point group                  ... D2h
+Number of irreps                  ... 8
+   Irrep   Ag has   11 SALCs (ofs=   0) #(closed)=   1 #(active)=   1
+   Irrep  B1g has    2 SALCs (ofs=  11) #(closed)=   0 #(active)=   0
+   Irrep  B2g has    2 SALCs (ofs=  13) #(closed)=   0 #(active)=   0
+   Irrep  B3g has    2 SALCs (ofs=  15) #(closed)=   0 #(active)=   0
+   Irrep   Au has    1 SALCs (ofs=  17) #(closed)=   0 #(active)=   0
+   Irrep  B1u has    6 SALCs (ofs=  18) #(closed)=   0 #(active)=   1
+   Irrep  B2u has    6 SALCs (ofs=  24) #(closed)=   0 #(active)=   1
+   Irrep  B3u has    6 SALCs (ofs=  30) #(closed)=   0 #(active)=   1
+ Symmetries of active orbitals:
+   MO =    1  IRREP= 0 (Ag)
+   MO =    2  IRREP= 6 (B2u)
+   MO =    3  IRREP= 7 (B3u)
+   MO =    4  IRREP= 5 (B1u)
+
+Setting up the integral package       ... done
+Building the CAS space              ... done (4 configurations for Mult=1 Irrep=0)
+
+SYSTEM-SPECIFIC SETTINGS:
+Number of active electrons          ...    2
+Number of active orbitals           ...    4
+Total number of electrons           ...    4
+Total number of orbitals            ...   36
+
+Determined orbital ranges:
+   Internal       0 -    0 (   1 orbitals)
+   Active         1 -    4 (   4 orbitals)
+   External       5 -   35 (  31 orbitals)
+Number of rotation parameters      ...     34
+
+CI-STEP:
+Number of symmetry/multplity blocks ...    1
+BLOCK  1 WEIGHT=   1.0000
+  Multiplicity                      ...    1
+  Irrep                             ...    0 (Ag)
+  #(Configurations)                 ...    4
+  #(CSFs)                           ...    4
+  #(Roots)                          ...    1
+    ROOT=0 WEIGHT=    1.000000
+
+  PrintLevel                        ...    1
+CI step strategy                    ... DIRECT (CSF)
+  N(GuessMat)                       ...      2064
+  Max(Iter-CI)                      ...        35
+  MaxDim(CI)                        ...         3
+  MaxIter(CI)                       ...        64
+  Energy Tolerance CI               ...  1.00e-09
+  Residual Tolerance CI             ...  1.00e-09
+  Shift(CI)                         ...  1.00e-13
+
+INTEGRAL-TRANSFORMATION-STEP:
+  Algorithm                         ... EXACT
+
+ORBITAL-IMPROVEMENT-STEP:
+  Algorithm                         ... SuperCI
+  Default Parametrization           ... CAYLEY
+  Options for diverging steps       ... let the program figure out whats best
+  Act-Act rotations                 ... depends on algorithm used
+  FreezeIE                          ... 95.00% of ||g||
+  Until reaching FreezeIE rotations with active orbitals are damped. 
+
+  MaxRot                            ... 2.00e-01 
+  TolU                              ... 5.00e-01 
+  MaxDampIter                       ... 3 
+  Approx. Fock at                   ... 1.000000e-02 density convergence
+  Level shift                       ... energy gap dependent
+  Switch step at gradient           ...  3.00e-02 
+  Switch step at iteration          ...        50   
+  Switch step to                    ... DIIS    
+
+SCF-SETTINGS:
+  Incremental                       ... on
+  RIJCOSX approximation             ... off
+  RI-JK approximation               ... off
+  AO integral handling              ... DIRECT
+  Integral Neglect Thresh           ...  1.00e-12
+  Primitive cutoff TCut             ...  1.00e-14
+  Energy convergence tolerance      ...  1.00e-08
+  Orbital gradient convergence      ...  1.00e-05
+  Max. number of iterations         ...        75  
+
+FINAL ORBITALS:
+  Active   Orbitals                 ... natural 
+  Internal Orbitals                 ... canonical 
+  External Orbitals                 ... canonical 
+
+------------------
+CAS-SCF ITERATIONS
+------------------
+
+
+MACRO-ITERATION   1: 
+   --- Canonicalize Internal Space
+   --- Canonicalize External Space
+   --- Inactive Energy E0 = -13.60390391 Eh
+CI-ITERATION   0: 
+   -14.604424771   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+
+                 <<<<<<<<<<<<<<<<<<INITIAL CI STATE CHECK>>>>>>>>>>>>>>>>>>
+
+BLOCK  1 MULT= 1 NROOTS= 1  IRREP=Ag 
+ROOT   0:  E=     -14.6044247712 Eh
+      0.90756 [     0]: 2000
+      0.03081 [     3]: 0002
+      0.03081 [     1]: 0200
+      0.03081 [     2]: 0020
+
+                 <<<<<<<<<<<<<<<<<<INITIAL CI STATE CHECK>>>>>>>>>>>>>>>>>>
+
+   E(CAS)=   -14.604424771 Eh DE=     0.000000000
+   --- Energy gap subspaces: Ext-Act = 0.095   Act-Int = 4.462
+   N(occ)=  1.81512 0.06163 0.06163 0.06163
+   ||g|| =      0.512945368 Max(G)=    -0.341954278 Rot=30,0
+   --- Orbital Update [   SuperCI]
+   SUPERCI-ITER   0: DE=    -0.014000753 <r|r>=      0.001192695
+   SUPERCI-ITER   1: DE=    -0.001471610 <r|r>=      0.000056340
+   SUPERCI-ITER   2: DE=    -0.000199420 <r|r>=      0.000033448
+   SUPERCI-ITER   3: DE=    -0.000004392 <r|r>=      0.000000006
+   SUPERCI-ITER   4: DE=    -0.000000001 <r|r>=      0.000000000
+   <Psi(SX)|Psi(SX)>=      1.000000000 DE(SX)=-0.015676176
+   Largest coefficient in the normalized |SX> wavefunction= 0.134477135
+   --- Forming Natural Orbitals
+   --- Density off from convergence (1.315e+00). Exact active Fock build
+
+MACRO-ITERATION   2: 
+   --- Canonicalize Internal Space
+   --- Canonicalize External Space
+   --- Inactive Energy E0 = -13.60938958 Eh
+CI-ITERATION   0: 
+   -14.613485224   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.613485224 Eh DE=    -0.009060452
+   --- Energy gap subspaces: Ext-Act = 0.043   Act-Int = 4.454
+   N(occ)=  1.79941 0.06686 0.06686 0.06686
+   ||g|| =      0.242920111 Max(G)=    -0.165949257 Rot=30,0
+   --- Orbital Update [   SuperCI]
+   SUPERCI-ITER   0: DE=    -0.003832536 <r|r>=      0.000003679
+   SUPERCI-ITER   1: DE=    -0.000004789 <r|r>=      0.000000167
+   SUPERCI-ITER   2: DE=    -0.000000204 <r|r>=      0.000000001
+   <Psi(SX)|Psi(SX)>=      1.000000000 DE(SX)=-0.003837529
+   Largest coefficient in the normalized |SX> wavefunction= 0.076290821
+   --- Forming Natural Orbitals
+   --- Density off from convergence (1.574e-02). Exact active Fock build
+
+MACRO-ITERATION   3: 
+   --- Canonicalize Internal Space
+   --- Canonicalize External Space
+   --- Inactive Energy E0 = -13.61083875 Eh
+CI-ITERATION   0: 
+   -14.615742927   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.615742927 Eh DE=    -0.002257703
+   --- Energy gap subspaces: Ext-Act = 0.029   Act-Int = 4.447
+   N(occ)=  1.80069 0.06644 0.06644 0.06644
+   ||g|| =      0.114179852 Max(G)=     0.076409293 Rot=30,0
+   --- Orbital Update [   SuperCI]
+   SUPERCI-ITER   0: DE=    -0.000660142 <r|r>=      0.000000192
+   SUPERCI-ITER   1: DE=    -0.000000235 <r|r>=      0.000000047
+   SUPERCI-ITER   2: DE=    -0.000000020 <r|r>=      0.000000000
+   <Psi(SX)|Psi(SX)>=      1.000000000 DE(SX)=-0.000660397
+   Largest coefficient in the normalized |SX> wavefunction= 0.030476638
+   --- Forming Natural Orbitals
+   --- Density close to convergence (1.271e-03). Approximate active Fock build
+
+MACRO-ITERATION   4: 
+   --- Canonicalize Internal Space
+   --- Canonicalize External Space
+   --- Inactive Energy E0 = -13.61106919 Eh
+CI-ITERATION   0: 
+   -14.616247197   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.616247197 Eh DE=    -0.000504270
+   --- Energy gap subspaces: Ext-Act = 0.023   Act-Int = 4.442
+   N(occ)=  1.80255 0.06582 0.06582 0.06582
+   ||g|| =      0.054797991 Max(G)=    -0.034868559 Rot=30,0
+   --- Orbital Update [   SuperCI]
+   SUPERCI-ITER   0: DE=    -0.000139722 <r|r>=      0.000000006
+   SUPERCI-ITER   1: DE=    -0.000000006 <r|r>=      0.000000005
+   SUPERCI-ITER   2: DE=    -0.000000001 
+   <Psi(SX)|Psi(SX)>=      1.000000000 DE(SX)=-0.000139729
+   Largest coefficient in the normalized |SX> wavefunction= 0.009294810
+   --- Forming Natural Orbitals
+   --- Density close to convergence (1.872e-03). Approximate active Fock build
+
+MACRO-ITERATION   5: 
+   --- Canonicalize Internal Space
+   --- Canonicalize External Space
+   --- Inactive Energy E0 = -13.61095110 Eh
+CI-ITERATION   0: 
+   -14.616393839   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.616393839 Eh DE=    -0.000146642
+   --- Energy gap subspaces: Ext-Act = 0.020   Act-Int = 4.439
+   N(occ)=  1.80310 0.06563 0.06563 0.06563
+   ||g|| =      0.027552183 Max(G)=    -0.015894555 Rot=30,0
+   ===>>> Convergence to 3.0e-02 achieved - switching to Step=DIIS
+   --- Orbital Update [      DIIS]
+   --- S-Fitting active orbitals
+   --- Density close to convergence (5.592e-04). Approximate active Fock build
+
+MACRO-ITERATION   6: 
+   --- Inactive Energy E0 = -13.61002771 Eh
+CI-ITERATION   0: 
+   -14.616478156   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.616478156 Eh DE=    -0.000084317
+   --- Energy gap subspaces: Ext-Act = 0.018   Act-Int = 4.435
+   N(occ)=  1.80360 0.06547 0.06547 0.06547
+   ||g|| =      0.018317894 Max(G)=    -0.011874325 Rot=30,0
+   --- Orbital Update [      DIIS]
+   --- S-Fitting active orbitals
+   --- Density close to convergence (5.130e-04). Approximate active Fock build
+
+MACRO-ITERATION   7: 
+   --- Inactive Energy E0 = -13.61012151 Eh
+CI-ITERATION   0: 
+   -14.616490640   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.616490640 Eh DE=    -0.000012484
+   --- Energy gap subspaces: Ext-Act = 0.017   Act-Int = 4.435
+   N(occ)=  1.80354 0.06549 0.06549 0.06549
+   ||g|| =      0.014359670 Max(G)=    -0.007928281 Rot=30,0
+   --- Orbital Update [      DIIS]
+   --- S-Fitting active orbitals
+   --- Density close to convergence (5.969e-05). Approximate active Fock build
+
+MACRO-ITERATION   8: 
+   --- Inactive Energy E0 = -13.61012484 Eh
+CI-ITERATION   0: 
+   -14.616495111   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.616495111 Eh DE=    -0.000004471
+   --- Energy gap subspaces: Ext-Act = 0.016   Act-Int = 4.435
+   N(occ)=  1.80359 0.06547 0.06547 0.06547
+   ||g|| =      0.004141539 Max(G)=     0.002976060 Rot=35,0
+   --- Orbital Update [      DIIS]
+   --- S-Fitting active orbitals
+   --- Density close to convergence (4.830e-05). Approximate active Fock build
+
+MACRO-ITERATION   9: 
+   --- Inactive Energy E0 = -13.61010476 Eh
+CI-ITERATION   0: 
+   -14.616496559   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.616496559 Eh DE=    -0.000001448
+   --- Energy gap subspaces: Ext-Act = 0.016   Act-Int = 4.434
+   N(occ)=  1.80365 0.06545 0.06545 0.06545
+   ||g|| =      0.002623648 Max(G)=    -0.001963395 Rot=35,0
+   --- Orbital Update [      DIIS]
+   --- S-Fitting active orbitals
+   --- Density close to convergence (6.649e-05). Approximate active Fock build
+
+MACRO-ITERATION  10: 
+   --- Inactive Energy E0 = -13.61009451 Eh
+CI-ITERATION   0: 
+   -14.616496948   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.616496948 Eh DE=    -0.000000389
+   --- Energy gap subspaces: Ext-Act = 0.015   Act-Int = 4.434
+   N(occ)=  1.80370 0.06543 0.06543 0.06543
+   ||g|| =      0.000920309 Max(G)=     0.000676763 Rot=35,0
+   --- Orbital Update [      DIIS]
+   --- S-Fitting active orbitals
+   --- Density close to convergence (4.684e-05). Approximate active Fock build
+
+MACRO-ITERATION  11: 
+   --- Inactive Energy E0 = -13.61009534 Eh
+CI-ITERATION   0: 
+   -14.616497000   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.616497000 Eh DE=    -0.000000052
+   --- Energy gap subspaces: Ext-Act = 0.015   Act-Int = 4.434
+   N(occ)=  1.80373 0.06542 0.06542 0.06542
+   ||g|| =      0.000456574 Max(G)=    -0.000309782 Rot=34,0
+   --- Orbital Update [      DIIS]
+   --- S-Fitting active orbitals
+   --- Density close to convergence (2.951e-05). Approximate active Fock build
+
+MACRO-ITERATION  12: 
+   --- Inactive Energy E0 = -13.61009547 Eh
+CI-ITERATION   0: 
+   -14.616497007   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.616497007 Eh DE=    -0.000000007
+   --- Energy gap subspaces: Ext-Act = 0.015   Act-Int = 4.434
+   N(occ)=  1.80374 0.06542 0.06542 0.06542
+   ||g|| =      0.000184163 Max(G)=     0.000129216 Rot=34,0
+                     ---- THE CAS-SCF ENERGY   HAS CONVERGED ----
+                            --- FINALIZING ORBITALS ---
+                    ---- DOING ONE FINAL ITERATION FOR PRINTING ----
+   --- Forming Natural Orbitals
+   --- Canonicalize Internal Space
+   --- Canonicalize External Space
+
+MACRO-ITERATION  13: 
+   --- Inactive Energy E0 = -13.61009547 Eh
+   --- All densities will be recomputed
+CI-ITERATION   0: 
+   -14.616497007   0.000000000000 (    0.00)
+   CI-PROBLEM SOLVED
+   DENSITIES MADE
+   E(CAS)=   -14.616497007 Eh DE=     0.000000000
+   --- Energy gap subspaces: Ext-Act = 0.015   Act-Int = 4.434
+   N(occ)=  1.80374 0.06542 0.06542 0.06542
+   ||g|| =      0.000183955 Max(G)=    -0.000129130 Rot=34,0
+--------------
+CASSCF RESULTS
+--------------
+
+Final CASSCF energy       : -14.616497007 Eh    -397.7351 eV
+
+Orbital   Occ.   Energy(Eh)   Energy(eV): Sym
+    0:  2.000000       -4.711840   -128.2157   1-Ag
+    1:  1.803744       -0.277795     -7.5592   2-Ag
+    2:  0.065419        0.112646      3.0653   1-B2u
+    3:  0.065419        0.112646      3.0653   1-B3u
+    4:  0.065419        0.112646      3.0653   1-B1u
+    5:  0.000000        0.127743      3.4761   3-Ag
+    6:  0.000000        0.150934      4.1071   2-B3u
+    7:  0.000000        0.150934      4.1071   2-B1u
+    8:  0.000000        0.150934      4.1071   2-B2u
+    9:  0.000000        0.274858      7.4793   1-B2g
+   10:  0.000000        0.274858      7.4793   1-B1g
+   11:  0.000000        0.274858      7.4793   1-B3g
+   12:  0.000000        0.274858      7.4793   4-Ag
+   13:  0.000000        0.274858      7.4793   5-Ag
+   14:  0.000000        0.681115     18.5341   6-Ag
+   15:  0.000000        0.767033     20.8720   3-B2u
+   16:  0.000000        0.767033     20.8720   3-B3u
+   17:  0.000000        0.767033     20.8720   3-B1u
+   18:  0.000000        1.118726     30.4421   2-B2g
+   19:  0.000000        1.118726     30.4421   2-B1g
+   20:  0.000000        1.118726     30.4421   2-B3g
+   21:  0.000000        1.118726     30.4421   7-Ag
+   22:  0.000000        1.118726     30.4421   8-Ag
+   23:  0.000000        1.176081     32.0028   4-B3u
+   24:  0.000000        1.176081     32.0028   4-B2u
+   25:  0.000000        1.176081     32.0028   4-B1u
+   26:  0.000000        1.176081     32.0028   5-B1u
+   27:  0.000000        1.176081     32.0028   5-B3u
+   28:  0.000000        1.176081     32.0028   5-B2u
+   29:  0.000000        1.176081     32.0028   1-Au
+   30:  0.000000        3.007599     81.8409   9-Ag
+   31:  0.000000       10.933791    297.5236   6-B2u
+   32:  0.000000       10.933791    297.5236   6-B3u
+   33:  0.000000       10.933791    297.5236   6-B1u
+   34:  0.000000       11.951757    325.2239  10-Ag
+   35:  0.000000       65.244454   1775.3919  11-Ag
+
+
+---------------------------------------------
+CAS-SCF STATES FOR BLOCK  1 MULT= 1 IRREP= Ag NROOTS= 1
+---------------------------------------------
+
+ROOT   0:  E=     -14.6164970070 Eh
+      0.90187 [     0]: 2000
+      0.03271 [     2]: 0020
+      0.03271 [     3]: 0002
+      0.03271 [     1]: 0200
+
+
+--------------
+DENSITY MATRIX
+--------------
+
+                   0          1          2          3    
+      0       1.803744   0.000000   0.000000   0.000000
+      1       0.000000   0.065419   0.000000   0.000000
+      2       0.000000   0.000000   0.065419   0.000000
+      3       0.000000   0.000000   0.000000   0.065419
+Trace of the electron density:  2.000000
+
+-----------------
+ENERGY COMPONENTS
+-----------------
+
+One electron energy          :    -19.082324970 Eh        -519.2565 eV
+Two electron energy          :      4.465827964 Eh         121.5214 eV
+Nuclear repuslion energy     :      0.000000000 Eh           0.0000 eV
+                               ----------------
+                                  -14.616497007
+
+Kinetic energy               :     14.616237387 Eh         397.7280 eV
+Potential energy             :    -29.232734394 Eh        -795.4631 eV
+Virial ratio                 :     -2.000017762 
+                               ----------------
+                                  -14.616497007
+
+Core energy                  :    -13.610095475 Eh     -370.3495 eV
+
+
+----------------------------
+LOEWDIN ORBITAL-COMPOSITIONS
+----------------------------
+
+                      0         1         2         3         4         5   
+                  -4.71184  -0.27779   0.11265   0.11265   0.11265   0.12774
+                   2.00000   1.80374   0.06542   0.06542   0.06542   0.00000
+                  --------  --------  --------  --------  --------  --------
+ 0 Be s             100.0     100.0       0.0       0.0       0.0     100.0
+ 0 Be pz              0.0       0.0       0.0       0.0     100.0       0.0
+ 0 Be px              0.0       0.0       0.0     100.0       0.0       0.0
+ 0 Be py              0.0       0.0     100.0       0.0       0.0       0.0
+
+                      6         7         8         9        10        11   
+                   0.15093   0.15093   0.15093   0.27486   0.27486   0.27486
+                   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+                  --------  --------  --------  --------  --------  --------
+ 0 Be pz              0.0     100.0       0.0       0.0       0.0       0.0
+ 0 Be px            100.0       0.0       0.0       0.0       0.0       0.0
+ 0 Be py              0.0       0.0     100.0       0.0       0.0       0.0
+ 0 Be dxz             0.0       0.0       0.0     100.0       0.0       0.0
+ 0 Be dyz             0.0       0.0       0.0       0.0       0.0     100.0
+ 0 Be dxy             0.0       0.0       0.0       0.0     100.0       0.0
+
+                     12        13        14        15        16        17   
+                   0.27486   0.27486   0.68112   0.76703   0.76703   0.76703
+                   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+                  --------  --------  --------  --------  --------  --------
+ 0 Be s               0.0       0.0     100.0       0.0       0.0       0.0
+ 0 Be pz              0.0       0.0       0.0       0.0       0.0     100.0
+ 0 Be px              0.0       0.0       0.0       0.0     100.0       0.0
+ 0 Be py              0.0       0.0       0.0     100.0       0.0       0.0
+ 0 Be dz2             0.0     100.0       0.0       0.0       0.0       0.0
+ 0 Be dx2y2         100.0       0.0       0.0       0.0       0.0       0.0
+
+                     18        19        20        21        22        23   
+                   1.11873   1.11873   1.11873   1.11873   1.11873   1.17608
+                   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+                  --------  --------  --------  --------  --------  --------
+ 0 Be dz2             0.0       0.0       0.0       8.6      91.4       0.0
+ 0 Be dxz           100.0       0.0       0.0       0.0       0.0       0.0
+ 0 Be dyz             0.0       0.0     100.0       0.0       0.0       0.0
+ 0 Be dx2y2           0.0       0.0       0.0      91.4       8.6       0.0
+ 0 Be dxy             0.0     100.0       0.0       0.0       0.0       0.0
+ 0 Be f+1             0.0       0.0       0.0       0.0       0.0      37.3
+ 0 Be f+3             0.0       0.0       0.0       0.0       0.0      62.7
+
+                     24        25        26        27        28        29   
+                   1.17608   1.17608   1.17608   1.17608   1.17608   1.17608
+                   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+                  --------  --------  --------  --------  --------  --------
+ 0 Be f0              0.0     100.0       0.0       0.0       0.0       0.0
+ 0 Be f+1             0.0       0.0       0.0      62.7       0.0       0.0
+ 0 Be f-1            37.5       0.0       0.0       0.0      62.5       0.0
+ 0 Be f+2             0.0       0.0     100.0       0.0       0.0       0.0
+ 0 Be f-2             0.0       0.0       0.0       0.0       0.0     100.0
+ 0 Be f+3             0.0       0.0       0.0      37.3       0.0       0.0
+ 0 Be f-3            62.5       0.0       0.0       0.0      37.5       0.0
+
+                     30        31        32        33        34        35   
+                   3.00760  10.93379  10.93379  10.93379  11.95176  65.24445
+                   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+                  --------  --------  --------  --------  --------  --------
+ 0 Be s             100.0       0.0       0.0       0.0     100.0     100.0
+ 0 Be pz              0.0       0.0       0.0     100.0       0.0       0.0
+ 0 Be px              0.0       0.0     100.0       0.0       0.0       0.0
+ 0 Be py              0.0     100.0       0.0       0.0       0.0       0.0
+
+------------------------------------------------------------------------------
+                           ORCA POPULATION ANALYSIS
+------------------------------------------------------------------------------
+Input electron density              ... casscf_beryllium_atom_sym.scfp.tmp
+BaseName (.gbw .S,...)              ... casscf_beryllium_atom_sym
+
+                    ********************************
+                    * MULLIKEN POPULATION ANALYSIS *
+                    ********************************
+
+-----------------------
+MULLIKEN ATOMIC CHARGES
+-----------------------
+   0 Be:    0.000000
+Sum of atomic charges:    0.0000000
+
+--------------------------------
+MULLIKEN REDUCED ORBITAL CHARGES
+--------------------------------
+  0 Bes       :     3.803744  s :     3.803744
+      pz      :     0.065419  p :     0.196256
+      px      :     0.065419
+      py      :     0.065419
+      dz2     :     0.000000  d :     0.000000
+      dxz     :     0.000000
+      dyz     :     0.000000
+      dx2y2   :     0.000000
+      dxy     :     0.000000
+      f0      :     0.000000  f :     0.000000
+      f+1     :     0.000000
+      f-1     :     0.000000
+      f+2     :     0.000000
+      f-2     :     0.000000
+      f+3     :     0.000000
+      f-3     :     0.000000
+
+
+                     *******************************
+                     * LOEWDIN POPULATION ANALYSIS *
+                     *******************************
+
+----------------------
+LOEWDIN ATOMIC CHARGES
+----------------------
+   0 Be:    0.000000
+
+-------------------------------
+LOEWDIN REDUCED ORBITAL CHARGES
+-------------------------------
+  0 Bes       :     3.803744  s :     3.803744
+      pz      :     0.065419  p :     0.196256
+      px      :     0.065419
+      py      :     0.065419
+      dz2     :     0.000000  d :     0.000000
+      dxz     :     0.000000
+      dyz     :     0.000000
+      dx2y2   :     0.000000
+      dxy     :     0.000000
+      f0      :     0.000000  f :     0.000000
+      f+1     :     0.000000
+      f-1     :     0.000000
+      f+2     :     0.000000
+      f-2     :     0.000000
+      f+3     :     0.000000
+      f-3     :     0.000000
+
+
+                      *****************************
+                      * MAYER POPULATION ANALYSIS *
+                      *****************************
+
+  NA   - Mulliken gross atomic population
+  ZA   - Total nuclear charge
+  QA   - Mulliken gross atomic charge
+  VA   - Mayer's total valence
+  BVA  - Mayer's bonded valence
+  FA   - Mayer's free valence
+
+  ATOM       NA         ZA         QA         VA         BVA        FA
+  0 Be     4.0000     4.0000     0.0000     0.7337     0.0000     0.7337
+
+
+
+Transition Dipole Moments (a.u.) with input orbitals:
+MO   0:
+ MO   2:      0.093193135 (    -0.000000000,      0.093193135,     -0.000000000)
+ MO   3:      0.093193135 (     0.093193135,     -0.000000000,     -0.000000000)
+ MO   4:      0.093193135 (     0.000000000,      0.000000000,     -0.093193135)
+MO   1:
+ MO   2:      1.461436957 (    -0.000000000,      1.461436957,     -0.000000000)
+ MO   3:      1.461436957 (     1.461436957,     -0.000000000,     -0.000000000)
+ MO   4:      1.461436957 (     0.000000000,      0.000000000,     -1.461436957)
+MO   2:
+MO   3:
+MO   4:
+  newgto Be
+  0 15
+    1      29646.704407000001         0.000038108121
+    2       4428.761435400000         0.000297339519
+    3       1005.470133200000         0.001564012189
+    4        284.153395780000         0.006560695178
+    5         92.504356461000         0.023217277748
+    6         33.311016058000         0.069760234287
+    7         12.911553314000         0.170882796272
+    8          5.266549736100         0.318203370984
+    9         22.995386380000        -0.000026816811
+   10          6.623635417600        -0.000262295694
+   11          2.228959500300         0.379039345639
+   12          0.953024334500         0.186073662085
+   13          0.246516024400         0.006077980713
+   14          0.101538953100        -0.011158776982
+   15          0.041551374600        -0.001939287633
+  0 15
+    1      29646.704407000001         0.000006656479
+    2       4428.761435400000         0.000051937333
+    3       1005.470133200000         0.000273191476
+    4        284.153395780000         0.001145979558
+    5         92.504356461000         0.004055443055
+    6         33.311016058000         0.012185263955
+    7         12.911553314000         0.029848695310
+    8          5.266549736100         0.055581695023
+    9         22.995386380000         0.001089174539
+   10          6.623635417600         0.010653234928
+   11          2.228959500300         0.118820253833
+   12          0.953024334500         0.107296709006
+   13          0.246516024400        -0.284116196701
+   14          0.101538953100        -0.627982487568
+   15          0.041551374600        -0.214445193944
+  1 7
+    1         14.099789445000         0.004692860169
+    2          3.180318848200         0.029433152129
+    3          0.904892205000         0.119338052458
+    4          0.304115855100         0.359138995817
+    5          0.113026066600         0.606337401509
+    6          0.042831733700         0.037936248001
+    7          6.400000000000        -0.004718510828
+  end
+
+-------------------------------------------------------------
+ Forming the transition density       ... done in 0.000138 sec
+-------------------------------------------------------------
+
+
+
+==========================================
+CASSCF UV, CD spectra and dipole moments
+==========================================
+-------------------
+ABSORPTION SPECTRUM
+-------------------
+
+Center of mass           = (  0.0000,  0.0000,  0.0000)
+Nuclear contribution to the dipole moment =     0.000000,    0.000000,    0.000000 au
+
+Calculating the dipole integrals          ... done
+
+Ground state mult:    1
+Ground state block:   0
+Ground state root:    0
+
+
+------------------------------------------------------------------------------
+                                 DIPOLE MOMENTS
+------------------------------------------------------------------------------
+  Root  Block           TX        TY        TZ           |T|
+                      (Debye)   (Debye)   (Debye)      (Debye)
+------------------------------------------------------------------------------
+    0    0           -0.00000   0.00000   0.00000      0.00000
+
+-------
+TIMINGS
+-------
+
+Total time                       ...        0.5 sec
+Sum of individual times          ...        0.4 sec ( 71.2%)
+
+Calculation of AO operators
+   F(Core) operator              ...        0.1 sec ( 25.6%)
+   G(Act) operator               ...        0.0 sec (  9.7%)
+   J(AO) operators               ...        0.2 sec ( 30.9%)
+Calculation of MO transformed quantities
+   J(MO) operators               ...        0.0 sec (  0.2%)
+   (pq|rs) integrals             ...        0.0 sec (  0.1%)
+   AO->MO one electron integrals ...        0.0 sec (  0.1%)
+Configuration interaction steps
+   CI-setup phase                ...        0.0 sec (  0.0%)
+   CI-solution phase             ...        0.0 sec (  2.5%)
+   Generation of densities       ...        0.0 sec (  0.1%)
+Orbital improvement steps
+   Orbital gradient              ...        0.0 sec (  0.2%)
+   O(1) converger                ...        0.0 sec (  1.5%)
+Properties                       ...        0.0 sec (  0.2%)
+
+-------------------------   --------------------
+FINAL SINGLE POINT ENERGY       -14.616497006964
+-------------------------   --------------------
+
+
+                            ***************************************
+                            *     ORCA property calculations      *
+                            ***************************************
+
+                                    ---------------------
+                                    Active property flags
+                                    ---------------------
+   (+) Dipole Moment
+
+
+------------------------------------------------------------------------------
+                       ORCA ELECTRIC PROPERTIES CALCULATION
+------------------------------------------------------------------------------
+
+Dipole Moment Calculation                       ... on
+Quadrupole Moment Calculation                   ... off
+Polarizability Calculation                      ... off
+GBWName                                         ... casscf_beryllium_atom_sym.gbw
+Electron density file                           ... casscf_beryllium_atom_sym.scfp.tmp
+
+-------------
+DIPOLE MOMENT
+-------------
+                                X             Y             Z
+Electronic contribution:     -0.00000       0.00000       0.00000
+Nuclear contribution   :      0.00000       0.00000       0.00000
+                        -----------------------------------------
+Total Dipole Moment    :     -0.00000       0.00000       0.00000
+                        -----------------------------------------
+Magnitude (a.u.)       :      0.00000
+Magnitude (Debye)      :      0.00000
+
+
+Timings for individual modules:
+
+Sum of individual times         ...        0.851 sec (=   0.014 min)
+GTO integral calculation        ...        0.174 sec (=   0.003 min)  20.5 %
+SCF iterations                  ...        0.080 sec (=   0.001 min)   9.4 %
+CASSCF iterations               ...        0.597 sec (=   0.010 min)  70.1 %
+                             ****ORCA TERMINATED NORMALLY****
+TOTAL RUN TIME: 0 days 0 hours 0 minutes 0 seconds 997 msec
