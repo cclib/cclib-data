@@ -1,0 +1,25 @@
+! hf sto-3g sp noautostart
+
+%coords 
+ ctyp internal
+ charge 0
+ mult 1
+ pardef
+   royl=1.4;
+   row=2.501;
+   roh=0.968;
+   aoh=126.6;
+   oylMDA=0.
+   end
+ coords
+   C      0   0   0     0.000000   0.0000000     0.00000000
+   DA     1   0   0     1.000000   0.0000000     0.00000000
+   DA     1   2   0     1.000000  90.0000000     0.00000000
+   DA     1   2   3     1.000000  90.0000000   270.00000000
+   O      1   2   4     {royl}   {OylMDA}        0.00000000
+   O      1   2   4     {royl}   {180.-OylMDA}   0.00000000
+   O      1   2   4     {row}    90.00000000     0.00000000
+   H      7   1   2     {roh}   {aoh}            0.00000000
+   H      7   1   2     {roh}   {aoh}          180.00000000
+   end
+ end
