@@ -14,6 +14,30 @@ repos:
     rev: "v5.0.0"
     hooks:
       - id: check-yaml
+      - id: trailing-whitespace
+        exclude: |
+          (?x)(
+              ^ADF|
+              ^DALTON|
+              ^FChk|
+              ^GAMESS|
+              ^GAMESSDAT|
+              ^GAMESS-UK|
+              ^Gaussian|
+              ^io|
+              ^Jaguar|
+              ^Molcas|
+              ^Molpro|
+              ^MOPAC|
+              ^NBO|
+              ^NWChem|
+              ^ORCA|
+              ^Psi3|
+              ^Psi4|
+              ^QChem|
+              ^Turbomole|
+              ^XTB
+          )
   - repo: local
     hooks:
       - id: sort-regressionfiles-yaml
