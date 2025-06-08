@@ -10,6 +10,8 @@ concurrency:
   group: nix-${{github.ref}}-${{github.event.pull_request.number || github.run_number}}
   cancel-in-progress: true
 
+permissions: {}
+
 jobs:
   nix-build:
     runs-on: ubuntu-latest
@@ -25,5 +27,7 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       # Checkout of the current head in the working dir
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          persist-credentials: false
       - name: Check nix flake
         run: nix flake check -L
