@@ -13,8 +13,10 @@ concurrency:
 jobs:
   prechecks:
     uses: ./.github/workflows/pre-commit.yml
-  all-prechecks:
-    needs: [prechecks]
+  nix:
+    uses: ./.github/workflows/nix.yml
+  all:
+    needs: [prechecks, nix]
     runs-on: ubuntu-latest
     steps:
       - name: Success
