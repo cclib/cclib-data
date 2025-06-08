@@ -45,7 +45,9 @@ repos:
         entry: ./sort_regressionfiles_yaml.sh
         language: script
         files: ^regressionfiles\.yaml$
-  - repo: https://github.com/Mateusz-Grzelinski/actionlint-py
-    rev: "v1.7.7.23"
+  - repo: https://github.com/rhysd/actionlint
+    rev: "v1.7.7"
     hooks:
       - id: actionlint
+        additional_dependencies:
+          - "github.com/wasilibs/go-shellcheck/cmd/shellcheck@v0.10.0"
