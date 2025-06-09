@@ -13,7 +13,32 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: "v5.0.0"
     hooks:
+      - id: check-json
       - id: check-yaml
+      - id: trailing-whitespace
+        exclude: |
+          (?x)(
+              ^ADF|
+              ^DALTON|
+              ^FChk|
+              ^GAMESS|
+              ^GAMESSDAT|
+              ^GAMESS-UK|
+              ^Gaussian|
+              ^io|
+              ^Jaguar|
+              ^Molcas|
+              ^Molpro|
+              ^MOPAC|
+              ^NBO|
+              ^NWChem|
+              ^ORCA|
+              ^Psi3|
+              ^Psi4|
+              ^QChem|
+              ^Turbomole|
+              ^XTB
+          )
   - repo: local
     hooks:
       - id: sort-regressionfiles-yaml
@@ -21,7 +46,14 @@ repos:
         entry: ./sort_regressionfiles_yaml.sh
         language: script
         files: ^regressionfiles\.yaml$
-  - repo: https://github.com/Mateusz-Grzelinski/actionlint-py
-    rev: "v1.7.7.23"
+  - repo: https://github.com/rhysd/actionlint
+    rev: "v1.7.7"
     hooks:
       - id: actionlint
+        additional_dependencies:
+          - "github.com/wasilibs/go-shellcheck/cmd/shellcheck@v0.10.0"
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: "v1.9.0"
+    hooks:
+      - id: zizmor
+        args: [--no-progress, --persona=pedantic]
