@@ -66,6 +66,9 @@
             '';
 
             packages = [
+              pkgs.coreutils
+              pkgs.diffutils
+              pkgs.patch
               python.pkgs.pip
               python.pkgs.ruamel-yaml
               python.pkgs.venvShellHook
