@@ -1,0 +1,1691 @@
+
+
+     ************************************************************************
+     *************** Dalton - An Electronic Structure Program ***************
+     ************************************************************************
+
+    This is output from DALTON release Dalton2018.2 (2019)
+         ( Web site: http://daltonprogram.org )
+
+   ----------------------------------------------------------------------------
+
+    NOTE:
+     
+    Dalton is an experimental code for the evaluation of molecular
+    properties using (MC)SCF, DFT, CI, and CC wave functions.
+    The authors accept no responsibility for the performance of
+    the code or for the correctness of the results.
+     
+    The code (in whole or part) is provided under a licence and
+    is not to be reproduced for further distribution without
+    the written permission of the authors or their representatives.
+     
+    See the home page "http://daltonprogram.org" for further information.
+     
+    If results obtained with this code are published,
+    the appropriate citations would be both of:
+     
+       K. Aidas, C. Angeli, K. L. Bak, V. Bakken, R. Bast,
+       L. Boman, O. Christiansen, R. Cimiraglia, S. Coriani,
+       P. Dahle, E. K. Dalskov, U. Ekstroem,
+       T. Enevoldsen, J. J. Eriksen, P. Ettenhuber, B. Fernandez,
+       L. Ferrighi, H. Fliegl, L. Frediani, K. Hald, A. Halkier,
+       C. Haettig, H. Heiberg, T. Helgaker, A. C. Hennum,
+       H. Hettema, E. Hjertenaes, S. Hoest, I.-M. Hoeyvik,
+       M. F. Iozzi, B. Jansik, H. J. Aa. Jensen, D. Jonsson,
+       P. Joergensen, J. Kauczor, S. Kirpekar,
+       T. Kjaergaard, W. Klopper, S. Knecht, R. Kobayashi, H. Koch,
+       J. Kongsted, A. Krapp, K. Kristensen, A. Ligabue,
+       O. B. Lutnaes, J. I. Melo, K. V. Mikkelsen, R. H. Myhre,
+       C. Neiss, C. B. Nielsen, P. Norman, J. Olsen,
+       J. M. H. Olsen, A. Osted, M. J. Packer, F. Pawlowski,
+       T. B. Pedersen, P. F. Provasi, S. Reine, Z. Rinkevicius,
+       T. A. Ruden, K. Ruud, V. Rybkin, P. Salek, C. C. M. Samson,
+       A. Sanchez de Meras, T. Saue, S. P. A. Sauer,
+       B. Schimmelpfennig, K. Sneskov, A. H. Steindal,
+       K. O. Sylvester-Hvid, P. R. Taylor, A. M. Teale,
+       E. I. Tellgren, D. P. Tew, A. J. Thorvaldsen, L. Thoegersen,
+       O. Vahtras, M. A. Watson, D. J. D. Wilson, M. Ziolkowski
+       and H. Agren,
+       "The Dalton quantum chemistry program system",
+       WIREs Comput. Mol. Sci. 2014, 4:269–284 (doi: 10.1002/wcms.1172)
+     
+    and
+     
+       Dalton, a molecular electronic structure program,
+       Release Dalton2018.2 (2019), see http://daltonprogram.org
+   ----------------------------------------------------------------------------
+
+    Authors in alphabetical order (major contribution(s) in parenthesis):
+
+  Kestutis Aidas,           Vilnius University,           Lithuania   (QM/MM)
+  Celestino Angeli,         University of Ferrara,        Italy       (NEVPT2)
+  Keld L. Bak,              UNI-C,                        Denmark     (AOSOPPA, non-adiabatic coupling, magnetic properties)
+  Vebjoern Bakken,          University of Oslo,           Norway      (DALTON; geometry optimizer, symmetry detection)
+  Radovan Bast,             UiT The Arctic U. of Norway,  Norway      (DALTON installation and execution frameworks)
+  Pablo Baudin,             University of Valencia,       Spain       (Cholesky excitation energies)
+  Linus Boman,              NTNU,                         Norway      (Cholesky decomposition and subsystems)
+  Ove Christiansen,         Aarhus University,            Denmark     (CC module)
+  Renzo Cimiraglia,         University of Ferrara,        Italy       (NEVPT2)
+  Sonia Coriani,            Technical Univ. of Denmark,   Denmark     (CC module, MCD in RESPONS)
+  Janusz Cukras,            University of Trieste,        Italy       (MChD in RESPONS)
+  Paal Dahle,               University of Oslo,           Norway      (Parallelization)
+  Erik K. Dalskov,          UNI-C,                        Denmark     (SOPPA)
+  Thomas Enevoldsen,        Univ. of Southern Denmark,    Denmark     (SOPPA)
+  Janus J. Eriksen,         Aarhus University,            Denmark     (Polarizable embedding model, TDA)
+  Rasmus Faber,             University of Copenhagen,     Denmark     (Vib.avg. NMR with SOPPA, parallel AO-SOPPA)
+  Tobias Fahleson,          KTH Stockholm,                Sweden      (Damped cubic response)
+  Berta Fernandez,          U. of Santiago de Compostela, Spain       (doublet spin, ESR in RESPONS)
+  Lara Ferrighi,            Aarhus University,            Denmark     (PCM Cubic response)
+  Heike Fliegl,             University of Oslo,           Norway      (CCSD(R12))
+  Luca Frediani,            UiT The Arctic U. of Norway,  Norway      (PCM)
+  Bin Gao,                  UiT The Arctic U. of Norway,  Norway      (Gen1Int library)
+  Christof Haettig,         Ruhr-University Bochum,       Germany     (CC module)
+  Kasper Hald,              Aarhus University,            Denmark     (CC module)
+  Asger Halkier,            Aarhus University,            Denmark     (CC module)
+  Frederik Beyer Hansen,    University of Copenhagen,     Denmark     (Parallel AO-SOPPA)
+  Erik D. Hedegaard,        Univ. of Southern Denmark,    Denmark     (Polarizable embedding model, QM/MM)
+  Hanne Heiberg,            University of Oslo,           Norway      (geometry analysis, selected one-electron integrals)
+  Trygve Helgaker,          University of Oslo,           Norway      (DALTON; ABACUS, ERI, DFT modules, London, and much more)
+  Alf Christian Hennum,     University of Oslo,           Norway      (Parity violation)
+  Hinne Hettema,            University of Auckland,       New Zealand (quadratic response in RESPONS; SIRIUS supersymmetry)
+  Eirik Hjertenaes,         NTNU,                         Norway      (Cholesky decomposition)
+  Pi A. B. Haase,           University of Copenhagen,     Denmark     (Triplet AO-SOPPA)
+  Maria Francesca Iozzi,    University of Oslo,           Norway      (RPA)
+  Christoph Jacob           TU Braunschweig               Germany     (Frozen density embedding model)
+  Brano Jansik              Technical Univ. of Ostrava    Czech Rep.  (DFT cubic response)
+  Hans Joergen Aa. Jensen,  Univ. of Southern Denmark,    Denmark     (DALTON; SIRIUS, RESPONS, ABACUS modules, London, and much more)
+  Dan Jonsson,              UiT The Arctic U. of Norway,  Norway      (cubic response in RESPONS module)
+  Poul Joergensen,          Aarhus University,            Denmark     (RESPONS, ABACUS, and CC modules)
+  Maciej Kaminski,          University of Warsaw,         Poland      (CPPh in RESPONS)
+  Joanna Kauczor,           Linkoeping University,        Sweden      (Complex polarization propagator (CPP) module)
+  Sheela Kirpekar,          Univ. of Southern Denmark,    Denmark     (Mass-velocity & Darwin integrals)
+  Wim Klopper,              KIT Karlsruhe,                Germany     (R12 code in CC, SIRIUS, and ABACUS modules)
+  Stefan Knecht,            ETH Zurich,                   Switzerland (Parallel CI and MCSCF)
+  Rika Kobayashi,           Australian National Univ.,    Australia   (DIIS in CC, London in MCSCF)
+  Henrik Koch,              NTNU,                         Norway      (CC module, Cholesky decomposition)
+  Jacob Kongsted,           Univ. of Southern Denmark,    Denmark     (Polarizable embedding model, QM/MM)
+  Andrea Ligabue,           University of Modena,         Italy       (CTOCD, AOSOPPA)
+  Nanna H. List             Univ. of Southern Denmark,    Denmark     (Polarizable embedding model)
+  Ola B. Lutnaes,           University of Oslo,           Norway      (DFT Hessian)
+  Juan I. Melo,             University of Buenos Aires,   Argentina   (LRESC, Relativistic Effects on NMR Shieldings)
+  Kurt V. Mikkelsen,        University of Copenhagen,     Denmark     (MC-SCRF and QM/MM)
+  Rolf H. Myhre,            NTNU,                         Norway      (Subsystems and CC3)
+  Christian Neiss,          Univ. Erlangen-Nuernberg,     Germany     (CCSD(R12))
+  Christian B. Nielsen,     University of Copenhagen,     Denmark     (QM/MM)
+  Patrick Norman,           KTH Stockholm,                Sweden      (Cubic response and complex frequency response in RESPONS)
+  Jeppe Olsen,              Aarhus University,            Denmark     (SIRIUS CI/density modules)
+  Jogvan Magnus H. Olsen,   Univ. of Southern Denmark,    Denmark     (Polarizable embedding model, QM/MM)
+  Anders Osted,             Copenhagen University,        Denmark     (QM/MM)
+  Martin J. Packer,         University of Sheffield,      UK          (SOPPA)
+  Filip Pawlowski,          Kazimierz Wielki University,  Poland      (CC3)
+  Morten N. Pedersen,       Univ. of Southern Denmark,    Denmark     (Polarizable embedding model)
+  Thomas B. Pedersen,       University of Oslo,           Norway      (Cholesky decomposition)
+  Patricio F. Provasi,      University of Northeastern,   Argentina   (Analysis of coupling constants in localized orbitals)
+  Zilvinas Rinkevicius,     KTH Stockholm,                Sweden      (open-shell DFT, ESR)
+  Elias Rudberg,            KTH Stockholm,                Sweden      (DFT grid and basis info)
+  Torgeir A. Ruden,         University of Oslo,           Norway      (Numerical derivatives in ABACUS)
+  Kenneth Ruud,             UiT The Arctic U. of Norway,  Norway      (DALTON; ABACUS magnetic properties and much more)
+  Pawel Salek,              KTH Stockholm,                Sweden      (DALTON; DFT code)
+  Claire C. M. Samson       University of Karlsruhe       Germany     (Boys localization, r12 integrals in ERI)
+  Alfredo Sanchez de Meras, University of Valencia,       Spain       (CC module, Cholesky decomposition)
+  Trond Saue,               Paul Sabatier University,     France      (direct Fock matrix construction)
+  Stephan P. A. Sauer,      University of Copenhagen,     Denmark     (SOPPA(CCSD), SOPPA prop., AOSOPPA, vibrational g-factors)
+  Andre S. P. Gomes,        CNRS/Universite de Lille,     France      (Frozen density embedding model)
+  Bernd Schimmelpfennig,    Forschungszentrum Karlsruhe,  Germany     (AMFI module)
+  Kristian Sneskov,         Aarhus University,            Denmark     (Polarizable embedding model, QM/MM)
+  Arnfinn H. Steindal,      UiT The Arctic U. of Norway,  Norway      (parallel QM/MM, Polarizable embedding model)
+  Casper Steinmann,         Univ. of Southern Denmark,    Denmark     (QFIT, Polarizable embedding model)
+  K. O. Sylvester-Hvid,     University of Copenhagen,     Denmark     (MC-SCRF)
+  Peter R. Taylor,          VLSCI/Univ. of Melbourne,     Australia   (Symmetry handling ABACUS, integral transformation)
+  Andrew M. Teale,          University of Nottingham,     England     (DFT-AC, DFT-D)
+  David P. Tew,             University of Bristol,        England     (CCSD(R12))
+  Olav Vahtras,             KTH Stockholm,                Sweden      (triplet response, spin-orbit, ESR, TDDFT, open-shell DFT)
+  Lucas Visscher,           Vrije Universiteit Amsterdam, Netherlands (Frozen density embedding model)
+  David J. Wilson,          La Trobe University,          Australia   (DFT Hessian and DFT magnetizabilities)
+  Hans Agren,               KTH Stockholm,                Sweden      (SIRIUS module, RESPONS, MC-SCRF solvation model)
+ --------------------------------------------------------------------------------
+
+     Date and time (Linux)  : Thu Jun 19 22:33:13 2025
+     Host name              : osmium                                  
+
+ * Work memory size             :    64000000 =  488.28 megabytes.
+
+ * Directories for basis set searches:
+   1) /home/eric/development/cclib_berquist/data/regression/DALTON/DALTON-2018
+   2) /home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis
+
+
+Compilation information
+-----------------------
+
+ Who compiled             | eric
+ Host                     | osmium
+ System                   | Linux-5.5.10-arch1-1
+ CMake generator          | Unix Makefiles
+ Processor                | x86_64
+ 64-bit integers          | OFF
+ MPI                      | OFF
+ Fortran compiler         | /usr/bin/f95
+ Fortran compiler version | GNU Fortran (Arch Linux 9.3.0-1) 9.3.0
+ Fortran flags            |  -fopenmp -DVAR_GFORTRAN -ffloat-store -fcray-poin
+                          | ter -std=legacy -m64 -O3 -ffast-math -funroll-loop
+                          | s -ftree-vectorize
+ C compiler               | /usr/bin/cc
+ C compiler version       | unknown
+ C flags                  |  -fopenmp -std=c99 -DRESTRICT=restrict -DFUNDERSCO
+                          | RE=1 -DHAVE_NO_LSEEK64 -ffloat-store -Wall -m64 -O
+                          | 3 -ffast-math -funroll-loops -ftree-vectorize -Wno
+                          | -unused
+ C++ compiler             | /usr/bin/c++
+ C++ compiler version     | c++ (Arch Linux 9.3.0-1) 9.3.0
+ C++ flags                |  -fopenmp -g -Wall -fno-rtti -fno-exceptions -m64 
+                          | -march=native -O3 -ffast-math -funroll-loops -ftre
+                          | e-vectorize -Wno-unused
+ BLAS                     | -Wl,--start-group;/opt/intel/mkl/lib/intel64/libmk
+                          | l_gf_lp64.so;/opt/intel/mkl/lib/intel64/libmkl_gnu
+                          | _thread.so;/opt/intel/mkl/lib/intel64/libmkl_core.
+                          | so;/usr/lib/libpthread.so;/usr/lib/libm.so;-fopenm
+                          | p;-Wl,--end-group
+ LAPACK                   | -Wl,--start-group;/opt/intel/mkl/lib/intel64/libmk
+                          | l_lapack95_lp64.a;/opt/intel/mkl/lib/intel64/libmk
+                          | l_gf_lp64.so;-fopenmp;-Wl,--end-group
+ Static linking           | OFF
+ Configuration time       | 2020-03-29 00:15:44.956303
+
+
+   Content of the .dal input file
+ ----------------------------------
+
+BASIS
+STO-3G
+---
+---
+Atomtypes=3 Angstrom Charge=0 Nosymmetry
+Charge=6.0 Atoms=1
+ C        0.027792    0.024268   -0.042053
+Charge=1.0 Atoms=3
+ H        0.464553   -0.923210   -0.237637
+ H        0.464653    0.667602    0.680443
+ H       -0.915877    0.267248   -0.462975
+Charge=17.0 Atoms=2
+Cl        1.178751    1.029248   -1.783568
+Cl       -1.188671   -1.037911    1.798579
+
+**DALTON INPUT
+.RUN WAVE FUNCTIONS
+*MOLBAS
+.PRINT
+5
+**WAVE FUNCTIONS
+.HF
+**END OF DALTON INPUT
+
+
+       *******************************************************************
+       *********** Output from DALTON general input processing ***********
+       *******************************************************************
+
+ --------------------------------------------------------------------------------
+   Overall default print level:    0
+   Print level for DALTON.STAT:    1
+
+    HERMIT 1- and 2-electron integral sections will be executed
+    "Old" integral transformation used (limited to max 255 basis functions)
+    Wave function sections will be executed (SIRIUS module)
+ --------------------------------------------------------------------------------
+
+
+ Changes of defaults for *MOLBAS
+ -------------------------------
+
+ Print level in molecule setup (READIN):    5
+
+ * Nuclear model: Point charge
+
+
+
+   ****************************************************************************
+   *************** Output of molecule and basis set information ***************
+   ****************************************************************************
+
+
+ Basis set 1 is  "STO-3G" from the basis set library.
+
+    The two title cards from your ".mol" input:
+    ------------------------------------------------------------------------
+ 1: ---                                                                     
+ 2: ---                                                                     
+    ------------------------------------------------------------------------
+
+  Coordinates are entered in Angstrom and converted to atomic units.
+          - Conversion factor : 1 bohr = 0.52917721 A
+
+  Calculation of transformation matrices for spherical GTOs.
+
+
+                  +----------------------------------------------+
+                  ! Cartesian to spherical transformation matrix !
+                  +----------------------------------------------+
+
+                              Moment order: 2
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       1       0.00000000     0.00000000    -0.28867513     0.00000000     0.50000000
+       2       1.00000000     0.00000000     0.00000000     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000000     1.00000000     0.00000000
+       4       0.00000000     0.00000000    -0.28867513     0.00000000    -0.50000000
+       5       0.00000000     1.00000000     0.00000000     0.00000000     0.00000000
+       6       0.00000000     0.00000000     0.57735027     0.00000000     0.00000000
+    ==== End of matrix output ====
+
+
+                  +----------------------------------------------+
+                  ! Cartesian to spherical transformation matrix !
+                  +----------------------------------------------+
+
+                              Moment order: 3
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       1       0.00000000     0.00000000     0.00000000     0.00000000    -0.15811388
+       2       0.61237244     0.00000000    -0.15811388     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000000    -0.38729833     0.00000000
+       4       0.00000000     0.00000000     0.00000000     0.00000000    -0.15811388
+       5       0.00000000     1.00000000     0.00000000     0.00000000     0.00000000
+       6       0.00000000     0.00000000     0.00000000     0.00000000     0.63245553
+       7      -0.20412415     0.00000000    -0.15811388     0.00000000     0.00000000
+       8       0.00000000     0.00000000     0.00000000    -0.38729833     0.00000000
+       9       0.00000000     0.00000000     0.63245553     0.00000000     0.00000000
+      10       0.00000000     0.00000000     0.00000000     0.25819889     0.00000000
+
+               Column   6     Column   7
+       1       0.00000000     0.20412415
+       3       0.50000000     0.00000000
+       4       0.00000000    -0.61237244
+       8      -0.50000000     0.00000000
+    ==== End of matrix output ====
+
+
+                  +----------------------------------------------+
+                  ! Cartesian to spherical transformation matrix !
+                  +----------------------------------------------+
+
+                              Moment order: 4
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       1       0.00000000     0.00000000     0.00000000     0.00000000     0.03659625
+       2       0.28867513     0.00000000    -0.10910895     0.00000000     0.00000000
+       4       0.00000000     0.00000000     0.00000000     0.00000000     0.07319251
+       5       0.00000000     0.61237244     0.00000000    -0.23145502     0.00000000
+       6       0.00000000     0.00000000     0.00000000     0.00000000    -0.29277002
+       7      -0.28867513     0.00000000    -0.10910895     0.00000000     0.00000000
+       9       0.00000000     0.00000000     0.65465367     0.00000000     0.00000000
+      11       0.00000000     0.00000000     0.00000000     0.00000000     0.03659625
+      12       0.00000000    -0.20412415     0.00000000    -0.23145502     0.00000000
+      13       0.00000000     0.00000000     0.00000000     0.00000000    -0.29277002
+      14       0.00000000     0.00000000     0.00000000     0.30860670     0.00000000
+      15       0.00000000     0.00000000     0.00000000     0.00000000     0.09759001
+
+               Column   6     Column   7     Column   8     Column   9
+       1       0.00000000    -0.05455447     0.00000000     0.07216878
+       3      -0.23145502     0.00000000     0.20412415     0.00000000
+       4       0.00000000     0.00000000     0.00000000    -0.43301270
+       6       0.00000000     0.32732684     0.00000000     0.00000000
+       8      -0.23145502     0.00000000    -0.61237244     0.00000000
+      10       0.30860670     0.00000000     0.00000000     0.00000000
+      11       0.00000000     0.05455447     0.00000000     0.07216878
+      13       0.00000000    -0.32732684     0.00000000     0.00000000
+    ==== End of matrix output ====
+
+
+                  +----------------------------------------------+
+                  ! Cartesian to spherical transformation matrix !
+                  +----------------------------------------------+
+
+                              Moment order: 5
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       2       0.11410887     0.00000000    -0.05103104     0.00000000     0.01574852
+       5       0.00000000     0.28867513     0.00000000    -0.16666667     0.00000000
+       7      -0.22821773     0.00000000    -0.03402069     0.00000000     0.03149704
+       9       0.00000000     0.00000000     0.40824829     0.00000000    -0.18898224
+      12       0.00000000    -0.28867513     0.00000000    -0.16666667     0.00000000
+      14       0.00000000     0.00000000     0.00000000     0.33333333     0.00000000
+      16       0.02282177     0.00000000     0.01701035     0.00000000     0.01574852
+      18       0.00000000     0.00000000    -0.13608276     0.00000000    -0.18898224
+      20       0.00000000     0.00000000     0.00000000     0.00000000     0.12598816
+
+               Column   6     Column   7     Column   8     Column   9     Column  10
+       1       0.00000000     0.01574852     0.00000000    -0.01701035     0.00000000
+       3       0.06099375     0.00000000    -0.08333333     0.00000000     0.07216878
+       4       0.00000000     0.03149704     0.00000000     0.03402069     0.00000000
+       6       0.00000000    -0.18898224     0.00000000     0.13608276     0.00000000
+       8       0.12198751     0.00000000     0.00000000     0.00000000    -0.43301270
+      10      -0.16265001     0.00000000     0.16666667     0.00000000     0.00000000
+      11       0.00000000     0.01574852     0.00000000     0.05103104     0.00000000
+      13       0.00000000    -0.18898224     0.00000000    -0.40824829     0.00000000
+      15       0.00000000     0.12598816     0.00000000     0.00000000     0.00000000
+      17       0.06099375     0.00000000     0.08333333     0.00000000     0.07216878
+      19      -0.16265001     0.00000000    -0.16666667     0.00000000     0.00000000
+      21       0.03253000     0.00000000     0.00000000     0.00000000     0.00000000
+
+               Column  11
+       1       0.02282177
+       4      -0.22821773
+      11       0.11410887
+    ==== End of matrix output ====
+
+
+                  +----------------------------------------------+
+                  ! Cartesian to spherical transformation matrix !
+                  +----------------------------------------------+
+
+                              Moment order: 6
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       2       0.03952847     0.00000000    -0.01946247     0.00000000     0.00888336
+       5       0.00000000     0.11410887     0.00000000    -0.07995027     0.00000000
+       7      -0.13176157     0.00000000     0.00000000     0.00000000     0.01776673
+       9       0.00000000     0.00000000     0.19462474     0.00000000    -0.14213381
+      12       0.00000000    -0.22821773     0.00000000    -0.05330018     0.00000000
+      14       0.00000000     0.00000000     0.00000000     0.21320072     0.00000000
+      16       0.03952847     0.00000000     0.01946247     0.00000000     0.00888336
+      18       0.00000000     0.00000000    -0.19462474     0.00000000    -0.14213381
+      20       0.00000000     0.00000000     0.00000000     0.00000000     0.14213381
+      23       0.00000000     0.02282177     0.00000000     0.02665009     0.00000000
+      25       0.00000000     0.00000000     0.00000000    -0.07106691     0.00000000
+
+               Column   6     Column   7     Column   8     Column   9     Column  10
+       1       0.00000000    -0.00306505     0.00000000     0.00444168     0.00000000
+       3       0.00000000     0.00000000     0.02809166     0.00000000    -0.02665009
+       4       0.00000000    -0.00919515     0.00000000     0.00444168     0.00000000
+       5       0.02809166     0.00000000     0.00000000     0.00000000     0.00000000
+       6       0.00000000     0.05517093     0.00000000    -0.07106691     0.00000000
+       8       0.00000000     0.00000000     0.05618332     0.00000000     0.05330018
+      10       0.00000000     0.00000000    -0.11236664     0.00000000     0.07106691
+      11       0.00000000    -0.00919515     0.00000000    -0.00444168     0.00000000
+      12       0.05618332     0.00000000     0.00000000     0.00000000     0.00000000
+      13       0.00000000     0.11034185     0.00000000     0.00000000     0.00000000
+      14      -0.11236664     0.00000000     0.00000000     0.00000000     0.00000000
+      15       0.00000000    -0.07356124     0.00000000     0.07106691     0.00000000
+      17       0.00000000     0.00000000     0.02809166     0.00000000     0.07995027
+      19       0.00000000     0.00000000    -0.11236664     0.00000000    -0.21320072
+      21       0.00000000     0.00000000     0.04494666     0.00000000     0.00000000
+      22       0.00000000    -0.00306505     0.00000000    -0.00444168     0.00000000
+      23       0.02809166     0.00000000     0.00000000     0.00000000     0.00000000
+      24       0.00000000     0.05517093     0.00000000     0.07106691     0.00000000
+      25      -0.11236664     0.00000000     0.00000000     0.00000000     0.00000000
+      26       0.00000000    -0.07356124     0.00000000    -0.07106691     0.00000000
+      27       0.04494666     0.00000000     0.00000000     0.00000000     0.00000000
+      28       0.00000000     0.00980816     0.00000000     0.00000000     0.00000000
+
+               Column  11     Column  12     Column  13
+       1      -0.00486562     0.00000000     0.00658808
+       3       0.00000000     0.02282177     0.00000000
+       4       0.02432809     0.00000000    -0.09882118
+       6       0.04865618     0.00000000     0.00000000
+       8       0.00000000    -0.22821773     0.00000000
+      11       0.02432809     0.00000000     0.09882118
+      13      -0.29193710     0.00000000     0.00000000
+      17       0.00000000     0.11410887     0.00000000
+      22      -0.00486562     0.00000000    -0.00658808
+      24       0.04865618     0.00000000     0.00000000
+    ==== End of matrix output ====
+
+
+                  +----------------------------------------------+
+                  ! Cartesian to spherical transformation matrix !
+                  +----------------------------------------------+
+
+                              Moment order: 7
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       2       0.01232517     0.00000000    -0.00646014     0.00000000     0.00350605
+       5       0.00000000     0.03952847     0.00000000    -0.03100868     0.00000000
+       7      -0.06162583     0.00000000     0.00646014     0.00000000     0.00584342
+       9       0.00000000     0.00000000     0.07752171     0.00000000    -0.07012102
+      12       0.00000000    -0.13176157     0.00000000     0.00000000     0.00000000
+      14       0.00000000     0.00000000     0.00000000     0.10336228     0.00000000
+      16       0.03697550     0.00000000     0.01162826     0.00000000     0.00116868
+      18       0.00000000     0.00000000    -0.15504342     0.00000000    -0.04674735
+      20       0.00000000     0.00000000     0.00000000     0.00000000     0.09349470
+      23       0.00000000     0.03952847     0.00000000     0.03100868     0.00000000
+      25       0.00000000     0.00000000     0.00000000    -0.10336228     0.00000000
+      29      -0.00176074     0.00000000    -0.00129203     0.00000000    -0.00116868
+      31       0.00000000     0.00000000     0.01550434     0.00000000     0.02337367
+      33       0.00000000     0.00000000     0.00000000     0.00000000    -0.03116490
+
+               Column   6     Column   7     Column   8     Column   9     Column  10
+       1       0.00000000     0.00000000     0.00000000    -0.00112457     0.00000000
+       2       0.00000000    -0.00112457     0.00000000     0.00000000     0.00000000
+       3       0.00000000     0.00000000    -0.00595065     0.00000000     0.00826384
+       4       0.00000000     0.00000000     0.00000000    -0.00337370     0.00000000
+       5       0.01652768     0.00000000     0.00000000     0.00000000     0.00000000
+       6       0.00000000     0.00000000     0.00000000     0.02698959     0.00000000
+       7       0.00000000    -0.00337370     0.00000000     0.00000000     0.00000000
+       8       0.00000000     0.00000000    -0.01785194     0.00000000     0.00826384
+       9       0.00000000     0.02698959     0.00000000     0.00000000     0.00000000
+      10       0.00000000     0.00000000     0.03570388     0.00000000    -0.04407382
+      11       0.00000000     0.00000000     0.00000000    -0.00337370     0.00000000
+      12       0.03305537     0.00000000     0.00000000     0.00000000     0.00000000
+      13       0.00000000     0.00000000     0.00000000     0.05397919     0.00000000
+      14      -0.08814765     0.00000000     0.00000000     0.00000000     0.00000000
+      15       0.00000000     0.00000000     0.00000000    -0.05397919     0.00000000
+      16       0.00000000    -0.00337370     0.00000000     0.00000000     0.00000000
+      17       0.00000000     0.00000000    -0.01785194     0.00000000    -0.00826384
+      18       0.00000000     0.05397919     0.00000000     0.00000000     0.00000000
+      19       0.00000000     0.00000000     0.07140776     0.00000000     0.00000000
+      20       0.00000000    -0.05397919     0.00000000     0.00000000     0.00000000
+      21       0.00000000     0.00000000    -0.02856310     0.00000000     0.02644429
+      22       0.00000000     0.00000000     0.00000000    -0.00112457     0.00000000
+      23       0.01652768     0.00000000     0.00000000     0.00000000     0.00000000
+      24       0.00000000     0.00000000     0.00000000     0.02698959     0.00000000
+      25      -0.08814765     0.00000000     0.00000000     0.00000000     0.00000000
+      26       0.00000000     0.00000000     0.00000000    -0.05397919     0.00000000
+      27       0.05288859     0.00000000     0.00000000     0.00000000     0.00000000
+      28       0.00000000     0.00000000     0.00000000     0.01439445     0.00000000
+      29       0.00000000    -0.00112457     0.00000000     0.00000000     0.00000000
+      30       0.00000000     0.00000000    -0.00595065     0.00000000    -0.00826384
+      31       0.00000000     0.02698959     0.00000000     0.00000000     0.00000000
+      32       0.00000000     0.00000000     0.03570388     0.00000000     0.04407382
+      33       0.00000000    -0.05397919     0.00000000     0.00000000     0.00000000
+      34       0.00000000     0.00000000    -0.02856310     0.00000000    -0.02644429
+      35       0.00000000     0.01439445     0.00000000     0.00000000     0.00000000
+      36       0.00000000     0.00000000     0.00272030     0.00000000     0.00000000
+
+               Column  11     Column  12     Column  13     Column  14     Column  15
+       1       0.00116868     0.00000000    -0.00129203     0.00000000     0.00176074
+       3       0.00000000    -0.00775217     0.00000000     0.00658808     0.00000000
+       4      -0.00116868     0.00000000     0.01162826     0.00000000    -0.03697550
+       6      -0.02337367     0.00000000     0.01550434     0.00000000     0.00000000
+       8       0.00000000     0.03876085     0.00000000    -0.09882118     0.00000000
+      10       0.00000000     0.02584057     0.00000000     0.00000000     0.00000000
+      11      -0.00584342     0.00000000     0.00646014     0.00000000     0.06162583
+      13       0.04674735     0.00000000    -0.15504342     0.00000000     0.00000000
+      15       0.03116490     0.00000000     0.00000000     0.00000000     0.00000000
+      17       0.00000000     0.03876085     0.00000000     0.09882118     0.00000000
+      19       0.00000000    -0.15504342     0.00000000     0.00000000     0.00000000
+      22      -0.00350605     0.00000000    -0.00646014     0.00000000    -0.01232517
+      24       0.07012102     0.00000000     0.07752171     0.00000000     0.00000000
+      26      -0.09349470     0.00000000     0.00000000     0.00000000     0.00000000
+      30       0.00000000    -0.00775217     0.00000000    -0.00658808     0.00000000
+      32       0.00000000     0.02584057     0.00000000     0.00000000     0.00000000
+    ==== End of matrix output ====
+
+
+                        Cartesian transformation matrices
+                        ---------------------------------
+
+  to spherical harmonics
+
+
+  Coefficients for angular quantum number     0
+  to GTOs with labels:
+     1s  
+
+               Column   1
+       1       1.00000000
+    ==== End of matrix output ====
+
+  Coefficients for angular quantum number     1
+  to GTOs with labels:
+     2px  2py  2pz 
+
+               Column   1     Column   2     Column   3
+       1       1.00000000     0.00000000     0.00000000
+       2       0.00000000     1.00000000     0.00000000
+       3       0.00000000     0.00000000     1.00000000
+    ==== End of matrix output ====
+
+  Coefficients for angular quantum number     2
+  to GTOs with labels:
+     3d2- 3d1- 3d0  3d1+ 3d2+
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       1       0.00000000     1.00000000     0.00000000     0.00000000     0.00000000
+       2       0.00000000     0.00000000     0.00000000     0.00000000     1.00000000
+       3      -0.28867513     0.00000000     0.00000000    -0.28867513     0.00000000
+       4       0.00000000     0.00000000     1.00000000     0.00000000     0.00000000
+       5       0.50000000     0.00000000     0.00000000    -0.50000000     0.00000000
+
+               Column   6
+       3       0.57735027
+    ==== End of matrix output ====
+
+  Coefficients for angular quantum number     3
+  to GTOs with labels:
+     4f3- 4f2- 4f1- 4f0  4f1+ 4f2+ 4f3+
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       1       0.00000000     0.61237244     0.00000000     0.00000000     0.00000000
+       2       0.00000000     0.00000000     0.00000000     0.00000000     1.00000000
+       3       0.00000000    -0.15811388     0.00000000     0.00000000     0.00000000
+       4       0.00000000     0.00000000    -0.38729833     0.00000000     0.00000000
+       5      -0.15811388     0.00000000     0.00000000    -0.15811388     0.00000000
+       6       0.00000000     0.00000000     0.50000000     0.00000000     0.00000000
+       7       0.20412415     0.00000000     0.00000000    -0.61237244     0.00000000
+
+               Column   6     Column   7     Column   8     Column   9     Column  10
+       1       0.00000000    -0.20412415     0.00000000     0.00000000     0.00000000
+       3       0.00000000    -0.15811388     0.00000000     0.63245553     0.00000000
+       4       0.00000000     0.00000000    -0.38729833     0.00000000     0.25819889
+       5       0.63245553     0.00000000     0.00000000     0.00000000     0.00000000
+       6       0.00000000     0.00000000    -0.50000000     0.00000000     0.00000000
+    ==== End of matrix output ====
+
+  Coefficients for angular quantum number     4
+  to GTOs with labels:
+     5g4- 5g3- 5g2- 5g1- 5g0  5g1+ 5g2+ 5g3+ 5g4+
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       1       0.00000000     0.28867513     0.00000000     0.00000000     0.00000000
+       2       0.00000000     0.00000000     0.00000000     0.00000000     0.61237244
+       3       0.00000000    -0.10910895     0.00000000     0.00000000     0.00000000
+       4       0.00000000     0.00000000     0.00000000     0.00000000    -0.23145502
+       5       0.03659625     0.00000000     0.00000000     0.07319251     0.00000000
+       6       0.00000000     0.00000000    -0.23145502     0.00000000     0.00000000
+       7      -0.05455447     0.00000000     0.00000000     0.00000000     0.00000000
+       8       0.00000000     0.00000000     0.20412415     0.00000000     0.00000000
+       9       0.07216878     0.00000000     0.00000000    -0.43301270     0.00000000
+
+               Column   6     Column   7     Column   8     Column   9     Column  10
+       1       0.00000000    -0.28867513     0.00000000     0.00000000     0.00000000
+       3       0.00000000    -0.10910895     0.00000000     0.65465367     0.00000000
+       5      -0.29277002     0.00000000     0.00000000     0.00000000     0.00000000
+       6       0.00000000     0.00000000    -0.23145502     0.00000000     0.30860670
+       7       0.32732684     0.00000000     0.00000000     0.00000000     0.00000000
+       8       0.00000000     0.00000000    -0.61237244     0.00000000     0.00000000
+
+               Column  11     Column  12     Column  13     Column  14     Column  15
+       2       0.00000000    -0.20412415     0.00000000     0.00000000     0.00000000
+       4       0.00000000    -0.23145502     0.00000000     0.30860670     0.00000000
+       5       0.03659625     0.00000000    -0.29277002     0.00000000     0.09759001
+       7       0.05455447     0.00000000    -0.32732684     0.00000000     0.00000000
+       9       0.07216878     0.00000000     0.00000000     0.00000000     0.00000000
+    ==== End of matrix output ====
+
+  Coefficients for angular quantum number     5
+  to GTOs with labels:
+     6h5- 6h4- 6h3- 6h2- 6h1- 6h0  6h1+ 6h2+ 6h3+ 6h4+ 6h5+
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       1       0.00000000     0.11410887     0.00000000     0.00000000     0.00000000
+       2       0.00000000     0.00000000     0.00000000     0.00000000     0.28867513
+       3       0.00000000    -0.05103104     0.00000000     0.00000000     0.00000000
+       4       0.00000000     0.00000000     0.00000000     0.00000000    -0.16666667
+       5       0.00000000     0.01574852     0.00000000     0.00000000     0.00000000
+       6       0.00000000     0.00000000     0.06099375     0.00000000     0.00000000
+       7       0.01574852     0.00000000     0.00000000     0.03149704     0.00000000
+       8       0.00000000     0.00000000    -0.08333333     0.00000000     0.00000000
+       9      -0.01701035     0.00000000     0.00000000     0.03402069     0.00000000
+      10       0.00000000     0.00000000     0.07216878     0.00000000     0.00000000
+      11       0.02282177     0.00000000     0.00000000    -0.22821773     0.00000000
+
+               Column   6     Column   7     Column   8     Column   9     Column  10
+       1       0.00000000    -0.22821773     0.00000000     0.00000000     0.00000000
+       3       0.00000000    -0.03402069     0.00000000     0.40824829     0.00000000
+       5       0.00000000     0.03149704     0.00000000    -0.18898224     0.00000000
+       6       0.00000000     0.00000000     0.12198751     0.00000000    -0.16265001
+       7      -0.18898224     0.00000000     0.00000000     0.00000000     0.00000000
+       8       0.00000000     0.00000000     0.00000000     0.00000000     0.16666667
+       9       0.13608276     0.00000000     0.00000000     0.00000000     0.00000000
+      10       0.00000000     0.00000000    -0.43301270     0.00000000     0.00000000
+
+               Column  11     Column  12     Column  13     Column  14     Column  15
+       2       0.00000000    -0.28867513     0.00000000     0.00000000     0.00000000
+       4       0.00000000    -0.16666667     0.00000000     0.33333333     0.00000000
+       7       0.01574852     0.00000000    -0.18898224     0.00000000     0.12598816
+       9       0.05103104     0.00000000    -0.40824829     0.00000000     0.00000000
+      11       0.11410887     0.00000000     0.00000000     0.00000000     0.00000000
+
+               Column  16     Column  17     Column  18     Column  19     Column  20
+       1       0.02282177     0.00000000     0.00000000     0.00000000     0.00000000
+       3       0.01701035     0.00000000    -0.13608276     0.00000000     0.00000000
+       5       0.01574852     0.00000000    -0.18898224     0.00000000     0.12598816
+       6       0.00000000     0.06099375     0.00000000    -0.16265001     0.00000000
+       8       0.00000000     0.08333333     0.00000000    -0.16666667     0.00000000
+      10       0.00000000     0.07216878     0.00000000     0.00000000     0.00000000
+
+               Column  21
+       6       0.03253000
+    ==== End of matrix output ====
+
+  Coefficients for angular quantum number     6
+  to GTOs with labels:
+     7i6- 7i5- 7i4- 7i3- 7i2- 7i1- 7i0  7i1+ 7i2+ 7i3+ 7i4+ 7i5+ 7i6+
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       1       0.00000000     0.03952847     0.00000000     0.00000000     0.00000000
+       2       0.00000000     0.00000000     0.00000000     0.00000000     0.11410887
+       3       0.00000000    -0.01946247     0.00000000     0.00000000     0.00000000
+       4       0.00000000     0.00000000     0.00000000     0.00000000    -0.07995027
+       5       0.00000000     0.00888336     0.00000000     0.00000000     0.00000000
+       6       0.00000000     0.00000000     0.00000000     0.00000000     0.02809166
+       7      -0.00306505     0.00000000     0.00000000    -0.00919515     0.00000000
+       8       0.00000000     0.00000000     0.02809166     0.00000000     0.00000000
+       9       0.00444168     0.00000000     0.00000000     0.00444168     0.00000000
+      10       0.00000000     0.00000000    -0.02665009     0.00000000     0.00000000
+      11      -0.00486562     0.00000000     0.00000000     0.02432809     0.00000000
+      12       0.00000000     0.00000000     0.02282177     0.00000000     0.00000000
+      13       0.00658808     0.00000000     0.00000000    -0.09882118     0.00000000
+
+               Column   6     Column   7     Column   8     Column   9     Column  10
+       1       0.00000000    -0.13176157     0.00000000     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000000     0.19462474     0.00000000
+       5       0.00000000     0.01776673     0.00000000    -0.14213381     0.00000000
+       7       0.05517093     0.00000000     0.00000000     0.00000000     0.00000000
+       8       0.00000000     0.00000000     0.05618332     0.00000000    -0.11236664
+       9      -0.07106691     0.00000000     0.00000000     0.00000000     0.00000000
+      10       0.00000000     0.00000000     0.05330018     0.00000000     0.07106691
+      11       0.04865618     0.00000000     0.00000000     0.00000000     0.00000000
+      12       0.00000000     0.00000000    -0.22821773     0.00000000     0.00000000
+
+               Column  11     Column  12     Column  13     Column  14     Column  15
+       2       0.00000000    -0.22821773     0.00000000     0.00000000     0.00000000
+       4       0.00000000    -0.05330018     0.00000000     0.21320072     0.00000000
+       6       0.00000000     0.05618332     0.00000000    -0.11236664     0.00000000
+       7      -0.00919515     0.00000000     0.11034185     0.00000000    -0.07356124
+       9      -0.00444168     0.00000000     0.00000000     0.00000000     0.07106691
+      11       0.02432809     0.00000000    -0.29193710     0.00000000     0.00000000
+      13       0.09882118     0.00000000     0.00000000     0.00000000     0.00000000
+
+               Column  16     Column  17     Column  18     Column  19     Column  20
+       1       0.03952847     0.00000000     0.00000000     0.00000000     0.00000000
+       3       0.01946247     0.00000000    -0.19462474     0.00000000     0.00000000
+       5       0.00888336     0.00000000    -0.14213381     0.00000000     0.14213381
+       8       0.00000000     0.02809166     0.00000000    -0.11236664     0.00000000
+      10       0.00000000     0.07995027     0.00000000    -0.21320072     0.00000000
+      12       0.00000000     0.11410887     0.00000000     0.00000000     0.00000000
+
+               Column  21     Column  22     Column  23     Column  24     Column  25
+       2       0.00000000     0.00000000     0.02282177     0.00000000     0.00000000
+       4       0.00000000     0.00000000     0.02665009     0.00000000    -0.07106691
+       6       0.00000000     0.00000000     0.02809166     0.00000000    -0.11236664
+       7       0.00000000    -0.00306505     0.00000000     0.05517093     0.00000000
+       8       0.04494666     0.00000000     0.00000000     0.00000000     0.00000000
+       9       0.00000000    -0.00444168     0.00000000     0.07106691     0.00000000
+      11       0.00000000    -0.00486562     0.00000000     0.04865618     0.00000000
+      13       0.00000000    -0.00658808     0.00000000     0.00000000     0.00000000
+
+               Column  26     Column  27     Column  28
+       6       0.00000000     0.04494666     0.00000000
+       7      -0.07356124     0.00000000     0.00980816
+       9      -0.07106691     0.00000000     0.00000000
+    ==== End of matrix output ====
+
+  Coefficients for angular quantum number     7
+  to GTOs with labels:
+     8k7- 8k6- 8k5- 8k4- 8k3- 8k2- 8k1- 8k0  8k1+ 8k2+ 8k3+ 8k4+ 8k5+ 8k6+ 8k7+
+
+               Column   1     Column   2     Column   3     Column   4     Column   5
+       1       0.00000000     0.01232517     0.00000000     0.00000000     0.00000000
+       2       0.00000000     0.00000000     0.00000000     0.00000000     0.03952847
+       3       0.00000000    -0.00646014     0.00000000     0.00000000     0.00000000
+       4       0.00000000     0.00000000     0.00000000     0.00000000    -0.03100868
+       5       0.00000000     0.00350605     0.00000000     0.00000000     0.00000000
+       6       0.00000000     0.00000000     0.00000000     0.00000000     0.01652768
+       7       0.00000000    -0.00112457     0.00000000     0.00000000     0.00000000
+       8       0.00000000     0.00000000    -0.00595065     0.00000000     0.00000000
+       9      -0.00112457     0.00000000     0.00000000    -0.00337370     0.00000000
+      10       0.00000000     0.00000000     0.00826384     0.00000000     0.00000000
+      11       0.00116868     0.00000000     0.00000000    -0.00116868     0.00000000
+      12       0.00000000     0.00000000    -0.00775217     0.00000000     0.00000000
+      13      -0.00129203     0.00000000     0.00000000     0.01162826     0.00000000
+      14       0.00000000     0.00000000     0.00658808     0.00000000     0.00000000
+      15       0.00176074     0.00000000     0.00000000    -0.03697550     0.00000000
+
+               Column   6     Column   7     Column   8     Column   9     Column  10
+       1       0.00000000    -0.06162583     0.00000000     0.00000000     0.00000000
+       3       0.00000000     0.00646014     0.00000000     0.07752171     0.00000000
+       5       0.00000000     0.00584342     0.00000000    -0.07012102     0.00000000
+       7       0.00000000    -0.00337370     0.00000000     0.02698959     0.00000000
+       8       0.00000000     0.00000000    -0.01785194     0.00000000     0.03570388
+       9       0.02698959     0.00000000     0.00000000     0.00000000     0.00000000
+      10       0.00000000     0.00000000     0.00826384     0.00000000    -0.04407382
+      11      -0.02337367     0.00000000     0.00000000     0.00000000     0.00000000
+      12       0.00000000     0.00000000     0.03876085     0.00000000     0.02584057
+      13       0.01550434     0.00000000     0.00000000     0.00000000     0.00000000
+      14       0.00000000     0.00000000    -0.09882118     0.00000000     0.00000000
+
+               Column  11     Column  12     Column  13     Column  14     Column  15
+       2       0.00000000    -0.13176157     0.00000000     0.00000000     0.00000000
+       4       0.00000000     0.00000000     0.00000000     0.10336228     0.00000000
+       6       0.00000000     0.03305537     0.00000000    -0.08814765     0.00000000
+       9      -0.00337370     0.00000000     0.05397919     0.00000000    -0.05397919
+      11      -0.00584342     0.00000000     0.04674735     0.00000000     0.03116490
+      13       0.00646014     0.00000000    -0.15504342     0.00000000     0.00000000
+      15       0.06162583     0.00000000     0.00000000     0.00000000     0.00000000
+
+               Column  16     Column  17     Column  18     Column  19     Column  20
+       1       0.03697550     0.00000000     0.00000000     0.00000000     0.00000000
+       3       0.01162826     0.00000000    -0.15504342     0.00000000     0.00000000
+       5       0.00116868     0.00000000    -0.04674735     0.00000000     0.09349470
+       7      -0.00337370     0.00000000     0.05397919     0.00000000    -0.05397919
+       8       0.00000000    -0.01785194     0.00000000     0.07140776     0.00000000
+      10       0.00000000    -0.00826384     0.00000000     0.00000000     0.00000000
+      12       0.00000000     0.03876085     0.00000000    -0.15504342     0.00000000
+      14       0.00000000     0.09882118     0.00000000     0.00000000     0.00000000
+
+               Column  21     Column  22     Column  23     Column  24     Column  25
+       2       0.00000000     0.00000000     0.03952847     0.00000000     0.00000000
+       4       0.00000000     0.00000000     0.03100868     0.00000000    -0.10336228
+       6       0.00000000     0.00000000     0.01652768     0.00000000    -0.08814765
+       8      -0.02856310     0.00000000     0.00000000     0.00000000     0.00000000
+       9       0.00000000    -0.00112457     0.00000000     0.02698959     0.00000000
+      10       0.02644429     0.00000000     0.00000000     0.00000000     0.00000000
+      11       0.00000000    -0.00350605     0.00000000     0.07012102     0.00000000
+      13       0.00000000    -0.00646014     0.00000000     0.07752171     0.00000000
+      15       0.00000000    -0.01232517     0.00000000     0.00000000     0.00000000
+
+               Column  26     Column  27     Column  28     Column  29     Column  30
+       1       0.00000000     0.00000000     0.00000000    -0.00176074     0.00000000
+       3       0.00000000     0.00000000     0.00000000    -0.00129203     0.00000000
+       5       0.00000000     0.00000000     0.00000000    -0.00116868     0.00000000
+       6       0.00000000     0.05288859     0.00000000     0.00000000     0.00000000
+       7       0.00000000     0.00000000     0.00000000    -0.00112457     0.00000000
+       8       0.00000000     0.00000000     0.00000000     0.00000000    -0.00595065
+       9      -0.05397919     0.00000000     0.01439445     0.00000000     0.00000000
+      10       0.00000000     0.00000000     0.00000000     0.00000000    -0.00826384
+      11      -0.09349470     0.00000000     0.00000000     0.00000000     0.00000000
+      12       0.00000000     0.00000000     0.00000000     0.00000000    -0.00775217
+      14       0.00000000     0.00000000     0.00000000     0.00000000    -0.00658808
+
+               Column  31     Column  32     Column  33     Column  34     Column  35
+       3       0.01550434     0.00000000     0.00000000     0.00000000     0.00000000
+       5       0.02337367     0.00000000    -0.03116490     0.00000000     0.00000000
+       7       0.02698959     0.00000000    -0.05397919     0.00000000     0.01439445
+       8       0.00000000     0.03570388     0.00000000    -0.02856310     0.00000000
+      10       0.00000000     0.04407382     0.00000000    -0.02644429     0.00000000
+      12       0.00000000     0.02584057     0.00000000     0.00000000     0.00000000
+
+               Column  36
+       8       0.00272030
+    ==== End of matrix output ====
+
+  Atomic type no.    1
+  --------------------
+  Nuclear charge:   6.00000
+  Number of symmetry independent centers:    1
+   Symmetry independent centers:
+       C     0.027792000000000   0.024268000000000  -0.042053000000000
+  Number of basis sets to read;    2
+ BASLIB: Q, QEFF, INTQ   6.0000000000000000        6.0000000000000000                6
+ BASLIB: BASNAM STO-3G                                                                          
+  Basis set file used for this atomic type with Z =   6 :
+  Trying file: "/home/eric/development/cclib_berquist/data/regression/DALTON/DALTON-2018/STO-3G"
+  Trying file: "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/STO-3G"
+     "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/STO-3G"
+
+
+                               Output from READ_NU
+                               -------------------
+
+ INTEXP,INTORB,NBLOCK:           6           2           1
+ IPRINT=           5
+
+
+                               Output from READ_NU
+                               -------------------
+
+ INTEXP,INTORB,NBLOCK:           3           1           2
+ IPRINT=           5
+  Basis set:
+      Max.ang.quantum no.:    1  Blocks:    1    1
+ BASLIB: Q, QEFF, INTQ   6.0000000000000000        6.0000000000000000                6
+ BASLIB: BASNAM HUCKEL                                                                          
+  Basis set file used for this atomic type with Z =   6 :
+  Trying file: "/home/eric/development/cclib_berquist/data/regression/DALTON/DALTON-2018/ano-4"
+  Trying file: "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/ano-4"
+     "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/ano-4"
+  Basis set:
+      Max.ang.quantum no.:    1  Blocks:    1    1
+
+  Atomic type no.    2
+  --------------------
+  Nuclear charge:   1.00000
+  Number of symmetry independent centers:    3
+   Symmetry independent centers:
+       H     0.464553000000000  -0.923210000000000  -0.237637000000000
+       H     0.464653000000000   0.667602000000000   0.680443000000000
+       H    -0.915877000000000   0.267248000000000  -0.462975000000000
+  Number of basis sets to read;    2
+ BASLIB: Q, QEFF, INTQ   1.0000000000000000        1.0000000000000000                1
+ BASLIB: BASNAM STO-3G                                                                          
+  Basis set file used for this atomic type with Z =   1 :
+  Trying file: "/home/eric/development/cclib_berquist/data/regression/DALTON/DALTON-2018/STO-3G"
+  Trying file: "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/STO-3G"
+     "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/STO-3G"
+
+
+                               Output from READ_NU
+                               -------------------
+
+ INTEXP,INTORB,NBLOCK:           3           1           1
+ IPRINT=           5
+  Basis set:
+      Max.ang.quantum no.:    0  Blocks:    1
+ BASLIB: Q, QEFF, INTQ   1.0000000000000000        1.0000000000000000                1
+ BASLIB: BASNAM HUCKEL                                                                          
+  Basis set file used for this atomic type with Z =   1 :
+  Trying file: "/home/eric/development/cclib_berquist/data/regression/DALTON/DALTON-2018/ano-4"
+  Trying file: "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/ano-4"
+     "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/ano-4"
+  Basis set:
+      Max.ang.quantum no.:    0  Blocks:    1
+
+  Atomic type no.    3
+  --------------------
+  Nuclear charge:  17.00000
+  Number of symmetry independent centers:    2
+   Symmetry independent centers:
+      Cl     1.178751000000000   1.029248000000000  -1.783568000000000
+      Cl    -1.188671000000000  -1.037911000000000   1.798579000000000
+  Number of basis sets to read;    2
+ BASLIB: Q, QEFF, INTQ   17.000000000000000        17.000000000000000               17
+ BASLIB: BASNAM STO-3G                                                                          
+  Basis set file used for this atomic type with Z =  17 :
+  Trying file: "/home/eric/development/cclib_berquist/data/regression/DALTON/DALTON-2018/STO-3G"
+  Trying file: "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/STO-3G"
+     "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/STO-3G"
+
+
+                               Output from READ_NU
+                               -------------------
+
+ INTEXP,INTORB,NBLOCK:           9           3           1
+ IPRINT=           5
+
+
+                               Output from READ_NU
+                               -------------------
+
+ INTEXP,INTORB,NBLOCK:           6           2           2
+ IPRINT=           5
+  Basis set:
+      Max.ang.quantum no.:    1  Blocks:    1    1
+ BASLIB: Q, QEFF, INTQ   17.000000000000000        17.000000000000000               17
+ BASLIB: BASNAM HUCKEL                                                                          
+  Basis set file used for this atomic type with Z =  17 :
+  Trying file: "/home/eric/development/cclib_berquist/data/regression/DALTON/DALTON-2018/ano-4"
+  Trying file: "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/ano-4"
+     "/home/eric/data/opt/apps/dalton/2018.2-g9.3.0-mkl-omp/dalton/basis/ano-4"
+  Basis set:
+      Max.ang.quantum no.:    2  Blocks:    1    1    1
+
+
+                         SYMGRP: Point group information
+                         -------------------------------
+
+@    Point group: C1 
+   C          0.05252   0.04586  -0.07947          6.00000000
+                Stabilizer  0, with 0 symmetry equivalent atoms
+
+   H          0.87788  -1.74461  -0.44907          1.00000000
+                Stabilizer  0, with 0 symmetry equivalent atoms
+
+   H          0.87807   1.26158   1.28585          1.00000000
+                Stabilizer  0, with 0 symmetry equivalent atoms
+
+   H         -1.73076   0.50503  -0.87490          1.00000000
+                Stabilizer  0, with 0 symmetry equivalent atoms
+
+  Cl          2.22752   1.94500  -3.37046         17.00000000
+                Stabilizer  0, with 0 symmetry equivalent atoms
+
+  Cl         -2.24626  -1.96137   3.39882         17.00000000
+                Stabilizer  0, with 0 symmetry equivalent atoms
+
+
+
+                                 Isotopic Masses
+                                 ---------------
+
+                            C         12.000000
+                            H          1.007825
+                            H          1.007825
+                            H          1.007825
+                           Cl         34.968853
+                           Cl         34.968853
+
+                       Total mass:    84.961181 amu
+                       Natural abundance:  56.754 %
+
+ Center-of-mass coordinates (a.u.):    0.000001    0.000000   -0.000001
+
+
+  Atoms and basis sets
+  --------------------
+
+  Number of atom types :    3
+  Total number of atoms:    6
+
+  Basis set used is "STO-3G" from the basis set library.
+
+  label    atoms   charge   prim   cont     basis
+  ----------------------------------------------------------------------
+   C          1    6.0000    15     5      [6s3p|2s1p]                                        
+   H          3    1.0000     3     1      [3s|1s]                                            
+  Cl          2   17.0000    27     9      [9s6p|3s2p]                                        
+  ----------------------------------------------------------------------
+  total:      6   43.0000    78    26
+  ----------------------------------------------------------------------
+  Spherical harmonic basis used.
+
+  Threshold for neglecting AO integrals:  1.00D-12
+
+
+  Cartesian Coordinates (a.u.)
+  ----------------------------
+
+  Total number of coordinates:   18
+   C      :     1  x   0.0525192685    2  y   0.0458598736    3  z  -0.0794686527
+   H      :     4  x   0.8778779405    5  y  -1.7446140559    6  z  -0.4490688472
+   H      :     7  x   0.8780669132    8  y   1.2615849405    9  z   1.2858509137
+   H      :    10  x  -1.7307566942   11  y   0.5050255275   12  z  -0.8748959527
+  Cl      :    13  x   2.2275165596   14  y   1.9449968347   15  z  -3.3704550453
+  Cl      :    16  x  -2.2462626427   17  y  -1.9613675321   18  z   3.3988217242
+
+
+   Interatomic separations (in Angstrom):
+   --------------------------------------
+
+             C           H           H           H          Cl          Cl    
+            ------      ------      ------      ------      ------      ------
+  C    :    0.000000
+  H    :    1.061474    0.000000
+  H    :    1.061474    1.836724    0.000000
+  H    :    1.061473    1.836724    1.836723    0.000000
+ Cl    :    2.316801    2.590767    2.590767    2.590768    0.000000
+ Cl    :    2.448659    2.625354    2.625354    2.625354    4.765460    0.000000
+
+
+  Max    interatomic separation is    4.7655 Angstrom (    9.0054 Bohr)
+  between atoms    6 and    5, "Cl    " and "Cl    ".
+
+  Min HX interatomic separation is    1.0615 Angstrom (    2.0059 Bohr)
+
+  Min YX interatomic separation is    2.3168 Angstrom (    4.3781 Bohr)
+
+
+  Bond distances (Angstrom):
+  --------------------------
+
+                  atom 1     atom 2       distance
+                  ------     ------       --------
+  bond distance:   H          C           1.061474
+  bond distance:   H          C           1.061474
+  bond distance:   H          C           1.061473
+
+
+  Bond angles (degrees):
+  ----------------------
+
+                  atom 1     atom 2     atom 3         angle
+                  ------     ------     ------         -----
+  bond angle:      H          C          H           119.806
+  bond angle:      H          C          H           119.806
+  bond angle:      H          C          H           119.806
+
+
+
+
+ Moments of inertia (u*A**2) :
+       301.223026  -85.209255  147.657765
+       -85.209255  324.407198  128.930152
+       147.657765  128.930152  175.388249
+
+
+ Principal moments of inertia (u*A**2) and principal axes
+ --------------------------------------------------------
+
+   IA       3.399951         -0.496788   -0.433780    0.751690
+   IB     398.809260         -0.510896    0.846323    0.150742
+   IC     398.809262          0.701561    0.309148    0.642059
+
+
+ Rotational constants
+ --------------------
+
+               A                   B                   C
+
+         148643.0197           1267.2198           1267.2198 MHz
+            4.958197            0.042270            0.042270 cm-1
+
+
+@  Nuclear repulsion energy :  107.967250983066 Hartree
+
+
+  Orbital exponents and contraction coefficients
+  ----------------------------------------------
+
+
+   C     1s      1       71.616837      0.1543    0.0000
+   seg. cont.    2       13.045096      0.5353    0.0000
+                 3        3.530512      0.4446    0.0000
+                 4        2.941249      0.0000   -0.1000
+                 5        0.683483      0.0000    0.3995
+                 6        0.222290      0.0000    0.7001
+
+   C     2px     7        2.941249      0.1559
+   seg. cont.    8        0.683483      0.6077
+                 9        0.222290      0.3920
+
+   C     2py    10        2.941249      0.1559
+   seg. cont.   11        0.683483      0.6077
+                12        0.222290      0.3920
+
+   C     2pz    13        2.941249      0.1559
+   seg. cont.   14        0.683483      0.6077
+                15        0.222290      0.3920
+
+   H     1s     16        3.425251      0.1543
+   seg. cont.   17        0.623914      0.5353
+                18        0.168855      0.4446
+
+   H     1s     19        3.425251      0.1543
+   seg. cont.   20        0.623914      0.5353
+                21        0.168855      0.4446
+
+   H     1s     22        3.425251      0.1543
+   seg. cont.   23        0.623914      0.5353
+                24        0.168855      0.4446
+
+  Cl     1s     25      601.345500      0.1543    0.0000    0.0000
+   seg. cont.   26      109.535800      0.5353    0.0000    0.0000
+                27       29.644810      0.4446    0.0000    0.0000
+                28       38.960430      0.0000   -0.1000    0.0000
+                29        9.053550      0.0000    0.3995    0.0000
+                30        2.944501      0.0000    0.7001    0.0000
+                31        2.129386      0.0000    0.0000   -0.2196
+                32        0.594093      0.0000    0.0000    0.2256
+                33        0.232524      0.0000    0.0000    0.9004
+
+  Cl     2px    34       38.960430      0.1559    0.0000
+   seg. cont.   35        9.053550      0.6077    0.0000
+                36        2.944501      0.3920    0.0000
+                37        2.129386      0.0000    0.0106
+                38        0.594093      0.0000    0.5952
+                39        0.232524      0.0000    0.4620
+
+  Cl     2py    40       38.960430      0.1559    0.0000
+   seg. cont.   41        9.053550      0.6077    0.0000
+                42        2.944501      0.3920    0.0000
+                43        2.129386      0.0000    0.0106
+                44        0.594093      0.0000    0.5952
+                45        0.232524      0.0000    0.4620
+
+  Cl     2pz    46       38.960430      0.1559    0.0000
+   seg. cont.   47        9.053550      0.6077    0.0000
+                48        2.944501      0.3920    0.0000
+                49        2.129386      0.0000    0.0106
+                50        0.594093      0.0000    0.5952
+                51        0.232524      0.0000    0.4620
+
+  Cl     1s     52      601.345500      0.1543    0.0000    0.0000
+   seg. cont.   53      109.535800      0.5353    0.0000    0.0000
+                54       29.644810      0.4446    0.0000    0.0000
+                55       38.960430      0.0000   -0.1000    0.0000
+                56        9.053550      0.0000    0.3995    0.0000
+                57        2.944501      0.0000    0.7001    0.0000
+                58        2.129386      0.0000    0.0000   -0.2196
+                59        0.594093      0.0000    0.0000    0.2256
+                60        0.232524      0.0000    0.0000    0.9004
+
+  Cl     2px    61       38.960430      0.1559    0.0000
+   seg. cont.   62        9.053550      0.6077    0.0000
+                63        2.944501      0.3920    0.0000
+                64        2.129386      0.0000    0.0106
+                65        0.594093      0.0000    0.5952
+                66        0.232524      0.0000    0.4620
+
+  Cl     2py    67       38.960430      0.1559    0.0000
+   seg. cont.   68        9.053550      0.6077    0.0000
+                69        2.944501      0.3920    0.0000
+                70        2.129386      0.0000    0.0106
+                71        0.594093      0.0000    0.5952
+                72        0.232524      0.0000    0.4620
+
+  Cl     2pz    73       38.960430      0.1559    0.0000
+   seg. cont.   74        9.053550      0.6077    0.0000
+                75        2.944501      0.3920    0.0000
+                76        2.129386      0.0000    0.0106
+                77        0.594093      0.0000    0.5952
+                78        0.232524      0.0000    0.4620
+
+
+  Contracted Orbitals
+  -------------------
+
+    1   C      1s      1    2    3
+    2   C      1s      4    5    6
+    3   C      2px     7    8    9
+    4   C      2py    10   11   12
+    5   C      2pz    13   14   15
+    6   H      1s     16   17   18
+    7   H      1s     19   20   21
+    8   H      1s     22   23   24
+    9  Cl      1s     25   26   27
+   10  Cl      1s     28   29   30
+   11  Cl      1s     31   32   33
+   12  Cl      2px    34   35   36
+   13  Cl      2py    40   41   42
+   14  Cl      2pz    46   47   48
+   15  Cl      2px    37   38   39
+   16  Cl      2py    43   44   45
+   17  Cl      2pz    49   50   51
+   18  Cl      1s     52   53   54
+   19  Cl      1s     55   56   57
+   20  Cl      1s     58   59   60
+   21  Cl      2px    61   62   63
+   22  Cl      2py    67   68   69
+   23  Cl      2pz    73   74   75
+   24  Cl      2px    64   65   66
+   25  Cl      2py    70   71   72
+   26  Cl      2pz    76   77   78
+
+
+
+
+  Orbital exponents and normalized contraction coefficients
+  ---------------------------------------------------------
+
+
+   C     1s      1       71.616837      2.7078    0.0000
+   seg. cont.    2       13.045096      2.6189    0.0000
+                 3        3.530512      0.8162    0.0000
+                 4        2.941249      0.0000   -0.1600
+                 5        0.683483      0.0000    0.2140
+                 6        0.222290      0.0000    0.1615
+
+   C     2px     7        2.941249      0.8560
+   seg. cont.    8        0.683483      0.5383
+                 9        0.222290      0.0853
+
+   C     2py    10        2.941249      0.8560
+   seg. cont.   11        0.683483      0.5383
+                12        0.222290      0.0853
+
+   C     2pz    13        2.941249      0.8560
+   seg. cont.   14        0.683483      0.5383
+                15        0.222290      0.0853
+
+   H     1s     16        3.425251      0.2769
+   seg. cont.   17        0.623914      0.2678
+                18        0.168855      0.0835
+
+   H     1s     19        3.425251      0.2769
+   seg. cont.   20        0.623914      0.2678
+                21        0.168855      0.0835
+
+   H     1s     22        3.425251      0.2769
+   seg. cont.   23        0.623914      0.2678
+                24        0.168855      0.0835
+
+  Cl     1s     25      601.345500     13.3567    0.0000    0.0000
+   seg. cont.   26      109.535800     12.9180    0.0000    0.0000
+                27       29.644810      4.0260    0.0000    0.0000
+                28       38.960430      0.0000   -1.1111    0.0000
+                29        9.053550      0.0000    1.4861    0.0000
+                30        2.944501      0.0000    1.1216    0.0000
+                31        2.129386      0.0000    0.0000   -0.2759
+                32        0.594093      0.0000    0.0000    0.1088
+                33        0.232524      0.0000    0.0000    0.2149
+
+  Cl     2px    34       38.960430     21.6327    0.0000
+   seg. cont.   35        9.053550     13.6032    0.0000
+                36        2.944501      2.1550    0.0000
+                37        2.129386      0.0000    0.0388
+                38        0.594093      0.0000    0.4425
+                39        0.232524      0.0000    0.1063
+
+  Cl     2py    40       38.960430     21.6327    0.0000
+   seg. cont.   41        9.053550     13.6032    0.0000
+                42        2.944501      2.1550    0.0000
+                43        2.129386      0.0000    0.0388
+                44        0.594093      0.0000    0.4425
+                45        0.232524      0.0000    0.1063
+
+  Cl     2pz    46       38.960430     21.6327    0.0000
+   seg. cont.   47        9.053550     13.6032    0.0000
+                48        2.944501      2.1550    0.0000
+                49        2.129386      0.0000    0.0388
+                50        0.594093      0.0000    0.4425
+                51        0.232524      0.0000    0.1063
+
+  Cl     1s     52      601.345500     13.3567    0.0000    0.0000
+   seg. cont.   53      109.535800     12.9180    0.0000    0.0000
+                54       29.644810      4.0260    0.0000    0.0000
+                55       38.960430      0.0000   -1.1111    0.0000
+                56        9.053550      0.0000    1.4861    0.0000
+                57        2.944501      0.0000    1.1216    0.0000
+                58        2.129386      0.0000    0.0000   -0.2759
+                59        0.594093      0.0000    0.0000    0.1088
+                60        0.232524      0.0000    0.0000    0.2149
+
+  Cl     2px    61       38.960430     21.6327    0.0000
+   seg. cont.   62        9.053550     13.6032    0.0000
+                63        2.944501      2.1550    0.0000
+                64        2.129386      0.0000    0.0388
+                65        0.594093      0.0000    0.4425
+                66        0.232524      0.0000    0.1063
+
+  Cl     2py    67       38.960430     21.6327    0.0000
+   seg. cont.   68        9.053550     13.6032    0.0000
+                69        2.944501      2.1550    0.0000
+                70        2.129386      0.0000    0.0388
+                71        0.594093      0.0000    0.4425
+                72        0.232524      0.0000    0.1063
+
+  Cl     2pz    73       38.960430     21.6327    0.0000
+   seg. cont.   74        9.053550     13.6032    0.0000
+                75        2.944501      2.1550    0.0000
+                76        2.129386      0.0000    0.0388
+                77        0.594093      0.0000    0.4425
+                78        0.232524      0.0000    0.1063
+
+
+ Copy of .mol input
+ ------------------
+
+
+--------------------------------------------------------------------------------
+BASIS                                                                           
+STO-3G                                                                          
+---                                                                             
+---                                                                             
+ATOMTYPES=3 ANGSTROM CHARGE=0 NOSYMMETRY                                        
+Charge=6.0 Atoms=1                                                              
+ C          0.0277920000        0.0242680000       -0.0420530000                
+Charge=1.0 Atoms=3                                                              
+ H          0.4645530000       -0.9232100000       -0.2376370000                
+ H          0.4646530000        0.6676020000        0.6804430000                
+ H         -0.9158770000        0.2672480000       -0.4629750000                
+Charge=17.0 Atoms=2                                                             
+Cl          1.1787510000        1.0292480000       -1.7835680000                
+Cl         -1.1886710000       -1.0379110000        1.7985790000                
+--------------------------------------------------------------------------------
+
+
+
+                     .---------------------------------------.
+                     | Starting in Integral Section (HERMIT) |
+                     `---------------------------------------'
+
+
+
+ ***************************************************************************************
+ ****************** Output from **INTEGRALS input processing (HERMIT) ******************
+ ***************************************************************************************
+
+
+ - Using defaults, no **INTEGRALS input found
+
+ Default print level:        1
+
+ Calculation of one- and two-electron Hamiltonian integrals.
+
+ Center of mass  (bohr):      0.000001029318      0.000000264893     -0.000001009131
+ Operator center (bohr):      0.000000000000      0.000000000000      0.000000000000
+ Gauge origin    (bohr):      0.000000000000      0.000000000000      0.000000000000
+ Dipole origin   (bohr):      0.000000000000      0.000000000000      0.000000000000
+
+
+     ************************************************************************
+     ************************** Output from HERINT **************************
+     ************************************************************************
+
+
+
+                      Nuclear contribution to dipole moments
+                      --------------------------------------
+
+                 au               Debye          C m (/(10**-30)
+
+      x      0.02162036         0.05495346         0.18330502
+      y      0.01885380         0.04792157         0.15984915
+      z     -0.03269226        -0.08309544        -0.27717654
+
+
+
+ Threshold for neglecting two-electron integrals:  1.00D-12
+ HERMIT - Number of two-electron integrals written:       45308 ( 73.3% )
+ HERMIT - Megabytes written:                              0.522
+
+  Total CPU  time used in HERMIT:   0.05 seconds
+  Total wall time used in HERMIT:   0.05 seconds
+
+
+                        .----------------------------------.
+                        | End of Integral Section (HERMIT) |
+                        `----------------------------------'
+
+
+
+                   .--------------------------------------------.
+                   | Starting in Wave Function Section (SIRIUS) |
+                   `--------------------------------------------'
+
+
+ *** Output from Huckel module :
+
+     Using EWMO model:          T
+     Using EHT  model:          F
+     Number of Huckel orbitals each symmetry:   36
+
+ EWMO - Energy Weighted Maximum Overlap - is a Huckel type method,
+        which normally is better than Extended Huckel Theory.
+ Reference: Linderberg and Ohrn, Propagators in Quantum Chemistry (Wiley, 1973)
+
+ Huckel EWMO eigenvalues for symmetry :  1
+         -104.883918    -104.883913     -11.349073     -10.608151     -10.607758
+           -8.072323      -8.072228      -8.072207      -8.072207      -8.072204
+           -8.072204      -1.438570      -1.119937      -1.001890      -0.715847
+           -0.715846      -0.577834      -0.505054      -0.505054      -0.475867
+           -0.475867      -0.451286      -0.280946      -0.132915      -0.107763
+           -0.107763      -0.055548      -0.055548      -0.055496      -0.055496
+           -0.055417      -0.055417      -0.054535      -0.054535      -0.053708
+           -0.052433
+
+HUCDRV: reduced number of huckel orbitals in sym 1 from 36 to 26
+
+ **********************************************************************
+ *SIRIUS* a direct, restricted step, second order MCSCF program       *
+ **********************************************************************
+
+ 
+     Date and time (Linux)  : Thu Jun 19 22:33:13 2025
+     Host name              : osmium                                  
+
+ Title lines from ".mol" input file:
+     ---                                                                     
+     ---                                                                     
+
+ Print level on unit LUPRI =   2 is   0
+ Print level on unit LUW4  =   2 is   5
+
+@    Restricted, one open shell Hartree-Fock calculation.
+
+ Initial molecular orbitals are obtained according to
+ ".MOSTART EWMO  " input option
+
+     Wave function specification
+     ============================
+@    Wave function type        --- HF ---
+@    Number of closed shell electrons          42
+@    Number of electrons in active shells       1
+@    Total charge of the molecule               0
+
+@    Spin multiplicity and 2 M_S                2         1
+@    Total number of symmetries                 1 (point group: C1 )
+@    Reference state symmetry                   1 (irrep name : A  )
+
+     Orbital specifications
+     ======================
+@    Abelian symmetry species          All |    1
+@                                          |  A  
+                                       --- |  ---
+@    Occupied SCF orbitals              21 |   21
+@    Open shell SCF orbitals             1 |    1
+@    Secondary orbitals                  4 |    4
+@    Total number of orbitals           26 |   26
+@    Number of basis functions          26 |   26
+
+     Optimization information
+     ========================
+@    Number of configurations                 1
+@    Number of orbital rotations            109
+     ------------------------------------------
+@    Total number of variables              110
+
+     Maximum number of Fock   iterations      0
+     Maximum number of DIIS   iterations     60
+     Maximum number of QC-SCF iterations     60
+     Threshold for SCF convergence     1.00D-05
+
+
+ ***********************************************
+ ***** DIIS acceleration of SCF iterations *****
+ ***********************************************
+
+ C1-DIIS algorithm; max error vectors =    8
+
+ Iter      Total energy        Error norm    Delta(E)  DIIS dim.
+ -----------------------------------------------------------------------------
+@  1    -948.043260602        1.06244D+00   -9.48D+02    1
+      Virial theorem: -V/T =      2.017301
+@    MULPOP    C      0.73;  H     -0.08;  H     -0.08;  H     -0.08; Cl     -0.24; Cl     -0.26; 
+   1  Level shift: doubly occupied orbital energies shifted by -2.00D-01
+               and singly occupied orbital energies shifted by -1.00D-01
+ -----------------------------------------------------------------------------
+@  2    -948.140196920        1.81227D-01   -9.69D-02    2
+      Virial theorem: -V/T =      2.017152
+@    MULPOP    C     -0.19;  H      0.15;  H      0.15;  H      0.15; Cl     -0.17; Cl     -0.10; 
+   2  Level shift: doubly occupied orbital energies shifted by -5.00D-02
+               and singly occupied orbital energies shifted by -2.50D-02
+ -----------------------------------------------------------------------------
+@  3    -948.150181349        8.23633D-02   -9.98D-03    3
+      Virial theorem: -V/T =      2.017109
+@    MULPOP    C     -0.06;  H      0.14;  H      0.14;  H      0.14; Cl     -0.25; Cl     -0.11; 
+   3  Level shift: doubly occupied orbital energies shifted by -2.50D-02
+               and singly occupied orbital energies shifted by -1.25D-02
+ -----------------------------------------------------------------------------
+@  4    -948.158225852        5.83722D-02   -8.04D-03    4
+      Virial theorem: -V/T =      2.017054
+@    MULPOP    C     -0.08;  H      0.15;  H      0.15;  H      0.15; Cl     -0.31; Cl     -0.06; 
+   4  Level shift: doubly occupied orbital energies shifted by -2.50D-02
+               and singly occupied orbital energies shifted by -1.25D-02
+ -----------------------------------------------------------------------------
+@  5    -948.162283183        2.44114D-02   -4.06D-03    5
+      Virial theorem: -V/T =      2.017031
+@    MULPOP    C     -0.09;  H      0.15;  H      0.15;  H      0.15; Cl     -0.34; Cl     -0.02; 
+   5  Level shift: doubly occupied orbital energies shifted by -1.25D-02
+               and singly occupied orbital energies shifted by -6.25D-03
+ -----------------------------------------------------------------------------
+@  6    -948.161704677        2.37685D-02    5.79D-04    6
+      Virial theorem: -V/T =      2.017053
+@    MULPOP    C     -0.09;  H      0.15;  H      0.15;  H      0.15; Cl     -0.31; Cl     -0.05; 
+   6  Level shift: doubly occupied orbital energies shifted by -1.25D-02
+               and singly occupied orbital energies shifted by -6.25D-03
+ -----------------------------------------------------------------------------
+@  7    -948.162370399        6.22549D-03   -6.66D-04    7
+      Virial theorem: -V/T =      2.017049
+@    MULPOP    C     -0.09;  H      0.15;  H      0.15;  H      0.15; Cl     -0.33; Cl     -0.03; 
+ -----------------------------------------------------------------------------
+@  8    -948.162414636        1.16199D-03   -4.42D-05    8
+      Virial theorem: -V/T =      2.017047
+@    MULPOP    C     -0.09;  H      0.15;  H      0.15;  H      0.15; Cl     -0.33; Cl     -0.02; 
+ -----------------------------------------------------------------------------
+@  9    -948.162416251        1.26474D-04   -1.61D-06    8
+      Virial theorem: -V/T =      2.017047
+@    MULPOP    C     -0.09;  H      0.15;  H      0.15;  H      0.15; Cl     -0.33; Cl     -0.02; 
+ -----------------------------------------------------------------------------
+@ 10    -948.162416263        5.04141D-05   -1.17D-08    8
+      Virial theorem: -V/T =      2.017047
+@    MULPOP    C     -0.09;  H      0.15;  H      0.15;  H      0.15; Cl     -0.33; Cl     -0.02; 
+ -----------------------------------------------------------------------------
+@ 11    -948.162416266        3.22471D-06   -3.08D-09    8
+
+@ *** DIIS converged in  11 iterations !
+@     Converged SCF energy, gradient:   -948.162416265940    3.22D-06
+    - total time used in SIRFCK :              0.00 seconds
+
+
+ *** SCF orbital energy analysis ***
+
+ Orbital energy analysis for an open-shell system.
+ Orbital energies are not uniquely defined for open-shell systems
+   here is used block diagonalization of the FD=FC+FV Fock matrix.
+ NOTE that Koopmans' theorem is not fulfilled for this case.
+
+ Number of electrons :   42
+ Orbital occupations :   21
+
+ Sym       Hartree-Fock orbital energies
+
+1 A    -103.75658520  -103.58737381   -11.17494535   -10.43924839   -10.28144048
+         -7.88376139    -7.87764124    -7.87764124    -7.72477728    -7.72052911
+         -7.72052911    -1.02907048    -0.97464483    -0.88684537    -0.64712508
+         -0.64712483    -0.45074519    -0.45074519    -0.36896697    -0.34370051
+         -0.34370051    -0.23988221     0.15902029     0.58866019     0.68361362
+          0.68361435
+
+    E(LUMO) :     0.15902029 au (symmetry 1)
+  - E(HOMO) :    -0.34370051 au (symmetry 1)
+  ------------------------------------------
+    gap     :     0.50272080 au
+
+and E(SOMO) :    -0.23988221 au (symmetry 1)
+
+ NOTE: MOLECULAR ORBITALS ARE NOT CANONICAL HARTREE-FOCK ORBITALS
+
+ Largest off-diagonal Fock matrix element is  3.04D-02
+
+ --- Writing SIRIFC interface file
+
+Calculating AOSUPINT
+     (Precalculated AO two-electron integrals are transformed to P-supermatrix elements.
+      Threshold for discarding integrals :  1.00D-12 )
+
+ CPU and wall time for SCF :       0.781       0.055
+
+
+                       .-----------------------------------.
+                       | --- Final results from SIRIUS --- |
+                       `-----------------------------------'
+
+
+@    Spin multiplicity:           2
+@    Spatial symmetry:            1 ( irrep  A   in C1  )
+@    Total charge of molecule:    0
+
+@    Final HF energy:            -948.162416265940                 
+@    Nuclear repulsion:           107.967250983066
+@    Electronic energy:         -1056.129667249006
+
+@    Final gradient norm:           0.000003224713
+
+ 
+     Date and time (Linux)  : Thu Jun 19 22:33:13 2025
+     Host name              : osmium                                  
+
+File label for MO orbitals:  19Jun25   FOCKDIIS
+
+ (Only coefficients > 0.0100 are printed.)
+
+ Molecular orbitals for symmetry species 1  (A  )
+ ------------------------------------------------
+
+    Orbital         1        2        3        4        5        6        7
+   1  C  :1s     0.0000   0.0000   0.9925   0.0008  -0.0009  -0.0008  -0.0000
+   2  C  :1s    -0.0001  -0.0001   0.0346  -0.0015   0.0023   0.0028   0.0000
+   9 Cl  :1s     0.0000  -0.9945   0.0001   0.0001   0.3772   0.0000   0.0000
+  10 Cl  :1s     0.0000  -0.0157  -0.0002  -0.0002  -1.0539  -0.0000   0.0000
+  11 Cl  :1s    -0.0000   0.0016  -0.0015  -0.0001  -0.0415   0.0002  -0.0000
+  18 Cl  :1s    -0.9945  -0.0000   0.0001  -0.3773   0.0001  -0.0004  -0.0000
+  19 Cl  :1s    -0.0157   0.0000  -0.0002   1.0541  -0.0002   0.0013   0.0000
+  20 Cl  :1s     0.0016  -0.0000  -0.0011   0.0407   0.0001  -0.0007  -0.0000
+  21 Cl  :2px   -0.0000   0.0000   0.0001   0.0004  -0.0000  -0.4915   0.3586
+  22 Cl  :2py   -0.0000   0.0000   0.0001   0.0004  -0.0000  -0.4292  -0.8821
+  23 Cl  :2pz    0.0000  -0.0000  -0.0001  -0.0007   0.0000   0.7437  -0.2720
+  24 Cl  :2px    0.0000  -0.0000  -0.0007   0.0004   0.0001  -0.0210   0.0141
+  25 Cl  :2py    0.0000  -0.0000  -0.0006   0.0003   0.0001  -0.0183  -0.0346
+  26 Cl  :2pz   -0.0000   0.0000   0.0011  -0.0005  -0.0001   0.0317  -0.0107
+
+    Orbital         8        9       10       11       12       13       14
+   1  C  :1s    -0.0000  -0.0009   0.0000   0.0000   0.1346  -0.1464  -0.1110
+   2  C  :1s     0.0000   0.0039  -0.0000  -0.0000  -0.3937   0.4348   0.3327
+   3  C  :2px   -0.0003   0.0023   0.0001   0.0006   0.0137   0.0138  -0.0376
+   4  C  :2py   -0.0000   0.0020  -0.0006  -0.0000   0.0120   0.0120  -0.0328
+   5  C  :2pz   -0.0002  -0.0035  -0.0003   0.0004  -0.0208  -0.0208   0.0569
+   6  H  :1s    -0.0001   0.0002   0.0006   0.0002  -0.1145   0.1267   0.1098
+   7  H  :1s    -0.0006   0.0002  -0.0004   0.0004  -0.1145   0.1267   0.1098
+   8  H  :1s     0.0006   0.0002  -0.0001  -0.0006  -0.1145   0.1267   0.1098
+   9 Cl  :1s     0.0000  -0.0023   0.0000   0.0000  -0.0153   0.0388  -0.0775
+  10 Cl  :1s     0.0000   0.0064  -0.0000  -0.0000   0.0508  -0.1279   0.2542
+  11 Cl  :1s    -0.0000  -0.0012   0.0000   0.0000  -0.1683   0.4366  -0.9028
+  12 Cl  :2px    0.0000   0.4915  -0.1976  -0.8362  -0.0049   0.0089   0.0002
+  13 Cl  :2py    0.0000   0.4292   0.8911   0.0421  -0.0043   0.0077   0.0001
+  14 Cl  :2pz    0.0000  -0.7437   0.3836  -0.5284   0.0074  -0.0134  -0.0002
+  15 Cl  :2px    0.0000   0.0209  -0.0079  -0.0334   0.0143  -0.0275   0.0011
+  16 Cl  :2py    0.0000   0.0183   0.0355   0.0017   0.0125  -0.0240   0.0010
+  17 Cl  :2pz    0.0000  -0.0317   0.0153  -0.0211  -0.0216   0.0416  -0.0017
+  18 Cl  :1s    -0.0000   0.0000   0.0000   0.0000  -0.0665  -0.0560  -0.0164
+  19 Cl  :1s     0.0000  -0.0000  -0.0000  -0.0000   0.2188   0.1836   0.0534
+  20 Cl  :1s    -0.0000   0.0002   0.0000   0.0000  -0.7632  -0.6565  -0.1981
+  21 Cl  :2px    0.7810  -0.0002   0.0000   0.0001   0.0047  -0.0010  -0.0037
+  22 Cl  :2py    0.1344  -0.0001  -0.0001  -0.0000   0.0041  -0.0009  -0.0032
+  23 Cl  :2pz    0.5937   0.0002  -0.0000   0.0000  -0.0072   0.0015   0.0056
+  24 Cl  :2px    0.0307   0.0001  -0.0000  -0.0000  -0.0140   0.0009   0.0103
+  25 Cl  :2py    0.0053   0.0001   0.0000   0.0000  -0.0122   0.0008   0.0090
+  26 Cl  :2pz    0.0233  -0.0002   0.0000  -0.0000   0.0212  -0.0014  -0.0156
+
+    Orbital        15       16       17       18       19       20       21
+   3  C  :2px    0.5079  -0.0246   0.0581  -0.0106   0.2463   0.0481  -0.0108
+   4  C  :2py   -0.1208   0.5139  -0.0272  -0.0550   0.2150  -0.0245  -0.0449
+   5  C  :2pz    0.2659   0.2803   0.0227  -0.0387  -0.3726   0.0176  -0.0331
+   6  H  :1s     0.2068  -0.4019   0.0307   0.0362  -0.0460   0.0322   0.0350
+   7  H  :1s     0.2447   0.3801   0.0160  -0.0447  -0.0460   0.0142  -0.0454
+   8  H  :1s    -0.4515   0.0219  -0.0467   0.0085  -0.0460  -0.0465   0.0104
+   9 Cl  :1s    -0.0000   0.0000   0.0000   0.0000  -0.0103  -0.0000   0.0000
+  10 Cl  :1s     0.0000  -0.0000  -0.0000  -0.0000   0.0330   0.0000  -0.0000
+  11 Cl  :1s    -0.0000   0.0000   0.0000   0.0000  -0.1365  -0.0000   0.0000
+  12 Cl  :2px   -0.0145   0.0007  -0.0062   0.0011   0.1064   0.2345  -0.0525
+  13 Cl  :2py    0.0035  -0.0147   0.0029   0.0059   0.0929  -0.1195  -0.2190
+  14 Cl  :2pz   -0.0076  -0.0080  -0.0024   0.0042  -0.1610   0.0860  -0.1611
+  15 Cl  :2px    0.0500  -0.0024   0.0227  -0.0041  -0.3860  -0.8692   0.1947
+  16 Cl  :2py   -0.0119   0.0506  -0.0106  -0.0214  -0.3370   0.4430   0.8118
+  17 Cl  :2pz    0.0262   0.0276   0.0089  -0.0151   0.5841  -0.3188   0.5971
+  19 Cl  :1s     0.0000  -0.0000   0.0000   0.0000  -0.0201   0.0000  -0.0000
+  20 Cl  :1s    -0.0000   0.0000  -0.0000  -0.0000   0.0862  -0.0000   0.0000
+  21 Cl  :2px   -0.0197   0.0010   0.2355  -0.0430   0.0266   0.0053  -0.0012
+  22 Cl  :2py    0.0047  -0.0199  -0.1103  -0.2227   0.0232  -0.0027  -0.0049
+  23 Cl  :2pz   -0.0103  -0.0109   0.0920  -0.1569  -0.0402   0.0019  -0.0036
+  24 Cl  :2px    0.0702  -0.0034  -0.8747   0.1597  -0.0927  -0.0198   0.0044
+  25 Cl  :2py   -0.0167   0.0711   0.4096   0.8273  -0.0809   0.0101   0.0185
+  26 Cl  :2pz    0.0368   0.0388  -0.3417   0.5829   0.1403  -0.0073   0.0136
+
+    Orbital        22       23       24       25       26
+   1  C  :1s    -0.0266   0.0222  -0.2285  -0.0000   0.0000
+   2  C  :1s     0.0767  -0.0733   1.4818   0.0000  -0.0000
+   3  C  :2px   -0.0193  -0.4497  -0.0299  -0.1096   0.9926
+   4  C  :2py   -0.0169  -0.3927  -0.0261   1.0220  -0.1746
+   5  C  :2pz    0.0292   0.6805   0.0453   0.5173   0.5553
+   6  H  :1s     0.0563  -0.0283  -0.7666   0.9662  -0.4240
+   7  H  :1s     0.0563  -0.0283  -0.7666  -0.8503  -0.6247
+   8  H  :1s     0.0563  -0.0283  -0.7666  -0.1159   1.0488
+   9 Cl  :1s    -0.0011   0.0113  -0.0015  -0.0000   0.0000
+  10 Cl  :1s     0.0036  -0.0353   0.0051   0.0000  -0.0000
+  11 Cl  :1s    -0.0143   0.1637  -0.0177  -0.0000   0.0000
+  12 Cl  :2px   -0.0366   0.0834  -0.0097  -0.0000   0.0003
+  13 Cl  :2py   -0.0320   0.0728  -0.0084   0.0003  -0.0001
+  14 Cl  :2pz    0.0554  -0.1262   0.0146   0.0002   0.0002
+  15 Cl  :2px    0.1355  -0.3207   0.0378   0.0001  -0.0009
+  16 Cl  :2py    0.1183  -0.2801   0.0330  -0.0009   0.0002
+  17 Cl  :2pz   -0.2050   0.4853  -0.0571  -0.0005  -0.0005
+  19 Cl  :1s    -0.0008   0.0207   0.0022   0.0000  -0.0000
+  20 Cl  :1s    -0.0008  -0.0965  -0.0036  -0.0000   0.0000
+  21 Cl  :2px    0.1347   0.0275   0.0045   0.0003  -0.0024
+  22 Cl  :2py    0.1176   0.0240   0.0039  -0.0025   0.0004
+  23 Cl  :2pz   -0.2038  -0.0416  -0.0068  -0.0013  -0.0014
+  24 Cl  :2px   -0.4969  -0.1097  -0.0171  -0.0012   0.0105
+  25 Cl  :2py   -0.4339  -0.0958  -0.0150   0.0108  -0.0018
+  26 Cl  :2pz    0.7519   0.1660   0.0259   0.0055   0.0059
+
+  Total CPU  time used in SIRIUS :   0.94 seconds
+  Total wall time used in SIRIUS :   0.07 seconds
+
+ 
+     Date and time (Linux)  : Thu Jun 19 22:33:13 2025
+     Host name              : osmium                                  
+
+
+                     .---------------------------------------.
+                     | End of Wave Function Section (SIRIUS) |
+                     `---------------------------------------'
+
+  Total CPU  time used in DALTON:   1.00 seconds
+  Total wall time used in DALTON:   0.14 seconds
+
+ 
+     Date and time (Linux)  : Thu Jun 19 22:33:13 2025
+     Host name              : osmium                                  
