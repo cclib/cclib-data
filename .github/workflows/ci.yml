@@ -18,6 +18,7 @@ jobs:
   nix:
     uses: ./.github/workflows/nix.yml
   all:
+    name: CI success
     needs: [prechecks, nix]
     runs-on: ubuntu-latest
     steps:
