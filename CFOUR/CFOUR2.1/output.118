@@ -1,0 +1,1553 @@
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xjoda
+
+
+   *************************************************************************
+         <<<     CCCCCC     CCCCCC   |||     CCCCCC     CCCCCC   >>>
+       <<<      CCC        CCC       |||    CCC        CCC         >>>
+      <<<      CCC        CCC        |||   CCC        CCC            >>>
+    <<<        CCC        CCC        |||   CCC        CCC              >>>
+      <<<      CCC        CCC        |||   CCC        CCC            >>>
+       <<<      CCC        CCC       |||    CCC        CCC         >>>
+         <<<     CCCCCC     CCCCCC   |||     CCCCCC     CCCCCC   >>>
+   *************************************************************************
+
+     ****************************************************************
+     * CFOUR Coupled-Cluster techniques for Computational Chemistry *
+     ****************************************************************
+
+
+   Department of Chemistry                Institut fuer Physikalische Chemie
+   University of Florida                  Universitaet Mainz
+   Gainesville, FL 32611, USA             D-55099 Mainz, Germany
+
+   Department of Chemistry                Fakultaet fuer Chemie und Biowiss.
+   Johns Hopkins University               Karlsruher Institut fuer Technologie
+   Baltimore, MD 21218, USA               D-76131 Karlsruhe, Germany
+
+   Department of Chemistry                Department of Physical Chemistry
+   Southern Methodist University          Eotvos Lorand University
+   Dallas, TX 75275, USA                  H-1053 Budapest, Hungary
+
+
+                       Version 2.1
+
+                     meyeri                                            
+                     Thu Nov 26 11:10:32 PM EST 2026                   
+                     integer*8 version is running
+
+********************************************************************************
+*                          Input from ZMAT file                                *
+********************************************************************************
+test 615c CC2 calculation of NMR chemical shifts                                
+O                                                                               
+H 1 R                                                                           
+H 1 R 2 A                                                                       
+                                                                                
+R=0.9658997774                                                                  
+A=106.6441344579                                                                
+                                                                                
+*CFOUR(CALC=CC2,BASIS=SPECIAL,SCF_CONV=10                                       
+SPHERICAL=OFF,PROP=NMR                                                          
+CONV=10,LINEQ_CONV=10,CC_CONV=10)                                               
+                                                                                
+O:DZP                                                                           
+H:DZ                                                                            
+H:DZ                                                                            
+                                                                                
+********************************************************************************
+    -------------------------------------------------------------------
+                    CFOUR Control Parameters 
+    -------------------------------------------------------------------
+        External           Internal           Value            Units
+          Name               Name
+    -------------------------------------------------------------------
+       ABCDTYPE             IABCDT         STANDARD    [  0]    ***   
+       ANHARMONIC           IANHAR         OFF         [  0]    ***   
+       ANH_ALGORIT          IANALG         STANDARD    [  0]    ***   
+       ANH_DERIVAT          IANDER         SECOND      [  1]    ***   
+       ANH_MODE             ANHMOD         VIBRATION   [  0]    ***   
+       ANH_STEPSIZ          ICUBST             50000          x 10-6  
+       ANH_SYMMETR          IANHSM         ABELIAN     [  0]    ***   
+       AO_LADDERS           IAOLAD         SINGLEPASS  [  1]    ***   
+       AV_SCF               IAVSCF         OFF         [  0]    ***   
+       BASIS                IBASIS         SPECIAL     [  0]    ***   
+       BOTHVECTORS          BOTHVC         OFF         [  0]    ***   
+       BOX_POTENT           IPIAB          OFF         [  0]    ***   
+       BREIT                IBREIT         OFF         [  0]    ***   
+       BRUCK_CONV           IBRTOL          10D-  4             ***   
+       BRUECKNER            IBRKNR         OFF         [  0]    ***   
+       BUFFERSIZE           IBUFFS              4096            ***   
+       CACHE_RECS           ICHREC             10               ***   
+       CALCLEVEL            ICLLVL         CC2         [ 31]    ***   
+       CCORBOPT             ICCORB         OFF         [  0]  x 0.01  
+       CC_CONV              ICCCNV          10D- 10             ***   
+       CC_EXPORDER          ICCEOR              5               ***   
+       CC_EXTRAPOL          ICCEXT         DIIS        [  1]    ***   
+       CC_GUESS             ICCGES         MP2         [  0]    ***   
+       CC_MAXCYC            ICCCYC            100              cycles 
+       CC_PROGRAM           ICCPRO         VCC         [  0]    ***   
+       CHARGE               ICHRGE              0               ***   
+       CHOLESKY             ICHOLE         OFF         [  0]    ***   
+       CIS_CONV             ICISTL              5               ***   
+       COMM_SIZE            IPSIZE            ***               ***   
+       CONSTANT             ICONST         OLD         [  1]    ***   
+       CONTINUUM            ICONTU         NONE        [  0]    ***   
+       CONTRACTION          ICNTYP         GENERAL     [  1]    ***   
+       COORDINATES          ICOORD         INTERNAL    [  0]    ***   
+       CPHF_CONVER          ICPHFT          10D- 16             ***   
+       CPHF_MAXCYC          ICPHFC             64              cycles 
+       CUBIC                ICUBIC         OFF         [  0]    ***   
+       CURVILINEAR          ICURVY         OFF         [  0]    ***   
+       DBOC                 IDBOC          OFF         [  0]    ***   
+       DCT                  IDCT           OFF         [  0]    ***   
+       DERIV_LEV            IDRLVL         SECOND      [  2]    ***   
+       DEVMEM_SIZE          IDVMEM          50000000           MByte  
+       DIAG_MRCC            IEOMST          10D-  0             ***   
+       DIFF_TYPE            IDIFTY         RELAXED     [  0]    ***   
+       DIRECT               IDIRCT         OFF         [  0]    ***   
+       DROPMO               IDRPMO      NONE         
+       ECP                  IECP           OFF         [  0]    ***   
+       EIGENVECTOR          IVEC                1               ***   
+       EL_ANHARM            IELANH         OFF         [  0]    ***   
+       EOMFOLLOW            IEOMSR         ENERGY      [  0]    ***   
+       EOMIP                IEOMIP         OFF         [  0]    ***   
+       EOMLEVEL             HBARFM         SAME        [  0]    ***   
+       EOM_MRCC             IMRCCE         NEW         [  1]    ***   
+       EOM_NONIT            EOMNON         OFF         [  0]    ***   
+       EOM_NSING            IEOMSI          10D-  0             ***   
+       EOM_NSTATES          IMRCCD         DAVIDSON    [  0]    ***   
+       EOM_NTRIP            IEOMTR          10D-  0             ***   
+       EOM_ORDER            IEXORD         ENERGY      [  0]    ***   
+       EOM_PROPSTA          IEOMST              0               ***   
+       ESTATE_CONV          IEXTOL          10D-  5             ***   
+       ESTATE_DIAG          IEXDIG         ITERATIVE   [  0]    ***   
+       ESTATE_LOCK          IESLOC         ON          [  1]    ***   
+       ESTATE_MAXC          IEXMXC             40               ***   
+       ESTATE_PROP          IEXPRP         OFF         [  0]    ***   
+       EVAL_HESS            IRECAL              0            # of cyc.
+       EXCITATION           IEXCIT              0               ***   
+       EXCITE               IEXCIT         NONE        [  0]    ***   
+       EXTERN_POT           IEXPOT         OFF         [  0]    ***   
+       FCGRADNEW            IFCGNW         OFF         [  0]    ***   
+       FC_FIELD             IFINFC              0             x 10-6  
+       FD_CALTYPE           IFDCAL         GRADONLY    [  0]    ***   
+       FD_PROJECT           IFDPRJ         OFF         [  1]    ***   
+       FD_STEPSIZE          IDISFD              0            10-4 bohr
+       FD_USEGROUP          IFDGRP         FULL        [  0]    ***   
+       FILE_RECSIZ          IFLREC              4096           words  
+       FINITE_PERT          IFIPER              0             x 10-6  
+       FIXGEOM              IFIXGM         OFF         [  0]    ***   
+       FOCK                 IFOCK          AO          [  1]    ***   
+       FREQ_ALGORI          IVIALG         STANDARD    [  0]    ***   
+       FROZEN_CORE          IFROCO         OFF         [  0]    ***   
+       GAMMA_ABCD           IGABCD         STORE       [  0]    ***   
+       GAMMA_ABCI           IGABCI         STORE       [  0]    ***   
+       GENBAS_1             IGNBS1              0               ***   
+       GENBAS_2             IGNBS2              0               ***   
+       GENBAS_3             IGNBS3              0               ***   
+       GENBAS_4             IGNBS4              0               ***   
+       GEO_CONV             ICONTL             10              H/bohr 
+       GEO_MAXCYC           IOPTCY             50               ***   
+       GEO_MAXSTEP          IMXSTP            300            millibohr
+       GEO_METHOD           INR            SINGLE_POINT[  5]    ***   
+       GIAO                 IGIAO          ON          [  0]    ***   
+       GIMIC                IGIMIC         OFF         [  0]    ***   
+       GRID                 IGRID          OFF         [  0]    ***   
+       GRID_ALGO            IGALGO         SERIAL      [  0]    ***   
+       GUESS                IGUESS         MOREAD      [  0]    ***   
+       HBAR                 IHBAR          OFF         [  0]    ***   
+       HESS_TYPE            IHESTP         SCF         [  0]    ***   
+       HF2_FILE             IHF2Fl         USE         [  1]    ***   
+       HFSTABILITY          ISTABL         OFF         [  0]    ***   
+       INCORE               INCORE         OFF         [  0]    ***   
+       INPUT_MRCC           IMRCC          ON          [  1]    ***   
+       INTEGRALS            INTTYP         VMOL        [  1]    ***   
+       JODA_PRINT           IJPRNT              0               ***   
+       KEYWORD_OUT          IDMPKW         NO          [  0]    ***   
+       LINDEP_TOL           ILINDP              8               ***   
+       LINEQ_CONV           IZTACN          10D- 10           cycles  
+       LINEQ_EXPOR          ILMAXD              5               ***   
+       LINEQ_MAXCY          ILMAXC            100               ***   
+       LINEQ_TYPE           ILTYPE         DIIS        [  1]    ***   
+       LOCK_ORBOCC          ILOCOC         OFF         [  0]    ***   
+       MEMORY_SIZE          IMEMSZ         100000000           words  
+       MEM_UNIT             IMEMU          INTEGERWORDS[  0]    ***   
+       MRCC                 IMRCCC         OFF         [  0]    ***   
+       MULTIPLICTY          IMULTP              1               ***   
+       NACOUPLING           IVCOUP         OFF         [  0]    ***   
+       NEGEVAL              IDIE           ABORT       [  0]    ***   
+       NEWNORM              INEWNO         OFF         [  0]    ***   
+       NON-HF               INONHF         OFF         [  0]    ***   
+       NTOP_TAMP            ITOPT2             15               ***   
+       NUC_MODEL            INUCMO         POINT       [  0]    ***   
+       OCCUPATION           IOCCU   ESTIMATED BY SCF 
+       OPEN-SHELL           IOPEN          SPIN-ORBITAL[  0]    ***   
+       OPTVIB               IOPTVB         OFF         [  0]    ***   
+       ORBITALS             IORBTP         STANDARD    [  0]    ***   
+       PARALLEL             IPARAL         ON          [  1]    ***   
+       PARA_INT             IPINTS         ON          [  1]    ***   
+       PARA_PRINT           IPPRIN              0               ***   
+       PERT_ORB             IPTORB         STANDARD    [  0]    ***   
+       POINTS               IGRDFD              0               ***   
+       PRINT                IPRNT               0               ***   
+       PROPS                IPROPS         NMR         [  3]    ***   
+       PROP_INTEGR          IINTYP         INTERNAL    [  0]    ***   
+       PSI                  IPSI           OFF         [  0]    ***   
+       QC_ALG               IQCALG         FLM         [  0]    ***   
+       QC_LINALG            IQCLIN         TRIDIAG     [  2]    ***   
+       QC_MAXCYC            IQCMAX          10D-100           cycles  
+       QC_MAXSCFCY          IQCMSC          10D- 15           cycles  
+       QC_RTRUST            IQCRTR          10D-  0           x 10-3  
+       QC_SKIPSCF           IQCSKI         OFF         [  0]    ***   
+       QC_START             IQCSTA          10D-  1             ***   
+       QRHFGUESS            IQGUES         OFF         [  0]    ***   
+       QUARTIC              IQUART         OFF         [  0]    ***   
+       RAMAN_INT            IRAMIN         OFF         [  0]    ***   
+       RAMAN_ORB            IRAMRE         UNRELAXED   [  0]    ***   
+       RDO                  IRDOFM         ON          [  1]    ***   
+       REDUCE_REPR          REDREP         Ir          [  0]    ***   
+       REFERENCE            IREFNC         RHF         [  0]    ***   
+       RELATIVIST           IRELAT         OFF         [  0]    ***   
+       RELAX_DENS           IRDENS         ON          [  1]    ***   
+       RESET_FLAGS          IRESET         OFF         [  0]    ***   
+       RESTART_CC           ICCRES         OFF         [  0]    ***   
+       ROT_EVEC             ROTVEC              0               ***   
+       SAVE_INTS            ISVINT         OFF         [  0]    ***   
+       SCALE_ON             ISTCRT              0               ***   
+       SCF_CONV             ISCFCV          10D- 10             ***   
+       SCF_DAMPING          IDAMP               0             x 10-3  
+       SCF_EXPORDE          IRPPOR              6               ***   
+       SCF_EXPSTAR          IRPPLS              8               ***   
+       SCF_EXTRAPO          IRPP           ON          [  1]    ***   
+       SCF_MAXCYC           ISCFCY            150              cycles 
+       SCF_NOSTOP           ISCFST         OFF         [  0]    ***   
+       SCF_PRINT            ISCFPR              0               ***   
+       SCF_PROG             ISCFPR         SCF         [  0]    ***   
+       SD_FIELD             IFINSD              0             x 10-6  
+       SOPERT               IPERSO         OFF         [  0]    ***   
+       SPHERICAL            IDFGHI         OFF         [  0]    ***   
+       SPINORBIT            ISOCAL         OFF         [  0]    ***   
+       SPINROTATIO          ISRCON         OFF         [  0]    ***   
+       SPIN_FLIP            ISPFLP         OFF         [  0]    ***   
+       SPIN_ORBIT           ISPORB         OFF         [  0]    ***   
+       SPIN_SCAL            ISCSMP         OFF         [  0]    ***   
+       STEEPSCALE           ISTPSC              1000          x 10-3  
+       SUBGROUP             ISUBGP         DEFAULT     [  0]    ***   
+       SUBGRPAXIS           ISBXYZ         X           [  0]    ***   
+       SYMMETRY             ISYM           ON          [  0]    ***   
+       SYM_CHECK            ISYMCK         OVERRIDE    [  1]    ***   
+       T3_EXTRAPOL          IT3EXT         OFF         [  0]    ***   
+       T4_EXTRAPOL          IT4EXP         OFF         [  0]    ***   
+       TAMP_SUM             IEVERY              5               ***   
+       TESTSUITE            ITESTS         OFF         [  0]    ***   
+       THERMOCH             ITHERM         OFF         [  0]    ***   
+       TOL_CHOLESK          ITOLCH          10D-  4             ***   
+       TRANGRAD             IRESRM         OFF         [  0]    ***   
+       TRANS_INV            ITRAIN         USE         [  0]    ***   
+       TREAT_PERT           ITREAT         SIMULTANEOUS[  0]    ***   
+       TRIP_ALGORI          ITRALG         NORMAL      [  0]    ***   
+       UIJ_THRESHO          IUIJTH              1               ***   
+       UNITS                IUNITS         ANGSTROM    [  0]    ***   
+       UNOS                 IUNOS          OFF         [  0]    ***   
+       UPDATE_HESS          IHUPDT         ON          [  1]    ***   
+       VIBPHASE             ISETPH         STANDARD    [  0]    ***   
+       VIBRATION            IVIB           NO          [  0]    ***   
+       VIB_ALGORIT          IGEALG         STANDARD    [  0]    ***   
+       VNATORB              IVNORB         OFF         [  0]    ***   
+       VTRAN                IVTRAN         FULL/PARTIAL[  0]    ***   
+       XFIELD               IXEFLD              0             x 10-6  
+       XFORM_TOL            IXFTOL          10D- 11             ***   
+       YFIELD               IYEFLD              0             x 10-6  
+       ZFIELD               IZEFLD              0             x 10-6  
+       ZSCALE_EXP           IZEXPS         OFF         [  0]    ***   
+    -------------------------------------------------------------------
+   3 entries found in Z-matrix 
+   Job Title : test 615c CC2 calculation of NMR chemical shifts                                
+   There are  2 unique internal coordinates.
+   Of these,  0 will be optimized.
+   User supplied Z-matrix: 
+--------------------------------------------------------------------------------
+       SYMBOL    BOND      LENGTH    ANGLE     ANGLE     DIHED     ANGLE
+                  TO      (ANGST)    WRT      (DEG)      WRT      (DEG)
+--------------------------------------------------------------------------------
+        O    
+        H          1         R    
+        H          1         R          2        A    
+                  *Initial values for internal coordinates* 
+                      Name             Value
+                        R               0.9658997774
+                        A             106.6441344579
+--------------------------------------------------------------------------------
+   Rotational constants (in cm-1): 
+          9.3371486079            13.9367757817            28.2913683370
+   Rotational constants (in MHz): 
+     279920.7124024384        417814.0853545374        848154.0042163066
+********************************************************************************
+   The full molecular point group is C2v .
+   The largest Abelian subgroup of the full molecular point group is C2v .
+   The computational point group is C2v .
+********************************************************************************
+--------------------------------------------------------------------------------
+   Analysis of internal coordinates specified by Z-matrix 
+--------------------------------------------------------------------------------
+   *The nuclear repulsion energy is    9.107303208494033 a.u.
+   *There are   2 degrees of freedom within the tot. symm. molecular subspace.
+   *Z-matrix requests optimization of   0 coordinates.
+   *The optimization is constrained.
+   *The following   2 parameters can have non-zero 
+    derivatives within the totally symmetric subspace:
+             A    [ 3]  R    [ 1]
+   *The following   0 parameters are to be optimized:
+
+   *The following coordinates must be varied in an  unconstrained optimization.
+             A    [ 3]  R    [ 1]
+--------------------------------------------------------------------------------
+
+
+ ----------------------------------------------------------------
+         Coordinates used in calculation (QCOMP) 
+ ----------------------------------------------------------------
+ Z-matrix   Atomic            Coordinates (in bohr)
+  Symbol    Number           X              Y              Z
+ ----------------------------------------------------------------
+     O         8         0.00000000    -0.00000000     0.12201780
+     H         1         0.00000000    -1.46389022    -0.96825554
+     H         1         0.00000000     1.46389022    -0.96825554
+ ----------------------------------------------------------------
+
+   Interatomic distance matrix (Angstroms) 
+
+                 O             H             H    
+                [ 1]        [ 2]        [ 3]
+  O    [ 1]     0.00000
+  H    [ 2]     0.96590     0.00000
+  H    [ 3]     0.96590     1.54931     0.00000
+ rotcon2
+   Rotational constants (in cm-1): 
+          9.3371486079            28.2913683370            13.9367757817
+   Rotational constants (in MHz): 
+     279920.7124024383        848154.0042163068        417814.0853545374
+  There are   20 basis functions.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.17/       0.43 seconds.
+--executable xjoda finished with status     0 in        0.47 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvmol
+
+OMP_NUM_THREADS not specified; defaulting to 1
+Running with 1 threads/proc
+
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG
+ SERIAL VERSION OF MOLECULE STARTED
+********************************************************************************
+                    INPUT FROM MOL FILE
+********************************************************************************
+INTGRL        1    0    1    0    0    0    0    0    1                         
+         *** CFOUR Program System (Release V0.1) ***                            
+test 615c CC2 calculation of NMR chemical shifts                                
+    2    2 X  Y       0.10E-08              0    0                              
+   9999.00      3.00                                                            
+          8.00000000    1    3    1    1    1                                   
+O #1   0.000000000000000  -0.000000000000000   0.122017802711303                
+    9    4                                                                      
+   7816.5400000000000        2.0309999999999998E-003   0.0000000000000000       
+   1175.8199999999999        1.5436000000000000E-002   0.0000000000000000       
+   273.18799999999999        7.3771000000000003E-002   0.0000000000000000       
+   81.169600000000003       0.24760599999999999        0.0000000000000000       
+   27.183599999999998       0.61183200000000004        0.0000000000000000       
+   3.4136000000000002       0.24120500000000000        0.0000000000000000       
+   9.5321999999999996        0.0000000000000000        1.0000000000000000       
+  0.93979999999999997        0.0000000000000000        0.0000000000000000       
+  0.28460000000000002        0.0000000000000000        0.0000000000000000       
+    5    2                                                                      
+   35.183199999999999        1.9580000000000000E-002   0.0000000000000000       
+   7.9039999999999999       0.12418899999999999        0.0000000000000000       
+   2.3050999999999999       0.39472699999999999        0.0000000000000000       
+  0.71709999999999996       0.62737500000000002        0.0000000000000000       
+  0.21370000000000000        0.0000000000000000        1.0000000000000000       
+    1    1                                                                      
+   1.2110000000000001        1.0000000000000000                                 
+          1.00000000    1    1    1                                             
+H #2   0.000000000000000  -1.463890222626280  -0.968255535400284                
+    4    2                                                                      
+   19.240600000000001        3.2828000000000003E-002   0.0000000000000000       
+   2.8992000000000000       0.23120800000000000        0.0000000000000000       
+  0.65339999999999998       0.81723800000000002        0.0000000000000000       
+  0.17760000000000001        0.0000000000000000        1.0000000000000000       
+FINISH                                                                          
+
+********************************************************************************
+ ONE- AND TWO-ELECTRON INTEGRALS OVER SYMMETRY-ADAPTED AOS ARE CALCULATED.
+
+  CARTESIAN GAUSSIANS ARE USED.
+  
+  INTEGRALS LESS THAN  0.10E-13 ARE NEGLECTED.
+
+  NUCLEAR REPULSION ENERGY :    9.1073032085 A.U.
+  @MOLECU-I, ONE ELECTRON INTEGRALS (CPU/WALL):        0.00/       0.00 SECONDS.
+  @TWOEL-I,       1903 INTEGRALS OF SYMMETRY TYPE  I I I I
+  @TWOEL-I,       1918 INTEGRALS OF SYMMETRY TYPE  I J I J
+  @TWOEL-I,       1293 INTEGRALS OF SYMMETRY TYPE  I I J J
+  @TWOEL-I,        381 INTEGRALS OF SYMMETRY TYPE  I J K L
+  @TWOEL-I, TOTAL NUMBER OF 2-E INTEGRALS       5495.
+  @MOLECU-I, TWO ELECTRON INTEGRALS (CPU/WALL):        0.01/       0.06 SECONDS.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.02/       0.07 seconds.
+--executable xvmol finished with status     0 in        0.13 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvmol2ja
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.00/       0.00 seconds.
+--executable xvmol2ja finished with status     0 in        0.02 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvscf
+  There are   20 functions in the AO basis.
+
+  There are 4 irreducible representations.
+
+       Irrep        # of functions
+         1                 11
+         2                  3
+         3                  5
+         4                  1
+
+
+  Parameters for SCF calculation: 
+        SCF reference function:  RHF  
+  Maximum number of iterations:  150
+     Full symmetry point group: C2v 
+     Computational point group: C2v 
+        Initial density matrix: MOREAD                 
+     SCF convergence tolerance: 10**(-10)
+  DIIS convergence acceleration:  ON
+          Latest start for DIIS:   8
+                     DIIS order:   6
+
+  Memory information:      55872 words required.
+  Fock matrices are constructed from AO integral file.
+ @GETMEM-I,  Allocated       0 MB of main memory.
+  Initialization and symmetry analysis required      0.001 seconds.
+
+  @INITGES-I, Occupancies from core Hamiltonian:
+
+          Alpha population by irrep:   3    1    1    0
+           Beta population by irrep:   3    1    1    0
+
+
+ total no. of electrons in initial guess :   0.0000000000000000     
+  --------------------------------------------------------------------
+  Iteration         Total Energy            Largest Density Difference
+  --------------------------------------------------------------------
+       0             9.107303208494033              0.0000000000D+00
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       1           -69.518734142397477              0.4980872960D+01
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       2           -71.998748791566285              0.7404840056D+01
+   current occupation vector 
+     4  0  1  0
+     4  0  1  0
+       3           -74.285099509773218              0.7200828694D+01
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       4           -75.210616136645356              0.1475074623D+01
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       5           -75.718426088375381              0.8995590500D+00
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       6           -75.902746892937429              0.5828094736D+00
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       7           -75.982903305977743              0.3831290118D+00
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       8           -76.012455438954163              0.2290969814D+00
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       9           -76.031367476226990              0.9514945969D-01
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      10           -76.031367853881804              0.7570966519D-03
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      11           -76.031367869278256              0.1747340693D-03
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      12           -76.031367869789250              0.2544564653D-04
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      13           -76.031367869817331              0.4745737319D-05
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      14           -76.031367869818169              0.8318874896D-06
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      15           -76.031367869818396              0.7681441372D-07
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      16           -76.031367869818141              0.1584420228D-07
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      17           -76.031367869818325              0.9531431200D-09
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      18           -76.031367869818311              0.4250777508D-09
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+
+  SCF has converged.
+
+ Density matrix saved to file den.dat
+ total electron number:   9.9999999999999876     
+     E(SCF)=       -76.031367869818339              0.4882694249D-10
+
+  Eigenvector printing suppressed.
+
+ @PUTMOS-I, Writing converged MOs to NEWMOS. 
+ @PUTMOS-I, Symmetry   1 Full Blocks  2 Partial Blocksize   3
+ @PUTMOS-I, Symmetry   2 Full Blocks  0 Partial Blocksize   3
+ @PUTMOS-I, Symmetry   3 Full Blocks  1 Partial Blocksize   1
+ @PUTMOS-I, Symmetry   4 Full Blocks  0 Partial Blocksize   1
+ @PUTFOCK-I, Writing converged Fock matrix to NEWFOCK. 
+ @PUTFOCK-I, Symmetry   1 Full Blocks  2 Partial Blocksize   3
+ @PUTFOCK-I, Symmetry   2 Full Blocks  0 Partial Blocksize   3
+ @PUTFOCK-I, Symmetry   3 Full Blocks  1 Partial Blocksize   1
+ @PUTFOCK-I, Symmetry   4 Full Blocks  0 Partial Blocksize   1
+
+
+
+  ORBITAL EIGENVALUES (ALPHA)  (1H = 27.2113834 eV)
+
+       MO #        E(hartree)               E(eV)           FULLSYM    COMPSYM
+       ----   --------------------   --------------------   -------   ---------
+    1     1         -20.5537122484        -559.2949442846      A1        A1 (1)
+    2     2          -1.3428915548         -36.5419369632      A1        A1 (1)
+    3    15          -0.7153631193         -19.4660201106      B2        B2 (3)
+    4     3          -0.5705050500         -15.5242316477      A1        A1 (1)
+    5    12          -0.5016505488         -13.6506054158      B1        B1 (2)
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    6     4           0.2213439092           6.0230739767      A1        A1 (1)
+    7    16           0.3123572633           8.4996732500      B2        B2 (3)
+    8    13           0.8685927458          23.6356102232      B1        B1 (2)
+    9     5           0.8861507049          24.1133865807      A1        A1 (1)
+   10    17           0.9102606639          24.7694519190      B2        B2 (3)
+   11     6           1.1927221840          32.4556206398      A1        A1 (1)
+   12    18           1.2237512253          33.2999637787      B2        B2 (3)
+   13     7           1.4485706713          39.4176119180      A1        A1 (1)
+   14     8           2.9546093541          80.3990079324      A1        A1 (1)
+   15    20           2.9628032794          80.6219759742      A2        A2 (4)
+   16    14           2.9928138984          81.4386064355      B1        B1 (2)
+   17     9           3.3492329487          91.1372618628      A1        A1 (1)
+   18    19           3.5412610067          96.3626109719      B2        B2 (3)
+   19    10           6.0059070662         163.4290398432      A1        A1 (1)
+   20    11          47.9793674174        1305.5849620833      A1        A1 (1)
+
+
+  VSCF finished.
+
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.19 seconds.
+--executable xvscf finished with status     0 in        0.22 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvtran
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  Full RHF integral transformation
+  Transformation of IIII integrals :
+  1 pass through the AO integral file was required.
+        1903 AO integrals were read.
+        2353 MO integrals were written to HF2.
+  Transformation of IIJJ integrals :
+  1 pass through the AO integral file was required.
+        1293 AO integrals were read.
+        1563 MO integrals were written to HF2.
+  Transformation of IJIJ integrals :
+  1 pass through the AO integral file was required.
+        1918 AO integrals were read.
+        2308 MO integrals were written to HF2.
+  Transformation of IJKL integrals :
+  1 pass through the AO integral file was required.
+         381 AO integrals were read.
+         495 MO integrals were written to HF2.
+  Summary of active molecular orbitals: 
+------------------------------------------------------------------------
+
+  Index      Eigenvalue    Symmetry    Index      Eigenvalue    Symmetry
+------------------------------------------------------------------------
+     1       -20.5537122        1        11         3.3492329        1
+     2        -1.3428916        1        12         6.0059071        1
+     3        -0.5705051        1        13        47.9793674        1
+     4        -0.5016505        2        14         0.8685927        2
+     5        -0.7153631        3        15         2.9928139        2
+     6         0.2213439        1        16         0.3123573        3
+     7         0.8861507        1        17         0.9102607        3
+     8         1.1927222        1        18         1.2237512        3
+     9         1.4485707        1        19         3.5412610        3
+    10         2.9546094        1        20         2.9628033        4
+------------------------------------------------------------------------
+  -20.553712248404985       -1.3428915548328377      -0.57050505001807417      -0.50165054878639359      -0.71536311934230334       0.22134390920933045       0.88615070488199155        1.1927221840470683        1.4485706712745108        2.9546093541290430        3.3492329486919212        6.0059070662017362        47.979367417360599       0.86859274575631917        2.9928138984481754       0.31235726332066999       0.91026066388720883        1.2237512253316469        3.5412610066680594        2.9628032793887469     
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.01 seconds.
+--executable xvtran finished with status     0 in        0.03 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xintprc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  @GMOIAA-I, Processing MO integrals for spin case AA.
+  @GMOIAA-I, Generation of integral list completed.
+                      TYPE                NUMBER
+                      ----               --------
+                      PPPP                  2216
+                      PPPH                  2658
+                      PPHH                   861
+                      PHPH                   578
+                      PHHH                   357
+                      HHHH                    49
+
+                     TOTAL                  6719
+
+  @FORMT2-I, Second-order MP correlation energies:
+            ------------------------------------------------
+            E(SCF)                  =    -76.031367869818 a.u.
+            E2(AA)                  =     -0.023986126746 a.u.
+            E2(AB)                  =     -0.154812696287 a.u.
+            E2(TOT)                 =     -0.202784949779 a.u.
+            Total MP2 energy        =    -76.234152819598 a.u.
+            ------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  4   4  14  14]-0.05151 [  3   3   7   7]-0.04171 [  4   3  14   7]-0.03578
+[  3   4   7  14]-0.03578 [  5   5  16  16]-0.03456 [  5   5  18  18]-0.03011
+[  5   4  16  14]-0.02736 [  4   5  14  16]-0.02736 [  5   5  18  16]-0.02455
+[  5   5  16  18]-0.02455 [  5   3  16   7]-0.02412 [  3   5   7  16]-0.02412
+[  5   4  18  14]-0.02288 [  4   5  14  18]-0.02288 [  5   5   8   8]-0.02222
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (     1647 symmetry allowed elements):  0.1942401148.
+-----------------------------------------------------------------------------
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.01 seconds.
+--executable xintprc finished with status     0 in        0.03 seconds (walltime).
+  calling xvcc 
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvcc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+   CC2 energy will be calculated.
+   The total correlation energy is -0.202784949779 a.u.
+   The total correlation energy is -0.202773482766 a.u.
+  Convergence information after     1 iterations: 
+  Largest element of residual vector : -0.77993455E-02.
+  Largest element of DIIS residual   : -0.77993455E-02.
+   The total correlation energy is -0.203396751629 a.u.
+  Convergence information after     2 iterations: 
+  Largest element of residual vector : -0.14899867E-02.
+  Largest element of DIIS residual   :  0.83548756E-03.
+   The total correlation energy is -0.203520300507 a.u.
+  Convergence information after     3 iterations: 
+  Largest element of residual vector :  0.83575023E-03.
+  Largest element of DIIS residual   :  0.54031683E-03.
+   The total correlation energy is -0.203564866419 a.u.
+  Convergence information after     4 iterations: 
+  Largest element of residual vector :  0.23567945E-03.
+  Largest element of DIIS residual   :  0.85663354E-04.
+   The total correlation energy is -0.203565554763 a.u.
+  Convergence information after     5 iterations: 
+  Largest element of residual vector :  0.97342907E-04.
+  Largest element of DIIS residual   :  0.20563310E-04.
+   The total correlation energy is -0.203565753745 a.u.
+  Convergence information after     6 iterations: 
+  Largest element of residual vector :  0.68413345E-05.
+  Largest element of DIIS residual   : -0.41682395E-05.
+   The total correlation energy is -0.203565837092 a.u.
+  Convergence information after     7 iterations: 
+  Largest element of residual vector :  0.24430466E-05.
+  Largest element of DIIS residual   :  0.93942372E-06.
+   The total correlation energy is -0.203565848988 a.u.
+  Convergence information after     8 iterations: 
+  Largest element of residual vector : -0.42830972E-06.
+  Largest element of DIIS residual   : -0.37558695E-06.
+   The total correlation energy is -0.203565856429 a.u.
+  Convergence information after     9 iterations: 
+  Largest element of residual vector : -0.56731239E-07.
+  Largest element of DIIS residual   :  0.36080890E-07.
+   The total correlation energy is -0.203565857594 a.u.
+  Convergence information after    10 iterations: 
+  Largest element of residual vector :  0.28717897E-07.
+  Largest element of DIIS residual   :  0.20438009E-07.
+   The total correlation energy is -0.203565858334 a.u.
+  Convergence information after    11 iterations: 
+  Largest element of residual vector :  0.93470110E-08.
+  Largest element of DIIS residual   :  0.35314393E-08.
+   The total correlation energy is -0.203565858511 a.u.
+  Convergence information after    12 iterations: 
+  Largest element of residual vector :  0.47848494E-08.
+  Largest element of DIIS residual   :  0.20682257E-08.
+   The total correlation energy is -0.203565858569 a.u.
+  Convergence information after    13 iterations: 
+  Largest element of residual vector :  0.93806626E-09.
+  Largest element of DIIS residual   : -0.29716121E-09.
+   The total correlation energy is -0.203565858571 a.u.
+  Convergence information after    14 iterations: 
+  Largest element of residual vector :  0.41134006E-09.
+  Largest element of DIIS residual   :  0.90960441E-10.
+   The total correlation energy is -0.203565858572 a.u.
+  Convergence information after    15 iterations: 
+  Largest element of residual vector : -0.38788828E-10.
+  Largest element of DIIS residual   : -0.33559171E-10.
+  Amplitude equations converged in    15iterations.
+   The total correlation energy is -0.203565858572 a.u.
+   The CC iterations have converged.
+
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  4      14    ]-0.01022 [  3       6    ] 0.00765 [  5      18    ] 0.00735
+[  2       7    ]-0.00473 [  5      16    ]-0.00404 [  5      17    ] 0.00360
+[  2      12    ] 0.00271 [  3       9    ]-0.00244 [  2       6    ]-0.00234
+[  3       7    ]-0.00212 [  2       9    ] 0.00185 [  5      19    ]-0.00183
+[  3       8    ]-0.00181 [  3      11    ]-0.00155 [  2       8    ] 0.00152
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       30 symmetry allowed elements):  0.0175324691.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  4   4  14  14]-0.05208 [  3   3   7   7]-0.04179 [  4   3  14   7]-0.03599
+[  3   4   7  14]-0.03599 [  5   5  16  16]-0.03535 [  5   5  18  18]-0.03012
+[  5   4  16  14]-0.02794 [  4   5  14  16]-0.02794 [  5   5  18  16]-0.02466
+[  5   5  16  18]-0.02466 [  5   3  16   7]-0.02457 [  3   5   7  16]-0.02457
+[  5   4  18  14]-0.02291 [  4   5  14  18]-0.02291 [  5   5   8   8]-0.02209
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (     1647 symmetry allowed elements):  0.1955463282.
+-----------------------------------------------------------------------------
+       Summary of iterative solution of CC equations 
+      -----------------------------------------------------------
+                       Correlation           Total
+       Iteration         Energy              Energy
+      -----------------------------------------------------------
+            0        -0.202784949779     -76.234152819598  DIIS 
+            1        -0.202773482766     -76.234141352585  DIIS 
+            2        -0.203396751629     -76.234764621447  DIIS 
+            3        -0.203520300507     -76.234888170325  DIIS 
+            4        -0.203564866419     -76.234932736238  DIIS 
+            5        -0.203565554763     -76.234933424581  DIIS 
+            6        -0.203565753745     -76.234933623564  DIIS 
+            7        -0.203565837092     -76.234933706910  DIIS 
+            8        -0.203565848988     -76.234933718807  DIIS 
+            9        -0.203565856429     -76.234933726247  DIIS 
+           10        -0.203565857594     -76.234933727413  DIIS 
+           11        -0.203565858334     -76.234933728153  DIIS 
+           12        -0.203565858511     -76.234933728329  DIIS 
+           13        -0.203565858569     -76.234933728388  DIIS 
+           14        -0.203565858571     -76.234933728390  DIIS 
+           15        -0.203565858572     -76.234933728391  DIIS 
+      -----------------------------------------------------------
+      A miracle has come to pass. The CC iterations have converged.
+      The reference energy is       -76.03136786981834 a.u.
+      The correlation energy is      -0.20356585857226 a.u.
+      The total energy is           -76.23493372839060 a.u.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.03/       0.04 seconds.
+--executable xvcc finished with status     0 in        0.05 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xlambda
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ The Lambda equations are solved for CC2.
+  Initial lambda amplitudes: 
+  Convergence information after     1 iterations: 
+  Largest element of residual vector :  0.12077720E-02.
+  Largest element of DIIS residual   :  0.12077720E-02.
+  Convergence information after     2 iterations: 
+  Largest element of residual vector : -0.12515313E-03.
+  Largest element of DIIS residual   :  0.75564440E-04.
+  Convergence information after     3 iterations: 
+  Largest element of residual vector :  0.79253436E-04.
+  Largest element of DIIS residual   : -0.58970316E-04.
+  Convergence information after     4 iterations: 
+  Largest element of residual vector : -0.31246158E-04.
+  Largest element of DIIS residual   : -0.78426331E-05.
+  Convergence information after     5 iterations: 
+  Largest element of residual vector : -0.85272593E-05.
+  Largest element of DIIS residual   : -0.49010287E-05.
+  Convergence information after     6 iterations: 
+  Largest element of residual vector : -0.25247515E-05.
+  Largest element of DIIS residual   : -0.52955048E-06.
+  Convergence information after     7 iterations: 
+  Largest element of residual vector : -0.33774915E-06.
+  Largest element of DIIS residual   :  0.13602246E-06.
+  Convergence information after     8 iterations: 
+  Largest element of residual vector : -0.67411947E-07.
+  Largest element of DIIS residual   :  0.24772057E-07.
+  Convergence information after     9 iterations: 
+  Largest element of residual vector :  0.11699869E-07.
+  Largest element of DIIS residual   :  0.70364428E-08.
+  Convergence information after    10 iterations: 
+  Largest element of residual vector :  0.33107748E-08.
+  Largest element of DIIS residual   : -0.14274991E-08.
+  Convergence information after    11 iterations: 
+  Largest element of residual vector : -0.82438393E-09.
+  Largest element of DIIS residual   : -0.67300419E-09.
+  Convergence information after    12 iterations: 
+  Largest element of residual vector : -0.43686925E-09.
+  Largest element of DIIS residual   : -0.30980620E-09.
+  Convergence information after    13 iterations: 
+  Largest element of residual vector : -0.20268025E-09.
+  Largest element of DIIS residual   : -0.60195832E-10.
+  Amplitude equations converged in    13 iterations.
+
+  Full Fbar is constructed for CCSD second derivatives
+
+      The lambda equations have converged.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.03/       0.04 seconds.
+--executable xlambda finished with status     0 in        0.07 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xdens
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  CC2 density and intermediates are calculated.
+  The iterative expansion of D(ai) converged after  16 iterations.
+  ----------------------------------------------------------------------
+                 Natural orbital occupation numbers
+  ----------------------------------------------------------------------
+  1.99970  1.98636  1.97282  1.97000  1.96947  0.02475  0.02355  0.02048
+  0.01124  0.00473  0.00420  0.00341  0.00331  0.00322  0.00094  0.00080
+  0.00043  0.00036  0.00018  0.00005
+  Trace of density matrix :  10.0000000000.
+  ----------------------------------------------------------------------
+  Density calculation successfully completed.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.01 seconds.
+--executable xdens finished with status     0 in        0.03 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvdint
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ One- and two-electron integral derivatives are calculated
+ for RHF-CC/MBPT NMR chemical shifts.
+ Gauge-including atomic orbitals (GIAOs) are used.
+ Cartesian gaussians are used.
+  magnet T F
+
+       HF-SCF contribution to diamagnetic part of shielding tensor
+       -----------------------------------------------------------
+
+
+           Symmetry 2
+                              By
+
+               O #1 y   403.19981743
+               H #2 y    73.41216437
+               H #2 z    20.58826385
+
+           Symmetry 3
+                              Bx
+
+               O #1 x   379.75773431
+               H #2 x    41.47655404
+
+           Symmetry 4
+                              Bz
+
+               O #1 z   391.85710257
+               H #2 y    19.24996065
+               H #2 z    57.63860648
+
+
+
+                       Bx          By          Bz
+
+      O #1    x  379.757734    0.000000    0.000000
+      O #1    y    0.000000  403.199817    0.000000
+      O #1    z    0.000000    0.000000  391.857103
+
+      H #21   x   20.738277    0.000000    0.000000
+      H #21   y    0.000000   36.706082    9.624980
+      H #21   z    0.000000   10.294132   28.819303
+
+      H #22   x   20.738277    0.000000    0.000000
+      H #22   y    0.000000   36.706082   -9.624980
+      H #22   z    0.000000  -10.294132   28.819303
+
+
+                  Diamagnetic part of shielding tensors
+                  -------------------------------------
+
+
+           Symmetry 2
+                              By
+
+               O #1 y   402.27260008
+               H #2 y    73.21043016
+               H #2 z    20.13626641
+
+           Symmetry 3
+                              Bx
+
+               O #1 x   378.33720151
+               H #2 x    41.26965919
+
+           Symmetry 4
+                              Bz
+
+               O #1 z   390.83042198
+               H #2 y    18.98538165
+               H #2 z    57.39297543
+
+
+
+                       Bx          By          Bz
+
+      O #1    x  378.337202    0.000000    0.000000
+      O #1    y    0.000000  402.272600    0.000000
+      O #1    z    0.000000    0.000000  390.830422
+
+      H #21   x   20.634830    0.000000    0.000000
+      H #21   y    0.000000   36.605215    9.492691
+      H #21   z    0.000000   10.068133   28.696488
+
+      H #22   x   20.634830    0.000000    0.000000
+      H #22   y    0.000000   36.605215   -9.492691
+      H #22   z    0.000000  -10.068133   28.696488
+
+ Evaluation of 1e integral derivatives required    0.02 seconds.
+ Evaluation of 2el GIAO integrals
+ Evaluation of 2e integral derivatives required    0.02 seconds.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.04/       0.04 seconds.
+--executable xvdint finished with status     0 in        0.06 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xcphf
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ Coupled-perturbed HF (CPHF) equations 
+ are solved for RHF-CC/MBPT magnetizabilities and NMR shifts.
+  irreducible representation Nr.                     1
+  # geometric perturbations                         1
+  irreducible representation Nr.                     2
+  # geometric perturbations                         3
+  irreducible representation Nr.                     3
+  # geometric perturbations                         2
+  irreducible representation Nr.                     4
+  # geometric perturbations                         3
+ There is 1 perturbation within irrep 2.
+ CPHF converged after  15 iterations.
+ There is 1 perturbation within irrep 3.
+ CPHF converged after  17 iterations.
+ There is 1 perturbation within irrep 4.
+ CPHF converged after   9 iterations.
+  fine structure   7.2973525681556684E-003   137.03599910518506        53.251354503968130     
+  CONVERT OLD   26.625680984500850      CONVERT NEW   26.625677251984065     
+
+       HF-SCF contribution to paramagnetic part of shielding tensor
+       ------------------------------------------------------------
+
+                        Bx          By          Bz
+
+      O #1    x  -90.419012    0.000000    0.000000
+      O #1    y    0.000000  -54.704083    0.000000
+      O #1    z    0.000000    0.000000  -88.364566
+
+      H #21   x    3.982640    0.000000    0.000000
+      H #21   y    0.000000    2.348425   -1.350495
+      H #21   z    0.000000   -3.464566    2.022855
+
+      H #22   x    3.982640    0.000000    0.000000
+      H #22   y    0.000000    2.348425    1.350495
+      H #22   z    0.000000    3.464566    2.022855
+
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.01 seconds.
+--executable xcphf finished with status     0 in        0.04 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xsdcc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ Chemical shifts are calculated at the CC2 level.
+ Gauge-origin independence is ensured by using gauge-including AOs.
+ Bx is a perturbation of irrep 3.
+ By is a perturbation of irrep 2.
+ Bz is a perturbation of irrep 4.
+ CPHF coefficients for occ-occ block: U^x(i,j) = -1/2 S^x(i,j)
+ CPHF coefficients for vrt-vrt block: U^x(a,b) = -1/2 S^x(a,b)
+ Transformation of GIAO integrals from AO to MO basis:
+ RHF transformation
+ Transformation of IIIJY integral derivatives.
+ 3 passes through the AO integral derivative file were needed.
+      1840 AO integral derivatives were read from file IIIJY.
+ Transformation of first index required    0.0 seconds.
+ Transformation of remaining indices required    0.0 seconds.
+      9082 MO integral derivatives were written to file DERINT.
+ Transformation of IIJKY integral derivatives.
+ 2 passes through the AO integral derivative file were needed.
+       848 AO integral derivatives were read from file IIJKY.
+ Transformation of first index required    0.0 seconds.
+ Transformation of remaining indices required    0.0 seconds.
+      3420 MO integral derivatives were written to file DERINT.
+ Transformation of IJIKY integral derivatives.
+ 2 passes through the AO integral derivative file were needed.
+      1792 AO integral derivatives were read from file IJIKY.
+ Transformation of first index required    0.0 seconds.
+ Transformation of remaining indices required    0.0 seconds.
+      6840 MO integral derivatives were written to file DERINT.
+        MO basis integral derivatives are being calculated
+             (Symmetry block 2, perturbation   1)
+ First derivative of the wavefunction is calculated (Symmetry block 2, perturbation   1)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-10).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.12230454E-01.
+ Largest element of DIIS residual   :  0.12230454E-01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.17811933E-02.
+ Largest element of DIIS residual   :  0.15185534E-02.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.19240732E-02.
+ Largest element of DIIS residual   : -0.12116051E-02.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.85239343E-03.
+ Largest element of DIIS residual   : -0.15709029E-03.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.22567724E-03.
+ Largest element of DIIS residual   : -0.52658356E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.23023555E-04.
+ Largest element of DIIS residual   : -0.16708593E-04.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.68289094E-05.
+ Largest element of DIIS residual   :  0.21655587E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.66184400E-06.
+ Largest element of DIIS residual   :  0.41256337E-06.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector :  0.13098323E-06.
+ Largest element of DIIS residual   :  0.11123309E-06.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.43929111E-07.
+ Largest element of DIIS residual   : -0.19728436E-07.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.11418004E-07.
+ Largest element of DIIS residual   : -0.74730952E-08.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.52060930E-08.
+ Largest element of DIIS residual   : -0.26232476E-08.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.18731797E-08.
+ Largest element of DIIS residual   : -0.92298702E-09.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.45569486E-09.
+ Largest element of DIIS residual   :  0.97882705E-10.
+ Perturbed amplitude equations converged in    14 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    4   14    9   0.0284745504 ABAB
+    4    4    9   14   0.0284745504 ABAB
+    5    4   16    8   0.0196722590 ABAB
+    4    5    8   16   0.0196722590 ABAB
+    4    3    9    7   0.0196327669 ABAB
+    3    4    7    9   0.0196327669 ABAB
+    5    4   18    9   0.0171495163 ABAB
+    4    5    9   18   0.0171495163 ABAB
+    4    4   14   12  -0.0160644059 ABAB
+    4    4   12   14  -0.0160644059 ABAB
+    4    4   14    6  -0.0156395624 ABAB
+    4    4    6   14  -0.0156395624 ABAB
+    4    0    7    0   0.0143821306 AA  
+    5    4    8   18   0.0133207121 ABAB
+    4    5   18    8   0.0133207121 ABAB
+    4    3   12    7  -0.0112874268 ABAB
+    3    4    7   12  -0.0112874268 ABAB
+    5    4   18    8   0.0109789595 ABAB
+    4    5    8   18   0.0109789595 ABAB
+    4    2    9    9   0.0109482137 ABAB
+  norm of converged amps   0.10940615664746961     
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-10).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.12530044E-01.
+ Largest element of DIIS residual   :  0.12530044E-01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.17520785E-02.
+ Largest element of DIIS residual   :  0.14691567E-02.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.20949518E-02.
+ Largest element of DIIS residual   :  0.12904189E-02.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.90930861E-03.
+ Largest element of DIIS residual   :  0.14959533E-03.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.22420165E-03.
+ Largest element of DIIS residual   :  0.52078164E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.22708835E-04.
+ Largest element of DIIS residual   :  0.16528388E-04.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.67424794E-05.
+ Largest element of DIIS residual   : -0.21064410E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.64276607E-06.
+ Largest element of DIIS residual   : -0.40634108E-06.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.13040539E-06.
+ Largest element of DIIS residual   : -0.10995362E-06.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.43921646E-07.
+ Largest element of DIIS residual   :  0.21088647E-07.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.12294649E-07.
+ Largest element of DIIS residual   :  0.76845395E-08.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.53879527E-08.
+ Largest element of DIIS residual   :  0.25497821E-08.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.18378268E-08.
+ Largest element of DIIS residual   :  0.94751391E-09.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.46720205E-09.
+ Largest element of DIIS residual   : -0.96366069E-10.
+ Perturbed Lambda equations converged in    14 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    4   14    9  -0.0284702561 ABAB
+    4    4    9   14  -0.0284702561 ABAB
+    5    4   16    8  -0.0196431995 ABAB
+    4    5    8   16  -0.0196431995 ABAB
+    4    3    9    7  -0.0196360677 ABAB
+    3    4    7    9  -0.0196360677 ABAB
+    5    4   18    9  -0.0171667377 ABAB
+    4    5    9   18  -0.0171667377 ABAB
+    4    4   14   12   0.0160353770 ABAB
+    4    4   12   14   0.0160353770 ABAB
+    4    4   14    6   0.0157644420 ABAB
+    4    4    6   14   0.0157644420 ABAB
+    4    0    7    0  -0.0149503657 AA  
+    5    4    8   18  -0.0132706620 ABAB
+    4    5   18    8  -0.0132706620 ABAB
+    4    3   12    7   0.0112709829 ABAB
+    3    4    7   12   0.0112709829 ABAB
+    4    2    9    9  -0.0109601257 ABAB
+    2    4    9    9  -0.0109601257 ABAB
+    5    4   18    8  -0.0109578038 ABAB
+ First-order density matrix is being calculated  (Symmetry block 2, perturbation   1)
+ Calculation of the contributions of <pq||rs> to dI(i,a)/dx required   0.0 seconds.
+ First-order Z-vector equations are solved for 1 perturbation.
+ Convergence reached after  16 iterations.
+ CPHF coefficients for occ-occ block: U^x(i,j) = -1/2 S^x(i,j)
+ CPHF coefficients for vrt-vrt block: U^x(a,b) = -1/2 S^x(a,b)
+ Transformation of GIAO integrals from AO to MO basis:
+ RHF transformation
+ Transformation of IIIJX integral derivatives.
+ 3 passes through the AO integral derivative file were needed.
+      5492 AO integral derivatives were read from file IIIJX.
+ Transformation of first index required    0.0 seconds.
+ Transformation of remaining indices required    0.0 seconds.
+     17546 MO integral derivatives were written to file DERINT.
+ Transformation of IIJKX integral derivatives.
+ 2 passes through the AO integral derivative file were needed.
+       436 AO integral derivatives were read from file IIJKX.
+ Transformation of first index required    0.0 seconds.
+ Transformation of remaining indices required    0.0 seconds.
+      2160 MO integral derivatives were written to file DERINT.
+ Transformation of IJIKX integral derivatives.
+ 2 passes through the AO integral derivative file were needed.
+       896 AO integral derivatives were read from file IJIKX.
+ Transformation of first index required    0.0 seconds.
+ Transformation of remaining indices required    0.0 seconds.
+      4320 MO integral derivatives were written to file DERINT.
+        MO basis integral derivatives are being calculated
+             (Symmetry block 3, perturbation   1)
+ First derivative of the wavefunction is calculated (Symmetry block 3, perturbation   1)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-10).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.46862993E-01.
+ Largest element of DIIS residual   :  0.46862993E-01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.87409546E-02.
+ Largest element of DIIS residual   :  0.64616989E-02.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.72057326E-02.
+ Largest element of DIIS residual   :  0.19892664E-02.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.84876164E-03.
+ Largest element of DIIS residual   : -0.20988623E-03.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.12814003E-03.
+ Largest element of DIIS residual   :  0.28246549E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.23311375E-04.
+ Largest element of DIIS residual   :  0.19055784E-04.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.10937478E-04.
+ Largest element of DIIS residual   :  0.31977155E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.14214123E-05.
+ Largest element of DIIS residual   :  0.45183305E-06.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector :  0.26596497E-06.
+ Largest element of DIIS residual   :  0.21499926E-06.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.13516489E-06.
+ Largest element of DIIS residual   :  0.81689653E-07.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.41909175E-07.
+ Largest element of DIIS residual   :  0.20268968E-07.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.12393752E-07.
+ Largest element of DIIS residual   :  0.31529328E-08.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.12008243E-08.
+ Largest element of DIIS residual   :  0.10890220E-08.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.53577999E-09.
+ Largest element of DIIS residual   :  0.24895825E-09.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.15756226E-09.
+ Largest element of DIIS residual   :  0.75795527E-10.
+ Perturbed amplitude equations converged in    15 iterations.
+  Dominant contributions to perturbed wavefunction:
+    3    3   16    7   0.0462837008 ABAB
+    3    3    7   16   0.0462837008 ABAB
+    3    0   16    0   0.0444875421 AA  
+    3    3   18    7  -0.0414948453 ABAB
+    3    3    7   18  -0.0414948453 ABAB
+    5    3   16   18  -0.0414196345 ABAB
+    3    5   18   16  -0.0414196345 ABAB
+    4    3   14   18  -0.0371558300 ABAB
+    3    4   18   14  -0.0371558300 ABAB
+    4    3   14   16   0.0333590966 ABAB
+    3    4   16   14   0.0333590966 ABAB
+    5    3   18   16   0.0332466969 ABAB
+    3    5   16   18   0.0332466969 ABAB
+    3    3   18    6   0.0287880503 ABAB
+    3    3    6   18   0.0287880503 ABAB
+    5    5   18    8  -0.0281630715 ABAB
+    5    5    8   18  -0.0281630715 ABAB
+    5    3   16   16   0.0273840530 ABAB
+    3    5   16   16   0.0273840530 ABAB
+    5    3   18   18  -0.0233383391 ABAB
+  norm of converged amps   0.20209471279238478     
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-10).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.47380461E-01.
+ Largest element of DIIS residual   : -0.47380461E-01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.90435889E-02.
+ Largest element of DIIS residual   : -0.65255364E-02.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.72979483E-02.
+ Largest element of DIIS residual   : -0.19373223E-02.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.82133600E-03.
+ Largest element of DIIS residual   :  0.19911997E-03.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.12924841E-03.
+ Largest element of DIIS residual   : -0.29556059E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.24129196E-04.
+ Largest element of DIIS residual   : -0.19543949E-04.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.11213966E-04.
+ Largest element of DIIS residual   : -0.31542204E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.13884698E-05.
+ Largest element of DIIS residual   : -0.44646652E-06.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.26080926E-06.
+ Largest element of DIIS residual   : -0.21448136E-06.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.13400489E-06.
+ Largest element of DIIS residual   : -0.81538949E-07.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.42083209E-07.
+ Largest element of DIIS residual   : -0.19921046E-07.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.12281510E-07.
+ Largest element of DIIS residual   : -0.31731204E-08.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.11955596E-08.
+ Largest element of DIIS residual   : -0.11017142E-08.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.54156195E-09.
+ Largest element of DIIS residual   : -0.24935247E-09.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector : -0.15832099E-09.
+ Largest element of DIIS residual   : -0.73638342E-10.
+ Perturbed Lambda equations converged in    15 iterations.
+  Dominant contributions to perturbed wavefunction:
+    3    0   16    0  -0.0478345626 AA  
+    3    3   16    7  -0.0463738449 ABAB
+    3    3    7   16  -0.0463738449 ABAB
+    3    3   18    7   0.0415241682 ABAB
+    3    3    7   18   0.0415241682 ABAB
+    5    3   16   18   0.0413843138 ABAB
+    3    5   18   16   0.0413843138 ABAB
+    4    3   14   18   0.0372014426 ABAB
+    3    4   18   14   0.0372014426 ABAB
+    4    3   14   16  -0.0334668284 ABAB
+    3    4   16   14  -0.0334668284 ABAB
+    5    3   18   16  -0.0333486032 ABAB
+    3    5   16   18  -0.0333486032 ABAB
+    3    3   18    6  -0.0286482411 ABAB
+    3    3    6   18  -0.0286482411 ABAB
+    5    5   18    8   0.0281435967 ABAB
+    5    5    8   18   0.0281435967 ABAB
+    5    3   16   16  -0.0274912409 ABAB
+    3    5   16   16  -0.0274912409 ABAB
+    5    3   18   18   0.0233843831 ABAB
+ First-order density matrix is being calculated  (Symmetry block 3, perturbation   1)
+ Calculation of the contributions of <pq||rs> to dI(i,a)/dx required   0.0 seconds.
+ First-order Z-vector equations are solved for 1 perturbation.
+ Convergence reached after  16 iterations.
+ CPHF coefficients for occ-occ block: U^x(i,j) = -1/2 S^x(i,j)
+ CPHF coefficients for vrt-vrt block: U^x(a,b) = -1/2 S^x(a,b)
+ Transformation of GIAO integrals from AO to MO basis:
+ RHF transformation
+ Transformation of IIIJZ integral derivatives.
+ 3 passes through the AO integral derivative file were needed.
+       916 AO integral derivatives were read from file IIIJZ.
+ Transformation of first index required    0.0 seconds.
+ Transformation of remaining indices required    0.0 seconds.
+      4222 MO integral derivatives were written to file DERINT.
+ Transformation of IIJKZ integral derivatives.
+ 2 passes through the AO integral derivative file were needed.
+      1268 AO integral derivatives were read from file IIJKZ.
+ Transformation of first index required    0.0 seconds.
+ Transformation of remaining indices required    0.0 seconds.
+      4748 MO integral derivatives were written to file DERINT.
+ Transformation of IJIKZ integral derivatives.
+ 2 passes through the AO integral derivative file were needed.
+      2608 AO integral derivatives were read from file IJIKZ.
+ Transformation of first index required    0.0 seconds.
+ Transformation of remaining indices required    0.0 seconds.
+      9496 MO integral derivatives were written to file DERINT.
+        MO basis integral derivatives are being calculated
+             (Symmetry block 4, perturbation   1)
+ First derivative of the wavefunction is calculated (Symmetry block 4, perturbation   1)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-10).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.57410549E-01.
+ Largest element of DIIS residual   :  0.57410549E-01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.13628128E-01.
+ Largest element of DIIS residual   :  0.94172198E-02.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.11083831E-01.
+ Largest element of DIIS residual   :  0.36863658E-02.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.17418695E-02.
+ Largest element of DIIS residual   : -0.11888766E-03.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.57804058E-04.
+ Largest element of DIIS residual   : -0.44838902E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.18365017E-04.
+ Largest element of DIIS residual   : -0.14567945E-04.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.68208130E-05.
+ Largest element of DIIS residual   :  0.12298523E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.66487333E-06.
+ Largest element of DIIS residual   :  0.21228490E-06.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector :  0.64633776E-07.
+ Largest element of DIIS residual   :  0.66852715E-07.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.38556308E-07.
+ Largest element of DIIS residual   :  0.26713511E-07.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.16811158E-07.
+ Largest element of DIIS residual   :  0.47932737E-08.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.26747242E-08.
+ Largest element of DIIS residual   : -0.75722470E-09.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.18093896E-09.
+ Largest element of DIIS residual   : -0.15675415E-09.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.54079678E-10.
+ Largest element of DIIS residual   : -0.12868666E-10.
+ Perturbed amplitude equations converged in    14 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0   16    0   0.0666011124 AA  
+    4    4   18   14  -0.0568352661 ABAB
+    4    4   14   18  -0.0568352661 ABAB
+    4    4   16   14   0.0517956047 ABAB
+    4    4   14   16   0.0517956047 ABAB
+    4    3   18    7  -0.0388269730 ABAB
+    3    4    7   18  -0.0388269730 ABAB
+    5    4   18   18  -0.0381300683 ABAB
+    4    5   18   18  -0.0381300683 ABAB
+    5    4   16   18  -0.0381085691 ABAB
+    4    5   18   16  -0.0381085691 ABAB
+    4    3   16    7   0.0345209264 ABAB
+    3    4    7   16   0.0345209264 ABAB
+    5    4   16   16   0.0339354787 ABAB
+    4    5   16   16   0.0339354787 ABAB
+    4    2   18    6  -0.0244831924 ABAB
+    2    4    6   18  -0.0244831924 ABAB
+    4    3   18    6   0.0230380321 ABAB
+    3    4    6   18   0.0230380321 ABAB
+    4    2   18    8  -0.0187507406 ABAB
+  norm of converged amps   0.20300744628354903     
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-10).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.57703136E-01.
+ Largest element of DIIS residual   : -0.57703136E-01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.13790557E-01.
+ Largest element of DIIS residual   : -0.94246636E-02.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.11126279E-01.
+ Largest element of DIIS residual   : -0.35834466E-02.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.16858194E-02.
+ Largest element of DIIS residual   :  0.11833026E-03.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.57229396E-04.
+ Largest element of DIIS residual   :  0.43910220E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.17870652E-04.
+ Largest element of DIIS residual   :  0.14306978E-04.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.66713378E-05.
+ Largest element of DIIS residual   : -0.12012593E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.67221771E-06.
+ Largest element of DIIS residual   : -0.21525482E-06.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.65779984E-07.
+ Largest element of DIIS residual   : -0.67093289E-07.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.38675663E-07.
+ Largest element of DIIS residual   : -0.27339550E-07.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.17210184E-07.
+ Largest element of DIIS residual   : -0.48642926E-08.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.27485342E-08.
+ Largest element of DIIS residual   :  0.78022268E-09.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.18206920E-09.
+ Largest element of DIIS residual   :  0.15340573E-09.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.52102364E-10.
+ Largest element of DIIS residual   :  0.12870333E-10.
+ Perturbed Lambda equations converged in    14 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0   16    0  -0.0682640392 AA  
+    4    4   18   14   0.0568302518 ABAB
+    4    4   14   18   0.0568302518 ABAB
+    4    4   16   14  -0.0518280061 ABAB
+    4    4   14   16  -0.0518280061 ABAB
+    4    3   18    7   0.0388458865 ABAB
+    3    4    7   18   0.0388458865 ABAB
+    5    4   18   18   0.0381600198 ABAB
+    4    5   18   18   0.0381600198 ABAB
+    5    4   16   18   0.0380544378 ABAB
+    4    5   18   16   0.0380544378 ABAB
+    4    3   16    7  -0.0345962596 ABAB
+    3    4    7   16  -0.0345962596 ABAB
+    5    4   16   16  -0.0339997792 ABAB
+    4    5   16   16  -0.0339997792 ABAB
+    4    2   18    6   0.0244720862 ABAB
+    2    4    6   18   0.0244720862 ABAB
+    4    3   18    6  -0.0229687094 ABAB
+    3    4    6   18  -0.0229687094 ABAB
+    4    2   18    8   0.0187350365 ABAB
+ First-order density matrix is being calculated  (Symmetry block 4, perturbation   1)
+ Calculation of the contributions of <pq||rs> to dI(i,a)/dx required   0.0 seconds.
+ First-order Z-vector equations are solved for 1 perturbation.
+ Convergence reached after   9 iterations.
+  CONVERT OLD   26.625680984500850      CONVERT NEW   26.625677251984065     
+
+ CC2 contribution to the paramagnetic part of the shielding tensor:
+
+                        Bx          By          Bz
+
+      O #1    x   22.282608    0.000000    0.000000
+      O #1    y    0.000000   12.249335    0.000000
+      O #1    z    0.000000    0.000000   27.075396
+
+      H #21   x   -0.253249    0.000000    0.000000
+      H #21   y    0.000000    0.061277    0.656002
+      H #21   z    0.000000    0.249376   -0.163972
+
+      H #22   x   -0.253249    0.000000    0.000000
+      H #22   y    0.000000    0.061277   -0.656002
+      H #22   z    0.000000   -0.249376   -0.163972
+
+
+ Total shielding tensor at the CC2 level:
+
+                        Bx          By          Bz
+
+      O #1    x  310.200798    0.000000    0.000000
+      O #1    y    0.000000  359.817852    0.000000
+      O #1    z    0.000000    0.000000  329.541253
+
+      H #21   x   24.364221    0.000000    0.000000
+      H #21   y    0.000000   39.014917    8.798197
+      H #21   z    0.000000    6.852942   30.555371
+
+      H #22   x   24.364221    0.000000    0.000000
+      H #22   y    0.000000   39.014917   -8.798197
+      H #22   z    0.000000   -6.852942   30.555371
+
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.15/       0.19 seconds.
+--executable xsdcc finished with status     0 in        0.22 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xjoda
+  ---------------------------------------------------------------
+   CC2 Nuclear Magnetic Resonance Shieldings and Anisotropies
+  ---------------------------------------------------------------
+    Z-matrix      Atomic      Chemical Shielding    Anisotropy
+     Center       Symbol            (ppm)             (ppm)
+  ---------------------------------------------------------------
+       1            O              333.187            39.947
+       2            H               31.312            18.554
+       3            H               31.312            18.554
+  ---------------------------------------------------------------
+
+  ---------------------------------------------------------------
+     HF-SCF Nuclear Magnetic Resonance Shieldings and Anisotropies
+  ---------------------------------------------------------------
+    Z-matrix      Atomic      Chemical Shielding    Anisotropy
+     Center       Symbol            (ppm)             (ppm)
+  ---------------------------------------------------------------
+       1            O              313.776            52.080
+       2            H               31.539            18.008
+       3            H               31.539            18.008
+  ---------------------------------------------------------------
+
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.00/       0.02 seconds.
+--executable xjoda finished with status     0 in        0.03 seconds (walltime).
+  The final electronic energy is       -76.234933728390601 a.u. 
+  This computation required                            1.42 seconds (walltime).

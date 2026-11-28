@@ -1,0 +1,2003 @@
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xjoda
+
+
+   *************************************************************************
+         <<<     CCCCCC     CCCCCC   |||     CCCCCC     CCCCCC   >>>
+       <<<      CCC        CCC       |||    CCC        CCC         >>>
+      <<<      CCC        CCC        |||   CCC        CCC            >>>
+    <<<        CCC        CCC        |||   CCC        CCC              >>>
+      <<<      CCC        CCC        |||   CCC        CCC            >>>
+       <<<      CCC        CCC       |||    CCC        CCC         >>>
+         <<<     CCCCCC     CCCCCC   |||     CCCCCC     CCCCCC   >>>
+   *************************************************************************
+
+     ****************************************************************
+     * CFOUR Coupled-Cluster techniques for Computational Chemistry *
+     ****************************************************************
+
+
+   Department of Chemistry                Institut fuer Physikalische Chemie
+   University of Florida                  Universitaet Mainz
+   Gainesville, FL 32611, USA             D-55099 Mainz, Germany
+
+   Department of Chemistry                Fakultaet fuer Chemie und Biowiss.
+   Johns Hopkins University               Karlsruher Institut fuer Technologie
+   Baltimore, MD 21218, USA               D-76131 Karlsruhe, Germany
+
+   Department of Chemistry                Department of Physical Chemistry
+   Southern Methodist University          Eotvos Lorand University
+   Dallas, TX 75275, USA                  H-1053 Budapest, Hungary
+
+
+                       Version 2.1
+
+                     meyeri                                            
+                     Fri Nov 27 12:25:49 AM EST 2026                   
+                     integer*8 version is running
+
+********************************************************************************
+*                          Input from ZMAT file                                *
+********************************************************************************
+TEST.                                                                           
+O                                                                               
+                                                                                
+*CFOUR(BASIS=AUG-PVQZ                                                           
+FROZEN_CORE=ON                                                                  
+OCCUPATION=2-1-1-0-1-0-0-0/2-1-0-0-0-0-0-0                                      
+CALC=CCSD[T]                                                                    
+MULT=3                                                                          
+REF=UHF                                                                         
+CC_PROG=ECC                                                                     
+SCF_CONV=12                                                                     
+CC_CONV=13                                                                      
+ABCDTYPE=AOBASIS)                                                               
+                                                                                
+********************************************************************************
+  @GTFLGS-I, Calculation type set to UHF.
+    -------------------------------------------------------------------
+                    CFOUR Control Parameters 
+    -------------------------------------------------------------------
+        External           Internal           Value            Units
+          Name               Name
+    -------------------------------------------------------------------
+       ABCDTYPE             IABCDT         AOBASIS     [  2]    ***   
+       ANHARMONIC           IANHAR         OFF         [  0]    ***   
+       ANH_ALGORIT          IANALG         STANDARD    [  0]    ***   
+       ANH_DERIVAT          IANDER         SECOND      [  1]    ***   
+       ANH_MODE             ANHMOD         VIBRATION   [  0]    ***   
+       ANH_STEPSIZ          ICUBST             50000          x 10-6  
+       ANH_SYMMETR          IANHSM         ABELIAN     [  0]    ***   
+       AO_LADDERS           IAOLAD         SINGLEPASS  [  1]    ***   
+       AV_SCF               IAVSCF         OFF         [  0]    ***   
+       BASIS                IBASIS         AUG-PVQZ    [ 35]    ***   
+       BOTHVECTORS          BOTHVC         OFF         [  0]    ***   
+       BOX_POTENT           IPIAB          OFF         [  0]    ***   
+       BREIT                IBREIT         OFF         [  0]    ***   
+       BRUCK_CONV           IBRTOL          10D-  4             ***   
+       BRUECKNER            IBRKNR         OFF         [  0]    ***   
+       BUFFERSIZE           IBUFFS              4096            ***   
+       CACHE_RECS           ICHREC             10               ***   
+       CALCLEVEL            ICLLVL         CCSD(T)     [ 22]    ***   
+       CCORBOPT             ICCORB         OFF         [  0]  x 0.01  
+       CC_CONV              ICCCNV          10D- 13             ***   
+       CC_EXPORDER          ICCEOR              5               ***   
+       CC_EXTRAPOL          ICCEXT         DIIS        [  1]    ***   
+       CC_GUESS             ICCGES         MP2         [  0]    ***   
+       CC_MAXCYC            ICCCYC            100              cycles 
+       CC_PROGRAM           ICCPRO         ECC         [  1]    ***   
+       CHARGE               ICHRGE              0               ***   
+       CHOLESKY             ICHOLE         OFF         [  0]    ***   
+       CIS_CONV             ICISTL              5               ***   
+       COMM_SIZE            IPSIZE            ***               ***   
+       CONSTANT             ICONST         OLD         [  1]    ***   
+       CONTINUUM            ICONTU         NONE        [  0]    ***   
+       CONTRACTION          ICNTYP         GENERAL     [  1]    ***   
+       COORDINATES          ICOORD         INTERNAL    [  0]    ***   
+       CPHF_CONVER          ICPHFT          10D- 16             ***   
+       CPHF_MAXCYC          ICPHFC             64              cycles 
+       CUBIC                ICUBIC         OFF         [  0]    ***   
+       CURVILINEAR          ICURVY         OFF         [  0]    ***   
+       DBOC                 IDBOC          OFF         [  0]    ***   
+       DCT                  IDCT           OFF         [  0]    ***   
+       DERIV_LEV            IDRLVL         ZERO        [  0]    ***   
+       DEVMEM_SIZE          IDVMEM          50000000           MByte  
+       DIAG_MRCC            IEOMST          10D-  0             ***   
+       DIFF_TYPE            IDIFTY         RELAXED     [  0]    ***   
+       DIRECT               IDIRCT         OFF         [  0]    ***   
+       DROPMO               IDRPMO      NONE         
+       ECP                  IECP           OFF         [  0]    ***   
+       EIGENVECTOR          IVEC                1               ***   
+       EL_ANHARM            IELANH         OFF         [  0]    ***   
+       EOMFOLLOW            IEOMSR         ENERGY      [  0]    ***   
+       EOMIP                IEOMIP         OFF         [  0]    ***   
+       EOMLEVEL             HBARFM         SAME        [  0]    ***   
+       EOM_MRCC             IMRCCE         NEW         [  1]    ***   
+       EOM_NONIT            EOMNON         OFF         [  0]    ***   
+       EOM_NSING            IEOMSI          10D-  0             ***   
+       EOM_NSTATES          IMRCCD         DAVIDSON    [  0]    ***   
+       EOM_NTRIP            IEOMTR          10D-  0             ***   
+       EOM_ORDER            IEXORD         ENERGY      [  0]    ***   
+       EOM_PROPSTA          IEOMST              0               ***   
+       ESTATE_CONV          IEXTOL          10D-  5             ***   
+       ESTATE_DIAG          IEXDIG         ITERATIVE   [  0]    ***   
+       ESTATE_LOCK          IESLOC         ON          [  1]    ***   
+       ESTATE_MAXC          IEXMXC             40               ***   
+       ESTATE_PROP          IEXPRP         OFF         [  0]    ***   
+       EVAL_HESS            IRECAL              0            # of cyc.
+       EXCITATION           IEXCIT              0               ***   
+       EXCITE               IEXCIT         NONE        [  0]    ***   
+       EXTERN_POT           IEXPOT         OFF         [  0]    ***   
+       FCGRADNEW            IFCGNW         OFF         [  0]    ***   
+       FC_FIELD             IFINFC              0             x 10-6  
+       FD_CALTYPE           IFDCAL         GRADONLY    [  0]    ***   
+       FD_PROJECT           IFDPRJ         OFF         [  1]    ***   
+       FD_STEPSIZE          IDISFD              0            10-4 bohr
+       FD_USEGROUP          IFDGRP         FULL        [  0]    ***   
+       FILE_RECSIZ          IFLREC              4096           words  
+       FINITE_PERT          IFIPER              0             x 10-6  
+       FIXGEOM              IFIXGM         OFF         [  0]    ***   
+       FOCK                 IFOCK          AO          [  1]    ***   
+       FREQ_ALGORI          IVIALG         STANDARD    [  0]    ***   
+       FROZEN_CORE          IFROCO         ON          [  1]    ***   
+       GAMMA_ABCD           IGABCD         DIRECT      [  1]    ***   
+       GAMMA_ABCI           IGABCI         STORE       [  0]    ***   
+       GENBAS_1             IGNBS1              0               ***   
+       GENBAS_2             IGNBS2              0               ***   
+       GENBAS_3             IGNBS3              0               ***   
+       GENBAS_4             IGNBS4              0               ***   
+       GEO_CONV             ICONTL              5              H/bohr 
+       GEO_MAXCYC           IOPTCY             50               ***   
+       GEO_MAXSTEP          IMXSTP            300            millibohr
+       GEO_METHOD           INR            SINGLE_POINT[  5]    ***   
+       GIAO                 IGIAO          OFF         [  1]    ***   
+       GIMIC                IGIMIC         OFF         [  0]    ***   
+       GRID                 IGRID          OFF         [  0]    ***   
+       GRID_ALGO            IGALGO         SERIAL      [  0]    ***   
+       GUESS                IGUESS         MOREAD      [  0]    ***   
+       HBAR                 IHBAR          OFF         [  0]    ***   
+       HESS_TYPE            IHESTP         SCF         [  0]    ***   
+       HF2_FILE             IHF2Fl         USE         [  1]    ***   
+       HFSTABILITY          ISTABL         OFF         [  0]    ***   
+       INCORE               INCORE         OFF         [  0]    ***   
+       INPUT_MRCC           IMRCC          ON          [  1]    ***   
+       INTEGRALS            INTTYP         VMOL        [  1]    ***   
+       JODA_PRINT           IJPRNT              0               ***   
+       KEYWORD_OUT          IDMPKW         NO          [  0]    ***   
+       LINDEP_TOL           ILINDP              8               ***   
+       LINEQ_CONV           IZTACN          10D-  7           cycles  
+       LINEQ_EXPOR          ILMAXD              5               ***   
+       LINEQ_MAXCY          ILMAXC            100               ***   
+       LINEQ_TYPE           ILTYPE         DIIS        [  1]    ***   
+       LOCK_ORBOCC          ILOCOC         OFF         [  0]    ***   
+       MEMORY_SIZE          IMEMSZ         100000000           words  
+       MEM_UNIT             IMEMU          INTEGERWORDS[  0]    ***   
+       MRCC                 IMRCCC         OFF         [  0]    ***   
+       MULTIPLICTY          IMULTP              3               ***   
+       NACOUPLING           IVCOUP         OFF         [  0]    ***   
+       NEGEVAL              IDIE           ABORT       [  0]    ***   
+       NEWNORM              INEWNO         OFF         [  0]    ***   
+       NON-HF               INONHF         OFF         [  0]    ***   
+       NTOP_TAMP            ITOPT2             15               ***   
+       NUC_MODEL            INUCMO         POINT       [  0]    ***   
+       OCCUPATION           IOCCU  A   2,  1,  1,  0,  1,  0,  0,  0,
+                                   B   2,  1,  0,  0,  0,  0,  0,  0,
+       OPEN-SHELL           IOPEN          SPIN-ORBITAL[  0]    ***   
+       OPTVIB               IOPTVB         OFF         [  0]    ***   
+       ORBITALS             IORBTP         STANDARD    [  0]    ***   
+       PARALLEL             IPARAL         ON          [  1]    ***   
+       PARA_INT             IPINTS         ON          [  1]    ***   
+       PARA_PRINT           IPPRIN              0               ***   
+       PERT_ORB             IPTORB         STANDARD    [  0]    ***   
+       POINTS               IGRDFD              0               ***   
+       PRINT                IPRNT               0               ***   
+       PROPS                IPROPS         OFF         [  0]    ***   
+       PROP_INTEGR          IINTYP         INTERNAL    [  0]    ***   
+       PSI                  IPSI           OFF         [  0]    ***   
+       QC_ALG               IQCALG         FLM         [  0]    ***   
+       QC_LINALG            IQCLIN         TRIDIAG     [  2]    ***   
+       QC_MAXCYC            IQCMAX          10D-100           cycles  
+       QC_MAXSCFCY          IQCMSC          10D- 15           cycles  
+       QC_RTRUST            IQCRTR          10D-  0           x 10-3  
+       QC_SKIPSCF           IQCSKI         OFF         [  0]    ***   
+       QC_START             IQCSTA          10D-  1             ***   
+       QRHFGUESS            IQGUES         OFF         [  0]    ***   
+       QUARTIC              IQUART         OFF         [  0]    ***   
+       RAMAN_INT            IRAMIN         OFF         [  0]    ***   
+       RAMAN_ORB            IRAMRE         UNRELAXED   [  0]    ***   
+       RDO                  IRDOFM         OFF         [  0]    ***   
+       REDUCE_REPR          REDREP         Ir          [  0]    ***   
+       REFERENCE            IREFNC         UHF         [  1]    ***   
+       RELATIVIST           IRELAT         OFF         [  0]    ***   
+       RELAX_DENS           IRDENS         OFF         [  0]    ***   
+       RESET_FLAGS          IRESET         OFF         [  0]    ***   
+       RESTART_CC           ICCRES         OFF         [  0]    ***   
+       ROT_EVEC             ROTVEC              0               ***   
+       SAVE_INTS            ISVINT         OFF         [  0]    ***   
+       SCALE_ON             ISTCRT              0               ***   
+       SCF_CONV             ISCFCV          10D- 12             ***   
+       SCF_DAMPING          IDAMP               0             x 10-3  
+       SCF_EXPORDE          IRPPOR              6               ***   
+       SCF_EXPSTAR          IRPPLS              8               ***   
+       SCF_EXTRAPO          IRPP           ON          [  1]    ***   
+       SCF_MAXCYC           ISCFCY            150              cycles 
+       SCF_NOSTOP           ISCFST         OFF         [  0]    ***   
+       SCF_PRINT            ISCFPR              0               ***   
+       SCF_PROG             ISCFPR         SCF         [  0]    ***   
+       SD_FIELD             IFINSD              0             x 10-6  
+       SOPERT               IPERSO         OFF         [  0]    ***   
+       SPHERICAL            IDFGHI         ON          [  1]    ***   
+       SPINORBIT            ISOCAL         OFF         [  0]    ***   
+       SPINROTATIO          ISRCON         OFF         [  0]    ***   
+       SPIN_FLIP            ISPFLP         OFF         [  0]    ***   
+       SPIN_ORBIT           ISPORB         OFF         [  0]    ***   
+       SPIN_SCAL            ISCSMP         OFF         [  0]    ***   
+       STEEPSCALE           ISTPSC              1000          x 10-3  
+       SUBGROUP             ISUBGP         DEFAULT     [  0]    ***   
+       SUBGRPAXIS           ISBXYZ         X           [  0]    ***   
+       SYMMETRY             ISYM           ON          [  0]    ***   
+       SYM_CHECK            ISYMCK         OVERRIDE    [  1]    ***   
+       T3_EXTRAPOL          IT3EXT         OFF         [  0]    ***   
+       T4_EXTRAPOL          IT4EXP         OFF         [  0]    ***   
+       TAMP_SUM             IEVERY              5               ***   
+       TESTSUITE            ITESTS         OFF         [  0]    ***   
+       THERMOCH             ITHERM         OFF         [  0]    ***   
+       TOL_CHOLESK          ITOLCH          10D-  4             ***   
+       TRANGRAD             IRESRM         OFF         [  0]    ***   
+       TRANS_INV            ITRAIN         USE         [  0]    ***   
+       TREAT_PERT           ITREAT         SIMULTANEOUS[  0]    ***   
+       TRIP_ALGORI          ITRALG         NORMAL      [  0]    ***   
+       UIJ_THRESHO          IUIJTH              1               ***   
+       UNITS                IUNITS         ANGSTROM    [  0]    ***   
+       UNOS                 IUNOS          OFF         [  0]    ***   
+       UPDATE_HESS          IHUPDT         ON          [  1]    ***   
+       VIBPHASE             ISETPH         STANDARD    [  0]    ***   
+       VIBRATION            IVIB           NO          [  0]    ***   
+       VIB_ALGORIT          IGEALG         STANDARD    [  0]    ***   
+       VNATORB              IVNORB         OFF         [  0]    ***   
+       VTRAN                IVTRAN         PARTIAL     [  2]    ***   
+       XFIELD               IXEFLD              0             x 10-6  
+       XFORM_TOL            IXFTOL          10D- 11             ***   
+       YFIELD               IYEFLD              0             x 10-6  
+       ZFIELD               IZEFLD              0             x 10-6  
+       ZSCALE_EXP           IZEXPS         OFF         [  0]    ***   
+    -------------------------------------------------------------------
+   1 entries found in Z-matrix 
+   Job Title : TEST.                                                                           
+   Rotational constants (in cm-1): 
+
+   Rotational constants (in MHz): 
+
+********************************************************************************
+   The full molecular point group is I h .
+   The largest Abelian subgroup of the full molecular point group is D2h .
+   The computational point group is D2h .
+********************************************************************************
+  @GTFLGS-I, Calculation type set to UHF.
+  There is   1 frozen-core orbital.
+  There is   1 frozen-core orbital.
+  There are   80 basis functions.
+ @GEOPT-W, Archive file not created for single-point calculation.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.16/       0.22 seconds.
+--executable xjoda finished with status     0 in        0.36 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvmol
+
+OMP_NUM_THREADS not specified; defaulting to 1
+Running with 1 threads/proc
+
+ SERIAL VERSION OF MOLECULE STARTED
+********************************************************************************
+                    INPUT FROM MOL FILE
+********************************************************************************
+INTGRL        1    0    1    0    0    0    0    0    0                         
+         *** CFOUR Program System (Release V0.1) ***                            
+TEST.                                                                           
+    1    3 X  Y   Z   0.10E-08              0    0                              
+   9999.00      3.00                                                            
+          8.00000000    1    5    1    1    1    1    1                         
+O #1   0.000000000000000   0.000000000000000   0.000000000000000                
+   13    6                                                                      
+   61420.000000000000        9.0000000000000006E-005  -2.0000000000000002E-005  
+   9199.0000000000000        6.9800000000000005E-004  -1.5899999999999999E-004  
+   2091.0000000000000        3.6640000000000002E-003  -8.2899999999999998E-004  
+   590.89999999999998        1.5218000000000001E-002  -3.5079999999999998E-003  
+   192.30000000000001        5.2422999999999997E-002  -1.2156000000000000E-002  
+   69.319999999999993       0.14592100000000000       -3.6261000000000002E-002  
+   26.969999999999999       0.30525799999999997       -8.2991999999999996E-002  
+   11.100000000000000       0.39850799999999997      -0.15209000000000000       
+   4.6820000000000004       0.21698000000000001      -0.11533100000000000       
+   1.4279999999999999        1.7593999999999999E-002  0.28897899999999999       
+  0.55469999999999997       -2.5019999999999999E-003  0.58612799999999998       
+  0.20669999999999999        9.5399999999999999E-004  0.27762399999999998       
+   6.9589999999999999E-002   0.0000000000000000        0.0000000000000000       
+    7    5                                                                      
+   63.420000000000002        6.0439999999999999E-003   0.0000000000000000       
+   14.660000000000000        4.1799000000000003E-002   0.0000000000000000       
+   4.4589999999999996       0.16114300000000001        0.0000000000000000       
+   1.5309999999999999       0.35673100000000002        1.0000000000000000       
+  0.53020000000000000       0.44830900000000001        0.0000000000000000       
+  0.17499999999999999       0.24493999999999999        0.0000000000000000       
+   5.3480000000000000E-002   0.0000000000000000        0.0000000000000000       
+    4    4                                                                      
+   3.7749999999999999        1.0000000000000000        0.0000000000000000       
+   1.3000000000000000        0.0000000000000000        1.0000000000000000       
+  0.44400000000000001        0.0000000000000000        0.0000000000000000       
+  0.15400000000000000        0.0000000000000000        0.0000000000000000       
+    3    3                                                                      
+   2.6659999999999999        1.0000000000000000        0.0000000000000000       
+  0.85899999999999999        0.0000000000000000        1.0000000000000000       
+  0.32400000000000001        0.0000000000000000        0.0000000000000000       
+    2    2                                                                      
+   1.8460000000000001        1.0000000000000000        0.0000000000000000       
+  0.71399999999999997        0.0000000000000000        1.0000000000000000       
+FINISH                                                                          
+
+********************************************************************************
+ ONE- AND TWO-ELECTRON INTEGRALS OVER SYMMETRY-ADAPTED AOS ARE CALCULATED.
+
+  SPHERICAL HARMONICS ARE USED.
+  
+  INTEGRALS LESS THAN  0.10E-13 ARE NEGLECTED.
+
+  NUCLEAR REPULSION ENERGY :    0.0000000000 A.U.
+  @MOLECU-I, ONE ELECTRON INTEGRALS (CPU/WALL):        0.01/       0.01 SECONDS.
+  @TWOEL-I,      19425 INTEGRALS OF SYMMETRY TYPE  I I I I
+  @TWOEL-I,     132400 INTEGRALS OF SYMMETRY TYPE  I J I J
+  @TWOEL-I,      82762 INTEGRALS OF SYMMETRY TYPE  I I J J
+  @TWOEL-I,     286916 INTEGRALS OF SYMMETRY TYPE  I J K L
+  @TWOEL-I, TOTAL NUMBER OF 2-E INTEGRALS     521503.
+  @MOLECU-I, TWO ELECTRON INTEGRALS (CPU/WALL):        1.20/       1.25 SECONDS.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        1.22/       1.27 seconds.
+--executable xvmol finished with status     0 in        1.31 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvmol2ja
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.88/       0.08 seconds.
+--executable xvmol2ja finished with status     0 in        0.13 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvscf
+  There are   80 functions in the AO basis.
+
+  There are 8 irreducible representations.
+
+       Irrep        # of functions
+         1                 20
+         2                 11
+         3                 11
+         4                  8
+         5                 11
+         6                  8
+         7                  8
+         8                  3
+
+
+  Parameters for SCF calculation: 
+        SCF reference function:  UHF  
+  Maximum number of iterations:  150
+     Full symmetry point group: I h 
+     Computational point group: D2h 
+        Initial density matrix: MOREAD                 
+     SCF convergence tolerance: 10**(-12)
+  DIIS convergence acceleration:  ON
+          Latest start for DIIS:   8
+                     DIIS order:   6
+
+     Alpha population by irrep:   2    1    1    0    1    0    0    0
+      Beta population by irrep:   2    1    0    0    0    0    0    0
+
+
+  Memory information:     390598 words required.
+  Fock matrices are constructed from AO integral file.
+ @GETMEM-I,  Allocated       2 MB of main memory.
+  Initialization and symmetry analysis required      0.002 seconds.
+
+ total no. of electrons in initial guess :   0.0000000000000000     
+ total no. of electrons in initial guess :   0.0000000000000000     
+  --------------------------------------------------------------------
+  Iteration         Total Energy            Largest Density Difference
+  --------------------------------------------------------------------
+       0             0.000000000000000              0.0000000000D+00
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+       1           -66.983103233954182              0.8865464816D+01
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+       2           -69.118769472488125              0.8855327656D+01
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+       3           -73.581672277723754              0.2369232783D+01
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+       4           -74.629609012688462              0.1811028473D+01
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+       5           -74.797441596998610              0.4829370206D+00
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+       6           -74.815846624278635              0.1843499626D+00
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+       7           -74.817611751916530              0.4451859481D-01
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+       8           -74.817622536668722              0.4138364786D-02
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+       9           -74.817624740609375              0.1838400528D-02
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+      10           -74.817625033637825              0.7945543538D-03
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+      11           -74.817625056777459              0.2336182278D-03
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+      12           -74.817625058140123              0.4932546528D-04
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+      13           -74.817625058311435              0.2076489792D-04
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+      14           -74.817625058317319              0.4630472223D-05
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+      15           -74.817625058317503              0.6168017219D-07
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+      16           -74.817625058317361              0.6053182522D-07
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+      17           -74.817625058317361              0.6459466295D-09
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+      18           -74.817625058317375              0.2770883523D-09
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+      19           -74.817625058317404              0.1249023107D-10
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+      20           -74.817625058317361              0.4159783629D-11
+   current occupation vector 
+     2  1  1  0  1  0  0  0
+     2  1  0  0  0  0  0  0
+
+  SCF has converged.
+
+ Density matrix saved to file den.dat
+ total alpha spin electron number:   5.0000000000000027     
+ total  beta spin electron number:   3.0000000000000044     
+     E(SCF)=       -74.817625058317375              0.6066258607D-12
+
+  Eigenvector printing suppressed.
+
+
+       The average multiplicity is    3.0062331
+  The expectation value of S**2 is    2.0093593
+
+ @PUTMOS-I, Writing converged MOs to NEWMOS. 
+ @PUTMOS-I, Symmetry   1 Full Blocks  5 Partial Blocksize   0
+ @PUTMOS-I, Symmetry   2 Full Blocks  2 Partial Blocksize   3
+ @PUTMOS-I, Symmetry   3 Full Blocks  2 Partial Blocksize   3
+ @PUTMOS-I, Symmetry   4 Full Blocks  2 Partial Blocksize   0
+ @PUTMOS-I, Symmetry   5 Full Blocks  2 Partial Blocksize   3
+ @PUTMOS-I, Symmetry   6 Full Blocks  2 Partial Blocksize   0
+ @PUTMOS-I, Symmetry   7 Full Blocks  2 Partial Blocksize   0
+ @PUTMOS-I, Symmetry   8 Full Blocks  0 Partial Blocksize   3
+ @PUTFOCK-I, Writing converged Fock matrix to NEWFOCK. 
+ @PUTFOCK-I, Symmetry   1 Full Blocks  5 Partial Blocksize   0
+ @PUTFOCK-I, Symmetry   2 Full Blocks  2 Partial Blocksize   3
+ @PUTFOCK-I, Symmetry   3 Full Blocks  2 Partial Blocksize   3
+ @PUTFOCK-I, Symmetry   4 Full Blocks  2 Partial Blocksize   0
+ @PUTFOCK-I, Symmetry   5 Full Blocks  2 Partial Blocksize   3
+ @PUTFOCK-I, Symmetry   6 Full Blocks  2 Partial Blocksize   0
+ @PUTFOCK-I, Symmetry   7 Full Blocks  2 Partial Blocksize   0
+ @PUTFOCK-I, Symmetry   8 Full Blocks  0 Partial Blocksize   3
+
+
+
+  ORBITAL EIGENVALUES (ALPHA)  (1H = 27.2113834 eV)
+
+       MO #        E(hartree)               E(eV)           FULLSYM    COMPSYM
+       ----   --------------------   --------------------   -------   ---------
+    1     1         -20.7085870666        -563.5093023426      Ag        Ag (1)
+    2     2          -1.4186742727         -38.6040895551      Ag        Ag (1)
+    3    51          -0.7110807988         -19.3494922435       u       B1u (5)
+    4    32          -0.7110807988         -19.3494922435       u       B3u (3)
+    5    21          -0.6116682995         -16.6443406114      Au       B2u (2)
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    6    52           0.1322785960           3.5994835925       u       B1u (5)
+    7    33           0.1322785960           3.5994835925       u       B3u (3)
+    8     3           0.1361366757           3.7044672761      Ag        Ag (1)
+    9    22           0.1400063572           3.8097666634      Au       B2u (2)
+   10    70           0.4609579860          12.5433044891       g       B2g (7)
+   11     4           0.4609579860          12.5433044891       g        Ag (1)
+   12    43           0.4726063581          12.8602728073       g       B1g (4)
+   13    62           0.4726063581          12.8602728073       g       B3g (6)
+   14     5           0.4766771075          12.9710435294      Ag        Ag (1)
+   15    53           0.6777609145          18.4428120982       u       B1u (5)
+   16    34           0.6777609145          18.4428120982       u       B3u (3)
+   17    23           0.7117742303          19.3683614758      Au       B2u (2)
+   18     6           0.8733431156          23.7648743581      Ag        Ag (1)
+   19    54           1.3087777459          35.6136530304       u       B1u (5)
+   20    35           1.3087777459          35.6136530304       u       B3u (3)
+   21    78           1.3235557291          36.0157823956       u        Au (8)
+   22    24           1.3235557291          36.0157823956       u       B2u (2)
+   23    55           1.3326890955          36.2643139300       u       B1u (5)
+   24    36           1.3326890955          36.2643139300       u       B3u (3)
+   25    25           1.3357888498          36.3486625330      Au       B2u (2)
+   26    71           1.4649905315          39.8644190301       g       B2g (7)
+   27     7           1.4649905315          39.8644190301       g        Ag (1)
+   28    44           1.5019644823          40.8705313816       g       B1g (4)
+   29    63           1.5019644823          40.8705313816       g       B3g (6)
+   30     8           1.5151847688          41.2302736649      Ag        Ag (1)
+   31    56           2.6637742719          72.4849830032       u       B1u (5)
+   32    37           2.6637742719          72.4849830032       u       B3u (3)
+   33    26           2.7320091974          74.3417497223      Au       B2u (2)
+   34    72           3.5905814792          97.7046892602       g       B2g (7)
+   35     9           3.5905814792          97.7046892602       g        Ag (1)
+   36    64           3.6117185328          98.2798577297       g       B3g (6)
+   37    45           3.6117185328          98.2798577297       g       B1g (4)
+   38    73           3.6270566605          98.6972294019       g       B2g (7)
+   39    10           3.6270566605          98.6972294019       g        Ag (1)
+   40    65           3.6363627715          98.9504615579       g       B3g (6)
+   41    46           3.6363627715          98.9504615579       g       B1g (4)
+   42    11           3.6394826678          99.0353582510      Ag        Ag (1)
+   43    12           3.8849378691         105.7145338415      Ag        Ag (1)
+   44    38           3.9639012761         107.8632373835       u       B3u (3)
+   45    57           3.9639012761         107.8632373835       u       B1u (5)
+   46    27           3.9999878857         108.8452039530       u       B2u (2)
+   47    79           3.9999878857         108.8452039530       u        Au (8)
+   48    39           4.0222370114         109.4506334427       u       B3u (3)
+   49    58           4.0222370114         109.4506334427       u       B1u (5)
+   50    28           4.0297778392         109.6558298004      Au       B2u (2)
+   51    74           4.2216338307         114.8764967428       g       B2g (7)
+   52    13           4.2216338307         114.8764967428       g        Ag (1)
+   53    47           4.2816458959         116.5095080570       g       B1g (4)
+   54    66           4.2816458959         116.5095080570       g       B3g (6)
+   55    14           4.3027469901         117.0836980202      Ag        Ag (1)
+   56    40          10.2750615525         279.5986393633       u       B3u (3)
+   57    59          10.2750615525         279.5986393633       u       B1u (5)
+   58    29          10.3461828029         281.5339469758      Au       B2u (2)
+   59    75          10.4906712585         285.4656777373       g       B2g (7)
+   60    15          10.4906712585         285.4656777373       g        Ag (1)
+   61    67          10.5288363675         286.5042031506       g       B3g (6)
+   62    48          10.5288363675         286.5042031506       g       B1g (4)
+   63    76          10.5563754070         287.2535785141       g       B2g (7)
+   64    16          10.5563754070         287.2535785141       g        Ag (1)
+   65    68          10.5730150079         287.7063650731       g       B3g (6)
+   66    49          10.5730150079         287.7063650731       g       B1g (4)
+   67    17          10.5785814613         287.8578359729      Ag        Ag (1)
+   68    60          11.7048268107         318.5045299756       u       B1u (5)
+   69    41          11.7048268107         318.5045299756       u       B3u (3)
+   70    80          11.7566639972         319.9150915327       u        Au (8)
+   71    30          11.7566639972         319.9150915327       u       B2u (2)
+   72    42          11.7883582986         320.7775373185       u       B3u (3)
+   73    61          11.7883582986         320.7775373185       u       B1u (5)
+   74    31          11.7990473139         321.0684002133      Au       B2u (2)
+   75    77          12.5279852223         340.9038091145       g       B2g (7)
+   76    18          12.5279852223         340.9038091145       g        Ag (1)
+   77    50          12.5910083478         342.6187555451       g       B1g (4)
+   78    69          12.5910083478         342.6187555451       g       B3g (6)
+   79    19          12.6124721114         343.2028142438      Ag        Ag (1)
+   80    20          40.4035581679        1099.4367120307      Ag        Ag (1)
+
+
+
+  ORBITAL EIGENVALUES ( BETA)  (1H = 27.2113834 eV)
+
+       MO #        E(hartree)               E(eV)           FULLSYM    COMPSYM
+       ----   --------------------   --------------------   -------   ---------
+    1     1         -20.6298810152        -561.3676018014      Ag        Ag (1)
+    2     2          -1.0759452776         -29.2779594650      Ag        Ag (1)
+    3    21          -0.5217280064         -14.1969408134      Au       B2u (2)
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    4    51           0.0624675710           1.6998290235       u       B1u (5)
+    5    32           0.0624675710           1.6998290235       u       B3u (3)
+    6    22           0.1431662540           3.8957518272      Au       B2u (2)
+    7     3           0.1468102566           3.9949101786      Ag        Ag (1)
+    8    52           0.1977922420           5.3822005294       u       B1u (5)
+    9    33           0.1977922420           5.3822005294       u       B3u (3)
+   10    70           0.4778986221          13.0042826332       g       B2g (7)
+   11     4           0.4778986221          13.0042826332       g        Ag (1)
+   12    62           0.4794918471          13.0476364877       g       B3g (6)
+   13    43           0.4794918471          13.0476364877       g       B1g (4)
+   14     5           0.4803144069          13.0700194795      Ag        Ag (1)
+   15    23           0.7328317130          19.9413647089      Au       B2u (2)
+   16    34           0.8044067536          21.8890205805       u       B3u (3)
+   17    53           0.8044067536          21.8890205805       u       B1u (5)
+   18     6           0.9258020383          25.1923542171      Ag        Ag (1)
+   19    54           1.3256397494          36.0724914715       u       B1u (5)
+   20    35           1.3256397494          36.0724914715       u       B3u (3)
+   21    78           1.3337513434          36.2932191645       u        Au (8)
+   22    24           1.3337513434          36.2932191645       u       B2u (2)
+   23    55           1.3386520700          36.4265747148       u       B1u (5)
+   24    36           1.3386520700          36.4265747148       u       B3u (3)
+   25    25           1.3402695078          36.4705874358      Au       B2u (2)
+   26     7           1.5553193106          42.3223900704      Ag        Ag (1)
+   27    44           1.5589697083          42.4217224402       g       B1g (4)
+   28    63           1.5589697083          42.4217224402       g       B3g (6)
+   29     8           1.5730154765          42.8039272243       g        Ag (1)
+   30    71           1.5730154765          42.8039272243       g       B2g (7)
+   31    26           2.7737643720          75.4779657869      Au       B2u (2)
+   32    56           2.8236041601          76.8341753693       u       B1u (5)
+   33    37           2.8236041601          76.8341753693       u       B3u (3)
+   34    72           3.6182888307          98.4586446239       g       B2g (7)
+   35     9           3.6182888307          98.4586446239       g        Ag (1)
+   36    64           3.6319185659          98.8295285734       g       B3g (6)
+   37    45           3.6319185659          98.8295285734       g       B1g (4)
+   38    73           3.6416575231          99.0945390718       g       B2g (7)
+   39    10           3.6416575231          99.0945390718       g        Ag (1)
+   40    46           3.6474954406          99.2533968851       g       B1g (4)
+   41    65           3.6474954406          99.2533968851       g       B3g (6)
+   42    11           3.6494399273          99.3063090581      Ag        Ag (1)
+   43    12           3.9807040811         108.3204649538      Ag        Ag (1)
+   44    38           4.0390168684         109.9072365644       u       B3u (3)
+   45    57           4.0390168684         109.9072365644       u       B1u (5)
+   46    27           4.0514199203         110.2447407657       u       B2u (2)
+   47    79           4.0514199203         110.2447407657       u        Au (8)
+   48    39           4.0588264868         110.4462836863       u       B3u (3)
+   49    58           4.0588264868         110.4462836863       u       B1u (5)
+   50    28           4.0612829846         110.5131283901      Au       B2u (2)
+   51    13           4.3817996201         119.2348294443      Ag        Ag (1)
+   52    47           4.3853427993         119.3312442533       g       B1g (4)
+   53    66           4.3853427993         119.3312442533       g       B3g (6)
+   54    14           4.3988191743         119.6979550599       g        Ag (1)
+   55    74           4.3988191743         119.6979550599       g       B2g (7)
+   56    29          10.3852108852         282.5959550877      Au       B2u (2)
+   57    40          10.3953836484         282.8727700457       u       B3u (3)
+   58    59          10.3953836484         282.8727700457       u       B1u (5)
+   59    75          10.5618548111         287.4026806794       g       B2g (7)
+   60    15          10.5618548111         287.4026806794       g        Ag (1)
+   61    48          10.5838482221         288.0011518180       g       B1g (4)
+   62    67          10.5838482221         288.0011518180       g       B3g (6)
+   63    76          10.5995908755         288.4295311973       g       B2g (7)
+   64    16          10.5995908755         288.4295311973       g        Ag (1)
+   65    49          10.6090478116         288.6868675108       g       B1g (4)
+   66    68          10.6090478116         288.6868675108       g       B3g (6)
+   67    17          10.6122018477         288.7726931956      Ag        Ag (1)
+   68    60          11.8214429272         321.6778158323       u       B1u (5)
+   69    41          11.8214429272         321.6778158323       u       B3u (3)
+   70    80          11.8407483160         322.2031421683       u        Au (8)
+   71    30          11.8407483160         322.2031421683       u       B2u (2)
+   72    42          11.8523789857         322.5196287807       u       B3u (3)
+   73    61          11.8523789857         322.5196287807       u       B1u (5)
+   74    31          11.8562634518         322.6253304787      Au       B2u (2)
+   75    77          12.6681437478         344.7177164877       g       B2g (7)
+   76    18          12.6681437478         344.7177164877       g        Ag (1)
+   77    50          12.6769271047         344.9567237789       g       B1g (4)
+   78    69          12.6769271047         344.9567237789       g       B3g (6)
+   79    19          12.6799403537         345.0387184540      Ag        Ag (1)
+   80    20          40.4522406049        1100.7614284903      Ag        Ag (1)
+
+
+  VSCF finished.
+
+ @CHECKOUT-I, Total execution time (CPU/WALL):      347.20/      11.35 seconds.
+--executable xvscf finished with status     0 in       11.46 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvtran
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  Partial UHF integral transformation
+  The following   1 alpha MOs will be dropped.
+    1
+  There are  79 active alpha molecular orbitals.
+  The following   1 beta MOs will be dropped.
+    1
+  There are  79 active beta molecular orbitals.
+  Transformation of IIII integrals :
+  2 passes through the AO integral file were required.
+       19425 AO integrals were read.
+        5391 MO integrals (Spin case AAAA) were written to HF2AA.
+        4062 MO integrals (Spin case BBBB) were written to HF2BB.
+        9564 MO integrals (Spin case AABB) were written to HF2AB.
+  Transformation of IIJJ integrals :
+  2 passes through the AO integral file were required.
+       82762 AO integrals were read.
+       19233 MO integrals (Spin case AAAA) were written to HF2AA.
+       10462 MO integrals (Spin case BBBB) were written to HF2BB.
+       29835 MO integrals (Spin case AABB) were written to HF2AB.
+  Transformation of IJIJ integrals :
+  2 passes through the AO integral file were required.
+      132400 AO integrals were read.
+       33702 MO integrals (Spin case AAAA) were written to HF2AA.
+       18366 MO integrals (Spin case BBBB) were written to HF2BB.
+       52771 MO integrals (Spin case AABB) were written to HF2AB.
+  Transformation of IJKL integrals :
+  2 passes through the AO integral file were required.
+      286916 AO integrals were read.
+       59801 MO integrals (Spin case AAAA) were written to HF2AA.
+       29080 MO integrals (Spin case BBBB) were written to HF2BB.
+       89426 MO integrals (Spin case AABB) were written to HF2AB.
+  Summary of active molecular orbitals: 
+------------------------------------------------------------------------
+                         * Spin case alpha *
+
+  Index      Eigenvalue    Symmetry    Index      Eigenvalue    Symmetry
+------------------------------------------------------------------------
+     1        -1.4186743        1        41        11.7048268        3
+     2        -0.6116683        2        42        11.7883583        3
+     3        -0.7110808        3        43         0.4726064        4
+     4        -0.7110808        5        44         1.5019645        4
+     5         0.1361367        1        45         3.6117185        4
+     6         0.4609580        1        46         3.6363628        4
+     7         0.4766771        1        47         4.2816459        4
+     8         0.8733431        1        48        10.5288364        4
+     9         1.4649905        1        49        10.5730150        4
+    10         1.5151848        1        50        12.5910083        4
+    11         3.5905815        1        51         0.1322786        5
+    12         3.6270567        1        52         0.6777609        5
+    13         3.6394827        1        53         1.3087777        5
+    14         3.8849379        1        54         1.3326891        5
+    15         4.2216338        1        55         2.6637743        5
+    16         4.3027470        1        56         3.9639013        5
+    17        10.4906713        1        57         4.0222370        5
+    18        10.5563754        1        58        10.2750616        5
+    19        10.5785815        1        59        11.7048268        5
+    20        12.5279852        1        60        11.7883583        5
+    21        12.6124721        1        61         0.4726064        6
+    22        40.4035582        1        62         1.5019645        6
+    23         0.1400064        2        63         3.6117185        6
+    24         0.7117742        2        64         3.6363628        6
+    25         1.3235557        2        65         4.2816459        6
+    26         1.3357888        2        66        10.5288364        6
+    27         2.7320092        2        67        10.5730150        6
+    28         3.9999879        2        68        12.5910083        6
+    29         4.0297778        2        69         0.4609580        7
+    30        10.3461828        2        70         1.4649905        7
+    31        11.7566640        2        71         3.5905815        7
+    32        11.7990473        2        72         3.6270567        7
+    33         0.1322786        3        73         4.2216338        7
+    34         0.6777609        3        74        10.4906713        7
+    35         1.3087777        3        75        10.5563754        7
+    36         1.3326891        3        76        12.5279852        7
+    37         2.6637743        3        77         1.3235557        8
+    38         3.9639013        3        78         3.9999879        8
+    39         4.0222370        3        79        11.7566640        8
+    40        10.2750616        3
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+                         * Spin case beta *
+
+  Index      Eigenvalue    Symmetry    Index      Eigenvalue    Symmetry
+------------------------------------------------------------------------
+     1        -1.0759453        1        41        11.8523790        3
+     2        -0.5217280        2        42         0.4794918        4
+     3         0.1468103        1        43         1.5589697        4
+     4         0.4778986        1        44         3.6319186        4
+     5         0.4803144        1        45         3.6474954        4
+     6         0.9258020        1        46         4.3853428        4
+     7         1.5553193        1        47        10.5838482        4
+     8         1.5730155        1        48        10.6090478        4
+     9         3.6182888        1        49        12.6769271        4
+    10         3.6416575        1        50         0.0624676        5
+    11         3.6494399        1        51         0.1977922        5
+    12         3.9807041        1        52         0.8044068        5
+    13         4.3817996        1        53         1.3256397        5
+    14         4.3988192        1        54         1.3386521        5
+    15        10.5618548        1        55         2.8236042        5
+    16        10.5995909        1        56         4.0390169        5
+    17        10.6122018        1        57         4.0588265        5
+    18        12.6681437        1        58        10.3953836        5
+    19        12.6799404        1        59        11.8214429        5
+    20        40.4522406        1        60        11.8523790        5
+    21         0.1431663        2        61         0.4794918        6
+    22         0.7328317        2        62         1.5589697        6
+    23         1.3337513        2        63         3.6319186        6
+    24         1.3402695        2        64         3.6474954        6
+    25         2.7737644        2        65         4.3853428        6
+    26         4.0514199        2        66        10.5838482        6
+    27         4.0612830        2        67        10.6090478        6
+    28        10.3852109        2        68        12.6769271        6
+    29        11.8407483        2        69         0.4778986        7
+    30        11.8562635        2        70         1.5730155        7
+    31         0.0624676        3        71         3.6182888        7
+    32         0.1977922        3        72         3.6416575        7
+    33         0.8044068        3        73         4.3988192        7
+    34         1.3256397        3        74        10.5618548        7
+    35         1.3386521        3        75        10.5995909        7
+    36         2.8236042        3        76        12.6681437        7
+    37         4.0390169        3        77         1.3337513        8
+    38         4.0588265        3        78         4.0514199        8
+    39        10.3953836        3        79        11.8407483        8
+    40        11.8214429        3
+------------------------------------------------------------------------
+  -1.4186742727360389      -0.61166829950405543      -0.71108079876116614      -0.71108079876117447       0.13613667565692439       0.46095798602908011       0.47667710747225595       0.87334311559124111        1.4649905315021432        1.5151847687725577        3.5905814792257309        3.6270566604817307        3.6394826677938656        3.8849378691085001        4.2216338307435928        4.3027469900784823        10.490671258460962        10.556375406997482        10.578581461347884        12.527985222335953        12.612472111353101        40.403558167892584       0.14000635717030499       0.71177423033225340        1.3235557290915745        1.3357888497872847        2.7320091973820833        3.9999878856959676        4.0297778392405643        10.346182802887137        11.756663997198267        11.799047313902591       0.13227859604318298       0.67776091450915077        1.3087777459472072        1.3326890954771498        2.6637742718808011        3.9639012760917236        4.0222370113941812        10.275061552484461        11.704826810664196        11.788358298552845       0.47260635809222939        1.5019644823199114        3.6117185328309476        3.6363627715422360        4.2816458959243846        10.528836367451332        10.573015007870129        12.591008347819725       0.13227859604318126       0.67776091450915010        1.3087777459472050        1.3326890954771491        2.6637742718807544        3.9639012760917307        4.0222370113941874        10.275061552485326        11.704826810664178        11.788358298552918       0.47260635809223583        1.5019644823199221        3.6117185328309316        3.6363627715422266        4.2816458959243908        10.528836367451325        10.573015007870124        12.591008347819804       0.46095798602907406        1.4649905315021270        3.5905814792257305        3.6270566604817081        4.2216338307435448        10.490671258460928        10.556375406997461        12.527985222335879        1.3235557290915705        3.9999878856959752        11.756663997198247     
+  -1.0759452775548368      -0.52172800642609107       0.14681025657185018       0.47789862213226753       0.48031440693116567       0.92580203831608943        1.5553193106074772        1.5730154764684863        3.6182888306920895        3.6416575230701258        3.6494399273405365        3.9807040811372878        4.3817996200928198        4.3988191743279774        10.561854811077914        10.599590875533021        10.612201847688251        12.668143747799117        12.679940353710908        40.452240604949750       0.14316625398744870       0.73283171295637850        1.3337513433631296        1.3402695077902733        2.7737643719693921        4.0514199203015915        4.0612829846098615        10.385210885223763        11.840748315954020        11.856263451814014        6.2467570960531578E-002  0.19779224195379849       0.80440675355426894        1.3256397494104928        1.3386520699581237        2.8236041600632484        4.0390168683732295        4.0588264867979200        10.395383648364504        11.821442927164206        11.852378985652628       0.47949184706741305        1.5589697082526750        3.6319185658688675        3.6474954406451787        4.3853427993393206        10.583848222063597        10.609047811616829        12.676927104665959        6.2467570960530405E-002  0.19779224195379316       0.80440675355426983        1.3256397494104875        1.3386520699581175        2.8236041600632360        4.0390168683732330        4.0588264867979316        10.395383648364794        11.821442927164174        11.852378985652670       0.47949184706740977        1.5589697082526859        3.6319185658688538        3.6474954406451805        4.3853427993393295        10.583848222063610        10.609047811616842        12.676927104665996       0.47789862213226697        1.5730154764684954        3.6182888306920882        3.6416575230701080        4.3988191743279872        10.561854811077845        10.599590875532959        12.668143747799075        1.3337513433631267        4.0514199203015933        11.840748315953965     
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.12/       0.12 seconds.
+--executable xvtran finished with status     0 in        0.14 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xintprc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  @GMOIAA-I, Processing MO integrals for spin case AA.
+  @GMOIAA-I, Generation of integral list completed.
+                      TYPE                NUMBER
+                      ----               --------
+                      PPPP                     0
+                      PPPH                107859
+                      PPHH                  5947
+                      PHPH                  3888
+                      PHHH                   417
+                      HHHH                    16
+
+                     TOTAL                118127
+  @GMOIAA-I, Processing MO integrals for spin case BB.
+  @GMOIAA-I, Generation of integral list completed.
+                      TYPE                NUMBER
+                      ----               --------
+                      PPPP                     0
+                      PPPH                 58870
+                      PPHH                  1693
+                      PHPH                  1319
+                      PHHH                    84
+                      HHHH                     4
+
+                     TOTAL                 61970
+  @GMOIAB-I, Processing MO integrals for spin case AB.
+                      TYPE                NUMBER
+                      ----               --------
+                      PPPP                     0
+                      PPPH1H              114069
+                      PPPH2H               55783
+                      PPHH                  6006
+                      PHPH1P                1260
+                      PHPH2P                4103
+                      PHHH1P                 139
+                      PHHH2P                 227
+                      HHHH                     9
+
+                     TOTAL                181596
+
+  @FORMT2-I, Second-order MP correlation energies:
+            ------------------------------------------------
+            E(SCF)                  =    -74.817625058317 a.u.
+            E2(AA)                  =     -0.033403630160 a.u.
+            E2(BB)                  =     -0.004581003665 a.u.
+            E2(AB)                  =     -0.121099336425 a.u.
+            E2(TOT)                 =     -0.159083970251 a.u.
+            Total MP2 energy        =    -74.976709028568 a.u.
+            ------------------------------------------------
+            ----------------------------------------------
+                     Projected spin multiplicities: 
+            ----------------------------------------------
+             <0|S^2|0>                  =    2.0093593047.
+             <0|S^2 T2|0>               =   -0.0036698836.
+             Projected <0|S^2 exp(T)|0> =    2.0056894211.
+             Approximate spin mult.     =    3.0037905527.
+            ----------------------------------------------
+   Largest T2 amplitudes for spin case AA:
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  4   2  52  24]-0.01777 [  3   2  34  24]-0.01777 [  4   3  52  34]-0.01673
+[  4   3  70   9] 0.01414 [  3   2  44  10]-0.01205 [  4   2  62  10]-0.01205
+[  3   2  37  24]-0.01145 [  4   2  55  24]-0.01145 [  4   3  55  37]-0.01096
+[  4   3  52  37]-0.01094 [  4   3  55  34]-0.01094 [  4   2  55  27]-0.01090
+[  3   2  37  27]-0.01090 [  4   2  52  27]-0.01083 [  3   2  34  27]-0.01083
+-----------------------------------------------------------------------------
+   Norm of T2AA vector (     2106 symmetry allowed elements):  0.0785114548.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case BB:
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  2   1  22   6]-0.01199 [  2   1  43  31] 0.00819 [  2   1  62  50] 0.00819
+[  2   1  62  51] 0.00789 [  2   1  43  32] 0.00789 [  2   1  22   3] 0.00744
+[  2   1  25   6]-0.00713 [  2   1  21   6]-0.00657 [  2   1  22  12] 0.00628
+[  2   1  25  12] 0.00613 [  2   1  42  31]-0.00528 [  2   1  61  50]-0.00528
+[  2   1  21   3] 0.00474 [  2   1  61  51]-0.00468 [  2   1  42  32]-0.00468
+-----------------------------------------------------------------------------
+   Norm of T2BB vector (      380 symmetry allowed elements):  0.0320240268.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  2   2  24  22]-0.03008 [  4   2  52  22]-0.02212 [  3   2  34  22]-0.02212
+[  2   2  27  25]-0.01819 [  2   1  24   6]-0.01783 [  2   2  27  22]-0.01673
+[  4   1  52   6]-0.01669 [  3   1  34   6]-0.01669 [  1   2   8  22] 0.01625
+[  2   2  10   7]-0.01606 [  2   2  24  25]-0.01587 [  2   2  24  21]-0.01578
+[  2   1  44  31] 0.01526 [  2   1  62  50] 0.01526 [  4   1   9  50] 0.01479
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (     6064 symmetry allowed elements):  0.1514508738.
+-----------------------------------------------------------------------------
+ @CHECKOUT-I, Total execution time (CPU/WALL):        1.90/       0.36 seconds.
+--executable xintprc finished with status     0 in        0.42 seconds (walltime).
+  calling xecc 
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xecc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ CCSD(T) energy will be calculated.
+ AO based algorithm is used. 
+ Largest T2 amplitudes for spin case AA:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  4   2  52  24]-0.01777 [  3   2  34  24]-0.01777 [  4   3  52  34]-0.01673
+ [  4   3  70   9] 0.01414 [  3   2  44  10]-0.01205 [  4   2  62  10]-0.01205
+ [  3   2  37  24]-0.01145 [  4   2  55  24]-0.01145 [  4   3  55  37]-0.01096
+ [  4   3  52  37]-0.01094 [  4   3  55  34]-0.01094 [  4   2  55  27]-0.01090
+ [  3   2  37  27]-0.01090 [  4   2  52  27]-0.01083 [  3   2  34  27]-0.01083
+ -----------------------------------------------------------------------------
+ Norm of T2AA vector (     2106 symmetry allowed elements):  0.0785114548.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case BB:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   1  22   6]-0.01199 [  2   1  43  31] 0.00819 [  2   1  62  50] 0.00819
+ [  2   1  62  51] 0.00789 [  2   1  43  32] 0.00789 [  2   1  22   3] 0.00744
+ [  2   1  25   6]-0.00713 [  2   1  21   6]-0.00657 [  2   1  22  12] 0.00628
+ [  2   1  25  12] 0.00613 [  2   1  42  31]-0.00528 [  2   1  61  50]-0.00528
+ [  2   1  21   3] 0.00474 [  2   1  61  51]-0.00468 [  2   1  42  32]-0.00468
+ -----------------------------------------------------------------------------
+ Norm of T2BB vector (      380 symmetry allowed elements):  0.0320240268.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AB:
+        _       _                 _       _                 _       _
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   2  24  22]-0.03008 [  4   2  52  22]-0.02212 [  3   2  34  22]-0.02212
+ [  2   2  27  25]-0.01819 [  2   1  24   6]-0.01783 [  2   2  27  22]-0.01673
+ [  4   1  52   6]-0.01669 [  3   1  34   6]-0.01669 [  1   2   8  22] 0.01625
+ [  2   2  10   7]-0.01606 [  2   2  24  25]-0.01587 [  2   2  24  21]-0.01578
+ [  2   1  44  31] 0.01526 [  2   1  62  50] 0.01526 [  4   1   9  50] 0.01479
+ -----------------------------------------------------------------------------
+ Norm of T2AB vector (     6064 symmetry allowed elements):  0.1514508738.
+ -----------------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0334036 a.u.
+ The BB contribution to the correlation energy is:   -0.0045810 a.u.
+ The AB contribution to the correlation energy is:   -0.1210993 a.u.
+ The total correlation energy is -0.159083970251 a.u.
+ Resorts of amplitudes and integrals (CPU/WALL):       0.00/       0.00 seconds.
+ Starting iterative solution of the CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ 5 expansion vectors are used in the DIIS extrapolation.
+ Convergence criterium is 10**(-13).
+ Maximum number of iterations is 100.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   1 started:
+ Generation of Intermediates required (CPU/WALL):      3.21/       0.16 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.1 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.3 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.41/       0.19 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0002620782-0.0051530531    4        51
+     T1        BB    0.0003682387 0.0055185454    1         7
+     T2        AA    0.0000018312-0.0008210011    3    2   44   10
+     T2        BB    0.0000103101 0.0013350419    2    1   22    6
+     T2        AB    0.0000036798 0.0026824744    4    1    9   50
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0340167 a.u.
+ The BB contribution to the correlation energy is:   -0.0045329 a.u.
+ The AB contribution to the correlation energy is:   -0.1315215 a.u.
+ The total correlation energy is -0.170071126990 a.u.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.55185454E-02.
+ Largest element of DIIS residual   :  0.55185454E-02.
+ Iteration Nr.   1 required (CPU/WALL):                3.61/       0.35 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   2 started:
+ Generation of Intermediates required (CPU/WALL):      2.20/       0.13 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.5 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.69/       0.31 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000850352-0.0015663083    1         5
+     T1        BB    0.0000957942 0.0016361148    1         7
+     T2        AA    0.0000007170-0.0003046417    4    3   52   33
+     T2        BB    0.0000031981 0.0005033189    2    1   22    6
+     T2        AB    0.0000014369-0.0014140224    4    2   24   51
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0339380 a.u.
+ The BB contribution to the correlation energy is:   -0.0045117 a.u.
+ The AB contribution to the correlation energy is:   -0.1341363 a.u.
+ The total correlation energy is -0.172586004711 a.u.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.16361148E-02.
+ Largest element of DIIS residual   : -0.15127546E-02.
+ Iteration Nr.   2 required (CPU/WALL):                2.88/       0.44 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   3 started:
+ Generation of Intermediates required (CPU/WALL):      2.56/       0.14 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.3 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.29/       0.19 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000400793-0.0011170983    2        23
+     T1        BB    0.0000307036-0.0005064224    2        21
+     T2        AA    0.0000001720-0.0000848317    4    3   70    9
+     T2        BB    0.0000006970 0.0001101839    2    1   22    6
+     T2        AB    0.0000005236-0.0007801672    3    2   24   31
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338356 a.u.
+ The BB contribution to the correlation energy is:   -0.0044953 a.u.
+ The AB contribution to the correlation energy is:   -0.1351676 a.u.
+ The total correlation energy is -0.173498523497 a.u.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.11170983E-02.
+ Largest element of DIIS residual   : -0.95631482E-03.
+ Iteration Nr.   3 required (CPU/WALL):                2.85/       0.33 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   4 started:
+ Generation of Intermediates required (CPU/WALL):      2.57/       0.13 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.4 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.39/       0.29 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000080158-0.0002522086    1         5
+     T1        BB    0.0000143663 0.0002663594    2        21
+     T2        AA    0.0000000916-0.0000651517    4    2   51   23
+     T2        BB    0.0000001542-0.0000192734    2    1   21    6
+     T2        AB    0.0000002611-0.0004883951    3    2   23   31
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338226 a.u.
+ The BB contribution to the correlation energy is:   -0.0044932 a.u.
+ The AB contribution to the correlation energy is:   -0.1354060 a.u.
+ The total correlation energy is -0.173721788654 a.u.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.48839507E-03.
+ Largest element of DIIS residual   : -0.35315780E-03.
+ Iteration Nr.   4 required (CPU/WALL):                3.00/       0.42 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   5 started:
+ Generation of Intermediates required (CPU/WALL):      2.54/       0.20 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.1 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.4 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.52/       0.21 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000040303-0.0001543537    2        23
+     T1        BB    0.0000034726 0.0000542648    2        21
+     T2        AA    0.0000000306 0.0000170986    4    3   70    9
+     T2        BB    0.0000000943-0.0000147171    2    1   22    6
+     T2        AB    0.0000001063-0.0002394067    4    2   23   50
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338306 a.u.
+ The BB contribution to the correlation energy is:   -0.0044938 a.u.
+ The AB contribution to the correlation energy is:   -0.1354363 a.u.
+ The total correlation energy is -0.173760781089 a.u.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.23940672E-03.
+ Largest element of DIIS residual   : -0.11732949E-03.
+ Iteration Nr.   5 required (CPU/WALL):                3.06/       0.41 seconds.
+ Largest T1 amplitudes for spin case AA:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  2      23    ]-0.00899 [  3      33    ]-0.00847 [  4      51    ]-0.00847
+ [  3      34    ]-0.00671 [  4      52    ]-0.00671 [  2      24    ]-0.00645
+ [  1       5    ]-0.00575 [  1       8    ] 0.00382 [  1      10    ] 0.00325
+ [  1       7    ]-0.00265 [  2      27    ] 0.00259 [  3      37    ] 0.00235
+ [  4      55    ] 0.00235 [  1      14    ] 0.00126 [  1      16    ] 0.00106
+ -----------------------------------------------------------------------------
+ Norm of T1AA vector (       48 symmetry allowed elements):  0.0211044349.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AA:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  3   2  34  24]-0.01809 [  4   2  52  24]-0.01809 [  4   3  52  34]-0.01760
+ [  4   3  70   9] 0.01384 [  3   2  44  10]-0.01281 [  4   2  62  10]-0.01281
+ [  3   2  37  24]-0.01160 [  4   2  55  24]-0.01160 [  4   3  52  37]-0.01151
+ [  4   3  55  34]-0.01151 [  4   3  55  37]-0.01126 [  3   2  34  27]-0.01100
+ [  4   2  52  27]-0.01100 [  4   2  55  27]-0.01086 [  3   2  37  27]-0.01086
+ -----------------------------------------------------------------------------
+ Norm of T2AA vector (     2106 symmetry allowed elements):  0.0803734498.
+ -----------------------------------------------------------------------------
+ Largest T1 amplitudes for spin case BB:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  1       7    ] 0.00797 [  2      25    ] 0.00587 [  2      21    ]-0.00530
+ [  1       5    ]-0.00517 [  1       6    ] 0.00426 [  1      13    ]-0.00383
+ [  1      12    ]-0.00365 [  1       3    ]-0.00157 [  2      28    ] 0.00137
+ [  2      24    ] 0.00135 [  2      27    ] 0.00127 [  1      19    ]-0.00049
+ [  2      30    ] 0.00034 [  2      22    ] 0.00024 [  1      20    ] 0.00014
+ -----------------------------------------------------------------------------
+ Norm of T1BB vector (       28 symmetry allowed elements):  0.0143959821.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case BB:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   1  22   6]-0.00980 [  2   1  43  31] 0.00943 [  2   1  62  50] 0.00943
+ [  2   1  43  32] 0.00911 [  2   1  62  51] 0.00911 [  2   1  42  31]-0.00676
+ [  2   1  61  50]-0.00676 [  2   1  61  51]-0.00618 [  2   1  42  32]-0.00618
+ [  2   1  22   3] 0.00614 [  2   1  25   6]-0.00597 [  2   1  62  52] 0.00546
+ [  2   1  43  33] 0.00546 [  2   1  21   6]-0.00540 [  2   1  25  12] 0.00534
+ -----------------------------------------------------------------------------
+ Norm of T2BB vector (      380 symmetry allowed elements):  0.0327352367.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AB:
+        _       _                 _       _                 _       _
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   2  24  22]-0.03405 [  4   2  52  22]-0.02391 [  3   2  34  22]-0.02391
+ [  2   2  27  25]-0.01927 [  2   2  27  22]-0.01918 [  1   2   8  22] 0.01872
+ [  4   1   9  50] 0.01866 [  4   1  70  31] 0.01866 [  3   1  70  50] 0.01866
+ [  3   1   9  31]-0.01866 [  2   2  24  25]-0.01857 [  2   1  24   6]-0.01826
+ [  2   1  44  31] 0.01814 [  2   1  62  50] 0.01814 [  2   2  10   7]-0.01798
+ -----------------------------------------------------------------------------
+ Norm of T2AB vector (     6064 symmetry allowed elements):  0.1780357184.
+ -----------------------------------------------------------------------------
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   6 started:
+ Generation of Intermediates required (CPU/WALL):      2.22/       0.08 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.2 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.5 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.74/       0.22 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000014903 0.0000370632    3        33
+     T1        BB    0.0000018509 0.0000331265    2        21
+     T2        AA    0.0000000118 0.0000066714    4    3   52   33
+     T2        BB    0.0000000321 0.0000033879    2    1   62   50
+     T2        AB    0.0000000321-0.0000773121    3    2   23   31
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338388 a.u.
+ The BB contribution to the correlation energy is:   -0.0044948 a.u.
+ The AB contribution to the correlation energy is:   -0.1354360 a.u.
+ The total correlation energy is -0.173769575468 a.u.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.77312088E-04.
+ Largest element of DIIS residual   : -0.44759272E-04.
+ Iteration Nr.   6 required (CPU/WALL):                2.96/       0.30 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   7 started:
+ Generation of Intermediates required (CPU/WALL):      2.42/       0.12 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.5 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.61/       0.29 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000006403 0.0000164697    4        51
+     T1        BB    0.0000004392-0.0000089501    2        22
+     T2        AA    0.0000000038-0.0000019865    4    3   70    9
+     T2        BB    0.0000000069 0.0000008295    2    1   25    6
+     T2        AB    0.0000000108-0.0000231704    3    2   23   32
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338392 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354389 a.u.
+ The total correlation energy is -0.173773118158 a.u.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.23170370E-04.
+ Largest element of DIIS residual   :  0.11104072E-04.
+ Iteration Nr.   7 required (CPU/WALL):                3.03/       0.41 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   8 started:
+ Generation of Intermediates required (CPU/WALL):      2.08/       0.14 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.4 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.50/       0.33 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000001937-0.0000071825    2        23
+     T1        BB    0.0000002964-0.0000069862    2        21
+     T2        AA    0.0000000017 0.0000010237    3    2   33   24
+     T2        BB    0.0000000047-0.0000006104    2    1   22    3
+     T2        AB    0.0000000036-0.0000064303    4    2   23   51
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338387 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354397 a.u.
+ The total correlation energy is -0.173773283332 a.u.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.71824983E-05.
+ Largest element of DIIS residual   : -0.92688437E-05.
+ Iteration Nr.   8 required (CPU/WALL):                2.91/       0.47 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   9 started:
+ Generation of Intermediates required (CPU/WALL):      2.35/       0.11 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.1 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.5 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.64/       0.25 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000478-0.0000016787    2        23
+     T1        BB    0.0000000849-0.0000016424    2        21
+     T2        AA    0.0000000006-0.0000004833    3    2   33   23
+     T2        BB    0.0000000022-0.0000002747    2    1   42   31
+     T2        AB    0.0000000013-0.0000022273    3    2   23   32
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354400 a.u.
+ The total correlation energy is -0.173773452916 a.u.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.22272512E-05.
+ Largest element of DIIS residual   : -0.15622806E-05.
+ Iteration Nr.   9 required (CPU/WALL):                3.00/       0.36 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  10 started:
+ Generation of Intermediates required (CPU/WALL):      2.95/       0.20 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.2 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.19/       0.33 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000367-0.0000009961    2        23
+     T1        BB    0.0000000468-0.0000011858    2        21
+     T2        AA    0.0000000001-0.0000000728    4    3   52   34
+     T2        BB    0.0000000005-0.0000000584    2    1   21    3
+     T2        AB    0.0000000003-0.0000004498    4    2   23   50
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338384 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773467825 a.u.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.11857928E-05.
+ Largest element of DIIS residual   :  0.68015125E-06.
+ Iteration Nr.  10 required (CPU/WALL):                3.14/       0.53 seconds.
+ Largest T1 amplitudes for spin case AA:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  2      23    ]-0.00911 [  3      33    ]-0.00839 [  4      51    ]-0.00839
+ [  4      52    ]-0.00667 [  3      34    ]-0.00667 [  2      24    ]-0.00649
+ [  1       5    ]-0.00571 [  1       8    ] 0.00379 [  1      10    ] 0.00324
+ [  1       7    ]-0.00264 [  2      27    ] 0.00259 [  3      37    ] 0.00235
+ [  4      55    ] 0.00235 [  1      14    ] 0.00126 [  1      16    ] 0.00106
+ -----------------------------------------------------------------------------
+ Norm of T1AA vector (       48 symmetry allowed elements):  0.0210646046.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AA:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  3   2  34  24]-0.01808 [  4   2  52  24]-0.01808 [  4   3  52  34]-0.01759
+ [  4   3  70   9] 0.01384 [  3   2  44  10]-0.01281 [  4   2  62  10]-0.01281
+ [  3   2  37  24]-0.01160 [  4   2  55  24]-0.01160 [  4   3  55  34]-0.01151
+ [  4   3  52  37]-0.01151 [  4   3  55  37]-0.01126 [  4   2  52  27]-0.01100
+ [  3   2  34  27]-0.01100 [  3   2  37  27]-0.01086 [  4   2  55  27]-0.01086
+ -----------------------------------------------------------------------------
+ Norm of T2AA vector (     2106 symmetry allowed elements):  0.0803639281.
+ -----------------------------------------------------------------------------
+ Largest T1 amplitudes for spin case BB:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  1       7    ] 0.00798 [  2      25    ] 0.00587 [  2      21    ]-0.00525
+ [  1       5    ]-0.00517 [  1       6    ] 0.00423 [  1      13    ]-0.00383
+ [  1      12    ]-0.00365 [  1       3    ]-0.00153 [  2      28    ] 0.00137
+ [  2      24    ] 0.00135 [  2      27    ] 0.00127 [  1      19    ]-0.00049
+ [  2      30    ] 0.00034 [  2      22    ] 0.00021 [  1      20    ] 0.00014
+ -----------------------------------------------------------------------------
+ Norm of T1BB vector (       28 symmetry allowed elements):  0.0143675290.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case BB:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   1  22   6]-0.00980 [  2   1  43  31] 0.00943 [  2   1  62  50] 0.00943
+ [  2   1  43  32] 0.00911 [  2   1  62  51] 0.00911 [  2   1  42  31]-0.00675
+ [  2   1  61  50]-0.00675 [  2   1  61  51]-0.00617 [  2   1  42  32]-0.00617
+ [  2   1  22   3] 0.00614 [  2   1  25   6]-0.00597 [  2   1  62  52] 0.00546
+ [  2   1  43  33] 0.00546 [  2   1  21   6]-0.00540 [  2   1  25  12] 0.00534
+ -----------------------------------------------------------------------------
+ Norm of T2BB vector (      380 symmetry allowed elements):  0.0327361541.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AB:
+        _       _                 _       _                 _       _
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   2  24  22]-0.03406 [  3   2  34  22]-0.02391 [  4   2  52  22]-0.02391
+ [  2   2  27  25]-0.01927 [  2   2  27  22]-0.01918 [  1   2   8  22] 0.01872
+ [  4   1   9  50] 0.01866 [  4   1  70  31] 0.01866 [  3   1  70  50] 0.01866
+ [  3   1   9  31]-0.01866 [  2   2  24  25]-0.01857 [  2   1  24   6]-0.01826
+ [  2   1  44  31] 0.01814 [  2   1  62  50] 0.01814 [  2   2  10   7]-0.01798
+ -----------------------------------------------------------------------------
+ Norm of T2AB vector (     6064 symmetry allowed elements):  0.1780959037.
+ -----------------------------------------------------------------------------
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  11 started:
+ Generation of Intermediates required (CPU/WALL):      2.07/       0.05 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.1 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.5 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.70/       0.17 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000067-0.0000001852    4        51
+     T1        BB    0.0000000095 0.0000001643    2        21
+     T2        AA    0.0000000001-0.0000000545    4    2   51   23
+     T2        BB    0.0000000001-0.0000000304    2    1   21    6
+     T2        AB    0.0000000001-0.0000002118    2    2   23   21
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773478386 a.u.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.21177783E-06.
+ Largest element of DIIS residual   : -0.20627779E-06.
+ Iteration Nr.  11 required (CPU/WALL):                2.78/       0.22 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  12 started:
+ Generation of Intermediates required (CPU/WALL):      2.42/       0.07 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.1 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.4 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.59/       0.19 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000032-0.0000000853    1         5
+     T1        BB    0.0000000035 0.0000000707    2        22
+     T2        AA    0.0000000000-0.0000000149    3    2   33   24
+     T2        BB    0.0000000001 0.0000000072    2    1   42   31
+     T2        AB    0.0000000001-0.0000001343    3    2   23   31
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773477583 a.u.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.13434225E-06.
+ Largest element of DIIS residual   :  0.12243642E-06.
+ Iteration Nr.  12 required (CPU/WALL):                3.01/       0.26 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  13 started:
+ Generation of Intermediates required (CPU/WALL):      2.34/       0.13 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.3 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.29/       0.17 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000010-0.0000000340    1         5
+     T1        BB    0.0000000025 0.0000000658    2        21
+     T2        AA    0.0000000000-0.0000000062    3    2   34   23
+     T2        BB    0.0000000000 0.0000000036    2    1   42   31
+     T2        AB    0.0000000000-0.0000000732    3    2   23   31
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773479383 a.u.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.73205265E-07.
+ Largest element of DIIS residual   : -0.36601062E-07.
+ Iteration Nr.  13 required (CPU/WALL):                3.09/       0.31 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  14 started:
+ Generation of Intermediates required (CPU/WALL):      2.28/       0.07 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.1 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.7 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.82/       0.24 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000006 0.0000000165    3        33
+     T1        BB    0.0000000005 0.0000000136    2        21
+     T2        AA    0.0000000000-0.0000000018    3    2   33   23
+     T2        BB    0.0000000000 0.0000000008    2    1   22    6
+     T2        AB    0.0000000000-0.0000000256    3    2   23   32
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773482277 a.u.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.25552895E-07.
+ Largest element of DIIS residual   :  0.12011841E-07.
+ Iteration Nr.  14 required (CPU/WALL):                3.11/       0.32 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  15 started:
+ Generation of Intermediates required (CPU/WALL):      2.13/       0.08 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.1 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.2 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.37/       0.20 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000002-0.0000000096    2        23
+     T1        BB    0.0000000003-0.0000000090    2        21
+     T2        AA    0.0000000000 0.0000000010    4    3   51   33
+     T2        BB    0.0000000000-0.0000000007    2    1   42   32
+     T2        AB    0.0000000000-0.0000000073    4    2   23   50
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773484605 a.u.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector : -0.96472452E-08.
+ Largest element of DIIS residual   : -0.10270479E-07.
+ Iteration Nr.  15 required (CPU/WALL):                2.89/       0.28 seconds.
+ Largest T1 amplitudes for spin case AA:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  2      23    ]-0.00912 [  3      33    ]-0.00839 [  4      51    ]-0.00839
+ [  4      52    ]-0.00667 [  3      34    ]-0.00667 [  2      24    ]-0.00649
+ [  1       5    ]-0.00571 [  1       8    ] 0.00379 [  1      10    ] 0.00324
+ [  1       7    ]-0.00264 [  2      27    ] 0.00259 [  3      37    ] 0.00235
+ [  4      55    ] 0.00235 [  1      14    ] 0.00126 [  1      16    ] 0.00106
+ -----------------------------------------------------------------------------
+ Norm of T1AA vector (       48 symmetry allowed elements):  0.0210650972.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AA:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  4   2  52  24]-0.01808 [  3   2  34  24]-0.01808 [  4   3  52  34]-0.01759
+ [  4   3  70   9] 0.01384 [  3   2  44  10]-0.01281 [  4   2  62  10]-0.01281
+ [  4   2  55  24]-0.01160 [  3   2  37  24]-0.01160 [  4   3  52  37]-0.01151
+ [  4   3  55  34]-0.01151 [  4   3  55  37]-0.01126 [  3   2  34  27]-0.01100
+ [  4   2  52  27]-0.01100 [  3   2  37  27]-0.01086 [  4   2  55  27]-0.01086
+ -----------------------------------------------------------------------------
+ Norm of T2AA vector (     2106 symmetry allowed elements):  0.0803641017.
+ -----------------------------------------------------------------------------
+ Largest T1 amplitudes for spin case BB:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  1       7    ] 0.00798 [  2      25    ] 0.00587 [  2      21    ]-0.00525
+ [  1       5    ]-0.00517 [  1       6    ] 0.00423 [  1      13    ]-0.00383
+ [  1      12    ]-0.00365 [  1       3    ]-0.00153 [  2      28    ] 0.00137
+ [  2      24    ] 0.00135 [  2      27    ] 0.00127 [  1      19    ]-0.00049
+ [  2      30    ] 0.00034 [  2      22    ] 0.00021 [  1      20    ] 0.00014
+ -----------------------------------------------------------------------------
+ Norm of T1BB vector (       28 symmetry allowed elements):  0.0143673873.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case BB:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   1  22   6]-0.00980 [  2   1  43  31] 0.00943 [  2   1  62  50] 0.00943
+ [  2   1  43  32] 0.00911 [  2   1  62  51] 0.00911 [  2   1  42  31]-0.00675
+ [  2   1  61  50]-0.00675 [  2   1  61  51]-0.00617 [  2   1  42  32]-0.00617
+ [  2   1  22   3] 0.00614 [  2   1  25   6]-0.00597 [  2   1  62  52] 0.00546
+ [  2   1  43  33] 0.00546 [  2   1  21   6]-0.00540 [  2   1  25  12] 0.00534
+ -----------------------------------------------------------------------------
+ Norm of T2BB vector (      380 symmetry allowed elements):  0.0327361796.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AB:
+        _       _                 _       _                 _       _
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   2  24  22]-0.03406 [  4   2  52  22]-0.02391 [  3   2  34  22]-0.02391
+ [  2   2  27  25]-0.01927 [  2   2  27  22]-0.01918 [  1   2   8  22] 0.01872
+ [  4   1   9  50] 0.01866 [  4   1  70  31] 0.01866 [  3   1  70  50] 0.01866
+ [  3   1   9  31]-0.01866 [  2   2  24  25]-0.01857 [  2   1  24   6]-0.01826
+ [  2   1  44  31] 0.01814 [  2   1  62  50] 0.01814 [  2   2  10   7]-0.01798
+ -----------------------------------------------------------------------------
+ Norm of T2AB vector (     6064 symmetry allowed elements):  0.1780959645.
+ -----------------------------------------------------------------------------
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  16 started:
+ Generation of Intermediates required (CPU/WALL):      2.73/       0.22 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.2 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.19/       0.19 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000001-0.0000000037    2        23
+     T1        BB    0.0000000002-0.0000000037    2        21
+     T2        AA    0.0000000000-0.0000000004    4    2   52   23
+     T2        BB    0.0000000000-0.0000000004    2    1   42   32
+     T2        AB    0.0000000000-0.0000000034    3    2   23   32
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485272 a.u.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector : -0.37201234E-08.
+ Largest element of DIIS residual   : -0.28800923E-08.
+ Iteration Nr.  16 required (CPU/WALL):                3.09/       0.41 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  17 started:
+ Generation of Intermediates required (CPU/WALL):      2.12/       0.12 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.6 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.68/       0.18 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000013    2        23
+     T1        BB    0.0000000001-0.0000000021    2        21
+     T2        AA    0.0000000000 0.0000000001    3    2   33   23
+     T2        BB    0.0000000000-0.0000000001    2    1   61   51
+     T2        AB    0.0000000000-0.0000000006    3    2   23   31
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485741 a.u.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector : -0.20811500E-08.
+ Largest element of DIIS residual   :  0.90726669E-09.
+ Iteration Nr.  17 required (CPU/WALL):                2.80/       0.30 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  18 started:
+ Generation of Intermediates required (CPU/WALL):      2.65/       0.07 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.3 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.32/       0.18 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000002    3        33
+     T1        BB    0.0000000000 0.0000000001    1         5
+     T2        AA    0.0000000000-0.0000000000    3    2   34   23
+     T2        BB    0.0000000000-0.0000000000    2    1   21    6
+     T2        AB    0.0000000000-0.0000000003    2    2   23   21
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485778 a.u.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector : -0.27691234E-09.
+ Largest element of DIIS residual   : -0.27949540E-09.
+ Iteration Nr.  18 required (CPU/WALL):                2.98/       0.26 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  19 started:
+ Generation of Intermediates required (CPU/WALL):      2.36/       0.21 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.1 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.2 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.30/       0.22 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000001    2        23
+     T1        BB    0.0000000000-0.0000000001    2        21
+     T2        AA    0.0000000000-0.0000000000    4    2   51   24
+     T2        BB    0.0000000000 0.0000000000    2    1   22    3
+     T2        AB    0.0000000000-0.0000000001    4    2   23   50
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485760 a.u.
+ Convergence information after    19 iterations: 
+ Largest element of residual vector : -0.12257709E-09.
+ Largest element of DIIS residual   :  0.12830422E-09.
+ Iteration Nr.  19 required (CPU/WALL):                3.06/       0.43 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  20 started:
+ Generation of Intermediates required (CPU/WALL):      2.77/       0.21 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.2 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.22/       0.27 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000000    1         8
+     T1        BB    0.0000000000 0.0000000001    2        21
+     T2        AA    0.0000000000-0.0000000000    4    3   69    9
+     T2        BB    0.0000000000 0.0000000000    2    1   61   51
+     T2        AB    0.0000000000-0.0000000001    3    2   23   31
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485750 a.u.
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.56996116E-10.
+ Largest element of DIIS residual   :  0.25179606E-10.
+ Iteration Nr.  20 required (CPU/WALL):                2.99/       0.48 seconds.
+ Largest T1 amplitudes for spin case AA:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  2      23    ]-0.00912 [  3      33    ]-0.00839 [  4      51    ]-0.00839
+ [  4      52    ]-0.00667 [  3      34    ]-0.00667 [  2      24    ]-0.00649
+ [  1       5    ]-0.00571 [  1       8    ] 0.00379 [  1      10    ] 0.00324
+ [  1       7    ]-0.00264 [  2      27    ] 0.00259 [  3      37    ] 0.00235
+ [  4      55    ] 0.00235 [  1      14    ] 0.00126 [  1      16    ] 0.00106
+ -----------------------------------------------------------------------------
+ Norm of T1AA vector (       48 symmetry allowed elements):  0.0210651014.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AA:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  4   2  52  24]-0.01808 [  3   2  34  24]-0.01808 [  4   3  52  34]-0.01759
+ [  4   3  70   9] 0.01384 [  3   2  44  10]-0.01281 [  4   2  62  10]-0.01281
+ [  4   2  55  24]-0.01160 [  3   2  37  24]-0.01160 [  4   3  52  37]-0.01151
+ [  4   3  55  34]-0.01151 [  4   3  55  37]-0.01126 [  3   2  34  27]-0.01100
+ [  4   2  52  27]-0.01100 [  3   2  37  27]-0.01086 [  4   2  55  27]-0.01086
+ -----------------------------------------------------------------------------
+ Norm of T2AA vector (     2106 symmetry allowed elements):  0.0803641019.
+ -----------------------------------------------------------------------------
+ Largest T1 amplitudes for spin case BB:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  1       7    ] 0.00798 [  2      25    ] 0.00587 [  2      21    ]-0.00525
+ [  1       5    ]-0.00517 [  1       6    ] 0.00423 [  1      13    ]-0.00383
+ [  1      12    ]-0.00365 [  1       3    ]-0.00153 [  2      28    ] 0.00137
+ [  2      24    ] 0.00135 [  2      27    ] 0.00127 [  1      19    ]-0.00049
+ [  2      30    ] 0.00034 [  2      22    ] 0.00021 [  1      20    ] 0.00014
+ -----------------------------------------------------------------------------
+ Norm of T1BB vector (       28 symmetry allowed elements):  0.0143673916.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case BB:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   1  22   6]-0.00980 [  2   1  43  31] 0.00943 [  2   1  62  50] 0.00943
+ [  2   1  43  32] 0.00911 [  2   1  62  51] 0.00911 [  2   1  42  31]-0.00675
+ [  2   1  61  50]-0.00675 [  2   1  61  51]-0.00617 [  2   1  42  32]-0.00617
+ [  2   1  22   3] 0.00614 [  2   1  25   6]-0.00597 [  2   1  62  52] 0.00546
+ [  2   1  43  33] 0.00546 [  2   1  21   6]-0.00540 [  2   1  25  12] 0.00534
+ -----------------------------------------------------------------------------
+ Norm of T2BB vector (      380 symmetry allowed elements):  0.0327361797.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AB:
+        _       _                 _       _                 _       _
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   2  24  22]-0.03406 [  3   2  34  22]-0.02391 [  4   2  52  22]-0.02391
+ [  2   2  27  25]-0.01927 [  2   2  27  22]-0.01918 [  1   2   8  22] 0.01872
+ [  4   1   9  50] 0.01866 [  4   1  70  31] 0.01866 [  3   1  70  50] 0.01866
+ [  3   1   9  31]-0.01866 [  2   2  24  25]-0.01857 [  2   1  24   6]-0.01826
+ [  2   1  44  31] 0.01814 [  2   1  62  50] 0.01814 [  2   2  10   7]-0.01798
+ -----------------------------------------------------------------------------
+ Norm of T2AB vector (     6064 symmetry allowed elements):  0.1780959702.
+ -----------------------------------------------------------------------------
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  21 started:
+ Generation of Intermediates required (CPU/WALL):      2.27/       0.10 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.6 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.69/       0.22 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000 0.0000000000    3        33
+     T1        BB    0.0000000000 0.0000000000    2        21
+     T2        AA    0.0000000000-0.0000000000    4    2   51   23
+     T2        BB    0.0000000000-0.0000000000    2    1   62   51
+     T2        AB    0.0000000000-0.0000000000    3    2   23   32
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485748 a.u.
+ Convergence information after    21 iterations: 
+ Largest element of residual vector :  0.24612899E-10.
+ Largest element of DIIS residual   :  0.10345906E-10.
+ Iteration Nr.  21 required (CPU/WALL):                2.96/       0.32 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  22 started:
+ Generation of Intermediates required (CPU/WALL):      2.64/       0.12 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.2 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.28/       0.23 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000000    2        23
+     T1        BB    0.0000000000-0.0000000000    1         3
+     T2        AA    0.0000000000-0.0000000000    4    2   52   23
+     T2        BB    0.0000000000-0.0000000000    2    1   21    3
+     T2        AB    0.0000000000-0.0000000000    3    2   23   31
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485748 a.u.
+ Convergence information after    22 iterations: 
+ Largest element of residual vector : -0.51689885E-11.
+ Largest element of DIIS residual   : -0.38756324E-11.
+ Iteration Nr.  22 required (CPU/WALL):                2.92/       0.35 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  23 started:
+ Generation of Intermediates required (CPU/WALL):      2.79/       0.15 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.2 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.34/       0.21 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000000    2        23
+     T1        BB    0.0000000000-0.0000000000    1         3
+     T2        AA    0.0000000000-0.0000000000    4    2   52   23
+     T2        BB    0.0000000000-0.0000000000    2    1   22    3
+     T2        AB    0.0000000000-0.0000000000    3    2   23   31
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485748 a.u.
+ Convergence information after    23 iterations: 
+ Largest element of residual vector : -0.23965673E-11.
+ Largest element of DIIS residual   : -0.17671715E-11.
+ Iteration Nr.  23 required (CPU/WALL):                3.13/       0.36 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  24 started:
+ Generation of Intermediates required (CPU/WALL):      2.37/       0.11 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.1 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.3 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.43/       0.24 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000000    2        23
+     T1        BB    0.0000000000-0.0000000000    2        21
+     T2        AA    0.0000000000-0.0000000000    4    2   51   24
+     T2        BB    0.0000000000-0.0000000000    2    1   42   32
+     T2        AB    0.0000000000 0.0000000000    2    2   23   21
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485749 a.u.
+ Convergence information after    24 iterations: 
+ Largest element of residual vector : -0.73851689E-12.
+ Largest element of DIIS residual   :  0.34774092E-12.
+ Iteration Nr.  24 required (CPU/WALL):                2.90/       0.35 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  25 started:
+ Generation of Intermediates required (CPU/WALL):      2.49/       0.19 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.0 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.3 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.55/       0.25 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000000    4        51
+     T1        BB    0.0000000000-0.0000000000    2        21
+     T2        AA    0.0000000000-0.0000000000    4    2   52   23
+     T2        BB    0.0000000000 0.0000000000    2    1   62   51
+     T2        AB    0.0000000000-0.0000000000    2    2   23   21
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485749 a.u.
+ Convergence information after    25 iterations: 
+ Largest element of residual vector : -0.12218178E-12.
+ Largest element of DIIS residual   : -0.16156845E-12.
+ Iteration Nr.  25 required (CPU/WALL):                3.05/       0.44 seconds.
+ Largest T1 amplitudes for spin case AA:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  2      23    ]-0.00912 [  4      51    ]-0.00839 [  3      33    ]-0.00839
+ [  4      52    ]-0.00667 [  3      34    ]-0.00667 [  2      24    ]-0.00649
+ [  1       5    ]-0.00571 [  1       8    ] 0.00379 [  1      10    ] 0.00324
+ [  1       7    ]-0.00264 [  2      27    ] 0.00259 [  4      55    ] 0.00235
+ [  3      37    ] 0.00235 [  1      14    ] 0.00126 [  1      16    ] 0.00106
+ -----------------------------------------------------------------------------
+ Norm of T1AA vector (       48 symmetry allowed elements):  0.0210651014.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AA:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  3   2  34  24]-0.01808 [  4   2  52  24]-0.01808 [  4   3  52  34]-0.01759
+ [  4   3  70   9] 0.01384 [  3   2  44  10]-0.01281 [  4   2  62  10]-0.01281
+ [  4   2  55  24]-0.01160 [  3   2  37  24]-0.01160 [  4   3  52  37]-0.01151
+ [  4   3  55  34]-0.01151 [  4   3  55  37]-0.01126 [  3   2  34  27]-0.01100
+ [  4   2  52  27]-0.01100 [  4   2  55  27]-0.01086 [  3   2  37  27]-0.01086
+ -----------------------------------------------------------------------------
+ Norm of T2AA vector (     2106 symmetry allowed elements):  0.0803641019.
+ -----------------------------------------------------------------------------
+ Largest T1 amplitudes for spin case BB:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  1       7    ] 0.00798 [  2      25    ] 0.00587 [  2      21    ]-0.00525
+ [  1       5    ]-0.00517 [  1       6    ] 0.00423 [  1      13    ]-0.00383
+ [  1      12    ]-0.00365 [  1       3    ]-0.00153 [  2      28    ] 0.00137
+ [  2      24    ] 0.00135 [  2      27    ] 0.00127 [  1      19    ]-0.00049
+ [  2      30    ] 0.00034 [  2      22    ] 0.00021 [  1      20    ] 0.00014
+ -----------------------------------------------------------------------------
+ Norm of T1BB vector (       28 symmetry allowed elements):  0.0143673916.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case BB:
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   1  22   6]-0.00980 [  2   1  43  31] 0.00943 [  2   1  62  50] 0.00943
+ [  2   1  43  32] 0.00911 [  2   1  62  51] 0.00911 [  2   1  42  31]-0.00675
+ [  2   1  61  50]-0.00675 [  2   1  61  51]-0.00617 [  2   1  42  32]-0.00617
+ [  2   1  22   3] 0.00614 [  2   1  25   6]-0.00597 [  2   1  62  52] 0.00546
+ [  2   1  43  33] 0.00546 [  2   1  21   6]-0.00540 [  2   1  25  12] 0.00534
+ -----------------------------------------------------------------------------
+ Norm of T2BB vector (      380 symmetry allowed elements):  0.0327361797.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AB:
+        _       _                 _       _                 _       _
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  2   2  24  22]-0.03406 [  4   2  52  22]-0.02391 [  3   2  34  22]-0.02391
+ [  2   2  27  25]-0.01927 [  2   2  27  22]-0.01918 [  1   2   8  22] 0.01872
+ [  4   1   9  50] 0.01866 [  4   1  70  31] 0.01866 [  3   1  70  50] 0.01866
+ [  3   1   9  31]-0.01866 [  2   2  24  25]-0.01857 [  2   1  24   6]-0.01826
+ [  2   1  44  31] 0.01814 [  2   1  62  50] 0.01814 [  2   2  10   7]-0.01798
+ -----------------------------------------------------------------------------
+ Norm of T2AB vector (     6064 symmetry allowed elements):  0.1780959702.
+ -----------------------------------------------------------------------------
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  26 started:
+ Generation of Intermediates required (CPU/WALL):      2.59/       0.08 seconds.
+ Transformation of t(ab,ij) amplitudes required    0.1 seconds.
+ Contraction of t(mu nu,ij) with AO integrals required    0.3 seconds.
+ Backtransformation of t(mu nu,ij) increments required    0.0 seconds.
+ Construction of Hbar required (CPU/WALL):             0.52/       0.17 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000000    2        23
+     T1        BB    0.0000000000-0.0000000000    2        21
+     T2        AA    0.0000000000-0.0000000000    4    2   51   24
+     T2        BB    0.0000000000 0.0000000000    2    1   62   50
+     T2        AB    0.0000000000-0.0000000000    3    2   24   31
+ -------------------------------------------------------------------
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485749 a.u.
+ Convergence information after    26 iterations: 
+ Largest element of residual vector : -0.58203442E-13.
+ Largest element of DIIS residual   :  0.52305921E-13.
+ Amplitude equations converged in    26 iterations.
+ Iteration Nr.  26 required (CPU/WALL):                3.11/       0.25 seconds.
+ The AA contribution to the correlation energy is:   -0.0338385 a.u.
+ The BB contribution to the correlation energy is:   -0.0044949 a.u.
+ The AB contribution to the correlation energy is:   -0.1354401 a.u.
+ The total correlation energy is -0.173773485749 a.u.
+            ----------------------------------------------
+                     Projected spin multiplicities: 
+            ----------------------------------------------
+             <0|S^2|0>                  =    2.0093593047.
+             <0|S^2 (T2+T1**2) |0>      =   -0.0068608985.
+             <0|S^2 T1|0>               =   -0.0018937554.
+             Projected <0|S^2 exp(T)|0> =    2.0006046508.
+             Approximate spin mult.     =    3.0004030735.
+            ----------------------------------------------
+
+ Summary of iterative solution of CC equations:
+ -----------------------------------------------------------
+                 Correlation           Total
+  Iteration        Energy              Energy
+ -----------------------------------------------------------
+      0     -0.1590839702505314   -74.976709028568   DIIS 
+      1     -0.1700711269904772   -74.987696185308   DIIS 
+      2     -0.1725860047108020   -74.990211063028   DIIS 
+      3     -0.1734985234970453   -74.991123581814   DIIS 
+      4     -0.1737217886543712   -74.991346846972   DIIS 
+      5     -0.1737607810890881   -74.991385839406   DIIS 
+      6     -0.1737695754677132   -74.991394633785   DIIS 
+      7     -0.1737731181575685   -74.991398176475   DIIS 
+      8     -0.1737732833323334   -74.991398341650   DIIS 
+      9     -0.1737734529160538   -74.991398511233   DIIS 
+     10     -0.1737734678246913   -74.991398526142   DIIS 
+     11     -0.1737734783862456   -74.991398536704   DIIS 
+     12     -0.1737734775833973   -74.991398535901   DIIS 
+     13     -0.1737734793834208   -74.991398537701   DIIS 
+     14     -0.1737734822766109   -74.991398540594   DIIS 
+     15     -0.1737734846047088   -74.991398542922   DIIS 
+     16     -0.1737734852724588   -74.991398543590   DIIS 
+     17     -0.1737734857410829   -74.991398544058   DIIS 
+     18     -0.1737734857783255   -74.991398544096   DIIS 
+     19     -0.1737734857599588   -74.991398544077   DIIS 
+     20     -0.1737734857502012   -74.991398544068   DIIS 
+     21     -0.1737734857477319   -74.991398544065   DIIS 
+     22     -0.1737734857482195   -74.991398544066   DIIS 
+     23     -0.1737734857483771   -74.991398544066   DIIS 
+     24     -0.1737734857486019   -74.991398544066   DIIS 
+     25     -0.1737734857486489   -74.991398544066   DIIS 
+     26     -0.1737734857486590   -74.991398544066   DIIS 
+ -----------------------------------------------------------
+ A miracle come to pass. The CC iterations have converged.
+
+ Non-iterative perturbative treatment of triple
+ excitations using the CCSD(T) method ...
+  trp1aaa requires                 66554  integer words memory.
+  trp1aaa requires                 62910  integer words memory.
+  trp1aab requires                 77555  integer words memory.
+  trp1abb requires                 71304  integer words memory.
+ ... required                        (CPU/WALL):       5.37/       0.25 seconds.
+--------------------------------------------------------------------------------
+  HF-SCF energy                            -74.817625058317
+  MP2 correlation energy                    -0.159083970251
+  MP2 energy                               -74.976709028568
+  CCSD correlation energy                   -0.173773485749
+  CCSD energy                              -74.991398544066
+  E4T  to CCSD(T)                           -0.003941777084
+  E5ST to CCSD(T)                            0.000072630971
+  E4T + E5ST                                -0.003869146113
+  CCSD(T) correlation energy                -0.177642631862
+--------------------------------------------------------------------------------
+  CCSD(T) energy                           -74.995267690179
+--------------------------------------------------------------------------------
+ @CHECKOUT-I, Total execution time (CPU/WALL):       83.72/       9.66 seconds.
+--executable xecc finished with status     0 in        9.77 seconds (walltime).
+  The final electronic energy is       -74.995267690179105 a.u. 
+  This computation required                           23.60 seconds (walltime).

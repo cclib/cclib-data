@@ -1,0 +1,1890 @@
+ --invoking executable--
+/home/harding/cfour_testsuite/bin/xjoda
+
+
+   *************************************************************************
+         <<<     CCCCCC     CCCCCC   |||     CCCCCC     CCCCCC   >>>
+       <<<      CCC        CCC       |||    CCC        CCC         >>>
+      <<<      CCC        CCC        |||   CCC        CCC            >>>
+    <<<        CCC        CCC        |||   CCC        CCC              >>>
+      <<<      CCC        CCC        |||   CCC        CCC            >>>
+       <<<      CCC        CCC       |||    CCC        CCC         >>>
+         <<<     CCCCCC     CCCCCC   |||     CCCCCC     CCCCCC   >>>
+   *************************************************************************
+
+     ****************************************************************
+     * CFOUR Coupled-Cluster techniques for Computational Chemistry *
+     ****************************************************************
+ 
+
+   Department of Chemistry                Institut fuer Physikalische Chemie
+   University of Texas at Austin          Universitaet Mainz
+   Austin, TX  78712, USA                 D-55099 Mainz, Germany
+ 
+                       Version 1.2
+ 
+                     dirac.chemie.uni-mainz.de                         
+                     Mi 21. Mai 20:34:07 CEST 2014                     
+                     integer*8 version is running
+ 
+********************************************************************************
+*                          Input from ZMAT file                                *
+********************************************************************************
+MG-O at TCSCF level                                                             
+MG                                                                              
+O 1 R                                                                           
+                                                                                
+R    =        1.788308608230064                                                 
+                                                                                
+*CFOUR(CALC=SCF,BASIS=6-31G*,REF=TCSCF                                          
+CORE=5-2-2-0,ACTIVE=2-0-0-0,SCF_CONV=12                                         
+VIB=ANALYTIC,VTRAN=FULL)                                                        
+                                                                                
+********************************************************************************
+    -------------------------------------------------------------------
+                    CFOUR Control Parameters 
+    -------------------------------------------------------------------
+        External           Internal           Value            Units
+          Name               Name
+    -------------------------------------------------------------------
+       ABCDTYPE             IABCDT         STANDARD     [  0]   ***   
+       ACTIVE_ORBI          ICORE    2,  0,  0,  0,
+       ANHARMONIC           IANHAR         OFF          [  0]   ***   
+       ANH_ALGORIT          IANALG         STANDARD     [  0]   ***   
+       ANH_DERIVAT          IANDER         SECOND       [  1]   ***   
+       ANH_STEPSIZ          ICUBST             50000          x 10-6  
+       ANH_SYMMETR          IANHSM         ABELIAN      [  0]   ***   
+       AO_LADDERS           IAOLAD         SINGLEPASS   [  1]   ***   
+       AV_SCF               IAVSCF         OFF          [  0]   ***   
+       BASIS                IBASIS         6-31G*       [ 19]   ***   
+       BOX_POTENT           IPIAB          OFF          [  0]   ***   
+       BREIT                IBREIT         OFF          [  0]   ***   
+       BRUCK_CONV           IBRTOL          10D-  4             ***   
+       BRUECKNER            IBRKNR             OFF      [  0]   ***   
+       BUFFERSIZE           IBUFFS            600               ***   
+       CACHE_RECS           ICHREC             10               ***   
+       CALCLEVEL            ICLLVL           SCF        [  0]   ***   
+       CCORBOPT             ICCORB             OFF      [  0] x 0.01  
+       CC_CONV              ICCCNV          10D-  7             ***   
+       CC_EXPORDER          ICCEOR              0               ***   
+       CC_EXTRAPOL          ICCEXT             DIIS     [  1]   ***   
+       CC_MAXCYC            ICCCYC              0              cycles 
+       CC_PROGRAM           ICCPRO         VCC          [  0]   ***   
+       CHARGE               ICHRGE              0               ***   
+       CHOLESKY             ICHOLE         OFF          [  0]   ***   
+       CIS_CONV             ICISTL              5               ***   
+       COMM_SIZE            IPSIZE            ***               ***   
+       CONSTANT             ICONST         OLD          [  1]   ***   
+       CONTINUUM            ICONTU         NONE         [  0]   ***   
+       CONTRACTION          ICNTYP          GENERAL     [  1]   ***   
+       COORDINATES          ICOORD         INTERNAL     [  0]   ***   
+       CORE_ORBITA          IACTIV   5,  2,  2,  0,
+       CPHF_CONVER          ICPHFT          10D- 16             ***   
+       CPHF_MAXCYC          ICPHFC             64              cycles 
+       CUBIC                ICUBIC         OFF          [  0]   ***   
+       CURVILINEAR          ICURVY            OFF       [  0]   ***   
+       DBOC                 IDBOC          OFF          [  0]   ***   
+       DCT                  IDCT           OFF          [  0]   ***   
+       DERIV_LEV            IDRLVL            SECOND    [  2]   ***   
+       DIAG_MRCC            IEOMST          10D-  0             ***   
+       DIFF_TYPE            IDIFTY         RELAXED      [  0]   ***   
+       DIRECT               IDIRCT         OFF          [  0]   ***   
+       DROPMO               IDRPMO      NONE         
+       ECP                  IECP           OFF          [  0]   ***   
+       EIGENVECTOR          IVEC                1               ***   
+       EL_ANHARM            IELANH         OFF          [  0]   ***   
+       EOMFOLLOW            IEOMSR         ENERGY       [  0]   ***   
+       EOMIP                IEOMIP         OFF          [  0]   ***   
+       EOM_MRCC             IMRCCE         NEW          [  1]   ***   
+       EOM_NONIT            EOMNON         OFF          [  0]   ***   
+       EOM_NSING            IEOMSI          10D-  0             ***   
+       EOM_NSTATES          IMRCCD         DAVIDSON     [  0]   ***   
+       EOM_NTRIP            IEOMTR          10D-  0             ***   
+       EOM_ORDER            IEXORD         ENERGY       [  0]   ***   
+       EOM_PROPSTA          IEOMST              0               ***   
+       ESTATE_CONV          IEXTOL          10D-  5             ***   
+       ESTATE_DIAG          IEXDIG         ITERATIVE    [  0]   ***   
+       ESTATE_LOCK          IESLOC         ON           [  1]   ***   
+       ESTATE_MAXC          IEXMXC             20               ***   
+       ESTATE_PROP          IEXPRP         OFF          [  0]   ***   
+       EVAL_HESS            IRECAL              0            # of cyc.
+       EXCITATION           IEXCIT              0               ***   
+       EXCITE               IEXCIT         NONE         [  0]   ***   
+       FCGRADNEW            IFCGNW         OFF          [  0]   ***   
+       FC_FIELD             IFINFC              0             x 10-6  
+       FD_CALTYPE           IFDCAL         GRADONLY     [  0]   ***   
+       FD_PROJECT           IFDPRJ         OFF          [  1]   ***   
+       FD_STEPSIZE          IDISFD              0            10-4 bohr
+       FD_USEGROUP          IFDGRP         FULL         [  0]   ***   
+       FILE_RECSIZ          IFLREC              4096           words  
+       FINITE_PERT          IFIPER              0             x 10-6  
+       FIXGEOM              IFIXGM         OFF          [  0]   ***   
+       FOCK                 IFOCK          AO           [  1]   ***   
+       FREQ_ALGORI          IVIALG         STANDARD     [  0]   ***   
+       FROZEN_CORE          IFROCO         OFF          [  0]   ***   
+       FROZEN_VIRT          IFROVI         OFF          [  0]   ***   
+       GAMMA_ABCD           IGABCD         STORE        [  0]   ***   
+       GAMMA_ABCI           IGABCI         STORE        [  0]   ***   
+       GENBAS_1             IGNBS1              0               ***   
+       GENBAS_2             IGNBS2              0               ***   
+       GENBAS_3             IGNBS3              0               ***   
+       GENBAS_4             IGNBS4              0               ***   
+       GEO_CONV             ICONTL              5              H/bohr 
+       GEO_MAXCYC           IOPTCY             50               ***   
+       GEO_MAXSTEP          IMXSTP            300            millibohr
+       GEO_METHOD           INR            SINGLE_POINT [  5]   ***   
+       GIAO                 IGIAO          OFF          [  1]   ***   
+       GIMIC                IGIMIC         OFF          [  0]   ***   
+       GRID                 IGRID          OFF          [  0]   ***   
+       GRID_ALGO            IGALGO         SERIAL       [  0]   ***   
+       GUESS                IGUESS            MOREAD    [  0]   ***   
+       HBAR                 IHBAR              OFF      [  0]   ***   
+       HESS_TYPE            IHESTP         SCF          [  0]   ***   
+       HF2_FILE             IHF2Fl         USE          [  1]   ***   
+       HFSTABILITY          ISTABL         OFF          [  0]   ***   
+       INCORE               INCORE             OFF      [  0]   ***   
+       INPUT_MRCC           IMRCC          ON           [  1]   ***   
+       INTEGRALS            INTTYP             VMOL     [  1]   ***   
+       JODA_PRINT           IJPRNT              0               ***   
+       KEYWORD_OUT          IDMPKW         NO           [  0]   ***   
+       LINDEP_TOL           ILINDP              8               ***   
+       LINEQ_CONV           IZTACN          10D-  7           cycles  
+       LINEQ_EXPOR          ILMAXD              5               ***   
+       LINEQ_MAXCY          ILMAXC            100               ***   
+       LINEQ_TYPE           ILTYPE         DIIS         [  1]   ***   
+       LOCK_ORBOCC          ILOCOC             OFF      [  0]   ***   
+       MEMORY_SIZE          IMEMSZ         100000000           words  
+       MEM_UNIT             IMEMU          INTEGERWORDS [  0]   ***   
+       MRCC                 IMRCCC         OFF          [  0]   ***   
+       MULTIPLICTY          IMULTP              1               ***   
+       NACOUPLING           IVCOUP         OFF          [  0]   ***   
+       NEGEVAL              IDIE             ABORT      [  0]   ***   
+       NEWNORM              INEWNO         OFF          [  0]   ***   
+       NON-HF               INONHF             OFF      [  0]   ***   
+       NTOP_TAMP            ITOPT2             15               ***   
+       NUC_MODEL            INUCMO         POINT        [  0]   ***   
+       OCCUPATION           IOCCU   ESTIMATED BY SCF 
+       OPEN-SHELL           IOPEN          SPIN-ORBITAL [  0]   ***   
+       ORBITALS             IORBTP           STANDARD   [  0]   ***   
+       PARALLEL             IPARAL         ON           [  1]   ***   
+       PARA_INT             IPINTS         ON           [  1]   ***   
+       PARA_PRINT           IPPRIN              0               ***   
+       PERT_ORB             IPTORB         STANDARD     [  0]   ***   
+       POINTS               IGRDFD              0               ***   
+       PRINT                IPRNT               0               ***   
+       PROPS                IPROPS             OFF      [  0]   ***   
+       PROP_INTEGR          IINTYP         INTERNAL     [  0]   ***   
+       PSI                  IPSI           OFF          [  0]   ***   
+       QRHFGUESS            IQGUES         OFF          [  0]   ***   
+       QUARTIC              IQUART         OFF          [  0]   ***   
+       RAMAN_INT            IRAMIN         OFF          [  0]   ***   
+       RAMAN_ORB            IRAMRE         UNRELAXED    [  0]   ***   
+       RDO                  IRDOFM             OFF      [  0]   ***   
+       REFERENCE            IREFNC             TCSCF    [  3]   ***   
+       RELATIVIST           IRELAT         OFF          [  0]   ***   
+       RELAX_DENS           IRDENS             OFF      [  0]   ***   
+       RESET_FLAGS          IRESET             OFF      [  0]   ***   
+       RESTART_CC           ICCRES         OFF          [  0]   ***   
+       ROT_EVEC             ROTVEC              0               ***   
+       SAVE_INTS            ISVINT             OFF      [  0]   ***   
+       SCALE_ON             ISTCRT              0               ***   
+       SCF_CONV             ISCFCV          10D- 12             ***   
+       SCF_DAMPING          IDAMP               0             x 10-3  
+       SCF_EXPORDE          IRPPOR              6               ***   
+       SCF_EXPSTAR          IRPPLS              8               ***   
+       SCF_EXTRAPO          IRPP                ON      [  1]   ***   
+       SCF_MAXCYC           ISCFCY            150              cycles 
+       SCF_NOSTOP           ISCFST         OFF          [  0]   ***   
+       SCF_PRINT            ISCFPR              0               ***   
+       SD_FIELD             IFINSD              0             x 10-6  
+       SEQUENCE             ISEQUE         OFF          [  0]   ***   
+       SOPERT               IPERSO         OFF          [  0]   ***   
+       SPHERICAL            IDFGHI             ON       [  1]   ***   
+       SPINORBIT            ISOCAL         OFF          [  0]   ***   
+       SPINROTATIO          ISRCON         OFF          [  0]   ***   
+       SPIN_FLIP            ISPFLP         OFF          [  0]   ***   
+       SPIN_ORBIT           ISPORB         OFF          [  0]   ***   
+       SPIN_SCAL            ISCSMP         OFF          [  0]   ***   
+       STEEPSCALE           ISTPSC              1000          x 10-3  
+       SUBGROUP             ISUBGP         DEFAULT      [  0]   ***   
+       SUBGRPAXIS           ISBXYZ         X            [  0]   ***   
+       SYMMETRY             ISYM             ON         [  0]   ***   
+       SYM_CHECK            ISYMCK         OVERRIDE     [  1]   ***   
+       T3_EXTRAPOL          IT3EXT         OFF          [  0]   ***   
+       TAMP_SUM             IEVERY              0               ***   
+       TESTSUITE            ITESTS         OFF          [  0]   ***   
+       THERMOCH             ITHERM         ON           [  1]   ***   
+       TOL_CHOLESK          ITOLCH          10D-  4             ***   
+       TRANGRAD             IRESRM         OFF          [  0]   ***   
+       TRANS_INV            ITRAIN         USE          [  0]   ***   
+       TREAT_PERT           ITREAT         SIMULTANEOUS [  0]   ***   
+       TRIP_ALGORI          ITRALG         NORMAL       [  0]   ***   
+       UIJ_THRESHO          IUIJTH              1               ***   
+       UNITS                IUNITS         ANGSTROM     [  0]   ***   
+       UNOS                 IUNOS          OFF          [  0]   ***   
+       UPDATE_HESS          IHUPDT         ON           [  1]   ***   
+       VIBPHASE             ISETPH         STANDARD     [  0]   ***   
+       VIBRATION            IVIB             ANALYTIC   [  1]   ***   
+       VIB_ALGORIT          IGEALG         STANDARD     [  0]   ***   
+       VNATORB              IVNORB         OFF          [  0]   ***   
+       VTRAN                IVTRAN         FULL         [  1]   ***   
+       XFIELD               IXEFLD              0             x 10-6  
+       XFORM_TOL            IXFTOL          10D- 11             ***   
+       YFIELD               IYEFLD              0             x 10-6  
+       ZFIELD               IZEFLD              0             x 10-6  
+       ZSCALE_EXP           IZEXPS         OFF          [  0]   ***   
+    -------------------------------------------------------------------
+   2 entries found in Z-matrix 
+   Job Title : MG-O at TCSCF level                                                             
+   There are  1 unique internal coordinates.
+   Of these,  0 will be optimized.
+   User supplied Z-matrix: 
+--------------------------------------------------------------------------------
+       SYMBOL    BOND      LENGTH    ANGLE     ANGLE     DIHED     ANGLE
+                  TO      (ANGST)    WRT      (DEG)      WRT      (DEG)
+--------------------------------------------------------------------------------
+        MG   
+        O          1         R    
+                  *Initial values for internal coordinates* 
+                      Name             Value
+                        R               1.7883086082
+--------------------------------------------------------------------------------
+  1  MG        12    23.98504
+  2  O          8    15.99491
+ factor:   60.1997200000000     
+   Rotational constants (in cm-1): 
+          0.5493277364             0.5493277364
+   Rotational constants (in MHz): 
+      16468.4335404409         16468.4335404409
+********************************************************************************
+   The full molecular point group is CXv .
+   The largest Abelian subgroup of the full molecular point group is C2v .
+   The computational point group is C2v .
+********************************************************************************
+--------------------------------------------------------------------------------
+   Analysis of internal coordinates specified by Z-matrix 
+--------------------------------------------------------------------------------
+   *The nuclear repulsion energy is   28.407290199357192 a.u.
+   *There is   1 degree of freedom within the tot. symm. molecular subspace.
+   *Z-matrix requests optimization of   0 coordinates.
+   *The optimization is constrained.
+   *The following   1 parameters can have non-zero 
+    derivatives within the totally symmetric subspace:
+             R    [ 1]
+   *The following   0 parameters are to be optimized:
+
+   *The following coordinates must be varied in an  unconstrained optimization.
+             R    [ 1]
+--------------------------------------------------------------------------------
+ ----------------------------------------------------------------
+ Z-matrix   Atomic            Coordinates (in bohr)
+  Symbol    Number           X              Y              Z
+ ----------------------------------------------------------------
+     MG       12         0.00000000     0.00000000     1.35201350
+     O         8         0.00000000     0.00000000    -2.02740070
+ ----------------------------------------------------------------
+   Interatomic distance matrix (Angstroms) 
+ 
+                 MG            O    
+                [ 1]        [ 2]
+  MG   [ 1]     0.00000
+  O    [ 2]     1.78831     0.00000
+   Rotational constants (in cm-1): 
+          0.5493277364             0.0000000000
+   Rotational constants (in MHz): 
+      16468.4335404409             0.0000000000
+  There are   32 basis functions.
+  @CHECKOUT-I, Total execution time (CPU/WALL):        0.16/       0.18 seconds.
+--executable xjoda finished with status     0 in        0.19 seconds (walltime).
+ --invoking executable--
+/home/harding/cfour_testsuite/bin/xvmol
+ Serial version of molecule started
+********************************************************************************
+                    Input from MOL file
+********************************************************************************
+INTGRL        1    0    1    0    0    0    0    0    0                         
+         *** CFOUR Program System (Release V0.1) ***                            
+MG-O at TCSCF level                                                             
+    2    2 X  Y       0.10E-08              0    0                              
+   9999.00      3.00                                                            
+         12.00000000    1    3    2    2    1                                   
+MG#1   0.000000000000000   0.000000000000000   1.352013504886953                
+    6    1                                                                      
+   11722.8000000000       1.977800000000000E-003                                
+   1759.93000000000       1.511400000000000E-002                                
+   400.846000000000       7.391080000000000E-002                                
+   112.807000000000       0.249191000000000                                     
+   35.9997000000000       0.487928000000000                                     
+   12.1828000000000       0.319662000000000                                     
+   10    3                                                                      
+   189.180000000000      -3.237200000000000E-003  0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+   45.2119000000000      -4.100790000000000E-002  0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+   14.3563000000000      -0.112600000000000       0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+   5.13886000000000       0.148633000000000       0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+   1.90652000000000       0.616497000000000       0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+  0.705887000000000       0.364829000000000       0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+  0.929340000000000       0.000000000000000E+000 -0.212290000000000             
+  0.000000000000000E+000                                                        
+  0.269035000000000       0.000000000000000E+000 -0.107985000000000             
+  0.000000000000000E+000                                                        
+  0.117379000000000       0.000000000000000E+000   1.17584000000000             
+  0.000000000000000E+000                                                        
+  4.210610000000000E-002  0.000000000000000E+000  0.000000000000000E+000        
+   1.00000000000000                                                             
+    6    1                                                                      
+   189.180000000000       4.928100000000000E-003                                
+   45.2119000000000       3.498880000000000E-002                                
+   14.3563000000000       0.140725000000000                                     
+   5.13886000000000       0.333642000000000                                     
+   1.90652000000000       0.444940000000000                                     
+  0.705887000000000       0.269254000000000                                     
+    4    2                                                                      
+  0.929340000000000      -2.241920000000000E-002  0.000000000000000E+000        
+  0.269035000000000       0.192271000000000       0.000000000000000E+000        
+  0.117379000000000       0.846181000000000       0.000000000000000E+000        
+  4.210610000000000E-002  0.000000000000000E+000   1.00000000000000             
+    1    1                                                                      
+  0.175000000000000        1.00000000000000                                     
+          8.00000000    1    3    1    1    1                                   
+O #2   0.000000000000000   0.000000000000000  -2.027400699223664                
+   10    3                                                                      
+   5484.67166000000       1.831100000000000E-003  0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+   825.234946000000       1.395020000000000E-002  0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+   188.046958000000       6.844509999999999E-002  0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+   52.9645000000000       0.232714300000000       0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+   16.8975704000000       0.470192900000000       0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+   5.79963530000000       0.358520900000000       0.000000000000000E+000        
+  0.000000000000000E+000                                                        
+   15.5396162000000       0.000000000000000E+000 -0.110777500000000             
+  0.000000000000000E+000                                                        
+   3.59993360000000       0.000000000000000E+000 -0.148026300000000             
+  0.000000000000000E+000                                                        
+   1.01376180000000       0.000000000000000E+000   1.13076700000000             
+  0.000000000000000E+000                                                        
+  0.270005800000000       0.000000000000000E+000  0.000000000000000E+000        
+   1.00000000000000                                                             
+    4    2                                                                      
+   15.5396162000000       7.087430000000000E-002  0.000000000000000E+000        
+   3.59993360000000       0.339752800000000       0.000000000000000E+000        
+   1.01376180000000       0.727158600000000       0.000000000000000E+000        
+  0.270005800000000       0.000000000000000E+000   1.00000000000000             
+    1    1                                                                      
+  0.800000000000000        1.00000000000000                                     
+FINISH                                                                          
+ 
+********************************************************************************
+ One- and two-electron integrals over symmetry-adapted AOs are calculated.
+
+  Spherical harmonics are used.
+  
+  Integrals less than  0.10E-13 are neglected.
+
+  Nuclear repulsion energy :   28.4072901994 a.u.
+  required memory for a1 array                5020082  words 
+  required memory for a2 array                2070133  words 
+ @GETMEM-I,  Allocated      69 MB of main memory.
+  @MOLECU-I, One electron integrals (CPU/WALL):        0.01/       0.01 seconds.
+  @TWOEL-I,       6421 integrals of symmetry type  I I I I
+  @TWOEL-I,      13548 integrals of symmetry type  I J I J
+  @TWOEL-I,       8176 integrals of symmetry type  I I J J
+  @TWOEL-I,       4230 integrals of symmetry type  I J K L
+  @TWOEL-I, Total number of 2-e integrals      32375.
+  @MOLECU-I, Two electron integrals (CPU/WALL):        0.08/       0.09 seconds.
+  @CHECKOUT-I, Total execution time (CPU/WALL):        0.10/       0.11 seconds.
+--executable xvmol finished with status     0 in        0.11 seconds (walltime).
+ --invoking executable--
+/home/harding/cfour_testsuite/bin/xvmol2ja
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  @CHECKOUT-I, Total execution time (CPU/WALL):        0.00/       0.00 seconds.
+--executable xvmol2ja finished with status     0 in        0.01 seconds (walltime).
+ --invoking executable--
+/home/harding/cfour_testsuite/bin/xvscf
+  There are   32 functions in the AO basis.
+
+  There are 4 irreducible representations.
+
+       Irrep        # of functions
+         1                 16
+         2                  7
+         3                  7
+         4                  2
+
+
+  readin orbitals
+  Parameters for SCF calculation: 
+        SCF reference function: TCSCF 
+  Maximum number of iterations:  150
+     Full symmetry point group: CXv 
+     Computational point group: C2v 
+        Initial density matrix: MOREAD                 
+     SCF convergence tolerance: 10**(-12)
+  DIIS convergence acceleration:  ON
+          Latest start for DIIS:   8
+                     DIIS order:   6
+
+        Core orbitals by irrep:   5    2    2    0
+      Active orbitals by irrep:   2    0    0    0
+
+
+
+  Two-configurational SCF calculation requested.
+
+  Memory information:      80246 words required.
+  Fock matrices are constructed from AO integral file.
+ @GETMEM-I,  Allocated       0 MB of main memory.
+  Initialization and symmetry analysis required      0.001 seconds.
+
+ total no. of electrons in initial guess :  0.000000000000000E+000
+  --------------------------------------------------------------------
+  Iteration         Total Energy            Largest Density Difference
+  --------------------------------------------------------------------
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -267.604931883206       -267.584180706392     
+
+  Current expansion coefficients: c1= 0.8635968   c2=-0.5041831
+
+       1          -267.615662098162375              0.2508115975D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -261.056386626147       -260.293378142236     
+
+  Current expansion coefficients: c1= 0.9993866   c2=-0.0350203
+
+       2          -261.057324699054561              0.2390275440D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -269.680853783687       -260.682039170463     
+
+  Current expansion coefficients: c1= 0.9999998   c2=-0.0006655
+
+       3          -269.680857769137560              0.2632111800D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -263.075014926402       -262.667055751626     
+
+  Current expansion coefficients: c1= 0.9938432   c2=-0.1107958
+
+       4          -263.080148962662292              0.2284256831D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -270.160209237603       -264.235975290582     
+
+  Current expansion coefficients: c1= 0.9999959   c2=-0.0028782
+
+       5          -270.160258316185434              0.2297443570D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -262.466012004470       -262.318693696468     
+
+  Current expansion coefficients: c1= 0.9746046   c2=-0.2239326
+
+       6          -262.474222880049581              0.2058424309D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -269.952344942310       -262.889516700153     
+
+  Current expansion coefficients: c1= 0.9999901   c2=-0.0044481
+
+       7          -269.952484693227518              0.2061777593D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -261.398020807340       -261.831009026265     
+
+  Current expansion coefficients: c1= 0.0231372   c2=-0.9997323
+
+       8          -261.831241066809980              0.5634281246D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -267.348909734691       -270.876313517431     
+
+  Current expansion coefficients: c1= 0.0296661   c2=-0.9995599
+
+       9          -270.879423373777286              0.6578500444D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -271.648301410094       -270.738907457630     
+
+  Current expansion coefficients: c1= 0.9996571   c2=-0.0261842
+
+      10          -271.648925760154498              0.1062286358D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -271.970950683951       -271.824176566740     
+
+  Current expansion coefficients: c1= 0.9240343   c2=-0.3823097
+
+      11          -272.001264735544680              0.9501486282D-01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -272.133242891690       -272.141775275551     
+
+  Current expansion coefficients: c1= 0.6794709   c2=-0.7337025
+
+      12          -272.193175440192704              0.1902770090D+00
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -272.240125077653       -273.329997595677     
+
+  Current expansion coefficients: c1= 0.0403107   c2=-0.9991872
+
+      13          -273.331774359052531              0.8000021443D+00
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -272.710099761855       -273.823958447575     
+
+  Current expansion coefficients: c1= 0.0617131   c2=-0.9980939
+
+      14          -273.828233145143031              0.3204861940D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -273.405833055576       -274.122083744258     
+
+  Current expansion coefficients: c1= 0.1800976   c2=-0.9836487
+
+      15          -274.146927037482385              0.1471068761D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.173953296461       -273.580733809661     
+
+  Current expansion coefficients: c1= 0.9779377   c2=-0.2088970
+
+      16          -274.202315514331474              0.1149718089D+01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.225064528698       -273.770682853436     
+
+  Current expansion coefficients: c1= 0.9732563   c2=-0.2297220
+
+      17          -274.251872711557212              0.2951323658D+00
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.202983490516       -273.920913030615     
+
+  Current expansion coefficients: c1= 0.9801791   c2=-0.1981134
+
+      18          -274.214997526338379              0.3861010051D+00
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.293764998635       -274.039801932808     
+
+  Current expansion coefficients: c1= 0.9201326   c2=-0.3916068
+
+      19          -274.349941836621497              0.1896593661D+00
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.300851265597       -274.073323748516     
+
+  Current expansion coefficients: c1= 0.8954654   c2=-0.4451311
+
+      20          -274.375526524938721              0.1133661626D+00
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.288729874432       -274.079113663096     
+
+  Current expansion coefficients: c1= 0.8882675   c2=-0.4593266
+
+      21          -274.365238699434656              0.2099898830D+00
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.306891084571       -274.119515283798     
+
+  Current expansion coefficients: c1= 0.8625757   c2=-0.5059280
+
+      22          -274.405157594905688              0.1476345156D+00
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.299423641933       -274.123359855306     
+
+  Current expansion coefficients: c1= 0.8525100   c2=-0.5227110
+
+      23          -274.405488470820046              0.3485466857D-01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.302497410299       -274.110301323421     
+
+  Current expansion coefficients: c1= 0.8637715   c2=-0.5038837
+
+      24          -274.401640224444691              0.4317548705D-01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.304067737888       -274.110623803313     
+
+  Current expansion coefficients: c1= 0.8626407   c2=-0.5058172
+
+      25          -274.405425636233701              0.1731267547D-01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.304302199293       -274.114872190948     
+
+  Current expansion coefficients: c1= 0.8596523   c2=-0.5108796
+
+      26          -274.407734021286274              0.2929482462D-01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.304688885222       -274.112257594907     
+
+  Current expansion coefficients: c1= 0.8608373   c2=-0.5088804
+
+      27          -274.408056990146520              0.1574886586D-01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305131793427       -274.114420466846     
+
+  Current expansion coefficients: c1= 0.8604687   c2=-0.5095034
+
+      28          -274.408097997998425              0.1254317028D-01
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305106798951       -274.113313193515     
+
+  Current expansion coefficients: c1= 0.8608446   c2=-0.5088679
+
+      29          -274.408121907650809              0.6418455204D-02
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305400870207       -274.113411324977     
+
+  Current expansion coefficients: c1= 0.8611218   c2=-0.5083987
+
+      30          -274.408127720754067              0.1991578900D-02
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305399185539       -274.113360339682     
+
+  Current expansion coefficients: c1= 0.8611386   c2=-0.5083702
+
+      31          -274.408128565424875              0.9378039313D-03
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305394110180       -274.113341439600     
+
+  Current expansion coefficients: c1= 0.8611402   c2=-0.5083675
+
+      32          -274.408128602656575              0.1873725280D-03
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305391354075       -274.113345948206     
+
+  Current expansion coefficients: c1= 0.8611356   c2=-0.5083754
+
+      33          -274.408128612086671              0.4479018402D-04
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305391104354       -274.113346745581     
+
+  Current expansion coefficients: c1= 0.8611350   c2=-0.5083764
+
+      34          -274.408128612318194              0.1398456079D-04
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390734039       -274.113345851771     
+
+  Current expansion coefficients: c1= 0.8611349   c2=-0.5083765
+
+      35          -274.408128612371229              0.8277009568D-05
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390682580       -274.113346780754     
+
+  Current expansion coefficients: c1= 0.8611345   c2=-0.5083772
+
+      36          -274.408128612389191              0.4140401320D-05
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390615737       -274.113346848687     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083773
+
+      37          -274.408128612391806              0.1756770893D-05
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390592989       -274.113346856600     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      38          -274.408128612392488              0.4766319711D-06
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390571933       -274.113346877568     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      39          -274.408128612392431              0.1676454808D-06
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390573117       -274.113346878890     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      40          -274.408128612391693              0.4306808335D-07
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390572579       -274.113346880040     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      41          -274.408128612391977              0.8436991977D-08
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390572478       -274.113346880197     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      42          -274.408128612391465              0.2287135357D-08
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390572523       -274.113346879970     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      43          -274.408128612391295              0.1722063286D-08
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390572540       -274.113346880122     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      44          -274.408128612391636              0.1632518876D-08
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390572546       -274.113346880025     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      45          -274.408128612391351              0.4903798246D-09
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390572545       -274.113346880056     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      46          -274.408128612391408              0.1705359697D-09
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390572548       -274.113346880045     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      47          -274.408128612391863              0.5655952210D-10
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390572549       -274.113346880044     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      48          -274.408128612391408              0.4149990523D-11
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390572550       -274.113346880044     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      49          -274.408128612392034              0.2045368664D-11
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390572549       -274.113346880044     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      50          -274.408128612391693              0.5310495063D-11
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+  processed                   6421  ao basis integrals from 
+                    11  buffers.
+  processed                   8176  ao basis integrals from 
+                    14  buffers.
+  processed                  13548  ao basis integrals from 
+                    23  buffers.
+  h11 and h22  -274.305390572549       -274.113346880043     
+
+  Current expansion coefficients: c1= 0.8611344   c2=-0.5083774
+
+      51          -274.408128612391408              0.3043873410D-11
+ 
+  current occupation vectors
+   det #1:       6  2  2  0
+   det #2:       6  2  2  0
+ 
+
+  SCF has converged.
+
+ Density matrix saved to file den.dat
+ total electron number:   20.0000000000000     
+  Eigenvector printing suppressed.
+
+ @PUTMOS-I, Writing converged MOs to NEWMOS. 
+ @PUTMOS-I, Symmetry   1 Full Blocks  4 Partial Blocksize   0
+ @PUTMOS-I, Symmetry   2 Full Blocks  1 Partial Blocksize   3
+ @PUTMOS-I, Symmetry   3 Full Blocks  1 Partial Blocksize   3
+ @PUTMOS-I, Symmetry   4 Full Blocks  0 Partial Blocksize   2
+
+
+ 
+  DIAGONAL FOCK MATRIX ELEMENTS (ALPHA)  (1H = 27.2113838 eV)
+
+       MO #        E(hartree)               E(eV)           FULLSYM    COMPSYM
+       ----   --------------------   --------------------   -------   ---------
+    1     1         -49.0528814667       -1334.7967850478     SG+        A1 (1)
+    2     2         -20.5106955210        -558.1244082274     SG+        A1 (1)
+    3     3          -3.7981228662        -103.3521791055     SG+        A1 (1)
+    4     4          -2.3165117112         -63.0354892966     SG+        A1 (1)
+    5    24          -2.3163258574         -63.0304319556      PI        B2 (3)
+    6    17          -2.3163258574         -63.0304319556      PI        B1 (2)
+    7     5          -1.1457441071         -31.1772826570     SG+        A1 (1)
+    8    25          -0.4278638650         -11.6427678518      PI        B2 (3)
+    9    18          -0.4278638650         -11.6427678518      PI        B1 (2)
+   10     6          -0.2529826816          -6.8840088491     SG+        A1 (1)
+   11     7          -0.0628277972          -1.7096313044     SG+        A1 (1)
+   12    19           0.0624065461           1.6981684775      PI        B1 (2)
+   13    26           0.0624065461           1.6981684775      PI        B2 (3)
+   14     8           0.1167808855           3.1777694977     SG+        A1 (1)
+   15     9           0.1916910469           5.2161786520     SG+        A1 (1)
+   16    27           0.2775001472           7.5511630153      PI        B2 (3)
+   17    20           0.2775001472           7.5511630153      PI        B1 (2)
+   18    10           0.3622880410           9.8583589377     SG+        A1 (1)
+   19    11           0.4139003130          11.2628002800      DE        A1 (1)
+   20    31           0.4139003130          11.2628002800      DE        A2 (4)
+   21    21           0.4947921874          13.4639801230      PI        B1 (2)
+   22    28           0.4947921874          13.4639801230      PI        B2 (3)
+   23    12           0.6708786583          18.2555366661     SG+        A1 (1)
+   24    22           1.3468142610          36.6486797888      PI        B1 (2)
+   25    29           1.3468142610          36.6486797888      PI        B2 (3)
+   26    13           1.3531403985          36.8208227443     SG+        A1 (1)
+   27    14           1.9610697180          53.3634207923     SG+        A1 (1)
+   28    15           2.1789799268          59.2930591225      DE        A1 (1)
+   29    32           2.1789799268          59.2930591225      DE        A2 (4)
+   30    23           2.2451214716          61.0928620854      PI        B1 (2)
+   31    30           2.2451214716          61.0928620854      PI        B2 (3)
+   32    16           2.2922413147          62.3750582220     SG+        A1 (1)
+
+
+  VSCF finished.
+
+  @CHECKOUT-I, Total execution time (CPU/WALL):        0.10/       0.11 seconds.
+--executable xvscf finished with status     0 in        0.12 seconds (walltime).
+ --invoking executable--
+/home/harding/cfour_testsuite/bin/xvtran
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  Full RHF integral transformation
+  The following   2 MOs will be doubled:
+                    10                    11
+  There are   2 active molecular orbitals.
+  Transformation of IIII integrals :
+  1 pass through the AO integral file was required.
+        6421 AO integrals were read.
+       12998 MO integrals were written to HF2.
+  Transformation of IIJJ integrals :
+  1 pass through the AO integral file was required.
+        8176 AO integrals were read.
+       11010 MO integrals were written to HF2.
+  Transformation of IJIJ integrals :
+  1 pass through the AO integral file was required.
+       13548 AO integrals were read.
+       17996 MO integrals were written to HF2.
+  Transformation of IJKL integrals :
+  1 pass through the AO integral file was required.
+        4230 AO integrals were read.
+        5127 MO integrals were written to HF2.
+  Summary of active molecular orbitals: 
+------------------------------------------------------------------------
+ 
+  Index      Eigenvalue    Symmetry    Index      Eigenvalue    Symmetry
+------------------------------------------------------------------------
+     1       -49.0528815        1        18         0.6708787        1
+     2       -20.5106955        1        19         1.3531404        1
+     3        -3.7981229        1        20         1.9610697        1
+     4        -2.3165117        1        21         2.1789799        1
+     5        -1.1457441        1        22         2.2922413        1
+     6        -0.2529827        1        23         0.0624065        2
+     7        -0.0628278        1        24         0.2775001        2
+     8        -2.3163259        2        25         0.4947922        2
+     9        -0.4278639        2        26         1.3468143        2
+    10        -2.3163259        3        27         2.2451215        2
+    11        -0.4278639        3        28         0.0624065        3
+    12        -0.2529827        1        29         0.2775001        3
+    13        -0.0628278        1        30         0.4947922        3
+    14         0.1167809        1        31         1.3468143        3
+    15         0.1916910        1        32         2.2451215        3
+    16         0.3622880        1        33         0.4139003        4
+    17         0.4139003        1        34         2.1789799        4
+------------------------------------------------------------------------
+  @CHECKOUT-I, Total execution time (CPU/WALL):        0.03/       0.03 seconds.
+--executable xvtran finished with status     0 in        0.03 seconds (walltime).
+ --invoking executable--
+/home/harding/cfour_testsuite/bin/xintprc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  Processing integrals for SCF second derivatives.
+  @GMOIAA-I, Processing MO integrals for spin case AA.
+  @GMOIAA-I, Generation of integral list completed.
+                      TYPE                NUMBER
+                      ----               --------
+                      PPPP                  9968
+                      PPPH                 17883
+                      PPHH                  8491
+                      PHPH                  5063
+                      PHHH                  4911
+                      HHHH                   815
+
+                     TOTAL                 47131
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  7   7  14  12]-1.70262 [  7   7  12  14]-1.70262 [  6   6  13  12] 0.63796
+[  6   6  12  13] 0.63796 [  7   6  12  12]-0.63796 [  6   7  12  12]-0.63796
+[  7   6  13  13] 0.56975 [  6   7  13  13] 0.56975 [  7   7  13  12]-0.56975
+[  7   7  12  13]-0.56975 [  6   6  13  13]-0.45759 [  7   7  12  12] 0.45759
+[  7   7  16  12] 0.23647 [  7   7  12  16] 0.23647 [  7   7  15  13]-0.15986
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (    18007 symmetry allowed elements):  3.1435366064.
+-----------------------------------------------------------------------------
+  @CHECKOUT-I, Total execution time (CPU/WALL):        0.03/       0.04 seconds.
+--executable xintprc finished with status     0 in        0.04 seconds (walltime).
+ --invoking executable--
+/home/harding/cfour_testsuite/bin/xvdint
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ One- and two-electron integral derivatives are calculated
+ for RHF hessians and dipole derivatives.
+ Spherical gaussians are used.
+
+                     Kinetic energy integral gradient
+                     --------------------------------
+
+                         MG#1 z    -0.1250562786
+                         O #2 z     0.1250562786
+
+
+ MG#1       0.0000000000            0.0000000000           -0.1250562786
+ O #2       0.0000000000            0.0000000000            0.1250562786
+
+
+
+                   Nuclear attraction integral gradient
+                   ------------------------------------
+
+                         MG#1 z    17.3226904777
+                         O #2 z   -17.3226904777
+
+
+ MG#1       0.0000000000            0.0000000000           17.3226904777
+ O #2       0.0000000000            0.0000000000          -17.3226904777
+
+
+
+                      Reorthonormalization gradient
+                      -----------------------------
+
+                         MG#1 z    -0.0873876553
+                         O #2 z     0.0873876553
+
+
+ MG#1       0.0000000000            0.0000000000           -0.0873876553
+ O #2       0.0000000000            0.0000000000            0.0873876553
+
+
+
+                     Kinetic energy integral Hessian
+                     -------------------------------
+
+
+           Symmetry 1
+
+           MG#1 z      O #2 z
+
+ MG#1 z   -0.008303
+ O #2 z    0.008303   -0.008303
+
+
+           Symmetry 2
+
+           MG#1 x      O #2 x
+
+ MG#1 x   -0.095588
+ O #2 x    0.095588   -0.095588
+
+
+           Symmetry 3
+
+           MG#1 y      O #2 y
+
+ MG#1 y   -0.095588
+ O #2 y    0.095588   -0.095588
+
+
+
+
+           MG#1 x      MG#1 y      MG#1 z      O #2 x      O #2 y      O #2 z
+
+ MG#1 x   -0.095588
+ MG#1 y    0.000000   -0.095588
+ MG#1 z    0.000000    0.000000   -0.008303
+
+ O #2 x    0.095588    0.000000    0.000000   -0.095588
+ O #2 y    0.000000    0.095588    0.000000    0.000000   -0.095588
+ O #2 z    0.000000    0.000000    0.008303    0.000000    0.000000   -0.008303
+
+
+
+
+                   Nuclear attraction integral Hessian
+                   -----------------------------------
+
+
+           Symmetry 1
+
+           MG#1 z      O #2 z
+
+ MG#1 z   -8.174244
+ O #2 z    8.174244   -8.174244
+
+
+           Symmetry 2
+
+           MG#1 x      O #2 x
+
+ MG#1 x    5.968305
+ O #2 x   -5.968305    5.968305
+
+
+           Symmetry 3
+
+           MG#1 y      O #2 y
+
+ MG#1 y    5.968305
+ O #2 y   -5.968305    5.968305
+
+
+
+
+           MG#1 x      MG#1 y      MG#1 z      O #2 x      O #2 y      O #2 z
+
+ MG#1 x    5.968305
+ MG#1 y    0.000000    5.968305
+ MG#1 z    0.000000    0.000000   -8.174244
+
+ O #2 x   -5.968305    0.000000    0.000000    5.968305
+ O #2 y    0.000000   -5.968305    0.000000    0.000000    5.968305
+ O #2 z    0.000000    0.000000    8.174244    0.000000    0.000000   -8.174244
+
+
+
+
+                Highest order reorthonormalization Hessian
+                ------------------------------------------
+
+
+           Symmetry 1
+
+           MG#1 z      O #2 z
+
+ MG#1 z   -0.042951
+ O #2 z    0.042951   -0.042951
+
+
+           Symmetry 2
+
+           MG#1 x      O #2 x
+
+ MG#1 x   -0.076708
+ O #2 x    0.076708   -0.076708
+
+
+           Symmetry 3
+
+           MG#1 y      O #2 y
+
+ MG#1 y   -0.076708
+ O #2 y    0.076708   -0.076708
+
+
+
+
+           MG#1 x      MG#1 y      MG#1 z      O #2 x      O #2 y      O #2 z
+
+ MG#1 x   -0.076708
+ MG#1 y    0.000000   -0.076708
+ MG#1 z    0.000000    0.000000   -0.042951
+
+ O #2 x    0.076708    0.000000    0.000000   -0.076708
+ O #2 y    0.000000    0.076708    0.000000    0.000000   -0.076708
+ O #2 z    0.000000    0.000000    0.042951    0.000000    0.000000   -0.042951
+
+
+
+
+                Electronic contributions to dipole moment
+                -----------------------------------------
+
+                               au             Debye
+
+                    z      1.48584422      3.77663996
+
+  Conversion factor used: 1 a.u. =   2.54174691 Debye 
+
+
+
+   Electronic contributions to static part of dipole moment derivatives
+   --------------------------------------------------------------------
+
+
+                     Total dipole moment derivatives
+                     -------------------------------
+
+
+           Symmetry 1
+                              Ez
+
+               MG#1 z   -11.36001130
+               O #2 z    -8.63998870
+
+           Symmetry 2
+                              Ex
+
+               MG#1 x   -11.07485450
+               O #2 x    -8.92514550
+
+           Symmetry 3
+                              Ey
+
+               MG#1 y   -11.07485450
+               O #2 y    -8.92514550
+
+
+
+                       Ex          Ey          Ez
+
+      MG#1    x  -11.074855    0.000000    0.000000
+      MG#1    y    0.000000  -11.074855    0.000000
+      MG#1    z    0.000000    0.000000  -11.360011
+
+      O #2    x   -8.925145    0.000000    0.000000
+      O #2    y    0.000000   -8.925145    0.000000
+      O #2    z    0.000000    0.000000   -8.639989
+
+  Evaluation of 1e integral derivatives required    0.06 seconds.
+  Evaluation of 2el integral derivatives
+
+                      Two-electron integral gradient
+                      ------------------------------
+
+                         MG#1 z    -8.7042659556
+                         O #2 z     8.7042659556
+
+
+ MG#1       0.0000000000            0.0000000000           -8.7042659556
+ O #2       0.0000000000            0.0000000000            8.7042659556
+
+
+  Evaluation of 2e integral derivatives required    0.40 seconds.
+
+                            Molecular gradient
+                            ------------------
+
+                         MG#1 z     0.0000000000
+                         O #2 z     0.0000000000
+
+
+ MG#1       0.0000000000            0.0000000000            0.0000000000
+ O #2       0.0000000000            0.0000000000            0.0000000000
+
+
+  Molecular gradient norm 0.725E-13
+
+                            Molecular hessian
+                            -----------------
+
+
+           Symmetry 1
+
+           MG#1 z      O #2 z
+
+ MG#1 z   -0.030017
+ O #2 z    0.030017   -0.030017
+
+
+           Symmetry 2
+
+           MG#1 x      O #2 x
+
+ MG#1 x   -0.013689
+ O #2 x    0.013689   -0.013689
+
+
+           Symmetry 3
+
+           MG#1 y      O #2 y
+
+ MG#1 y   -0.013689
+ O #2 y    0.013689   -0.013689
+
+
+
+
+           MG#1 x      MG#1 y      MG#1 z      O #2 x      O #2 y      O #2 z
+
+ MG#1 x   -0.013689
+ MG#1 y    0.000000   -0.013689
+ MG#1 z    0.000000    0.000000   -0.030017
+
+ O #2 x    0.013689    0.000000    0.000000   -0.013689
+ O #2 y    0.000000    0.013689    0.000000    0.000000   -0.013689
+ O #2 z    0.000000    0.000000    0.030017    0.000000    0.000000   -0.030017
+
+
+
+
+                           Total dipole moment
+                           -------------------
+
+                               au             Debye
+
+                    z      1.49080068      3.78923803
+
+  Conversion factor used: 1 a.u. =   2.54174691 Debye 
+
+
+
+                     Total dipole moment derivatives
+                     -------------------------------
+
+
+           Symmetry 1
+                              Ez
+
+               MG#1 z     0.63998870
+               O #2 z    -0.63998870
+
+           Symmetry 2
+                              Ex
+
+               MG#1 x     0.92514550
+               O #2 x    -0.92514550
+
+           Symmetry 3
+                              Ey
+
+               MG#1 y     0.92514550
+               O #2 y    -0.92514550
+
+
+
+                       Ex          Ey          Ez
+
+      MG#1    x    0.925145    0.000000    0.000000
+      MG#1    y    0.000000    0.925145    0.000000
+      MG#1    z    0.000000    0.000000    0.639989
+
+      O #2    x   -0.925145    0.000000    0.000000
+      O #2    y    0.000000   -0.925145    0.000000
+      O #2    z    0.000000    0.000000   -0.639989
+
+  @CHECKOUT-I, Total execution time (CPU/WALL):        0.46/       0.46 seconds.
+--executable xvdint finished with status     0 in        0.47 seconds (walltime).
+ --invoking executable--
+/home/harding/cfour_testsuite/bin/xcptcscf
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ irrepx,irrepy,irrepz                     2                     3
+                     1
+ Coupled perturbed TCSCF equations are solved
+ for dipole derivatives and hessian
+ There are                     2 perturbations
+ within irrep                     1
+ CPTCSCF converged after                     25  iterations.
+ There are                     2 perturbations
+ within irrep                     2
+ CPTCSCF converged after                     21  iterations.
+ There are                     2 perturbations
+ within irrep                     3
+ CPTCSCF converged after                     21  iterations.
+ There are                     0 perturbations
+ within irrep                     4
+ CPTCSCF converged after                      1  iterations.
+  @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.01 seconds.
+--executable xcptcscf finished with status     0 in        0.02 seconds (walltime).
+ --invoking executable--
+/home/harding/cfour_testsuite/bin/xjoda
+  igrd and ihes are                      0                     0
+  fetching hessian                     36
+  masses used (in AMU) in vibrational analysis: 
+  23.985042300     15.994914630
+                     Normal Coordinate Analysis
+  ----------------------------------------------------------------
+    Irreducible         Harmonic       Infrared        Type 
+   Representation       Frequency      Intensity 
+  ----------------------------------------------------------------
+                       (cm-1)         (km/mol)
+  ----------------------------------------------------------------
+      ----                 0.0075i       19.7707       ROTATION  
+      ----                 0.0075i       19.7707       ROTATION  
+      ----                 0.0000         0.0000      TRANSLATION
+      ----                 0.0000         0.0000      TRANSLATION
+      ----                 0.0000         0.0000      TRANSLATION
+       SG+               733.1215        91.3031       VIBRATION 
+  ----------------------------------------------------------------
+ 
+ 
+                                   Normal Coordinates 
+
+               SG+
+               733.12 
+             VIBRATION 
+ MG     0.000 0.0000  0.6325
+ O      0.000 0.0000 -0.7745
+            Gradient vector in normal coordinate representation
+         ----------------------------------------------------------
+   i    W(I)     dE/dQ(i)     dE/dq      dE/dq     [dE/dQ(i)]/w(i)
+                              (cm-1)      (eV)        (relative)
+         ----------------------------------------------------------
+    6   733.12  0.0000000000      0.00000      0.00000   0.0000000000
+         ----------------------------------------------------------
+ 
+                      Normal modes in internal coordinates 
+---------------------------------------------------------------------------
+              0.007         0.007         0.000         0.000         0.000
+---------------------------------------------------------------------------
+R          0.000000      0.000000      0.000000      0.000000      0.000000
+---------------------------------------------------------------------------
+ 
+  ----------------------------------------------------------------
+                    Dipole Moment Function
+                   (Normal Coordinate Basis)
+  ----------------------------------------------------------------
+    Mode     Symmetry    d(Mu(x))/dQ   d(Mu(y))/dQ   d(Mu(z))/dQ
+  ----------------------------------------------------------------
+     Q6         SG+        0.000000      0.000000      0.306034
+  ----------------------------------------------------------------
+---------------------------------------------------------------------------
+------------------------------------------------------------
+        Parameter                (MHz)                 (CM-1)
+------------------------------------------------------------
+ 
+           R6                0.000000E+00           0.000000E+00
+           R5                0.000000E+00           0.000000E+00
+           SI                            0.100000E+81
+ 
+  A-reduced centrifugal distortion parameters (Ir representation) 
+ 
+           DJ                0.369875E-01           0.123377E-05
+           DK                0.369875E-01           0.123377E-05
+           DJK               -.739750E-01           -.246754E-05
+           DELJ              0.369875E-01           0.123377E-05
+           DELK              0.369875E-01           0.123377E-05
+           DELJK             -.739750E-01           -.246754E-05
+           delJ              0.000000E+00           0.000000E+00
+           delK              0.000000E+00           0.000000E+00
+ 
+  S-reduced centrifugal distortion parameters (Ir representation) 
+ 
+           DJ                0.369875E-01           0.123377E-05
+           DK                0.369875E-01           0.123377E-05
+           DJK               -.739750E-01           -.246754E-05
+           D1                0.000000E+00           0.000000E+00
+           D2                0.000000E+00           0.000000E+00
+------------------------------------------------------------
+  null vector returned from NORMAL
+   Vibrational frequencies after rotational projection  of 
+   Cartesian force constants: 
+            1               0.0000i
+            2               0.0000i
+            3               0.0000i
+            4               0.0000 
+            5               0.0000 
+            6             733.1215 
+  Zero-point energy:    1.0480 kcal/mol =    4.3850 kJ/mol =     366.561 cm-1 
+ 
+  Finite temperature thermodynamic corrections:
+=======================================================
+Temperature     Entropy       Enthalpy     Gibbs Energy
+    (K)        (J/(mol K))    (kJ/mol)      (kJ/mol) 
+=======================================================
+    298.15      213.6255        8.9390      -54.7534
+    100.00      180.7114        2.9103      -15.1608
+    200.00      201.1484        5.8653      -34.3644
+    300.00      213.8254        8.9988      -55.1488
+    400.00      223.3587       12.3164      -77.0271
+    500.00      231.0406       15.7608      -99.7595
+    600.00      237.4681       19.2872     -123.1937
+    700.00      242.9860       22.8673     -147.2229
+    800.00      247.8148       26.4839     -171.7680
+    900.00      252.1045       30.1261     -196.7679
+   1000.00      255.9615       33.7870     -222.1745
+   1100.00      259.4640       37.4619     -247.9485
+   1200.00      262.6707       41.1474     -274.0574
+   1300.00      265.6273       44.8412     -300.4743
+   1400.00      268.3696       48.5416     -327.1758
+   1500.00      270.9263       52.2474     -354.1420
+   1600.00      273.3207       55.9575     -381.3556
+   1700.00      275.5721       59.6713     -408.8014
+   1800.00      277.6966       63.3880     -436.4658
+   1900.00      279.7075       67.1074     -464.3369
+   2000.00      281.6164       70.8289     -492.4039
+=======================================================
+  @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.02 seconds.
+--executable xjoda finished with status     0 in        0.03 seconds (walltime).
+  The final electronic energy is      -274.305390572548674 a.u. 
+  This computation required                            1.04 seconds (walltime).
