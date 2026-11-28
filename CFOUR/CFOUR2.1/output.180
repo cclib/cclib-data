@@ -1,0 +1,840 @@
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xjoda
+
+
+   *************************************************************************
+         <<<     CCCCCC     CCCCCC   |||     CCCCCC     CCCCCC   >>>
+       <<<      CCC        CCC       |||    CCC        CCC         >>>
+      <<<      CCC        CCC        |||   CCC        CCC            >>>
+    <<<        CCC        CCC        |||   CCC        CCC              >>>
+      <<<      CCC        CCC        |||   CCC        CCC            >>>
+       <<<      CCC        CCC       |||    CCC        CCC         >>>
+         <<<     CCCCCC     CCCCCC   |||     CCCCCC     CCCCCC   >>>
+   *************************************************************************
+
+     ****************************************************************
+     * CFOUR Coupled-Cluster techniques for Computational Chemistry *
+     ****************************************************************
+
+
+   Department of Chemistry                Institut fuer Physikalische Chemie
+   University of Florida                  Universitaet Mainz
+   Gainesville, FL 32611, USA             D-55099 Mainz, Germany
+
+   Department of Chemistry                Fakultaet fuer Chemie und Biowiss.
+   Johns Hopkins University               Karlsruher Institut fuer Technologie
+   Baltimore, MD 21218, USA               D-76131 Karlsruhe, Germany
+
+   Department of Chemistry                Department of Physical Chemistry
+   Southern Methodist University          Eotvos Lorand University
+   Dallas, TX 75275, USA                  H-1053 Budapest, Hungary
+
+
+                       Version 2.1
+
+                     meyeri                                            
+                     Thu Nov 26 11:12:20 PM EST 2026                   
+                     integer*8 version is running
+
+********************************************************************************
+*                          Input from ZMAT file                                *
+********************************************************************************
+TEST.180                                                                        
+C                                                                               
+                                                                                
+*CFOUR(CALC=CCSD                                                                
+MULT=3                                                                          
+OCCUPATION=2-1-1-0-0-0-0-0/2-0-0-0-0-0-0-0                                      
+FROZEN_CORE=ON                                                                  
+REF=ROHF                                                                        
+SCF_CONV=12                                                                     
+CC_CONV=13                                                                      
+BASIS=PVDZ)                                                                     
+                                                                                
+********************************************************************************
+  @GTFLGS-I, Calculation type set to UHF.
+    -------------------------------------------------------------------
+                    CFOUR Control Parameters 
+    -------------------------------------------------------------------
+        External           Internal           Value            Units
+          Name               Name
+    -------------------------------------------------------------------
+       ABCDTYPE             IABCDT         STANDARD    [  0]    ***   
+       ANHARMONIC           IANHAR         OFF         [  0]    ***   
+       ANH_ALGORIT          IANALG         STANDARD    [  0]    ***   
+       ANH_DERIVAT          IANDER         SECOND      [  1]    ***   
+       ANH_MODE             ANHMOD         VIBRATION   [  0]    ***   
+       ANH_STEPSIZ          ICUBST             50000          x 10-6  
+       ANH_SYMMETR          IANHSM         ABELIAN     [  0]    ***   
+       AO_LADDERS           IAOLAD         SINGLEPASS  [  1]    ***   
+       AV_SCF               IAVSCF         OFF         [  0]    ***   
+       BASIS                IBASIS         PVDZ        [ 13]    ***   
+       BOTHVECTORS          BOTHVC         OFF         [  0]    ***   
+       BOX_POTENT           IPIAB          OFF         [  0]    ***   
+       BREIT                IBREIT         OFF         [  0]    ***   
+       BRUCK_CONV           IBRTOL          10D-  4             ***   
+       BRUECKNER            IBRKNR         OFF         [  0]    ***   
+       BUFFERSIZE           IBUFFS              4096            ***   
+       CACHE_RECS           ICHREC             10               ***   
+       CALCLEVEL            ICLLVL         CCSD        [ 10]    ***   
+       CCORBOPT             ICCORB         OFF         [  0]  x 0.01  
+       CC_CONV              ICCCNV          10D- 13             ***   
+       CC_EXPORDER          ICCEOR              5               ***   
+       CC_EXTRAPOL          ICCEXT         DIIS        [  1]    ***   
+       CC_GUESS             ICCGES         MP2         [  0]    ***   
+       CC_MAXCYC            ICCCYC            100              cycles 
+       CC_PROGRAM           ICCPRO         VCC         [  0]    ***   
+       CHARGE               ICHRGE              0               ***   
+       CHOLESKY             ICHOLE         OFF         [  0]    ***   
+       CIS_CONV             ICISTL              5               ***   
+       COMM_SIZE            IPSIZE            ***               ***   
+       CONSTANT             ICONST         OLD         [  1]    ***   
+       CONTINUUM            ICONTU         NONE        [  0]    ***   
+       CONTRACTION          ICNTYP         GENERAL     [  1]    ***   
+       COORDINATES          ICOORD         INTERNAL    [  0]    ***   
+       CPHF_CONVER          ICPHFT          10D- 16             ***   
+       CPHF_MAXCYC          ICPHFC             64              cycles 
+       CUBIC                ICUBIC         OFF         [  0]    ***   
+       CURVILINEAR          ICURVY         OFF         [  0]    ***   
+       DBOC                 IDBOC          OFF         [  0]    ***   
+       DCT                  IDCT           OFF         [  0]    ***   
+       DERIV_LEV            IDRLVL         ZERO        [  0]    ***   
+       DEVMEM_SIZE          IDVMEM          50000000           MByte  
+       DIAG_MRCC            IEOMST          10D-  0             ***   
+       DIFF_TYPE            IDIFTY         RELAXED     [  0]    ***   
+       DIRECT               IDIRCT         OFF         [  0]    ***   
+       DROPMO               IDRPMO      NONE         
+       ECP                  IECP           OFF         [  0]    ***   
+       EIGENVECTOR          IVEC                1               ***   
+       EL_ANHARM            IELANH         OFF         [  0]    ***   
+       EOMFOLLOW            IEOMSR         ENERGY      [  0]    ***   
+       EOMIP                IEOMIP         OFF         [  0]    ***   
+       EOMLEVEL             HBARFM         SAME        [  0]    ***   
+       EOM_MRCC             IMRCCE         NEW         [  1]    ***   
+       EOM_NONIT            EOMNON         OFF         [  0]    ***   
+       EOM_NSING            IEOMSI          10D-  0             ***   
+       EOM_NSTATES          IMRCCD         DAVIDSON    [  0]    ***   
+       EOM_NTRIP            IEOMTR          10D-  0             ***   
+       EOM_ORDER            IEXORD         ENERGY      [  0]    ***   
+       EOM_PROPSTA          IEOMST              0               ***   
+       ESTATE_CONV          IEXTOL          10D-  5             ***   
+       ESTATE_DIAG          IEXDIG         ITERATIVE   [  0]    ***   
+       ESTATE_LOCK          IESLOC         ON          [  1]    ***   
+       ESTATE_MAXC          IEXMXC             40               ***   
+       ESTATE_PROP          IEXPRP         OFF         [  0]    ***   
+       EVAL_HESS            IRECAL              0            # of cyc.
+       EXCITATION           IEXCIT              0               ***   
+       EXCITE               IEXCIT         NONE        [  0]    ***   
+       EXTERN_POT           IEXPOT         OFF         [  0]    ***   
+       FCGRADNEW            IFCGNW         OFF         [  0]    ***   
+       FC_FIELD             IFINFC              0             x 10-6  
+       FD_CALTYPE           IFDCAL         GRADONLY    [  0]    ***   
+       FD_PROJECT           IFDPRJ         OFF         [  1]    ***   
+       FD_STEPSIZE          IDISFD              0            10-4 bohr
+       FD_USEGROUP          IFDGRP         FULL        [  0]    ***   
+       FILE_RECSIZ          IFLREC              4096           words  
+       FINITE_PERT          IFIPER              0             x 10-6  
+       FIXGEOM              IFIXGM         OFF         [  0]    ***   
+       FOCK                 IFOCK          AO          [  1]    ***   
+       FREQ_ALGORI          IVIALG         STANDARD    [  0]    ***   
+       FROZEN_CORE          IFROCO         ON          [  1]    ***   
+       GAMMA_ABCD           IGABCD         STORE       [  0]    ***   
+       GAMMA_ABCI           IGABCI         STORE       [  0]    ***   
+       GENBAS_1             IGNBS1              0               ***   
+       GENBAS_2             IGNBS2              0               ***   
+       GENBAS_3             IGNBS3              0               ***   
+       GENBAS_4             IGNBS4              0               ***   
+       GEO_CONV             ICONTL              5              H/bohr 
+       GEO_MAXCYC           IOPTCY             50               ***   
+       GEO_MAXSTEP          IMXSTP            300            millibohr
+       GEO_METHOD           INR            SINGLE_POINT[  5]    ***   
+       GIAO                 IGIAO          OFF         [  1]    ***   
+       GIMIC                IGIMIC         OFF         [  0]    ***   
+       GRID                 IGRID          OFF         [  0]    ***   
+       GRID_ALGO            IGALGO         SERIAL      [  0]    ***   
+       GUESS                IGUESS         MOREAD      [  0]    ***   
+       HBAR                 IHBAR          OFF         [  0]    ***   
+       HESS_TYPE            IHESTP         SCF         [  0]    ***   
+       HF2_FILE             IHF2Fl         USE         [  1]    ***   
+       HFSTABILITY          ISTABL         OFF         [  0]    ***   
+       INCORE               INCORE         OFF         [  0]    ***   
+       INPUT_MRCC           IMRCC          ON          [  1]    ***   
+       INTEGRALS            INTTYP         VMOL        [  1]    ***   
+       JODA_PRINT           IJPRNT              0               ***   
+       KEYWORD_OUT          IDMPKW         NO          [  0]    ***   
+       LINDEP_TOL           ILINDP              8               ***   
+       LINEQ_CONV           IZTACN          10D-  7           cycles  
+       LINEQ_EXPOR          ILMAXD              5               ***   
+       LINEQ_MAXCY          ILMAXC            100               ***   
+       LINEQ_TYPE           ILTYPE         DIIS        [  1]    ***   
+       LOCK_ORBOCC          ILOCOC         OFF         [  0]    ***   
+       MEMORY_SIZE          IMEMSZ         100000000           words  
+       MEM_UNIT             IMEMU          INTEGERWORDS[  0]    ***   
+       MRCC                 IMRCCC         OFF         [  0]    ***   
+       MULTIPLICTY          IMULTP              3               ***   
+       NACOUPLING           IVCOUP         OFF         [  0]    ***   
+       NEGEVAL              IDIE           ABORT       [  0]    ***   
+       NEWNORM              INEWNO         OFF         [  0]    ***   
+       NON-HF               INONHF         ON          [  1]    ***   
+       NTOP_TAMP            ITOPT2             15               ***   
+       NUC_MODEL            INUCMO         POINT       [  0]    ***   
+       OCCUPATION           IOCCU  A   2,  1,  1,  0,  0,  0,  0,  0,
+                                   B   2,  0,  0,  0,  0,  0,  0,  0,
+       OPEN-SHELL           IOPEN          SPIN-ORBITAL[  0]    ***   
+       OPTVIB               IOPTVB         OFF         [  0]    ***   
+       ORBITALS             IORBTP         SEMICANONICA[  1]    ***   
+       PARALLEL             IPARAL         ON          [  1]    ***   
+       PARA_INT             IPINTS         ON          [  1]    ***   
+       PARA_PRINT           IPPRIN              0               ***   
+       PERT_ORB             IPTORB         STANDARD    [  0]    ***   
+       POINTS               IGRDFD              0               ***   
+       PRINT                IPRNT               0               ***   
+       PROPS                IPROPS         OFF         [  0]    ***   
+       PROP_INTEGR          IINTYP         INTERNAL    [  0]    ***   
+       PSI                  IPSI           OFF         [  0]    ***   
+       QC_ALG               IQCALG         FLM         [  0]    ***   
+       QC_LINALG            IQCLIN         TRIDIAG     [  2]    ***   
+       QC_MAXCYC            IQCMAX          10D-100           cycles  
+       QC_MAXSCFCY          IQCMSC          10D- 15           cycles  
+       QC_RTRUST            IQCRTR          10D-  0           x 10-3  
+       QC_SKIPSCF           IQCSKI         OFF         [  0]    ***   
+       QC_START             IQCSTA          10D-  1             ***   
+       QRHFGUESS            IQGUES         OFF         [  0]    ***   
+       QUARTIC              IQUART         OFF         [  0]    ***   
+       RAMAN_INT            IRAMIN         OFF         [  0]    ***   
+       RAMAN_ORB            IRAMRE         UNRELAXED   [  0]    ***   
+       RDO                  IRDOFM         OFF         [  0]    ***   
+       REDUCE_REPR          REDREP         Ir          [  0]    ***   
+       REFERENCE            IREFNC         ROHF        [  2]    ***   
+       RELATIVIST           IRELAT         OFF         [  0]    ***   
+       RELAX_DENS           IRDENS         OFF         [  0]    ***   
+       RESET_FLAGS          IRESET         OFF         [  0]    ***   
+       RESTART_CC           ICCRES         OFF         [  0]    ***   
+       ROT_EVEC             ROTVEC              0               ***   
+       SAVE_INTS            ISVINT         OFF         [  0]    ***   
+       SCALE_ON             ISTCRT              0               ***   
+       SCF_CONV             ISCFCV          10D- 12             ***   
+       SCF_DAMPING          IDAMP               0             x 10-3  
+       SCF_EXPORDE          IRPPOR              6               ***   
+       SCF_EXPSTAR          IRPPLS              8               ***   
+       SCF_EXTRAPO          IRPP           ON          [  1]    ***   
+       SCF_MAXCYC           ISCFCY            150              cycles 
+       SCF_NOSTOP           ISCFST         OFF         [  0]    ***   
+       SCF_PRINT            ISCFPR              0               ***   
+       SCF_PROG             ISCFPR         SCF         [  0]    ***   
+       SD_FIELD             IFINSD              0             x 10-6  
+       SOPERT               IPERSO         OFF         [  0]    ***   
+       SPHERICAL            IDFGHI         ON          [  1]    ***   
+       SPINORBIT            ISOCAL         OFF         [  0]    ***   
+       SPINROTATIO          ISRCON         OFF         [  0]    ***   
+       SPIN_FLIP            ISPFLP         OFF         [  0]    ***   
+       SPIN_ORBIT           ISPORB         OFF         [  0]    ***   
+       SPIN_SCAL            ISCSMP         OFF         [  0]    ***   
+       STEEPSCALE           ISTPSC              1000          x 10-3  
+       SUBGROUP             ISUBGP         DEFAULT     [  0]    ***   
+       SUBGRPAXIS           ISBXYZ         X           [  0]    ***   
+       SYMMETRY             ISYM           ON          [  0]    ***   
+       SYM_CHECK            ISYMCK         OVERRIDE    [  1]    ***   
+       T3_EXTRAPOL          IT3EXT         OFF         [  0]    ***   
+       T4_EXTRAPOL          IT4EXP         OFF         [  0]    ***   
+       TAMP_SUM             IEVERY              5               ***   
+       TESTSUITE            ITESTS         OFF         [  0]    ***   
+       THERMOCH             ITHERM         OFF         [  0]    ***   
+       TOL_CHOLESK          ITOLCH          10D-  4             ***   
+       TRANGRAD             IRESRM         OFF         [  0]    ***   
+       TRANS_INV            ITRAIN         USE         [  0]    ***   
+       TREAT_PERT           ITREAT         SIMULTANEOUS[  0]    ***   
+       TRIP_ALGORI          ITRALG         NORMAL      [  0]    ***   
+       UIJ_THRESHO          IUIJTH              1               ***   
+       UNITS                IUNITS         ANGSTROM    [  0]    ***   
+       UNOS                 IUNOS          OFF         [  0]    ***   
+       UPDATE_HESS          IHUPDT         ON          [  1]    ***   
+       VIBPHASE             ISETPH         STANDARD    [  0]    ***   
+       VIBRATION            IVIB           NO          [  0]    ***   
+       VIB_ALGORIT          IGEALG         STANDARD    [  0]    ***   
+       VNATORB              IVNORB         OFF         [  0]    ***   
+       VTRAN                IVTRAN         FULL/PARTIAL[  0]    ***   
+       XFIELD               IXEFLD              0             x 10-6  
+       XFORM_TOL            IXFTOL          10D- 11             ***   
+       YFIELD               IYEFLD              0             x 10-6  
+       ZFIELD               IZEFLD              0             x 10-6  
+       ZSCALE_EXP           IZEXPS         OFF         [  0]    ***   
+    -------------------------------------------------------------------
+   1 entries found in Z-matrix 
+   Job Title : TEST.180                                                                        
+   Rotational constants (in cm-1): 
+
+   Rotational constants (in MHz): 
+
+********************************************************************************
+   The full molecular point group is I h .
+   The largest Abelian subgroup of the full molecular point group is D2h .
+   The computational point group is D2h .
+********************************************************************************
+  @GTFLGS-I, Calculation type set to UHF.
+  There is   1 frozen-core orbital.
+  There is   1 frozen-core orbital.
+  There are   14 basis functions.
+ @GEOPT-W, Archive file not created for single-point calculation.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.17/       0.54 seconds.
+--executable xjoda finished with status     0 in        0.76 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvmol
+
+OMP_NUM_THREADS not specified; defaulting to 1
+Running with 1 threads/proc
+
+ SERIAL VERSION OF MOLECULE STARTED
+********************************************************************************
+                    INPUT FROM MOL FILE
+********************************************************************************
+INTGRL        1    0    1    0    0    0    0    0    0                         
+         *** CFOUR Program System (Release V0.1) ***                            
+TEST.180                                                                        
+    1    3 X  Y   Z   0.10E-08              0    0                              
+   9999.00      3.00                                                            
+          6.00000000    1    3    1    1    1                                   
+C #1   0.000000000000000   0.000000000000000   0.000000000000000                
+    9    3                                                                      
+   6665.0000000000000        6.9200000000000002E-004  -1.4600000000000000E-004  
+   1000.0000000000000        5.3290000000000004E-003  -1.1540000000000001E-003  
+   228.00000000000000        2.7077000000000000E-002  -5.7250000000000001E-003  
+   64.709999999999994       0.10171800000000000       -2.3311999999999999E-002  
+   21.059999999999999       0.27473999999999998       -6.3954999999999998E-002  
+   7.4950000000000001       0.44856400000000002      -0.14998100000000000       
+   2.7970000000000002       0.28507399999999999      -0.12726199999999999       
+  0.52149999999999996        1.5204000000000001E-002  0.54452900000000004       
+  0.15959999999999999       -3.1909999999999998E-003  0.58049600000000001       
+    4    2                                                                      
+   9.4390000000000001        3.8108999999999997E-002   0.0000000000000000       
+   2.0019999999999998       0.20948000000000000        0.0000000000000000       
+  0.54559999999999997       0.50855700000000004        0.0000000000000000       
+  0.15170000000000000       0.46884199999999998        1.0000000000000000       
+    1    1                                                                      
+  0.55000000000000004        1.0000000000000000                                 
+FINISH                                                                          
+
+********************************************************************************
+ ONE- AND TWO-ELECTRON INTEGRALS OVER SYMMETRY-ADAPTED AOS ARE CALCULATED.
+
+  SPHERICAL HARMONICS ARE USED.
+  
+  INTEGRALS LESS THAN  0.10E-13 ARE NEGLECTED.
+
+  NUCLEAR REPULSION ENERGY :    0.0000000000 A.U.
+  @MOLECU-I, ONE ELECTRON INTEGRALS (CPU/WALL):        0.00/       0.01 SECONDS.
+  @TWOEL-I,         79 INTEGRALS OF SYMMETRY TYPE  I I I I
+  @TWOEL-I,        250 INTEGRALS OF SYMMETRY TYPE  I J I J
+  @TWOEL-I,        221 INTEGRALS OF SYMMETRY TYPE  I I J J
+  @TWOEL-I,        226 INTEGRALS OF SYMMETRY TYPE  I J K L
+  @TWOEL-I, TOTAL NUMBER OF 2-E INTEGRALS        776.
+  @MOLECU-I, TWO ELECTRON INTEGRALS (CPU/WALL):        0.01/       0.03 SECONDS.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.06 seconds.
+--executable xvmol finished with status     0 in        0.11 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvmol2ja
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.00/       0.01 seconds.
+--executable xvmol2ja finished with status     0 in        0.03 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvscf
+  There are   14 functions in the AO basis.
+
+  There are 8 irreducible representations.
+
+       Irrep        # of functions
+         1                  5
+         2                  2
+         3                  2
+         4                  1
+         5                  2
+         6                  1
+         7                  1
+         8                  0
+
+
+  Parameters for SCF calculation: 
+        SCF reference function: ROHF  
+  Maximum number of iterations:  150
+     Full symmetry point group: I h 
+     Computational point group: D2h 
+        Initial density matrix: MOREAD                 
+     SCF convergence tolerance: 10**(-12)
+  DIIS convergence acceleration:  ON
+          Latest start for DIIS:   8
+                     DIIS order:   6
+
+     Alpha population by irrep:   2    1    1    0    0    0    0    0
+      Beta population by irrep:   2    0    0    0    0    0    0    0
+
+
+  Memory information:      54326 words required.
+  Fock matrices are constructed from AO integral file.
+ @GETMEM-I,  Allocated       0 MB of main memory.
+  Initialization and symmetry analysis required      0.002 seconds.
+
+ total no. of electrons in initial guess :   0.0000000000000000     
+ total no. of electrons in initial guess :   0.0000000000000000     
+  --------------------------------------------------------------------
+  Iteration         Total Energy            Largest Density Difference
+  --------------------------------------------------------------------
+       0             0.000000000000000              0.0000000000D+00
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+       1           -36.749955456006091              0.5061384020D+01
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+       2           -37.582069360684287              0.3984422534D+01
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+       3           -37.678693099363798              0.5847569196D+00
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+       4           -37.681780028332625              0.2660406716D+00
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+       5           -37.682414422309890              0.6075068110D-01
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+       6           -37.682417881178161              0.4261429457D-02
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+       7           -37.682417881029664              0.6465101282D-04
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+       8           -37.682417881458726              0.4773408533D-04
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+       9           -37.682417881458754              0.1791662396D-06
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+      10           -37.682417881458754              0.1201042421D-07
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+      11           -37.682417881458797              0.8989298195D-09
+   current occupation vector 
+     2  1  1  0  0  0  0  0
+     2  0  0  0  0  0  0  0
+
+  SCF has converged.
+
+ Density matrix saved to file den.dat
+ total alpha spin electron number:   4.0000000000000009     
+ total  beta spin electron number:   2.0000000000000018     
+     E(ROHF)=       -37.682417881458790              0.2224886941D-12
+
+  Eigenvector printing suppressed.
+
+
+       The average multiplicity is    3.0000000
+  The expectation value of S**2 is    2.0000000
+
+ @PUTMOS-I, Writing converged MOs to NEWMOS. 
+ @PUTMOS-I, Symmetry   1 Full Blocks  1 Partial Blocksize   1
+ @PUTMOS-I, Symmetry   2 Full Blocks  0 Partial Blocksize   2
+ @PUTMOS-I, Symmetry   3 Full Blocks  0 Partial Blocksize   2
+ @PUTMOS-I, Symmetry   4 Full Blocks  0 Partial Blocksize   1
+ @PUTMOS-I, Symmetry   5 Full Blocks  0 Partial Blocksize   2
+ @PUTMOS-I, Symmetry   6 Full Blocks  0 Partial Blocksize   1
+ @PUTMOS-I, Symmetry   7 Full Blocks  0 Partial Blocksize   1
+ @PUTMOS-I, Symmetry   8 Full Blocks  0 Partial Blocksize   0
+ @PUTFOCK-I, Writing converged Fock matrix to NEWFOCK. 
+ @PUTFOCK-I, Symmetry   1 Full Blocks  1 Partial Blocksize   1
+ @PUTFOCK-I, Symmetry   2 Full Blocks  0 Partial Blocksize   2
+ @PUTFOCK-I, Symmetry   3 Full Blocks  0 Partial Blocksize   2
+ @PUTFOCK-I, Symmetry   4 Full Blocks  0 Partial Blocksize   1
+ @PUTFOCK-I, Symmetry   5 Full Blocks  0 Partial Blocksize   2
+ @PUTFOCK-I, Symmetry   6 Full Blocks  0 Partial Blocksize   1
+ @PUTFOCK-I, Symmetry   7 Full Blocks  0 Partial Blocksize   1
+ @PUTFOCK-I, Symmetry   8 Full Blocks  0 Partial Blocksize   0
+  @DMPJOB-I, Rotating orbitals to semicanonical basis.
+             *** Eigenvalues correspond to new basis. ***
+
+
+
+
+  ORBITAL EIGENVALUES (ALPHA)  (1H = 27.2113834 eV)
+
+       MO #        E(hartree)               E(eV)           FULLSYM    COMPSYM
+       ----   --------------------   --------------------   -------   ---------
+    1     1         -11.3461085486        -308.7433098140      Ag        Ag (1)
+    2     2          -0.8190577725         -22.2876950753      Ag        Ag (1)
+    3     6          -0.4302230615         -11.7069646736       u       B2u (2)
+    4     8          -0.4302230615         -11.7069646736       u       B3u (3)
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    5    11           0.0371821294           1.0117771791      Au       B1u (5)
+    6     7           0.6352038027          17.2847742128       u       B2u (2)
+    7     9           0.6352038027          17.2847742128       u       B3u (3)
+    8    12           0.7154857204          19.4693562562      Au       B1u (5)
+    9     3           0.7211453738          19.6233632543      Ag        Ag (1)
+   10     4           1.3354929811          36.3406115357       g        Ag (1)
+   11    10           1.3354929811          36.3406115357       g       B1g (4)
+   12    13           1.3609946033          37.0345459556       g       B3g (6)
+   13    14           1.3609946033          37.0345459556       g       B2g (7)
+   14     5           1.3698456701          37.2753957276      Ag        Ag (1)
+
+
+
+  ORBITAL EIGENVALUES ( BETA)  (1H = 27.2113834 eV)
+
+       MO #        E(hartree)               E(eV)           FULLSYM    COMPSYM
+       ----   --------------------   --------------------   -------   ---------
+    1     1         -11.3034903531        -307.5836097566      Ag        Ag (1)
+    2     2          -0.5886465632         -16.0178873176      Ag        Ag (1)
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    3    11           0.0877428297           2.3876037782      Au       B1u (5)
+    4     8           0.1376963939           3.7469093683       u       B3u (3)
+    5     6           0.1376963939           3.7469093683       u       B2u (2)
+    6    12           0.7475694930          20.3424000917      Au       B1u (5)
+    7     3           0.7875600400          21.4305981981      Ag        Ag (1)
+    8     7           0.7962236346          21.6663465942       u       B2u (2)
+    9     9           0.7962236346          21.6663465942       u       B3u (3)
+   10     4           1.4396759245          39.1755735533      Ag        Ag (1)
+   11    13           1.4547917008          39.5868947378       g       B3g (6)
+   12    14           1.4547917008          39.5868947378       g       B2g (7)
+   13     5           1.4995198814          40.8040104083       g        Ag (1)
+   14    10           1.4995198814          40.8040104083       g       B1g (4)
+
+
+  VSCF finished.
+
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.02/       0.23 seconds.
+--executable xvscf finished with status     0 in        0.25 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvtran
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  Full UHF integral transformation
+  The following   1 alpha MOs will be dropped.
+    1
+  There are  13 active alpha molecular orbitals.
+  The following   1 beta MOs will be dropped.
+    1
+  There are  13 active beta molecular orbitals.
+  Transformation of IIII integrals :
+  2 passes through the AO integral file were required.
+          79 AO integrals were read.
+          66 MO integrals (Spin case AAAA) were written to HF2AA.
+          66 MO integrals (Spin case BBBB) were written to HF2BB.
+         110 MO integrals (Spin case AABB) were written to HF2AB.
+  Transformation of IIJJ integrals :
+  2 passes through the AO integral file were required.
+         221 AO integrals were read.
+         170 MO integrals (Spin case AAAA) were written to HF2AA.
+         170 MO integrals (Spin case BBBB) were written to HF2BB.
+         340 MO integrals (Spin case AABB) were written to HF2AB.
+  Transformation of IJIJ integrals :
+  2 passes through the AO integral file were required.
+         250 AO integrals were read.
+         187 MO integrals (Spin case AAAA) were written to HF2AA.
+         187 MO integrals (Spin case BBBB) were written to HF2BB.
+         305 MO integrals (Spin case AABB) were written to HF2AB.
+  Transformation of IJKL integrals :
+  2 passes through the AO integral file were required.
+         226 AO integrals were read.
+         187 MO integrals (Spin case AAAA) were written to HF2AA.
+         187 MO integrals (Spin case BBBB) were written to HF2BB.
+         374 MO integrals (Spin case AABB) were written to HF2AB.
+  Summary of active molecular orbitals: 
+------------------------------------------------------------------------
+                         * Spin case alpha *
+
+  Index      Eigenvalue    Symmetry    Index      Eigenvalue    Symmetry
+------------------------------------------------------------------------
+     1        -0.8190578        1         8         0.6352038        3
+     2        -0.4302231        2         9         1.3354930        4
+     3        -0.4302231        3        10         0.0371821        5
+     4         0.7211454        1        11         0.7154857        5
+     5         1.3354930        1        12         1.3609946        6
+     6         1.3698457        1        13         1.3609946        7
+     7         0.6352038        2
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+                         * Spin case beta *
+
+  Index      Eigenvalue    Symmetry    Index      Eigenvalue    Symmetry
+------------------------------------------------------------------------
+     1        -0.5886466        1         8         0.7962236        3
+     2         0.7875600        1         9         1.4995199        4
+     3         1.4396759        1        10         0.0877428        5
+     4         1.4995199        1        11         0.7475695        5
+     5         0.1376964        2        12         1.4547917        6
+     6         0.7962236        2        13         1.4547917        7
+     7         0.1376964        3
+------------------------------------------------------------------------
+ -0.81905777254029744      -0.43022306148440281      -0.43022306148440276       0.72114537382599697        1.3354929810636302        1.3698456700896671       0.63520380271489241       0.63520380271489341        1.3354929810636311        3.7182129414740771E-002  0.71548572044195335        1.3609946032956519        1.3609946032956524     
+ -0.58864656317253505       0.78756003996745350        1.4396759244987827        1.4995198813847317       0.13769639393948974       0.79622363463639900       0.13769639393948921       0.79622363463640033        1.4995198813847326        8.7742829651507773E-002  0.74756949298155662        1.4547917008061662        1.4547917008061662     
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.02/       0.03 seconds.
+--executable xvtran finished with status     0 in        0.05 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xintprc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  Processing integrals for CCSD calculation.
+  @GMOIAA-I, Processing MO integrals for spin case AA.
+  @GMOIAA-I, Generation of integral list completed.
+                      TYPE                NUMBER
+                      ----               --------
+                      PPPP                   228
+                      PPPH                   214
+                      PPHH                    74
+                      PHPH                    57
+                      PHHH                    28
+                      HHHH                     9
+
+                     TOTAL                   610
+  @GMOIAA-I, Processing MO integrals for spin case BB.
+  @GMOIAA-I, Generation of integral list completed.
+                      TYPE                NUMBER
+                      ----               --------
+                      PPPP                   440
+                      PPPH                   133
+                      PPHH                    16
+                      PHPH                    17
+                      PHHH                     3
+                      HHHH                     1
+
+                     TOTAL                   610
+  @GMOIAB-I, Processing MO integrals for spin case AB.
+                      TYPE                NUMBER
+                      ----               --------
+                      PPPP                   565
+                      PPPH1H                 307
+                      PPPH2H                  94
+                      PPHH                    48
+                      PHPH1P                  13
+                      PHPH2P                  80
+                      PHHH1P                   5
+                      PHHH2P                  14
+                      HHHH                     3
+
+                     TOTAL                  1129
+
+  @FORMT2-I, Second-order MP correlation energies:
+  @FORMT2-I, Singles contribution will be calculated.
+            ------------------------------------------------
+            E(SCF)                  =    -37.682417881459 a.u.
+            E2(AA)                  =     -0.009475761797 a.u.
+            E2(BB)                  =      0.000000000000 a.u.
+            E2(AB)                  =     -0.043225849563 a.u.
+            E2(SINGLE)              =     -0.002826397644 a.u.
+            E2(TOT)                 =     -0.052701611360 a.u.
+            Total MP2 energy        =    -37.737945890463 a.u.
+            ------------------------------------------------
+            ----------------------------------------------
+                     Projected spin multiplicities: 
+            ----------------------------------------------
+             <0|S^2|0>                  =    2.0000000000.
+             <0|S^2 T2|0>               =   -0.0000000000.
+             Projected <0|S^2 exp(T)|0> =    2.0000000000.
+             Approximate spin mult.     =    3.0000000000.
+            ----------------------------------------------
+   Largest T2 amplitudes for spin case AA:
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  3   2   8   7]-0.03409 [  3   2   9   5]-0.02643 [  2   1   7   4]-0.02011
+[  3   1   8   4]-0.02011 [  2   1  12  10]-0.01613 [  3   1  13  10]-0.01613
+[  3   2  13  12]-0.01303 [  2   1  12  11]-0.00599 [  3   1  13  11]-0.00599
+[  3   1   8   5]-0.00361 [  2   1   7   5] 0.00361 [  2   1   9   8]-0.00361
+[  3   1   9   7]-0.00361 [  3   1   8   6]-0.00225 [  2   1   7   6]-0.00225
+-----------------------------------------------------------------------------
+   Norm of T2AA vector (       17 symmetry allowed elements):  0.0591072606.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  1   1  10  10]-0.06382 [  2   1   7   2]-0.03400 [  3   1   8   2]-0.03400
+[  2   1  12  10]-0.03141 [  3   1  13  10]-0.03141 [  3   1   5   7] 0.03073
+[  2   1   9   7]-0.03073 [  2   1   5   5]-0.03073 [  3   1   9   5]-0.03073
+[  1   1   4   2]-0.02629 [  1   1  10  11]-0.02259 [  1   1  11  10]-0.02019
+[  3   1   6   7] 0.01735 [  2   1   6   5] 0.01735 [  1   1  11  11]-0.01625
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (       52 symmetry allowed elements):  0.1343768494.
+-----------------------------------------------------------------------------
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.03/       0.03 seconds.
+--executable xintprc finished with status     0 in        0.04 seconds (walltime).
+  calling xvcc 
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvcc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+   CCSD energy will be calculated.
+   The reference state is a ROHF wave function.
+   The total correlation energy is -0.055572037657 a.u.
+   The total correlation energy is -0.070061504725 a.u.
+  Convergence information after     1 iterations: 
+  Largest element of residual vector : -0.28465255E-01.
+  Largest element of DIIS residual   : -0.28465255E-01.
+   The total correlation energy is -0.074240767062 a.u.
+  Convergence information after     2 iterations: 
+  Largest element of residual vector : -0.14357700E-01.
+  Largest element of DIIS residual   : -0.69200364E-02.
+   The total correlation energy is -0.076485878072 a.u.
+  Convergence information after     3 iterations: 
+  Largest element of residual vector : -0.40868232E-02.
+  Largest element of DIIS residual   : -0.73851478E-03.
+   The total correlation energy is -0.076923368006 a.u.
+  Convergence information after     4 iterations: 
+  Largest element of residual vector : -0.39099162E-03.
+  Largest element of DIIS residual   : -0.99457345E-04.
+   The total correlation energy is -0.076953495014 a.u.
+  Convergence information after     5 iterations: 
+  Largest element of residual vector : -0.32431156E-04.
+  Largest element of DIIS residual   :  0.17838721E-04.
+   The total correlation energy is -0.076944097016 a.u.
+  Convergence information after     6 iterations: 
+  Largest element of residual vector : -0.18640998E-04.
+  Largest element of DIIS residual   : -0.45209732E-05.
+   The total correlation energy is -0.076947263421 a.u.
+  Convergence information after     7 iterations: 
+  Largest element of residual vector :  0.18814782E-05.
+  Largest element of DIIS residual   :  0.12901700E-05.
+   The total correlation energy is -0.076947207410 a.u.
+  Convergence information after     8 iterations: 
+  Largest element of residual vector :  0.65432451E-06.
+  Largest element of DIIS residual   : -0.24745813E-06.
+   The total correlation energy is -0.076947170466 a.u.
+  Convergence information after     9 iterations: 
+  Largest element of residual vector : -0.10582683E-06.
+  Largest element of DIIS residual   :  0.51868716E-07.
+   The total correlation energy is -0.076947180503 a.u.
+  Convergence information after    10 iterations: 
+  Largest element of residual vector :  0.18666620E-07.
+  Largest element of DIIS residual   : -0.99350440E-08.
+   The total correlation energy is -0.076947181147 a.u.
+  Convergence information after    11 iterations: 
+  Largest element of residual vector :  0.56928731E-08.
+  Largest element of DIIS residual   : -0.23619309E-08.
+   The total correlation energy is -0.076947180888 a.u.
+  Convergence information after    12 iterations: 
+  Largest element of residual vector : -0.84177382E-09.
+  Largest element of DIIS residual   : -0.63815170E-09.
+   The total correlation energy is -0.076947180996 a.u.
+  Convergence information after    13 iterations: 
+  Largest element of residual vector : -0.31430594E-09.
+  Largest element of DIIS residual   : -0.66531331E-10.
+   The total correlation energy is -0.076947181062 a.u.
+  Convergence information after    14 iterations: 
+  Largest element of residual vector :  0.27546491E-10.
+  Largest element of DIIS residual   :  0.24800920E-10.
+   The total correlation energy is -0.076947181062 a.u.
+  Convergence information after    15 iterations: 
+  Largest element of residual vector :  0.12275054E-10.
+  Largest element of DIIS residual   :  0.43325995E-11.
+   The total correlation energy is -0.076947181061 a.u.
+  Convergence information after    16 iterations: 
+  Largest element of residual vector :  0.22690322E-11.
+  Largest element of DIIS residual   : -0.12715291E-11.
+   The total correlation energy is -0.076947181061 a.u.
+  Convergence information after    17 iterations: 
+  Largest element of residual vector : -0.54387246E-12.
+  Largest element of DIIS residual   : -0.28360150E-12.
+   The total correlation energy is -0.076947181061 a.u.
+  Convergence information after    18 iterations: 
+  Largest element of residual vector : -0.12248931E-12.
+  Largest element of DIIS residual   : -0.10979566E-12.
+   The total correlation energy is -0.076947181061 a.u.
+  Convergence information after    19 iterations: 
+  Largest element of residual vector : -0.42438275E-13.
+  Largest element of DIIS residual   : -0.19771215E-13.
+  Amplitude equations converged in    19iterations.
+   The total correlation energy is -0.076947181061 a.u.
+   The CC iterations have converged.
+
+            ----------------------------------------------
+                     Projected spin multiplicities: 
+            ----------------------------------------------
+             <0|S^2|0>                  =    2.0000000000.
+             <0|S^2 (T2+T1**2) |0>      =   -0.0000000000.
+             <0|S^2 T1|0>               =   -0.0000000000.
+             Projected <0|S^2 exp(T)|0> =    2.0000000000.
+             Approximate spin mult.     =    3.0000000000.
+            ----------------------------------------------
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  1       4    ] 0.02198 [  1       6    ]-0.01674 [  3       8    ] 0.00039
+[  2       7    ] 0.00039 [  1       5    ] 0.00000 [  1       3    ] 0.00000
+[  1       3    ] 0.00000 [  1       3    ] 0.00000 [  1       3    ] 0.00000
+[  1       3    ] 0.00000 [  1       3    ] 0.00000 [  1       3    ] 0.00000
+[  1       3    ] 0.00000 [  1       3    ] 0.00000 [  1       3    ] 0.00000
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (        5 symmetry allowed elements):  0.0276343484.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AA:
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  3   2   8   7]-0.04515 [  3   2   9   5]-0.02781 [  2   1   7   4]-0.02548
+[  3   1   8   4]-0.02548 [  3   1  13  10]-0.01579 [  2   1  12  10]-0.01579
+[  3   2  13  12]-0.01390 [  2   1  12  11]-0.00681 [  3   1  13  11]-0.00681
+[  3   1   8   5]-0.00387 [  2   1   7   5] 0.00387 [  3   1   9   7]-0.00387
+[  2   1   9   8]-0.00387 [  2   1   7   6]-0.00225 [  3   1   8   6]-0.00225
+-----------------------------------------------------------------------------
+   Norm of T2AA vector (       17 symmetry allowed elements):  0.0704638967.
+-----------------------------------------------------------------------------
+   Largest T1 amplitudes for spin case BB:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  1       3    ] 0.03700 [  1       2    ]-0.01288 [  1       4    ] 0.00000
+[  1       1    ] 0.00000 [  1       1    ] 0.00000 [  1       1    ] 0.00000
+[  1       1    ] 0.00000 [  1       1    ] 0.00000 [  1       1    ] 0.00000
+[  1       1    ] 0.00000 [  1       1    ] 0.00000 [  1       1    ] 0.00000
+[  1       1    ] 0.00000 [  1       1    ] 0.00000 [  1       1    ] 0.00000
+-----------------------------------------------------------------------------
+   Norm of T1BB vector (        3 symmetry allowed elements):  0.0391739007.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  1   1  10  10]-0.12340 [  1   1  10  11]-0.04447 [  2   1  12  10]-0.04246
+[  3   1  13  10]-0.04246 [  1   1  11  10]-0.04156 [  3   1   5   7] 0.04104
+[  2   1   9   7]-0.04104 [  2   1   5   5]-0.04104 [  3   1   9   5]-0.04104
+[  2   1   7   2]-0.04033 [  3   1   8   2]-0.04033 [  1   1   4   2]-0.02987
+[  2   1  10  12]-0.02849 [  3   1  10  13]-0.02849 [  3   1   6   7] 0.02476
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (       52 symmetry allowed elements):  0.2064911614.
+-----------------------------------------------------------------------------
+       Summary of iterative solution of CC equations 
+      -----------------------------------------------------------
+                       Correlation           Total
+       Iteration         Energy              Energy
+      -----------------------------------------------------------
+            0        -0.055572037657     -37.737989919116  DIIS 
+            1        -0.070061504725     -37.752479386183  DIIS 
+            2        -0.074240767062     -37.756658648521  DIIS 
+            3        -0.076485878072     -37.758903759531  DIIS 
+            4        -0.076923368006     -37.759341249465  DIIS 
+            5        -0.076953495014     -37.759371376472  DIIS 
+            6        -0.076944097016     -37.759361978474  DIIS 
+            7        -0.076947263421     -37.759365144880  DIIS 
+            8        -0.076947207410     -37.759365088869  DIIS 
+            9        -0.076947170466     -37.759365051925  DIIS 
+           10        -0.076947180503     -37.759365061961  DIIS 
+           11        -0.076947181147     -37.759365062606  DIIS 
+           12        -0.076947180888     -37.759365062347  DIIS 
+           13        -0.076947180996     -37.759365062455  DIIS 
+           14        -0.076947181062     -37.759365062521  DIIS 
+           15        -0.076947181062     -37.759365062521  DIIS 
+           16        -0.076947181061     -37.759365062520  DIIS 
+           17        -0.076947181061     -37.759365062520  DIIS 
+           18        -0.076947181061     -37.759365062520  DIIS 
+           19        -0.076947181061     -37.759365062520  DIIS 
+      -----------------------------------------------------------
+      A miracle has come to pass. The CC iterations have converged.
+      The reference energy is       -37.68241788145879 a.u.
+      The correlation energy is      -0.07694718106129 a.u.
+      The total energy is           -37.75936506252008 a.u.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.02/       0.02 seconds.
+--executable xvcc finished with status     0 in        0.04 seconds (walltime).
+  The final electronic energy is       -37.759365062520075 a.u. 
+  This computation required                            1.40 seconds (walltime).

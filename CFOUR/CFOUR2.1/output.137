@@ -1,0 +1,3551 @@
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xjoda
+
+
+   *************************************************************************
+         <<<     CCCCCC     CCCCCC   |||     CCCCCC     CCCCCC   >>>
+       <<<      CCC        CCC       |||    CCC        CCC         >>>
+      <<<      CCC        CCC        |||   CCC        CCC            >>>
+    <<<        CCC        CCC        |||   CCC        CCC              >>>
+      <<<      CCC        CCC        |||   CCC        CCC            >>>
+       <<<      CCC        CCC       |||    CCC        CCC         >>>
+         <<<     CCCCCC     CCCCCC   |||     CCCCCC     CCCCCC   >>>
+   *************************************************************************
+
+     ****************************************************************
+     * CFOUR Coupled-Cluster techniques for Computational Chemistry *
+     ****************************************************************
+
+
+   Department of Chemistry                Institut fuer Physikalische Chemie
+   University of Florida                  Universitaet Mainz
+   Gainesville, FL 32611, USA             D-55099 Mainz, Germany
+
+   Department of Chemistry                Fakultaet fuer Chemie und Biowiss.
+   Johns Hopkins University               Karlsruher Institut fuer Technologie
+   Baltimore, MD 21218, USA               D-76131 Karlsruhe, Germany
+
+   Department of Chemistry                Department of Physical Chemistry
+   Southern Methodist University          Eotvos Lorand University
+   Dallas, TX 75275, USA                  H-1053 Budapest, Hungary
+
+
+                       Version 2.1
+
+                     meyeri                                            
+                     Thu Nov 26 11:11:28 PM EST 2026                   
+                     integer*8 version is running
+
+********************************************************************************
+*                          Input from ZMAT file                                *
+********************************************************************************
+Test 653a conventional NMR chemical shifts for unrelaxed CC3                    
+O                                                                               
+H 1 R                                                                           
+H 1 R 2 A                                                                       
+                                                                                
+R=1.                                                                            
+A=100.                                                                          
+                                                                                
+*CFOUR(SCF_CONV=13,CC_CONV=13,LINEQ_CONV=13                                     
+PROP=NMR_SWITCH                                                                 
+CC_PROG=ECC                                                                     
+DIFF_TYPE=UNRELAXED                                                             
+CALC=CC3,BASIS=3-21G)                                                           
+                                                                                
+********************************************************************************
+    -------------------------------------------------------------------
+                    CFOUR Control Parameters 
+    -------------------------------------------------------------------
+        External           Internal           Value            Units
+          Name               Name
+    -------------------------------------------------------------------
+       ABCDTYPE             IABCDT         STANDARD    [  0]    ***   
+       ANHARMONIC           IANHAR         OFF         [  0]    ***   
+       ANH_ALGORIT          IANALG         STANDARD    [  0]    ***   
+       ANH_DERIVAT          IANDER         SECOND      [  1]    ***   
+       ANH_MODE             ANHMOD         VIBRATION   [  0]    ***   
+       ANH_STEPSIZ          ICUBST             50000          x 10-6  
+       ANH_SYMMETR          IANHSM         ABELIAN     [  0]    ***   
+       AO_LADDERS           IAOLAD         SINGLEPASS  [  1]    ***   
+       AV_SCF               IAVSCF         OFF         [  0]    ***   
+       BASIS                IBASIS         3-21G       [  5]    ***   
+       BOTHVECTORS          BOTHVC         OFF         [  0]    ***   
+       BOX_POTENT           IPIAB          OFF         [  0]    ***   
+       BREIT                IBREIT         OFF         [  0]    ***   
+       BRUCK_CONV           IBRTOL          10D-  4             ***   
+       BRUECKNER            IBRKNR         OFF         [  0]    ***   
+       BUFFERSIZE           IBUFFS              4096            ***   
+       CACHE_RECS           ICHREC             10               ***   
+       CALCLEVEL            ICLLVL         CC3         [ 32]    ***   
+       CCORBOPT             ICCORB         OFF         [  0]  x 0.01  
+       CC_CONV              ICCCNV          10D- 13             ***   
+       CC_EXPORDER          ICCEOR              5               ***   
+       CC_EXTRAPOL          ICCEXT         DIIS        [  1]    ***   
+       CC_GUESS             ICCGES         MP2         [  0]    ***   
+       CC_MAXCYC            ICCCYC            100              cycles 
+       CC_PROGRAM           ICCPRO         ECC         [  1]    ***   
+       CHARGE               ICHRGE              0               ***   
+       CHOLESKY             ICHOLE         OFF         [  0]    ***   
+       CIS_CONV             ICISTL              5               ***   
+       COMM_SIZE            IPSIZE            ***               ***   
+       CONSTANT             ICONST         OLD         [  1]    ***   
+       CONTINUUM            ICONTU         NONE        [  0]    ***   
+       CONTRACTION          ICNTYP         GENERAL     [  1]    ***   
+       COORDINATES          ICOORD         INTERNAL    [  0]    ***   
+       CPHF_CONVER          ICPHFT          10D- 16             ***   
+       CPHF_MAXCYC          ICPHFC             64              cycles 
+       CUBIC                ICUBIC         OFF         [  0]    ***   
+       CURVILINEAR          ICURVY         OFF         [  0]    ***   
+       DBOC                 IDBOC          OFF         [  0]    ***   
+       DCT                  IDCT           OFF         [  0]    ***   
+       DERIV_LEV            IDRLVL         SECOND      [  2]    ***   
+       DEVMEM_SIZE          IDVMEM          50000000           MByte  
+       DIAG_MRCC            IEOMST          10D-  0             ***   
+       DIFF_TYPE            IDIFTY         UNRELAXED   [  1]    ***   
+       DIRECT               IDIRCT         OFF         [  0]    ***   
+       DROPMO               IDRPMO      NONE         
+       ECP                  IECP           OFF         [  0]    ***   
+       EIGENVECTOR          IVEC                1               ***   
+       EL_ANHARM            IELANH         OFF         [  0]    ***   
+       EOMFOLLOW            IEOMSR         ENERGY      [  0]    ***   
+       EOMIP                IEOMIP         OFF         [  0]    ***   
+       EOMLEVEL             HBARFM         SAME        [  0]    ***   
+       EOM_MRCC             IMRCCE         NEW         [  1]    ***   
+       EOM_NONIT            EOMNON         OFF         [  0]    ***   
+       EOM_NSING            IEOMSI          10D-  0             ***   
+       EOM_NSTATES          IMRCCD         DAVIDSON    [  0]    ***   
+       EOM_NTRIP            IEOMTR          10D-  0             ***   
+       EOM_ORDER            IEXORD         ENERGY      [  0]    ***   
+       EOM_PROPSTA          IEOMST              0               ***   
+       ESTATE_CONV          IEXTOL          10D-  5             ***   
+       ESTATE_DIAG          IEXDIG         ITERATIVE   [  0]    ***   
+       ESTATE_LOCK          IESLOC         ON          [  1]    ***   
+       ESTATE_MAXC          IEXMXC             40               ***   
+       ESTATE_PROP          IEXPRP         OFF         [  0]    ***   
+       EVAL_HESS            IRECAL              0            # of cyc.
+       EXCITATION           IEXCIT              0               ***   
+       EXCITE               IEXCIT         NONE        [  0]    ***   
+       EXTERN_POT           IEXPOT         OFF         [  0]    ***   
+       FCGRADNEW            IFCGNW         OFF         [  0]    ***   
+       FC_FIELD             IFINFC              0             x 10-6  
+       FD_CALTYPE           IFDCAL         GRADONLY    [  0]    ***   
+       FD_PROJECT           IFDPRJ         OFF         [  1]    ***   
+       FD_STEPSIZE          IDISFD              0            10-4 bohr
+       FD_USEGROUP          IFDGRP         FULL        [  0]    ***   
+       FILE_RECSIZ          IFLREC              4096           words  
+       FINITE_PERT          IFIPER              0             x 10-6  
+       FIXGEOM              IFIXGM         OFF         [  0]    ***   
+       FOCK                 IFOCK          AO          [  1]    ***   
+       FREQ_ALGORI          IVIALG         STANDARD    [  0]    ***   
+       FROZEN_CORE          IFROCO         OFF         [  0]    ***   
+       GAMMA_ABCD           IGABCD         STORE       [  0]    ***   
+       GAMMA_ABCI           IGABCI         STORE       [  0]    ***   
+       GENBAS_1             IGNBS1              0               ***   
+       GENBAS_2             IGNBS2              0               ***   
+       GENBAS_3             IGNBS3              0               ***   
+       GENBAS_4             IGNBS4              0               ***   
+       GEO_CONV             ICONTL              5              H/bohr 
+       GEO_MAXCYC           IOPTCY             50               ***   
+       GEO_MAXSTEP          IMXSTP            300            millibohr
+       GEO_METHOD           INR            SINGLE_POINT[  5]    ***   
+       GIAO                 IGIAO          OFF         [  1]    ***   
+       GIMIC                IGIMIC         OFF         [  0]    ***   
+       GRID                 IGRID          OFF         [  0]    ***   
+       GRID_ALGO            IGALGO         SERIAL      [  0]    ***   
+       GUESS                IGUESS         MOREAD      [  0]    ***   
+       HBAR                 IHBAR          OFF         [  0]    ***   
+       HESS_TYPE            IHESTP         SCF         [  0]    ***   
+       HF2_FILE             IHF2Fl         USE         [  1]    ***   
+       HFSTABILITY          ISTABL         OFF         [  0]    ***   
+       INCORE               INCORE         OFF         [  0]    ***   
+       INPUT_MRCC           IMRCC          ON          [  1]    ***   
+       INTEGRALS            INTTYP         VMOL        [  1]    ***   
+       JODA_PRINT           IJPRNT              0               ***   
+       KEYWORD_OUT          IDMPKW         NO          [  0]    ***   
+       LINDEP_TOL           ILINDP              8               ***   
+       LINEQ_CONV           IZTACN          10D- 13           cycles  
+       LINEQ_EXPOR          ILMAXD              5               ***   
+       LINEQ_MAXCY          ILMAXC            100               ***   
+       LINEQ_TYPE           ILTYPE         DIIS        [  1]    ***   
+       LOCK_ORBOCC          ILOCOC         OFF         [  0]    ***   
+       MEMORY_SIZE          IMEMSZ         100000000           words  
+       MEM_UNIT             IMEMU          INTEGERWORDS[  0]    ***   
+       MRCC                 IMRCCC         OFF         [  0]    ***   
+       MULTIPLICTY          IMULTP              1               ***   
+       NACOUPLING           IVCOUP         OFF         [  0]    ***   
+       NEGEVAL              IDIE           ABORT       [  0]    ***   
+       NEWNORM              INEWNO         OFF         [  0]    ***   
+       NON-HF               INONHF         OFF         [  0]    ***   
+       NTOP_TAMP            ITOPT2             15               ***   
+       NUC_MODEL            INUCMO         POINT       [  0]    ***   
+       OCCUPATION           IOCCU   ESTIMATED BY SCF 
+       OPEN-SHELL           IOPEN          SPIN-ORBITAL[  0]    ***   
+       OPTVIB               IOPTVB         OFF         [  0]    ***   
+       ORBITALS             IORBTP         STANDARD    [  0]    ***   
+       PARALLEL             IPARAL         ON          [  1]    ***   
+       PARA_INT             IPINTS         ON          [  1]    ***   
+       PARA_PRINT           IPPRIN              0               ***   
+       PERT_ORB             IPTORB         STANDARD    [  0]    ***   
+       POINTS               IGRDFD              0               ***   
+       PRINT                IPRNT               0               ***   
+       PROPS                IPROPS         NMR_SWITCH  [  4]    ***   
+       PROP_INTEGR          IINTYP         INTERNAL    [  0]    ***   
+       PSI                  IPSI           OFF         [  0]    ***   
+       QC_ALG               IQCALG         FLM         [  0]    ***   
+       QC_LINALG            IQCLIN         TRIDIAG     [  2]    ***   
+       QC_MAXCYC            IQCMAX          10D-100           cycles  
+       QC_MAXSCFCY          IQCMSC          10D- 15           cycles  
+       QC_RTRUST            IQCRTR          10D-  0           x 10-3  
+       QC_SKIPSCF           IQCSKI         OFF         [  0]    ***   
+       QC_START             IQCSTA          10D-  1             ***   
+       QRHFGUESS            IQGUES         OFF         [  0]    ***   
+       QUARTIC              IQUART         OFF         [  0]    ***   
+       RAMAN_INT            IRAMIN         OFF         [  0]    ***   
+       RAMAN_ORB            IRAMRE         UNRELAXED   [  0]    ***   
+       RDO                  IRDOFM         ON          [  1]    ***   
+       REDUCE_REPR          REDREP         Ir          [  0]    ***   
+       REFERENCE            IREFNC         RHF         [  0]    ***   
+       RELATIVIST           IRELAT         OFF         [  0]    ***   
+       RELAX_DENS           IRDENS         ON          [  1]    ***   
+       RESET_FLAGS          IRESET         OFF         [  0]    ***   
+       RESTART_CC           ICCRES         OFF         [  0]    ***   
+       ROT_EVEC             ROTVEC              0               ***   
+       SAVE_INTS            ISVINT         OFF         [  0]    ***   
+       SCALE_ON             ISTCRT              0               ***   
+       SCF_CONV             ISCFCV          10D- 13             ***   
+       SCF_DAMPING          IDAMP               0             x 10-3  
+       SCF_EXPORDE          IRPPOR              6               ***   
+       SCF_EXPSTAR          IRPPLS              8               ***   
+       SCF_EXTRAPO          IRPP           ON          [  1]    ***   
+       SCF_MAXCYC           ISCFCY            150              cycles 
+       SCF_NOSTOP           ISCFST         OFF         [  0]    ***   
+       SCF_PRINT            ISCFPR              0               ***   
+       SCF_PROG             ISCFPR         SCF         [  0]    ***   
+       SD_FIELD             IFINSD              0             x 10-6  
+       SOPERT               IPERSO         OFF         [  0]    ***   
+       SPHERICAL            IDFGHI         ON          [  1]    ***   
+       SPINORBIT            ISOCAL         OFF         [  0]    ***   
+       SPINROTATIO          ISRCON         OFF         [  0]    ***   
+       SPIN_FLIP            ISPFLP         OFF         [  0]    ***   
+       SPIN_ORBIT           ISPORB         OFF         [  0]    ***   
+       SPIN_SCAL            ISCSMP         OFF         [  0]    ***   
+       STEEPSCALE           ISTPSC              1000          x 10-3  
+       SUBGROUP             ISUBGP         DEFAULT     [  0]    ***   
+       SUBGRPAXIS           ISBXYZ         X           [  0]    ***   
+       SYMMETRY             ISYM           ON          [  0]    ***   
+       SYM_CHECK            ISYMCK         OVERRIDE    [  1]    ***   
+       T3_EXTRAPOL          IT3EXT         OFF         [  0]    ***   
+       T4_EXTRAPOL          IT4EXP         OFF         [  0]    ***   
+       TAMP_SUM             IEVERY              5               ***   
+       TESTSUITE            ITESTS         OFF         [  0]    ***   
+       THERMOCH             ITHERM         OFF         [  0]    ***   
+       TOL_CHOLESK          ITOLCH          10D-  4             ***   
+       TRANGRAD             IRESRM         OFF         [  0]    ***   
+       TRANS_INV            ITRAIN         USE         [  0]    ***   
+       TREAT_PERT           ITREAT         SIMULTANEOUS[  0]    ***   
+       TRIP_ALGORI          ITRALG         NORMAL      [  0]    ***   
+       UIJ_THRESHO          IUIJTH              1               ***   
+       UNITS                IUNITS         ANGSTROM    [  0]    ***   
+       UNOS                 IUNOS          OFF         [  0]    ***   
+       UPDATE_HESS          IHUPDT         ON          [  1]    ***   
+       VIBPHASE             ISETPH         STANDARD    [  0]    ***   
+       VIBRATION            IVIB           NO          [  0]    ***   
+       VIB_ALGORIT          IGEALG         STANDARD    [  0]    ***   
+       VNATORB              IVNORB         OFF         [  0]    ***   
+       VTRAN                IVTRAN         FULL/PARTIAL[  0]    ***   
+       XFIELD               IXEFLD              0             x 10-6  
+       XFORM_TOL            IXFTOL          10D- 11             ***   
+       YFIELD               IYEFLD              0             x 10-6  
+       ZFIELD               IZEFLD              0             x 10-6  
+       ZSCALE_EXP           IZEXPS         OFF         [  0]    ***   
+    -------------------------------------------------------------------
+   3 entries found in Z-matrix 
+   Job Title : Test 653a conventional NMR chemical shifts for unrelaxed CC3                    
+   There are  2 unique internal coordinates.
+   Of these,  0 will be optimized.
+   User supplied Z-matrix: 
+--------------------------------------------------------------------------------
+       SYMBOL    BOND      LENGTH    ANGLE     ANGLE     DIHED     ANGLE
+                  TO      (ANGST)    WRT      (DEG)      WRT      (DEG)
+--------------------------------------------------------------------------------
+        O    
+        H          1         R    
+        H          1         R          2        A    
+                  *Initial values for internal coordinates* 
+                      Name             Value
+                        R               1.0000000000
+                        A             100.0000000000
+--------------------------------------------------------------------------------
+   Rotational constants (in cm-1): 
+          8.7688482409            14.2519235515            22.7924928411
+   Rotational constants (in MHz): 
+     262883.4936261069        427261.9791319328        683301.8410053814
+********************************************************************************
+   The full molecular point group is C2v .
+   The largest Abelian subgroup of the full molecular point group is C2v .
+   The computational point group is C2v .
+********************************************************************************
+--------------------------------------------------------------------------------
+   Analysis of internal coordinates specified by Z-matrix 
+--------------------------------------------------------------------------------
+   *The nuclear repulsion energy is    8.812229421843860 a.u.
+   *There are   2 degrees of freedom within the tot. symm. molecular subspace.
+   *Z-matrix requests optimization of   0 coordinates.
+   *The optimization is constrained.
+   *The following   2 parameters can have non-zero 
+    derivatives within the totally symmetric subspace:
+             A    [ 3]  R    [ 2]
+   *The following   0 parameters are to be optimized:
+
+   *The following coordinates must be varied in an  unconstrained optimization.
+             A    [ 3]  R    [ 2]
+--------------------------------------------------------------------------------
+
+
+ ----------------------------------------------------------------
+         Coordinates used in calculation (QCOMP) 
+ ----------------------------------------------------------------
+ Z-matrix   Atomic            Coordinates (in bohr)
+  Symbol    Number           X              Y              Z
+ ----------------------------------------------------------------
+     O         8         0.00000000     0.00000000     0.13594219
+     H         1         0.00000000    -1.44761450    -1.07875060
+     H         1         0.00000000     1.44761450    -1.07875060
+ ----------------------------------------------------------------
+
+   Interatomic distance matrix (Angstroms) 
+
+                 O             H             H    
+                [ 1]        [ 2]        [ 3]
+  O    [ 1]     0.00000
+  H    [ 2]     1.00000     0.00000
+  H    [ 3]     1.00000     1.53209     0.00000
+ rotcon2
+   Rotational constants (in cm-1): 
+          8.7688482409            22.7924928411            14.2519235515
+   Rotational constants (in MHz): 
+     262883.4936261071        683301.8410053821        427261.9791319330
+  There are   13 basis functions.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.16/       0.23 seconds.
+--executable xjoda finished with status     0 in        0.29 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvmol
+
+OMP_NUM_THREADS not specified; defaulting to 1
+Running with 1 threads/proc
+
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG
+ SERIAL VERSION OF MOLECULE STARTED
+********************************************************************************
+                    INPUT FROM MOL FILE
+********************************************************************************
+INTGRL        1    0    1    0    0    0    0    0    0                         
+         *** CFOUR Program System (Release V0.1) ***                            
+Test 653a conventional NMR chemical shifts for unrelaxed CC3                    
+    2    2 X  Y       0.10E-08              0    0                              
+   9999.00      3.00                                                            
+          8.00000000    1    2    1    1                                        
+O #1   0.000000000000000   0.000000000000000   0.135942190285917                
+    6    3                                                                      
+   322.03699999999998        5.9239399999999998E-002   0.0000000000000000       
+   48.430799999999998       0.35149999999999998        0.0000000000000000       
+   10.420600000000000       0.70765800000000001        0.0000000000000000       
+   7.4029400000000001        0.0000000000000000      -0.40445300000000001       
+   1.5762000000000000        0.0000000000000000        1.2215600000000000       
+  0.37368400000000002        0.0000000000000000        0.0000000000000000       
+    3    2                                                                      
+   7.4029400000000001       0.24458600000000000        0.0000000000000000       
+   1.5762000000000000       0.85395500000000002        0.0000000000000000       
+  0.37368400000000002        0.0000000000000000        1.0000000000000000       
+          1.00000000    1    1    1                                             
+H #2   0.000000000000000  -1.447614500172018  -1.078750602895305                
+    3    2                                                                      
+   5.4471780000000001       0.15628500000000001        0.0000000000000000       
+  0.82454720000000004       0.90469100000000002        0.0000000000000000       
+  0.18319160000000001        0.0000000000000000        1.0000000000000000       
+FINISH                                                                          
+
+********************************************************************************
+ ONE- AND TWO-ELECTRON INTEGRALS OVER SYMMETRY-ADAPTED AOS ARE CALCULATED.
+
+  SPHERICAL HARMONICS ARE USED.
+  
+  INTEGRALS LESS THAN  0.10E-13 ARE NEGLECTED.
+
+  NUCLEAR REPULSION ENERGY :    8.8122294218 A.U.
+  @MOLECU-I, ONE ELECTRON INTEGRALS (CPU/WALL):        0.00/       0.00 SECONDS.
+  @TWOEL-I,        413 INTEGRALS OF SYMMETRY TYPE  I I I I
+  @TWOEL-I,        499 INTEGRALS OF SYMMETRY TYPE  I J I J
+  @TWOEL-I,        358 INTEGRALS OF SYMMETRY TYPE  I I J J
+  @TWOEL-I, TOTAL NUMBER OF 2-E INTEGRALS       1270.
+  @MOLECU-I, TWO ELECTRON INTEGRALS (CPU/WALL):        0.00/       0.00 SECONDS.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.01 seconds.
+--executable xvmol finished with status     0 in        0.02 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvmol2ja
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.00/       0.00 seconds.
+--executable xvmol2ja finished with status     0 in        0.02 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvscf
+  There are   13 functions in the AO basis.
+
+  There are 4 irreducible representations.
+
+       Irrep        # of functions
+         1                  7
+         2                  2
+         3                  4
+         4                  0
+
+
+  Parameters for SCF calculation: 
+        SCF reference function:  RHF  
+  Maximum number of iterations:  150
+     Full symmetry point group: C2v 
+     Computational point group: C2v 
+        Initial density matrix: MOREAD                 
+     SCF convergence tolerance: 10**(-13)
+  DIIS convergence acceleration:  ON
+          Latest start for DIIS:   8
+                     DIIS order:   6
+
+  Memory information:      54409 words required.
+  Fock matrices are constructed from AO integral file.
+ @GETMEM-I,  Allocated       0 MB of main memory.
+  Initialization and symmetry analysis required      0.001 seconds.
+
+  @INITGES-I, Occupancies from core Hamiltonian:
+
+          Alpha population by irrep:   3    1    1    0
+           Beta population by irrep:   3    1    1    0
+
+
+ total no. of electrons in initial guess :   0.0000000000000000     
+  --------------------------------------------------------------------
+  Iteration         Total Energy            Largest Density Difference
+  --------------------------------------------------------------------
+       0             8.812229421843861              0.0000000000D+00
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       1           -66.022823242467680              0.2101042703D+01
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       2           -70.110607330892776              0.4291143554D+01
+   current occupation vector 
+     3  0  2  0
+     3  0  2  0
+       3           -73.013613531745577              0.3693474425D+01
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       4           -74.581709478376354              0.1712112943D+01
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       5           -75.222408560940877              0.1488675698D+01
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       6           -75.476021288319970              0.4010990447D+00
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       7           -75.551227470989417              0.2946097332D+00
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       8           -75.573862907154364              0.1245344758D+00
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+       9           -75.582872260562482              0.5397105150D-01
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      10           -75.582875224250486              0.1705803838D-02
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      11           -75.582875280854211              0.2885428792D-03
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      12           -75.582875281042845              0.8041898229D-05
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      13           -75.582875281047663              0.2655960296D-05
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      14           -75.582875281047592              0.2350515986D-06
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      15           -75.582875281047606              0.3497017009D-07
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      16           -75.582875281047649              0.2838824065D-08
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      17           -75.582875281047620              0.2570860191D-09
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      18           -75.582875281047592              0.1026840835D-09
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      19           -75.582875281047620              0.1789324244D-10
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      20           -75.582875281047535              0.4369837825D-12
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+      21           -75.582875281047691              0.1549871342D-12
+   current occupation vector 
+     3  1  1  0
+     3  1  1  0
+
+  SCF has converged.
+
+ Density matrix saved to file den.dat
+ total electron number:   10.000000000000000     
+     E(SCF)=       -75.582875281047677              0.3474998067D-13
+
+  Eigenvector printing suppressed.
+
+ @PUTMOS-I, Writing converged MOs to NEWMOS. 
+ @PUTMOS-I, Symmetry   1 Full Blocks  1 Partial Blocksize   3
+ @PUTMOS-I, Symmetry   2 Full Blocks  0 Partial Blocksize   2
+ @PUTMOS-I, Symmetry   3 Full Blocks  1 Partial Blocksize   0
+ @PUTMOS-I, Symmetry   4 Full Blocks  0 Partial Blocksize   0
+ @PUTFOCK-I, Writing converged Fock matrix to NEWFOCK. 
+ @PUTFOCK-I, Symmetry   1 Full Blocks  1 Partial Blocksize   3
+ @PUTFOCK-I, Symmetry   2 Full Blocks  0 Partial Blocksize   2
+ @PUTFOCK-I, Symmetry   3 Full Blocks  1 Partial Blocksize   0
+ @PUTFOCK-I, Symmetry   4 Full Blocks  0 Partial Blocksize   0
+
+
+
+  ORBITAL EIGENVALUES (ALPHA)  (1H = 27.2113834 eV)
+
+       MO #        E(hartree)               E(eV)           FULLSYM    COMPSYM
+       ----   --------------------   --------------------   -------   ---------
+    1     1         -20.4413187308        -556.2365611859      A1        A1 (1)
+    2     2          -1.3142459676         -35.7624509070      A1        A1 (1)
+    3    10          -0.6562108507         -17.8564050504      B2        B2 (3)
+    4     3          -0.5408693907         -14.7178043599      A1        A1 (1)
+    5     8          -0.4808116592         -13.0835504006      B1        B1 (2)
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    6     4           0.2496920404           6.7944658431      A1        A1 (1)
+    7    11           0.3440342527           9.3616479536      B2        B2 (3)
+    8    12           1.1530129507          31.3750774676      B2        B2 (3)
+    9     5           1.2788947757          34.8004960704      A1        A1 (1)
+   10     9           1.7789796903          48.4084984141      B1        B1 (2)
+   11     6           1.8890125741          51.4026454020      A1        A1 (1)
+   12    13           2.0067281703          54.6058496216      B2        B2 (3)
+   13     7           3.0937987006          84.1865426042      A1        A1 (1)
+
+
+  VSCF finished.
+
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.21 seconds.
+--executable xvscf finished with status     0 in        0.23 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvtran
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  Full RHF integral transformation
+  Transformation of IIII integrals :
+  1 pass through the AO integral file was required.
+         413 AO integrals were read.
+         467 MO integrals were written to HF2.
+  Transformation of IIJJ integrals :
+  1 pass through the AO integral file was required.
+         358 AO integrals were read.
+         394 MO integrals were written to HF2.
+  Transformation of IJIJ integrals :
+  1 pass through the AO integral file was required.
+         499 AO integrals were read.
+         547 MO integrals were written to HF2.
+  Transformation of IJKL integrals :
+  1 pass through the AO integral file was required.
+           0 AO integrals were read.
+           0 MO integrals were written to HF2.
+  Summary of active molecular orbitals: 
+------------------------------------------------------------------------
+
+  Index      Eigenvalue    Symmetry    Index      Eigenvalue    Symmetry
+------------------------------------------------------------------------
+     1       -20.4413187        1         8         1.8890126        1
+     2        -1.3142460        1         9         3.0937987        1
+     3        -0.5408694        1        10         1.7789797        2
+     4        -0.4808117        2        11         0.3440343        3
+     5        -0.6562109        3        12         1.1530130        3
+     6         0.2496920        1        13         2.0067282        3
+     7         1.2788948        1
+------------------------------------------------------------------------
+  -20.441318730819013       -1.3142459676281169      -0.54086939070965601      -0.48081165916140667      -0.65621085072947705       0.24969204039304785        1.2788947757193656        1.8890125741264767        3.0937987005894265        1.7789796903211250       0.34403425272547072        1.1530129507335134        2.0067281702977913     
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.01 seconds.
+--executable xvtran finished with status     0 in        0.03 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xintprc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  @GMOIAA-I, Processing MO integrals for spin case AA.
+  @GMOIAA-I, Generation of integral list completed.
+                      TYPE                NUMBER
+                      ----               --------
+                      PPPP                   247
+                      PPPH                   468
+                      PPHH                   265
+                      PHPH                   187
+                      PHHH                   192
+                      HHHH                    49
+
+                     TOTAL                  1408
+
+  @FORMT2-I, Second-order MP correlation energies:
+            ------------------------------------------------
+            E(SCF)                  =    -75.582875281048 a.u.
+            E2(AA)                  =     -0.014195747780 a.u.
+            E2(AB)                  =     -0.097539380239 a.u.
+            E2(TOT)                 =     -0.125930875798 a.u.
+            Total MP2 energy        =    -75.708806156846 a.u.
+            ------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  11  11]-0.04649 [  4   4  10  10]-0.03925 [  3   3   8   8]-0.02968
+[  5   3  11   6] 0.02645 [  3   5   6  11] 0.02645 [  4   3  10   8]-0.02544
+[  3   4   8  10]-0.02544 [  3   3   6   6]-0.02540 [  4   5  10  11]-0.02382
+[  5   4  11  10]-0.02382 [  5   5  12  12]-0.02347 [  5   4  13  10]-0.02038
+[  4   5  10  13]-0.02038 [  5   5   7   7]-0.02023 [  5   5  13  13]-0.01894
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      490 symmetry allowed elements):  0.1612374904.
+-----------------------------------------------------------------------------
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.02 seconds.
+--executable xintprc finished with status     0 in        0.06 seconds (walltime).
+  calling xecc 
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xecc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ CC3 energy will be calculated.
+ Largest T2 amplitudes for spin case AB:
+        _       _                 _       _                 _       _
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  5   5  11  11]-0.04649 [  4   4  10  10]-0.03925 [  3   3   8   8]-0.02968
+ [  5   3  11   6] 0.02645 [  3   5   6  11] 0.02645 [  4   3  10   8]-0.02544
+ [  3   4   8  10]-0.02544 [  3   3   6   6]-0.02540 [  4   5  10  11]-0.02382
+ [  5   4  11  10]-0.02382 [  5   5  12  12]-0.02347 [  5   4  13  10]-0.02038
+ [  4   5  10  13]-0.02038 [  5   5   7   7]-0.02023 [  5   5  13  13]-0.01894
+ -----------------------------------------------------------------------------
+ Norm of T2AB vector (      490 symmetry allowed elements):  0.1612374904.
+ -----------------------------------------------------------------------------
+ The total correlation energy is -0.125930875798 a.u.
+ Resorts of amplitudes and integrals (CPU/WALL):       0.00/       0.00 seconds.
+ Starting iterative solution of the CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ 5 expansion vectors are used in the DIIS extrapolation.
+ Convergence criterium is 10**(-13).
+ Maximum number of iterations is 100.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   1 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0008009106 0.0079282545    5        13
+     T2        AB    0.0000531578-0.0063964152    5    5   11   11
+ -------------------------------------------------------------------
+ The total correlation energy is -0.130602334243 a.u.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.79282545E-02.
+ Largest element of DIIS residual   :  0.79282545E-02.
+ Iteration Nr.   1 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   2 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0002614962 0.0029681043    3         6
+     T2        AB    0.0000224677-0.0036241816    5    5   11   11
+ -------------------------------------------------------------------
+ The total correlation energy is -0.133625837867 a.u.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.36241816E-02.
+ Largest element of DIIS residual   : -0.22514513E-02.
+ Iteration Nr.   2 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   3 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000671951 0.0009943963    3         6
+     T2        AB    0.0000034922 0.0006018543    5    3    6   11
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135051039892 a.u.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.99439630E-03.
+ Largest element of DIIS residual   :  0.76312970E-03.
+ Iteration Nr.   3 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   4 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000283669 0.0004349230    3         6
+     T2        AB    0.0000011092-0.0002549147    3    3    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135212110365 a.u.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.43492303E-03.
+ Largest element of DIIS residual   :  0.22996895E-03.
+ Iteration Nr.   4 required (CPU/WALL):                0.00/       0.01 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   5 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000086719 0.0001259409    3         6
+     T2        AB    0.0000002541-0.0000636887    3    3    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135230491588 a.u.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.12594089E-03.
+ Largest element of DIIS residual   :  0.29482796E-04.
+ Iteration Nr.   5 required (CPU/WALL):                0.00/       0.00 seconds.
+ Largest T1 amplitudes for spin case AA:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  3       6    ] 0.01318 [  5      13    ] 0.00993 [  5      11    ]-0.00707
+ [  3       8    ] 0.00518 [  2       8    ]-0.00395 [  3       9    ]-0.00335
+ [  2       9    ] 0.00267 [  3       7    ] 0.00257 [  5      12    ]-0.00251
+ [  2       6    ]-0.00166 [  1       9    ]-0.00024 [  2       7    ] 0.00016
+ [  1       8    ]-0.00010 [  1       6    ]-0.00008 [  1       7    ]-0.00005
+ -----------------------------------------------------------------------------
+ Norm of T1AA vector (       16 symmetry allowed elements):  0.0199722731.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AB:
+        _       _                 _       _                 _       _
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  5   5  11  11]-0.05929 [  4   4  10  10]-0.04349 [  5   3  11   6] 0.03436
+ [  3   5   6  11] 0.03436 [  3   3   6   6]-0.03431 [  3   3   8   8]-0.03238
+ [  5   5  12  12]-0.02890 [  5   5   6   6]-0.02764 [  4   3  10   8]-0.02575
+ [  3   4   8  10]-0.02575 [  3   3  11  11]-0.02564 [  5   5  12  11]-0.02449
+ [  5   5  11  12]-0.02449 [  5   5   7   7]-0.02402 [  5   4  11  10]-0.02243
+ -----------------------------------------------------------------------------
+ Norm of T2AB vector (      490 symmetry allowed elements):  0.1934997600.
+ -----------------------------------------------------------------------------
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   6 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000013809 0.0000213297    3         6
+     T2        AB    0.0000000473 0.0000076575    5    5   11   11
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228694535 a.u.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.21329724E-04.
+ Largest element of DIIS residual   :  0.10688373E-04.
+ Iteration Nr.   6 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   7 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000003337 0.0000048246    3         6
+     T2        AB    0.0000000142 0.0000026955    5    5   11   11
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228556254 a.u.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.48245577E-05.
+ Largest element of DIIS residual   :  0.16344132E-05.
+ Iteration Nr.   7 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   8 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000592 0.0000008423    3         6
+     T2        AB    0.0000000039 0.0000006741    5    5   11   11
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228637308 a.u.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.84225737E-06.
+ Largest element of DIIS residual   :  0.52477374E-06.
+ Iteration Nr.   8 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.   9 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000108 0.0000001146    5        11
+     T2        AB    0.0000000011 0.0000002284    3    3    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228592514 a.u.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector :  0.22843963E-06.
+ Largest element of DIIS residual   :  0.89535012E-07.
+ Iteration Nr.   9 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  10 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000020-0.0000000222    4        10
+     T2        AB    0.0000000002 0.0000000455    3    3    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228569253 a.u.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.45476729E-07.
+ Largest element of DIIS residual   :  0.31868297E-07.
+ Iteration Nr.  10 required (CPU/WALL):                0.00/       0.00 seconds.
+ Largest T1 amplitudes for spin case AA:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  3       6    ] 0.01323 [  5      13    ] 0.00993 [  5      11    ]-0.00706
+ [  3       8    ] 0.00518 [  2       8    ]-0.00395 [  3       9    ]-0.00335
+ [  2       9    ] 0.00268 [  3       7    ] 0.00257 [  5      12    ]-0.00251
+ [  2       6    ]-0.00166 [  1       9    ]-0.00024 [  2       7    ] 0.00016
+ [  1       8    ]-0.00010 [  1       6    ]-0.00008 [  1       7    ]-0.00005
+ -----------------------------------------------------------------------------
+ Norm of T1AA vector (       16 symmetry allowed elements):  0.0199996044.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AB:
+        _       _                 _       _                 _       _
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  5   5  11  11]-0.05927 [  4   4  10  10]-0.04349 [  5   3  11   6] 0.03436
+ [  3   5   6  11] 0.03436 [  3   3   6   6]-0.03432 [  3   3   8   8]-0.03238
+ [  5   5  12  12]-0.02890 [  5   5   6   6]-0.02763 [  4   3  10   8]-0.02575
+ [  3   4   8  10]-0.02575 [  3   3  11  11]-0.02565 [  5   5  12  11]-0.02448
+ [  5   5  11  12]-0.02448 [  5   5   7   7]-0.02402 [  4   5  10  11]-0.02243
+ -----------------------------------------------------------------------------
+ Norm of T2AB vector (      490 symmetry allowed elements):  0.1934937479.
+ -----------------------------------------------------------------------------
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  11 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000014-0.0000000209    3         6
+     T2        AB    0.0000000001 0.0000000148    3    3    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228564050 a.u.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.20897954E-07.
+ Largest element of DIIS residual   : -0.18312668E-07.
+ Iteration Nr.  11 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  12 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000006-0.0000000095    3         6
+     T2        AB    0.0000000000 0.0000000053    3    3    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228562592 a.u.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.94703358E-08.
+ Largest element of DIIS residual   : -0.27454754E-08.
+ Iteration Nr.  12 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  13 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000002-0.0000000024    3         6
+     T2        AB    0.0000000000-0.0000000010    5    5    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228562149 a.u.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.24133657E-08.
+ Largest element of DIIS residual   : -0.66554410E-09.
+ Iteration Nr.  13 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  14 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000004    3         6
+     T2        AB    0.0000000000-0.0000000002    5    5   11   11
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228562117 a.u.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.41679299E-09.
+ Largest element of DIIS residual   : -0.12986141E-09.
+ Iteration Nr.  14 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  15 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000001    3         6
+     T2        AB    0.0000000000-0.0000000000    5    5   11   11
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228562119 a.u.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector : -0.76278732E-10.
+ Largest element of DIIS residual   : -0.36396057E-10.
+ Iteration Nr.  15 required (CPU/WALL):                0.00/       0.00 seconds.
+ Largest T1 amplitudes for spin case AA:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  3       6    ] 0.01323 [  5      13    ] 0.00993 [  5      11    ]-0.00706
+ [  3       8    ] 0.00518 [  2       8    ]-0.00395 [  3       9    ]-0.00335
+ [  2       9    ] 0.00268 [  3       7    ] 0.00257 [  5      12    ]-0.00251
+ [  2       6    ]-0.00166 [  1       9    ]-0.00024 [  2       7    ] 0.00016
+ [  1       8    ]-0.00010 [  1       6    ]-0.00008 [  1       7    ]-0.00005
+ -----------------------------------------------------------------------------
+ Norm of T1AA vector (       16 symmetry allowed elements):  0.0199995759.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AB:
+        _       _                 _       _                 _       _
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  5   5  11  11]-0.05927 [  4   4  10  10]-0.04349 [  5   3  11   6] 0.03436
+ [  3   5   6  11] 0.03436 [  3   3   6   6]-0.03432 [  3   3   8   8]-0.03238
+ [  5   5  12  12]-0.02890 [  5   5   6   6]-0.02763 [  4   3  10   8]-0.02575
+ [  3   4   8  10]-0.02575 [  3   3  11  11]-0.02565 [  5   5  12  11]-0.02448
+ [  5   5  11  12]-0.02448 [  5   5   7   7]-0.02402 [  5   4  11  10]-0.02243
+ -----------------------------------------------------------------------------
+ Norm of T2AB vector (      490 symmetry allowed elements):  0.1934937257.
+ -----------------------------------------------------------------------------
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  16 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000000    3         6
+     T2        AB    0.0000000000 0.0000000000    5    5    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228562119 a.u.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.16227644E-10.
+ Largest element of DIIS residual   :  0.11236770E-10.
+ Iteration Nr.  16 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  17 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000-0.0000000000    3         6
+     T2        AB    0.0000000000 0.0000000000    3    3   11   11
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228562119 a.u.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.39474118E-11.
+ Largest element of DIIS residual   : -0.30182997E-11.
+ Iteration Nr.  17 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  18 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000 0.0000000000    3         6
+     T2        AB    0.0000000000-0.0000000000    3    3    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228562119 a.u.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector : -0.95795594E-12.
+ Largest element of DIIS residual   :  0.63303190E-12.
+ Iteration Nr.  18 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  19 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000 0.0000000000    3         6
+     T2        AB    0.0000000000-0.0000000000    3    3    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228562119 a.u.
+ Convergence information after    19 iterations: 
+ Largest element of residual vector :  0.40602244E-12.
+ Largest element of DIIS residual   : -0.19273096E-12.
+ Iteration Nr.  19 required (CPU/WALL):                0.00/       0.00 seconds.
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  20 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000 0.0000000000    3         6
+     T2        AB    0.0000000000-0.0000000000    3    3    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228562119 a.u.
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.13378534E-12.
+ Largest element of DIIS residual   :  0.25745586E-13.
+ Iteration Nr.  20 required (CPU/WALL):                0.00/       0.00 seconds.
+ Largest T1 amplitudes for spin case AA:
+    i       a                 i       a                 i       a    
+ -----------------------------------------------------------------------------
+ [  3       6    ] 0.01323 [  5      13    ] 0.00993 [  5      11    ]-0.00706
+ [  3       8    ] 0.00518 [  2       8    ]-0.00395 [  3       9    ]-0.00335
+ [  2       9    ] 0.00268 [  3       7    ] 0.00257 [  5      12    ]-0.00251
+ [  2       6    ]-0.00166 [  1       9    ]-0.00024 [  2       7    ] 0.00016
+ [  1       8    ]-0.00010 [  1       6    ]-0.00008 [  1       7    ]-0.00005
+ -----------------------------------------------------------------------------
+ Norm of T1AA vector (       16 symmetry allowed elements):  0.0199995759.
+ -----------------------------------------------------------------------------
+ Largest T2 amplitudes for spin case AB:
+        _       _                 _       _                 _       _
+    i   j   a   b             i   j   a   b             i   j   a   b
+ -----------------------------------------------------------------------------
+ [  5   5  11  11]-0.05927 [  4   4  10  10]-0.04349 [  5   3  11   6] 0.03436
+ [  3   5   6  11] 0.03436 [  3   3   6   6]-0.03432 [  3   3   8   8]-0.03238
+ [  5   5  12  12]-0.02890 [  5   5   6   6]-0.02763 [  4   3  10   8]-0.02575
+ [  3   4   8  10]-0.02575 [  3   3  11  11]-0.02565 [  5   5  12  11]-0.02448
+ [  5   5  11  12]-0.02448 [  5   5   7   7]-0.02402 [  5   4  11  10]-0.02243
+ -----------------------------------------------------------------------------
+ Norm of T2AB vector (      490 symmetry allowed elements):  0.1934937257.
+ -----------------------------------------------------------------------------
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Iteration Nr.  21 started:
+ Generation of Intermediates required (CPU/WALL):      0.00/       0.00 seconds.
+ Construction of Hbar required (CPU/WALL):             0.00/       0.00 seconds.
+ Amplitude changes are:
+ -------------------------------------------------------------------
+              Spin      RMS          Max.      Max. change for
+  Amplitude   Case     Change       Change       i    j    a    b
+ -------------------------------------------------------------------
+     T1        AA    0.0000000000 0.0000000000    3         6
+     T2        AB    0.0000000000-0.0000000000    3    3    6    6
+ -------------------------------------------------------------------
+ The total correlation energy is -0.135228562119 a.u.
+ Convergence information after    21 iterations: 
+ Largest element of residual vector :  0.14882193E-13.
+ Largest element of DIIS residual   :  0.34990329E-14.
+ Amplitude equations converged in    21 iterations.
+ Iteration Nr.  21 required (CPU/WALL):                0.00/       0.00 seconds.
+ The total correlation energy is -0.135228562119 a.u.
+
+ Summary of iterative solution of CC equations:
+ -----------------------------------------------------------
+                 Correlation           Total
+  Iteration        Energy              Energy
+ -----------------------------------------------------------
+      0     -0.1259308757978325   -75.708806156846   DIIS 
+      1     -0.1306023342434181   -75.713477615291   DIIS 
+      2     -0.1336258378671966   -75.716501118915   DIIS 
+      3     -0.1350510398923274   -75.717926320940   DIIS 
+      4     -0.1352121103653203   -75.718087391413   DIIS 
+      5     -0.1352304915883553   -75.718105772636   DIIS 
+      6     -0.1352286945350935   -75.718103975583   DIIS 
+      7     -0.1352285562544695   -75.718103837302   DIIS 
+      8     -0.1352286373083574   -75.718103918356   DIIS 
+      9     -0.1352285925138244   -75.718103873562   DIIS 
+     10     -0.1352285692533790   -75.718103850301   DIIS 
+     11     -0.1352285640501964   -75.718103845098   DIIS 
+     12     -0.1352285625918252   -75.718103843639   DIIS 
+     13     -0.1352285621491462   -75.718103843197   DIIS 
+     14     -0.1352285621166778   -75.718103843164   DIIS 
+     15     -0.1352285621187737   -75.718103843166   DIIS 
+     16     -0.1352285621192292   -75.718103843167   DIIS 
+     17     -0.1352285621192489   -75.718103843167   DIIS 
+     18     -0.1352285621193449   -75.718103843167   DIIS 
+     19     -0.1352285621194037   -75.718103843167   DIIS 
+     20     -0.1352285621194421   -75.718103843167   DIIS 
+     21     -0.1352285621194495   -75.718103843167   DIIS 
+ -----------------------------------------------------------
+ A miracle come to pass. The CC iterations have converged.
+
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.07/       0.07 seconds.
+--executable xecc finished with status     0 in        0.10 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xlcc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ Lambda equations are solved for CC3
+ The total correlation energy is -0.135250820577 a.u.
+ Sum of Pseudoenergies:     0.00000000000000
+ Starting iterative solution of the Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ 5 expansion vectors are used in the DIIS extrapolation.
+ Convergence criterium is 10**(-13).
+ Maximum number of iterations is 100.
+ The total correlation energy is -0.134713129656 a.u.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.76907292E-03.
+ Largest element of DIIS residual   : -0.76907292E-03.
+ The total correlation energy is -0.134545903953 a.u.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.34108547E-03.
+ Largest element of DIIS residual   : -0.19396047E-03.
+ The total correlation energy is -0.134479181477 a.u.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.12259612E-03.
+ Largest element of DIIS residual   : -0.79459370E-04.
+ The total correlation energy is -0.134467494643 a.u.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.40361611E-04.
+ Largest element of DIIS residual   : -0.14442693E-04.
+ The total correlation energy is -0.134466177876 a.u.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.98735416E-05.
+ Largest element of DIIS residual   : -0.35035733E-05.
+ The total correlation energy is -0.134466347086 a.u.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.16578262E-05.
+ Largest element of DIIS residual   : -0.71902695E-06.
+ The total correlation energy is -0.134466369338 a.u.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.28799112E-06.
+ Largest element of DIIS residual   : -0.13993248E-06.
+ The total correlation energy is -0.134466373645 a.u.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.45045016E-07.
+ Largest element of DIIS residual   : -0.26705038E-07.
+ The total correlation energy is -0.134466375169 a.u.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.12941517E-07.
+ Largest element of DIIS residual   : -0.10280374E-07.
+ The total correlation energy is -0.134466375695 a.u.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.45146955E-08.
+ Largest element of DIIS residual   :  0.24365461E-08.
+ The total correlation energy is -0.134466375987 a.u.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.11606307E-08.
+ Largest element of DIIS residual   :  0.75849653E-09.
+ The total correlation energy is -0.134466376047 a.u.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.36742945E-09.
+ Largest element of DIIS residual   :  0.18948461E-09.
+ The total correlation energy is -0.134466376059 a.u.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.11989914E-09.
+ Largest element of DIIS residual   :  0.60997951E-10.
+ The total correlation energy is -0.134466376061 a.u.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.27118925E-10.
+ Largest element of DIIS residual   :  0.84198669E-11.
+ The total correlation energy is -0.134466376062 a.u.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.46507121E-11.
+ Largest element of DIIS residual   :  0.28622017E-11.
+ The total correlation energy is -0.134466376062 a.u.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.12644677E-11.
+ Largest element of DIIS residual   :  0.81349627E-12.
+ The total correlation energy is -0.134466376062 a.u.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.39853190E-12.
+ Largest element of DIIS residual   : -0.19406024E-12.
+ The total correlation energy is -0.134466376062 a.u.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector : -0.65048661E-13.
+ Largest element of DIIS residual   : -0.35958455E-13.
+ Amplitude equations converged in    18 iterations.
+ The total correlation energy is -0.134466376062 a.u.
+ Summary of iterative solution of CC equations 
+ -----------------------------------------------------------
+                 Correlation           Total
+  Iteration        Energy              Energy
+ -----------------------------------------------------------
+      0     -0.1352508205769694   -75.718126101625   DIIS 
+      1     -0.1347131296560999   -75.717588410704   DIIS 
+      2     -0.1345459039533137   -75.717421185001   DIIS 
+      3     -0.1344791814770950   -75.717354462525   DIIS 
+      4     -0.1344674946425161   -75.717342775690   DIIS 
+      5     -0.1344661778761478   -75.717341458924   DIIS 
+      6     -0.1344663470855715   -75.717341628133   DIIS 
+      7     -0.1344663693378917   -75.717341650386   DIIS 
+      8     -0.1344663736450435   -75.717341654693   DIIS 
+      9     -0.1344663751687296   -75.717341656216   DIIS 
+     10     -0.1344663756952842   -75.717341656743   DIIS 
+     11     -0.1344663759874879   -75.717341657035   DIIS 
+     12     -0.1344663760470829   -75.717341657095   DIIS 
+     13     -0.1344663760587826   -75.717341657106   DIIS 
+     14     -0.1344663760614516   -75.717341657109   DIIS 
+     15     -0.1344663760617514   -75.717341657109   DIIS 
+     16     -0.1344663760616903   -75.717341657109   DIIS 
+     17     -0.1344663760616554   -75.717341657109   DIIS 
+     18     -0.1344663760616397   -75.717341657109   DIIS 
+ -----------------------------------------------------------
+ A miracle come to pass. The CC iterations have converged.
+  Triples contribution to unrelaxed derivatives are calculated.
+
+  Full density matrices D(i,j) and D(a,b) constructed
+
+  There are                    30  ijk combinations. 
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.09/       0.09 seconds.
+--executable xlcc finished with status     0 in        0.12 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xdens
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  CC3 density and intermediates are calculated.
+  Unrelaxed density is calculated
+  ----------------------------------------------------------------------
+                 Natural orbital occupation numbers
+  ----------------------------------------------------------------------
+  1.99993  1.99138  1.98644  1.97118  1.96664  0.03002  0.02752  0.01246
+  0.00790  0.00285  0.00182  0.00099  0.00088
+  Trace of density matrix :  10.0000000000.
+  ----------------------------------------------------------------------
+  Density calculation successfully completed.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.03 seconds.
+--executable xdens finished with status     0 in        0.05 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xvdint
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ One- and two-electron integral derivatives are calculated
+ for RHF-CC/MBPT NMR chemical shifts and magnetizabilities.
+ Field-independent atomic orbitals are used.
+ Spherical gaussians are used.
+  magnet T F
+ The gauge-origin is chosen as   0.0000000    0.0000000    0.0000000
+
+       HF-SCF contribution to diamagnetic part of shielding tensor
+       -----------------------------------------------------------
+
+
+           Symmetry 2
+                              By
+
+               O #1 y   413.36802022
+               H #2 y    71.04436614
+               H #2 z    22.01506108
+
+           Symmetry 3
+                              Bx
+
+               O #1 x   412.10162412
+               H #2 x    36.45343496
+
+           Symmetry 4
+                              Bz
+
+               O #1 z   412.65206126
+               H #2 y    30.34825308
+               H #2 z    52.84338832
+
+
+
+                       Bx          By          Bz
+
+      O #1    x  412.101624    0.000000    0.000000
+      O #1    y    0.000000  413.368020    0.000000
+      O #1    z    0.000000    0.000000  412.652061
+
+      H #21   x   18.226717    0.000000    0.000000
+      H #21   y    0.000000   35.522183   15.174127
+      H #21   z    0.000000   11.007531   26.421694
+
+      H #22   x   18.226717    0.000000    0.000000
+      H #22   y    0.000000   35.522183  -15.174127
+      H #22   z    0.000000  -11.007531   26.421694
+
+
+                  Diamagnetic part of shielding tensors
+                  -------------------------------------
+
+
+           Symmetry 2
+                              By
+
+               O #1 y   413.45285062
+               H #2 y    72.12057836
+               H #2 z    21.22532151
+
+           Symmetry 3
+                              Bx
+
+               O #1 x   412.41835323
+               H #2 x    38.72620944
+
+           Symmetry 4
+                              Bz
+
+               O #1 z   412.97592227
+               H #2 y    29.27682208
+               H #2 z    54.38885657
+
+
+
+                       Bx          By          Bz
+
+      O #1    x  412.418353    0.000000    0.000000
+      O #1    y    0.000000  413.452851    0.000000
+      O #1    z    0.000000    0.000000  412.975922
+
+      H #21   x   19.363105    0.000000    0.000000
+      H #21   y    0.000000   36.060289   14.638411
+      H #21   z    0.000000   10.612661   27.194428
+
+      H #22   x   19.363105    0.000000    0.000000
+      H #22   y    0.000000   36.060289  -14.638411
+      H #22   z    0.000000  -10.612661   27.194428
+
+
+            Diamagnetic part of HF-SCF magnetizability tensor
+            -------------------------------------------------
+
+                        Bx          By          Bz
+
+            Bx    -3.47698914 -0.00000000 -0.00000000
+            By    -0.00000000 -2.91533743 -0.00000000
+            Bz    -0.00000000 -0.00000000 -3.13159744
+
+
+
+                Diamagnetic part of magnetizability tensor
+                ------------------------------------------
+
+                        Bx          By          Bz
+
+            Bx    -3.52468237 -0.00000000 -0.00000000
+            By    -0.00000000 -2.93389775 -0.00000000
+            Bz    -0.00000000 -0.00000000 -3.16417375
+
+
+ Evaluation of 1e integral derivatives required    0.02 seconds.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.02/       0.02 seconds.
+--executable xvdint finished with status     0 in        0.04 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xcphf
+ @GETMEM-I,  Allocated     762 MB of main memory.
+  irreducible representation Nr.                     1
+  # geometric perturbations                         1
+  irreducible representation Nr.                     2
+  # geometric perturbations                         3
+  irreducible representation Nr.                     3
+  # geometric perturbations                         2
+  irreducible representation Nr.                     4
+  # geometric perturbations                         3
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.01/       0.03 seconds.
+--executable xcphf finished with status     0 in        0.06 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xsdcc
+ @GETMEM-I,  Allocated     762 MB of main memory.
+ Chemical shifts are calculated at the CC3 level.
+ Field-independent AOs are used in the NMR shift calculation.
+ Be aware that the results depend on the chosen gauge-origin !
+ Unrelaxed derivatives are calculated
+ Bx is a perturbation of irrep 3.
+ By is a perturbation of irrep 2.
+ Bz is a perturbation of irrep 4.
+ First derivative of the wavefunction is calculated (Symmetry block 1, perturbation   1)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+  add F(me) terms for ROHF and unrelaxed computations
+  add df/dx
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.78327361E-01.
+ Largest element of DIIS residual   : -0.78327361E-01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.44091492E-01.
+ Largest element of DIIS residual   :  0.83701116E-02.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.31672176E-02.
+ Largest element of DIIS residual   : -0.20304286E-02.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.68563834E-03.
+ Largest element of DIIS residual   : -0.26784515E-03.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.10779269E-03.
+ Largest element of DIIS residual   : -0.41089512E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.24952833E-04.
+ Largest element of DIIS residual   : -0.18760303E-04.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.11555437E-04.
+ Largest element of DIIS residual   : -0.38288998E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.22161045E-05.
+ Largest element of DIIS residual   : -0.88149096E-06.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.48186549E-06.
+ Largest element of DIIS residual   :  0.20626395E-06.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.96816765E-07.
+ Largest element of DIIS residual   :  0.10040372E-06.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.56167343E-07.
+ Largest element of DIIS residual   : -0.54365166E-07.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.28555026E-07.
+ Largest element of DIIS residual   : -0.40776702E-08.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.20793489E-08.
+ Largest element of DIIS residual   : -0.14374676E-08.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.86677168E-09.
+ Largest element of DIIS residual   : -0.44934534E-09.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector : -0.26063997E-09.
+ Largest element of DIIS residual   :  0.15320848E-09.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.80748686E-10.
+ Largest element of DIIS residual   : -0.69810630E-10.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector : -0.38196678E-10.
+ Largest element of DIIS residual   : -0.20827944E-10.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector :  0.10341110E-10.
+ Largest element of DIIS residual   : -0.86433464E-11.
+ Convergence information after    19 iterations: 
+ Largest element of residual vector : -0.53392291E-11.
+ Largest element of DIIS residual   : -0.27346343E-11.
+ Convergence information after    20 iterations: 
+ Largest element of residual vector : -0.20568547E-11.
+ Largest element of DIIS residual   : -0.76608748E-12.
+ Convergence information after    21 iterations: 
+ Largest element of residual vector : -0.59796612E-12.
+ Largest element of DIIS residual   :  0.19269258E-12.
+ Convergence information after    22 iterations: 
+ Largest element of residual vector :  0.10548355E-12.
+ Largest element of DIIS residual   :  0.83395877E-13.
+ Perturbed amplitude equations converged in    22 iterations.
+  Dominant contributions to perturbed wavefunction:
+    3    0    6    0  -0.3781440009 AA  
+    2    0    8    0  -0.0909423201 AA  
+    5    0   13    0  -0.0607154754 AA  
+    3    0    7    0  -0.0556299296 AA  
+    3    3    6    6   0.0531349561 ABAB
+    3    0    9    0  -0.0528510710 AA  
+    5    0   12    0   0.0419108572 AA  
+    5    3   11    6  -0.0324268621 ABAB
+    3    5    6   11  -0.0324268621 ABAB
+    1    0    8    0  -0.0290689842 AA  
+    3    3   11   11   0.0222622638 ABAB
+    2    0    9    0   0.0200864891 AA  
+    5    0   11    0  -0.0190215064 AA  
+    5    3    6   11  -0.0168949638 ABAB
+    3    5   11    6  -0.0168949638 ABAB
+    3    3    8    8  -0.0124037379 ABAB
+    5    2   11    6  -0.0117509420 ABAB
+    2    5    6   11  -0.0117509420 ABAB
+    1    0    7    0   0.0112713440 AA  
+    4    3   10    6  -0.0107553221 ABAB
+ grad +df*t1   7.6621936652954449E-003
+  Total CCSD gradient is    0.007662193665295.
+  norm of converged amps   0.10053266880339159     
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ anti,anti2 T T
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.77791320E-01.
+ Largest element of DIIS residual   :  0.77791320E-01.
+ anti,anti2 T T
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.43663027E-01.
+ Largest element of DIIS residual   : -0.79800363E-02.
+ anti,anti2 T T
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.32434194E-02.
+ Largest element of DIIS residual   :  0.24419485E-02.
+ anti,anti2 T T
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.73651353E-03.
+ Largest element of DIIS residual   :  0.26607164E-03.
+ anti,anti2 T T
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.11690874E-03.
+ Largest element of DIIS residual   :  0.44640946E-04.
+ anti,anti2 T T
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.27209799E-04.
+ Largest element of DIIS residual   :  0.20705907E-04.
+ anti,anti2 T T
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.12716949E-04.
+ Largest element of DIIS residual   :  0.42410178E-05.
+ anti,anti2 T T
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.24531078E-05.
+ Largest element of DIIS residual   :  0.76471448E-06.
+ anti,anti2 T T
+ Convergence information after     9 iterations: 
+ Largest element of residual vector :  0.43353966E-06.
+ Largest element of DIIS residual   :  0.18554195E-06.
+ anti,anti2 T T
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.96054808E-07.
+ Largest element of DIIS residual   : -0.90910064E-07.
+ anti,anti2 T T
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.65415351E-07.
+ Largest element of DIIS residual   :  0.58337712E-07.
+ anti,anti2 T T
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.30591494E-07.
+ Largest element of DIIS residual   :  0.44685626E-08.
+ anti,anti2 T T
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.24469885E-08.
+ Largest element of DIIS residual   :  0.19126881E-08.
+ anti,anti2 T T
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.11144794E-08.
+ Largest element of DIIS residual   :  0.58771118E-09.
+ anti,anti2 T T
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.34542574E-09.
+ Largest element of DIIS residual   : -0.18410569E-09.
+ anti,anti2 T T
+ Convergence information after    16 iterations: 
+ Largest element of residual vector : -0.96720618E-10.
+ Largest element of DIIS residual   :  0.73837049E-10.
+ anti,anti2 T T
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.39727586E-10.
+ Largest element of DIIS residual   :  0.24110649E-10.
+ anti,anti2 T T
+ Convergence information after    18 iterations: 
+ Largest element of residual vector :  0.11835390E-10.
+ Largest element of DIIS residual   :  0.11460473E-10.
+ anti,anti2 T T
+ Convergence information after    19 iterations: 
+ Largest element of residual vector :  0.68919315E-11.
+ Largest element of DIIS residual   :  0.32022661E-11.
+ anti,anti2 T T
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.24072411E-11.
+ Largest element of DIIS residual   :  0.75107589E-12.
+ anti,anti2 T T
+ Convergence information after    21 iterations: 
+ Largest element of residual vector :  0.63338224E-12.
+ Largest element of DIIS residual   : -0.21325700E-12.
+ anti,anti2 T T
+ Convergence information after    22 iterations: 
+ Largest element of residual vector :  0.11566881E-12.
+ Largest element of DIIS residual   : -0.86789603E-13.
+ Perturbed Lambda equations converged in    22 iterations.
+  Dominant contributions to perturbed wavefunction:
+    3    0    6    0   0.3820557293 AA  
+    2    0    8    0   0.0891102904 AA  
+    3    0    7    0   0.0586788598 AA  
+    5    0   13    0   0.0543443369 AA  
+    3    0    9    0   0.0520489744 AA  
+    5    0   12    0  -0.0489976630 AA  
+    3    3    6    6  -0.0431449905 ABAB
+    5    3   11    6   0.0309184072 ABAB
+    3    5    6   11   0.0309184072 ABAB
+    1    0    8    0   0.0285240390 AA  
+    2    0    9    0  -0.0238586075 AA  
+    3    3   11   11  -0.0218910262 ABAB
+    5    3    6   11   0.0161405625 ABAB
+    3    5   11    6   0.0161405625 ABAB
+    5    3   13    6   0.0139720164 ABAB
+    3    5    6   13   0.0139720164 ABAB
+    3    3    8    8   0.0122011429 ABAB
+    4    3   10    6   0.0111998024 ABAB
+    3    4    6   10   0.0111998024 ABAB
+    5    2   11    6   0.0110679106 ABAB
+  Total CCSD gradient is   -0.003802329077844.
+  Memory requiremen in dtrprhf2                  7326
+  There are                    30  IJK combinations. 
+ First-order density matrix is being calculated  (Symmetry block 1, perturbation   1)
+ First derivative of the wavefunction is calculated (Symmetry block 2, perturbation   2)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+  add F(me) terms for ROHF and unrelaxed computations
+  add df/dx
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.14826177E+01.
+ Largest element of DIIS residual   : -0.14826177E+01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.94049639E+00.
+ Largest element of DIIS residual   : -0.36559336E+00.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.26764672E+00.
+ Largest element of DIIS residual   : -0.23973382E-01.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.10973779E-01.
+ Largest element of DIIS residual   :  0.34314900E-02.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.16069067E-02.
+ Largest element of DIIS residual   :  0.77619403E-03.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.40140771E-03.
+ Largest element of DIIS residual   :  0.30492513E-03.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.16887487E-03.
+ Largest element of DIIS residual   : -0.70758284E-04.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.38019143E-04.
+ Largest element of DIIS residual   : -0.28111004E-04.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.11839831E-04.
+ Largest element of DIIS residual   : -0.54263550E-05.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.39665575E-05.
+ Largest element of DIIS residual   : -0.37971952E-05.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.23023191E-05.
+ Largest element of DIIS residual   : -0.29827987E-06.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.22651771E-06.
+ Largest element of DIIS residual   : -0.90556239E-07.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.86431393E-07.
+ Largest element of DIIS residual   : -0.51687072E-07.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.33349091E-07.
+ Largest element of DIIS residual   : -0.13258024E-07.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector : -0.77961258E-08.
+ Largest element of DIIS residual   :  0.50381141E-08.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.22154314E-08.
+ Largest element of DIIS residual   :  0.14658912E-08.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.59316929E-09.
+ Largest element of DIIS residual   : -0.58178820E-09.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector : -0.29223735E-09.
+ Largest element of DIIS residual   : -0.68857253E-10.
+ Convergence information after    19 iterations: 
+ Largest element of residual vector : -0.67857719E-10.
+ Largest element of DIIS residual   : -0.40969301E-10.
+ Convergence information after    20 iterations: 
+ Largest element of residual vector : -0.28759217E-10.
+ Largest element of DIIS residual   : -0.21818599E-10.
+ Convergence information after    21 iterations: 
+ Largest element of residual vector : -0.12885693E-10.
+ Largest element of DIIS residual   : -0.39016410E-11.
+ Convergence information after    22 iterations: 
+ Largest element of residual vector : -0.17195134E-11.
+ Largest element of DIIS residual   :  0.58929222E-12.
+ Convergence information after    23 iterations: 
+ Largest element of residual vector : -0.29320990E-12.
+ Largest element of DIIS residual   :  0.20426783E-12.
+ Convergence information after    24 iterations: 
+ Largest element of residual vector :  0.10391688E-12.
+ Largest element of DIIS residual   : -0.86935704E-13.
+ Perturbed amplitude equations converged in    24 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0    6    0  -6.5988434412 AA  
+    4    0    8    0   3.1060827030 AA  
+    3    0   10    0  -2.5626602960 AA  
+    4    0    7    0  -1.9568758411 AA  
+    5    4   11    6  -0.6465679009 ABAB
+    4    5    6   11  -0.6465679009 ABAB
+    4    3    6    6   0.4647036354 ABAB
+    3    4    6    6   0.4647036354 ABAB
+    5    4    6   11  -0.4199408161 ABAB
+    4    5   11    6  -0.4199408161 ABAB
+    4    0    9    0  -0.4102451263 AA  
+    4    2    6    6  -0.3195823683 ABAB
+    2    4    6    6  -0.3195823683 ABAB
+    2    0   10    0   0.3149354848 AA  
+    4    3   11   11   0.2876228363 ABAB
+    3    4   11   11   0.2876228363 ABAB
+    5    4   12    6  -0.2778757421 ABAB
+    4    5    6   12  -0.2778757421 ABAB
+    5    4    7   11  -0.2013097304 ABAB
+    4    5   11    7  -0.2013097304 ABAB
+  norm of converged amps    1.7677280875821986     
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ anti,anti2 T T
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.14955461E+01.
+ Largest element of DIIS residual   :  0.14955461E+01.
+ anti,anti2 T T
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.94732696E+00.
+ Largest element of DIIS residual   :  0.37494195E+00.
+ anti,anti2 T T
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.27464608E+00.
+ Largest element of DIIS residual   :  0.25041471E-01.
+ anti,anti2 T T
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.11395665E-01.
+ Largest element of DIIS residual   :  0.31281651E-02.
+ anti,anti2 T T
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.16888381E-02.
+ Largest element of DIIS residual   : -0.69576552E-03.
+ anti,anti2 T T
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.37708463E-03.
+ Largest element of DIIS residual   : -0.29963244E-03.
+ anti,anti2 T T
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.17099120E-03.
+ Largest element of DIIS residual   :  0.62404344E-04.
+ anti,anti2 T T
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.33315352E-04.
+ Largest element of DIIS residual   :  0.14451319E-04.
+ anti,anti2 T T
+ Convergence information after     9 iterations: 
+ Largest element of residual vector :  0.59694752E-05.
+ Largest element of DIIS residual   :  0.67298332E-05.
+ anti,anti2 T T
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.49597689E-05.
+ Largest element of DIIS residual   :  0.46108180E-05.
+ anti,anti2 T T
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.29243066E-05.
+ Largest element of DIIS residual   :  0.30640153E-06.
+ anti,anti2 T T
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.35814606E-06.
+ Largest element of DIIS residual   :  0.12672645E-06.
+ anti,anti2 T T
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.95110114E-07.
+ Largest element of DIIS residual   :  0.61812621E-07.
+ anti,anti2 T T
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.36637064E-07.
+ Largest element of DIIS residual   :  0.15749942E-07.
+ anti,anti2 T T
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.88849243E-08.
+ Largest element of DIIS residual   :  0.38379730E-08.
+ anti,anti2 T T
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.23322760E-08.
+ Largest element of DIIS residual   :  0.15992914E-08.
+ anti,anti2 T T
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.73043260E-09.
+ Largest element of DIIS residual   :  0.10347522E-08.
+ anti,anti2 T T
+ Convergence information after    18 iterations: 
+ Largest element of residual vector :  0.63172578E-09.
+ Largest element of DIIS residual   :  0.15408324E-09.
+ anti,anti2 T T
+ Convergence information after    19 iterations: 
+ Largest element of residual vector :  0.17609558E-09.
+ Largest element of DIIS residual   :  0.88997385E-10.
+ anti,anti2 T T
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.58495431E-10.
+ Largest element of DIIS residual   :  0.33900679E-10.
+ anti,anti2 T T
+ Convergence information after    21 iterations: 
+ Largest element of residual vector :  0.19097612E-10.
+ Largest element of DIIS residual   :  0.48147790E-11.
+ anti,anti2 T T
+ Convergence information after    22 iterations: 
+ Largest element of residual vector :  0.26088576E-11.
+ Largest element of DIIS residual   : -0.11977231E-11.
+ anti,anti2 T T
+ Convergence information after    23 iterations: 
+ Largest element of residual vector : -0.72364337E-12.
+ Largest element of DIIS residual   :  0.59887874E-12.
+ anti,anti2 T T
+ Convergence information after    24 iterations: 
+ Largest element of residual vector :  0.33156811E-12.
+ Largest element of DIIS residual   :  0.21320585E-12.
+ anti,anti2 T T
+ Convergence information after    25 iterations: 
+ Largest element of residual vector :  0.11762813E-12.
+ Largest element of DIIS residual   :  0.56918980E-13.
+ Perturbed Lambda equations converged in    25 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0    6    0   6.6205904064 AA  
+    4    0    8    0  -3.1031525028 AA  
+    3    0   10    0   2.6592701561 AA  
+    4    0    7    0   1.9837951958 AA  
+    4    5    6   11   0.6216382622 ABAB
+    5    4   11    6   0.6216382622 ABAB
+    4    0    9    0   0.4310913615 AA  
+    5    4    6   11   0.4021991290 ABAB
+    4    5   11    6   0.4021991290 ABAB
+    4    3    6    6  -0.3859124497 ABAB
+    3    4    6    6  -0.3859124497 ABAB
+    2    0   10    0  -0.3228811219 AA  
+    4    2    6    6   0.3085894028 ABAB
+    2    4    6    6   0.3085894028 ABAB
+    4    3   11   11  -0.2765634893 ABAB
+    3    4   11   11  -0.2765634893 ABAB
+    5    4   12    6   0.2720715946 ABAB
+    4    5    6   12   0.2720715946 ABAB
+    5    4    7   11   0.1942700469 ABAB
+    4    5   11    7   0.1942700469 ABAB
+  Memory requiremen in dtrprhf2                  6573
+  There are                    30  IJK combinations. 
+ First-order density matrix is being calculated  (Symmetry block 2, perturbation   2)
+ First derivative of the wavefunction is calculated (Symmetry block 2, perturbation   3)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+  add F(me) terms for ROHF and unrelaxed computations
+  add df/dx
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.41897356E-01.
+ Largest element of DIIS residual   :  0.41897356E-01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.25827769E-01.
+ Largest element of DIIS residual   :  0.88452485E-02.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.65092478E-02.
+ Largest element of DIIS residual   :  0.11533004E-02.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.47427316E-03.
+ Largest element of DIIS residual   :  0.12042486E-03.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.77358252E-04.
+ Largest element of DIIS residual   :  0.37134577E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.19651291E-04.
+ Largest element of DIIS residual   :  0.11183439E-04.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.56324543E-05.
+ Largest element of DIIS residual   : -0.22790982E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.13462272E-05.
+ Largest element of DIIS residual   : -0.91414627E-06.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.34164453E-06.
+ Largest element of DIIS residual   : -0.26071452E-06.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.20595787E-06.
+ Largest element of DIIS residual   :  0.20833348E-06.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.13492501E-06.
+ Largest element of DIIS residual   :  0.24916594E-07.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.14591921E-07.
+ Largest element of DIIS residual   :  0.10526045E-07.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.57553965E-08.
+ Largest element of DIIS residual   :  0.36931206E-08.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.20384194E-08.
+ Largest element of DIIS residual   : -0.96584175E-09.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.55074625E-09.
+ Largest element of DIIS residual   : -0.38920863E-09.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector : -0.18250237E-09.
+ Largest element of DIIS residual   :  0.13139159E-09.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.78168477E-10.
+ Largest element of DIIS residual   : -0.56271166E-10.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector : -0.35526802E-10.
+ Largest element of DIIS residual   :  0.15478711E-10.
+ Convergence information after    19 iterations: 
+ Largest element of residual vector :  0.69408368E-11.
+ Largest element of DIIS residual   :  0.47237859E-11.
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.17422452E-11.
+ Largest element of DIIS residual   : -0.12779794E-11.
+ Convergence information after    21 iterations: 
+ Largest element of residual vector :  0.54659489E-12.
+ Largest element of DIIS residual   :  0.32903147E-12.
+ Convergence information after    22 iterations: 
+ Largest element of residual vector :  0.18628675E-12.
+ Largest element of DIIS residual   :  0.10668719E-12.
+ Convergence information after    23 iterations: 
+ Largest element of residual vector :  0.58269362E-13.
+ Largest element of DIIS residual   : -0.44761886E-13.
+ Perturbed amplitude equations converged in    23 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0    6    0   0.1895126220 AA  
+    2    0   10    0   0.0714312716 AA  
+    4    0    9    0   0.0680073997 AA  
+    4    0    8    0  -0.0365820132 AA  
+    1    0   10    0   0.0259258090 AA  
+    3    0   10    0   0.0220404822 AA  
+    4    0    7    0  -0.0204505909 AA  
+    5    4   11    6   0.0152900751 ABAB
+    4    5    6   11   0.0152900751 ABAB
+    4    3    6    6  -0.0124369925 ABAB
+    3    4    6    6  -0.0124369925 ABAB
+    4    2    6    6   0.0095992883 ABAB
+    2    4    6    6   0.0095992883 ABAB
+    4    4   10    6   0.0086564064 ABAB
+    4    4    6   10   0.0086564064 ABAB
+    5    4    6   11   0.0069296043 ABAB
+    4    5   11    6   0.0069296043 ABAB
+    4    3    6    8   0.0057997419 ABAB
+    3    4    8    6   0.0057997419 ABAB
+    5    4   12    6   0.0047583206 ABAB
+  norm of converged amps    4.1805114467862281E-002
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ anti,anti2 T T
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.42070624E-01.
+ Largest element of DIIS residual   : -0.42070624E-01.
+ anti,anti2 T T
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.25834590E-01.
+ Largest element of DIIS residual   : -0.88030191E-02.
+ anti,anti2 T T
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.65325009E-02.
+ Largest element of DIIS residual   : -0.94173392E-03.
+ anti,anti2 T T
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.42125932E-03.
+ Largest element of DIIS residual   : -0.12367443E-03.
+ anti,anti2 T T
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.73436317E-04.
+ Largest element of DIIS residual   : -0.33946067E-04.
+ anti,anti2 T T
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.17750078E-04.
+ Largest element of DIIS residual   : -0.10021344E-04.
+ anti,anti2 T T
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.50583079E-05.
+ Largest element of DIIS residual   :  0.19978332E-05.
+ anti,anti2 T T
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.13672059E-05.
+ Largest element of DIIS residual   :  0.87660026E-06.
+ anti,anti2 T T
+ Convergence information after     9 iterations: 
+ Largest element of residual vector :  0.32671692E-06.
+ Largest element of DIIS residual   :  0.24527185E-06.
+ anti,anti2 T T
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.20779082E-06.
+ Largest element of DIIS residual   : -0.19873204E-06.
+ anti,anti2 T T
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.12747898E-06.
+ Largest element of DIIS residual   : -0.25695042E-07.
+ anti,anti2 T T
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.13089882E-07.
+ Largest element of DIIS residual   : -0.90288178E-08.
+ anti,anti2 T T
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.49290152E-08.
+ Largest element of DIIS residual   : -0.34183344E-08.
+ anti,anti2 T T
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.19021066E-08.
+ Largest element of DIIS residual   : -0.98398892E-09.
+ anti,anti2 T T
+ Convergence information after    15 iterations: 
+ Largest element of residual vector : -0.55718465E-09.
+ Largest element of DIIS residual   :  0.42240370E-09.
+ anti,anti2 T T
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.18447294E-09.
+ Largest element of DIIS residual   : -0.12470846E-09.
+ anti,anti2 T T
+ Convergence information after    17 iterations: 
+ Largest element of residual vector : -0.72407578E-10.
+ Largest element of DIIS residual   :  0.59426507E-10.
+ anti,anti2 T T
+ Convergence information after    18 iterations: 
+ Largest element of residual vector :  0.37163368E-10.
+ Largest element of DIIS residual   : -0.11799259E-10.
+ anti,anti2 T T
+ Convergence information after    19 iterations: 
+ Largest element of residual vector : -0.47587490E-11.
+ Largest element of DIIS residual   : -0.23072837E-11.
+ anti,anti2 T T
+ Convergence information after    20 iterations: 
+ Largest element of residual vector : -0.14810098E-11.
+ Largest element of DIIS residual   :  0.10313179E-11.
+ anti,anti2 T T
+ Convergence information after    21 iterations: 
+ Largest element of residual vector : -0.59593996E-12.
+ Largest element of DIIS residual   : -0.31587426E-12.
+ anti,anti2 T T
+ Convergence information after    22 iterations: 
+ Largest element of residual vector : -0.17684031E-12.
+ Largest element of DIIS residual   : -0.95154775E-13.
+ Perturbed Lambda equations converged in    22 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0    6    0  -0.1896133701 AA  
+    2    0   10    0  -0.0707928937 AA  
+    4    0    9    0  -0.0686164434 AA  
+    4    0    8    0   0.0360797423 AA  
+    1    0   10    0  -0.0253237604 AA  
+    3    0   10    0  -0.0246735067 AA  
+    4    0    7    0   0.0198113653 AA  
+    5    4   11    6  -0.0146054434 ABAB
+    4    5    6   11  -0.0146054434 ABAB
+    4    3    6    6   0.0101795156 ABAB
+    3    4    6    6   0.0101795156 ABAB
+    4    2    6    6  -0.0092071487 ABAB
+    2    4    6    6  -0.0092071487 ABAB
+    4    4   10    6  -0.0085989952 ABAB
+    4    4    6   10  -0.0085989952 ABAB
+    4    3    6    8  -0.0068176027 ABAB
+    3    4    8    6  -0.0068176027 ABAB
+    5    4    6   11  -0.0066012749 ABAB
+    4    5   11    6  -0.0066012749 ABAB
+    4    5    6   13  -0.0059113855 ABAB
+  Memory requiremen in dtrprhf2                  6573
+  There are                    30  IJK combinations. 
+ First-order density matrix is being calculated  (Symmetry block 2, perturbation   3)
+ First derivative of the wavefunction is calculated (Symmetry block 2, perturbation   4)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+  add F(me) terms for ROHF and unrelaxed computations
+  add df/dx
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.13781037E+00.
+ Largest element of DIIS residual   : -0.13781037E+00.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.87399034E-01.
+ Largest element of DIIS residual   :  0.14496733E-01.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.52975193E-02.
+ Largest element of DIIS residual   : -0.15520535E-02.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.80552723E-03.
+ Largest element of DIIS residual   :  0.32179757E-03.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.16617835E-03.
+ Largest element of DIIS residual   :  0.58781280E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.32805404E-04.
+ Largest element of DIIS residual   : -0.32298335E-04.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.12351724E-04.
+ Largest element of DIIS residual   : -0.70046376E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.41191961E-05.
+ Largest element of DIIS residual   :  0.14492386E-05.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector :  0.54759727E-06.
+ Largest element of DIIS residual   : -0.44892791E-06.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.21128588E-06.
+ Largest element of DIIS residual   : -0.25742264E-06.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.16857441E-06.
+ Largest element of DIIS residual   :  0.39166184E-07.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.23701985E-07.
+ Largest element of DIIS residual   : -0.16402143E-07.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.89578929E-08.
+ Largest element of DIIS residual   :  0.52646030E-08.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.27856361E-08.
+ Largest element of DIIS residual   : -0.16035089E-08.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector : -0.91752960E-09.
+ Largest element of DIIS residual   :  0.51593770E-09.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector : -0.28377591E-09.
+ Largest element of DIIS residual   : -0.16418779E-09.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector : -0.97162594E-10.
+ Largest element of DIIS residual   : -0.70784226E-10.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector :  0.30720620E-10.
+ Largest element of DIIS residual   :  0.10632384E-10.
+ Convergence information after    19 iterations: 
+ Largest element of residual vector : -0.90321084E-11.
+ Largest element of DIIS residual   : -0.42938928E-11.
+ Convergence information after    20 iterations: 
+ Largest element of residual vector : -0.50265347E-11.
+ Largest element of DIIS residual   : -0.38487678E-11.
+ Convergence information after    21 iterations: 
+ Largest element of residual vector : -0.27581271E-11.
+ Largest element of DIIS residual   : -0.36693293E-12.
+ Convergence information after    22 iterations: 
+ Largest element of residual vector : -0.21671553E-12.
+ Largest element of DIIS residual   : -0.12908435E-12.
+ Convergence information after    23 iterations: 
+ Largest element of residual vector : -0.78673179E-13.
+ Largest element of DIIS residual   : -0.52635558E-13.
+ Perturbed amplitude equations converged in    23 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0    6    0  -0.6426510700 AA  
+    4    0    7    0  -0.0864606574 AA  
+    2    0   10    0  -0.0849745876 AA  
+    4    0    9    0  -0.0796754987 AA  
+    5    4   11    6  -0.0671872440 ABAB
+    4    5    6   11  -0.0671872440 ABAB
+    4    0    8    0   0.0597857707 AA  
+    4    3    6    6   0.0491227434 ABAB
+    3    4    6    6   0.0491227434 ABAB
+    5    4    6   11  -0.0387785786 ABAB
+    4    5   11    6  -0.0387785786 ABAB
+    4    2    6    6  -0.0386969914 ABAB
+    2    4    6    6  -0.0386969914 ABAB
+    3    0   10    0  -0.0371634709 AA  
+    1    0   10    0  -0.0313556647 AA  
+    4    4   10    6  -0.0271126458 ABAB
+    4    4    6   10  -0.0271126458 ABAB
+    5    4   12    6  -0.0241490242 ABAB
+    4    5    6   12  -0.0241490242 ABAB
+    4    3   11   11   0.0220217692 ABAB
+  norm of converged amps   0.17181939610599167     
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ anti,anti2 T T
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.13817007E+00.
+ Largest element of DIIS residual   :  0.13817007E+00.
+ anti,anti2 T T
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.87237451E-01.
+ Largest element of DIIS residual   : -0.13870551E-01.
+ anti,anti2 T T
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.54674143E-02.
+ Largest element of DIIS residual   :  0.15506458E-02.
+ anti,anti2 T T
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.75778674E-03.
+ Largest element of DIIS residual   : -0.26259963E-03.
+ anti,anti2 T T
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.13601880E-03.
+ Largest element of DIIS residual   : -0.56575049E-04.
+ anti,anti2 T T
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.30330772E-04.
+ Largest element of DIIS residual   :  0.29700720E-04.
+ anti,anti2 T T
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.10842141E-04.
+ Largest element of DIIS residual   :  0.65820640E-05.
+ anti,anti2 T T
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.38896585E-05.
+ Largest element of DIIS residual   : -0.17762000E-05.
+ anti,anti2 T T
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.47878475E-06.
+ Largest element of DIIS residual   :  0.44688138E-06.
+ anti,anti2 T T
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.21947126E-06.
+ Largest element of DIIS residual   :  0.24458538E-06.
+ anti,anti2 T T
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.16130118E-06.
+ Largest element of DIIS residual   : -0.38515064E-07.
+ anti,anti2 T T
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.21422235E-07.
+ Largest element of DIIS residual   : -0.13714115E-07.
+ anti,anti2 T T
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.71704828E-08.
+ Largest element of DIIS residual   : -0.40013232E-08.
+ anti,anti2 T T
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.22128432E-08.
+ Largest element of DIIS residual   :  0.14368545E-08.
+ anti,anti2 T T
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.84321921E-09.
+ Largest element of DIIS residual   : -0.55943215E-09.
+ anti,anti2 T T
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.28138961E-09.
+ Largest element of DIIS residual   :  0.16749039E-09.
+ anti,anti2 T T
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.95909634E-10.
+ Largest element of DIIS residual   :  0.71596041E-10.
+ anti,anti2 T T
+ Convergence information after    18 iterations: 
+ Largest element of residual vector :  0.32757241E-10.
+ Largest element of DIIS residual   :  0.10157879E-10.
+ anti,anti2 T T
+ Convergence information after    19 iterations: 
+ Largest element of residual vector :  0.83176799E-11.
+ Largest element of DIIS residual   :  0.38044836E-11.
+ anti,anti2 T T
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.45973225E-11.
+ Largest element of DIIS residual   :  0.35234278E-11.
+ anti,anti2 T T
+ Convergence information after    21 iterations: 
+ Largest element of residual vector :  0.24059643E-11.
+ Largest element of DIIS residual   :  0.36780535E-12.
+ anti,anti2 T T
+ Convergence information after    22 iterations: 
+ Largest element of residual vector :  0.19106938E-12.
+ Largest element of DIIS residual   :  0.14690825E-12.
+ anti,anti2 T T
+ Convergence information after    23 iterations: 
+ Largest element of residual vector :  0.89418056E-13.
+ Largest element of DIIS residual   :  0.53814663E-13.
+ Perturbed Lambda equations converged in    23 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0    6    0   0.6420324414 AA  
+    4    0    7    0   0.0881244731 AA  
+    2    0   10    0   0.0830098995 AA  
+    4    0    9    0   0.0818854561 AA  
+    5    4   11    6   0.0642298710 ABAB
+    4    5    6   11   0.0642298710 ABAB
+    4    0    8    0  -0.0581606293 AA  
+    3    0   10    0   0.0462108511 AA  
+    4    3    6    6  -0.0411812644 ABAB
+    3    4    6    6  -0.0411812644 ABAB
+    4    2    6    6   0.0372424807 ABAB
+    2    4    6    6   0.0372424807 ABAB
+    5    4    6   11   0.0371002504 ABAB
+    4    5   11    6   0.0371002504 ABAB
+    1    0   10    0   0.0299007242 AA  
+    4    4   10    6   0.0270247633 ABAB
+    4    4    6   10   0.0270247633 ABAB
+    4    5    6   12   0.0236346860 ABAB
+    5    4   12    6   0.0236346860 ABAB
+    4    3    6    8   0.0222775766 ABAB
+  Memory requiremen in dtrprhf2                  6573
+  There are                    30  IJK combinations. 
+ First-order density matrix is being calculated  (Symmetry block 2, perturbation   4)
+ First derivative of the wavefunction is calculated (Symmetry block 3, perturbation   2)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+  add F(me) terms for ROHF and unrelaxed computations
+  add df/dx
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.11037207E+01.
+ Largest element of DIIS residual   :  0.11037207E+01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.56733688E+00.
+ Largest element of DIIS residual   : -0.12795388E+00.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.63944986E-01.
+ Largest element of DIIS residual   : -0.10080093E-01.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.54158542E-02.
+ Largest element of DIIS residual   : -0.19108034E-02.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.10180902E-02.
+ Largest element of DIIS residual   :  0.37404702E-03.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.18459198E-03.
+ Largest element of DIIS residual   :  0.14163944E-03.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.86819949E-04.
+ Largest element of DIIS residual   : -0.44829863E-04.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.22905566E-04.
+ Largest element of DIIS residual   :  0.78900448E-05.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.33533919E-05.
+ Largest element of DIIS residual   :  0.11076168E-05.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.50493717E-06.
+ Largest element of DIIS residual   :  0.40885981E-06.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.19801441E-06.
+ Largest element of DIIS residual   :  0.89058662E-07.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.68796577E-07.
+ Largest element of DIIS residual   :  0.25011813E-07.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.24178759E-07.
+ Largest element of DIIS residual   :  0.18187755E-07.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.11566702E-07.
+ Largest element of DIIS residual   :  0.43259637E-08.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.18434143E-08.
+ Largest element of DIIS residual   : -0.88493561E-09.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector : -0.51314197E-09.
+ Largest element of DIIS residual   : -0.35144805E-09.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector : -0.19905766E-09.
+ Largest element of DIIS residual   : -0.11098004E-09.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector : -0.66934902E-10.
+ Largest element of DIIS residual   : -0.16585110E-10.
+ Convergence information after    19 iterations: 
+ Largest element of residual vector : -0.89821484E-11.
+ Largest element of DIIS residual   :  0.50857558E-11.
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.38973269E-11.
+ Largest element of DIIS residual   :  0.45810460E-11.
+ Convergence information after    21 iterations: 
+ Largest element of residual vector :  0.25952573E-11.
+ Largest element of DIIS residual   :  0.14359022E-11.
+ Convergence information after    22 iterations: 
+ Largest element of residual vector :  0.87485574E-12.
+ Largest element of DIIS residual   :  0.18726332E-12.
+ Convergence information after    23 iterations: 
+ Largest element of residual vector :  0.14299673E-12.
+ Largest element of DIIS residual   : -0.96095653E-13.
+ Perturbed amplitude equations converged in    23 iterations.
+  Dominant contributions to perturbed wavefunction:
+    3    0   11    0   4.6198585229 AA  
+    5    0    6    0   2.8823767421 AA  
+    3    0   13    0   2.4806490659 AA  
+    5    0    8    0  -2.0296792515 AA  
+    5    0    7    0   1.2167765763 AA  
+    3    0   12    0   1.0952983319 AA  
+    3    3   11    6  -0.4747352714 ABAB
+    3    3    6   11  -0.4747352714 ABAB
+    5    5   11    6   0.3267461460 ABAB
+    5    5    6   11   0.3267461460 ABAB
+    2    0   11    0  -0.3048771590 AA  
+    2    0   13    0  -0.2987031043 AA  
+    5    3    7    6   0.2438544081 ABAB
+    3    5    6    7   0.2438544081 ABAB
+    5    0    9    0   0.2354841137 AA  
+    5    3    6    6   0.2199447461 ABAB
+    3    5    6    6   0.2199447461 ABAB
+    3    3   12    6  -0.1922591957 ABAB
+    3    3    6   12  -0.1922591957 ABAB
+    5    5   11    8   0.1910034559 ABAB
+  norm of converged amps    1.5090382407958458     
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ anti,anti2 T T
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.11094460E+01.
+ Largest element of DIIS residual   : -0.11094460E+01.
+ anti,anti2 T T
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.56946686E+00.
+ Largest element of DIIS residual   :  0.13000200E+00.
+ anti,anti2 T T
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.66164133E-01.
+ Largest element of DIIS residual   :  0.11189562E-01.
+ anti,anti2 T T
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.59014122E-02.
+ Largest element of DIIS residual   :  0.23507605E-02.
+ anti,anti2 T T
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.11355447E-02.
+ Largest element of DIIS residual   : -0.38310256E-03.
+ anti,anti2 T T
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.20773898E-03.
+ Largest element of DIIS residual   : -0.14771059E-03.
+ anti,anti2 T T
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.96697089E-04.
+ Largest element of DIIS residual   :  0.52406986E-04.
+ anti,anti2 T T
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.22474444E-04.
+ Largest element of DIIS residual   : -0.62669884E-05.
+ anti,anti2 T T
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.21100326E-05.
+ Largest element of DIIS residual   : -0.10129047E-05.
+ anti,anti2 T T
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.73517389E-06.
+ Largest element of DIIS residual   : -0.78234004E-06.
+ anti,anti2 T T
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.44776187E-06.
+ Largest element of DIIS residual   : -0.15929894E-06.
+ anti,anti2 T T
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.11157030E-06.
+ Largest element of DIIS residual   : -0.45327834E-07.
+ anti,anti2 T T
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.33940470E-07.
+ Largest element of DIIS residual   : -0.22317399E-07.
+ anti,anti2 T T
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.13057790E-07.
+ Largest element of DIIS residual   :  0.53499381E-08.
+ anti,anti2 T T
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.23371660E-08.
+ Largest element of DIIS residual   :  0.10333810E-08.
+ anti,anti2 T T
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.70234307E-09.
+ Largest element of DIIS residual   :  0.22629877E-09.
+ anti,anti2 T T
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.17921753E-09.
+ Largest element of DIIS residual   : -0.85108818E-10.
+ anti,anti2 T T
+ Convergence information after    18 iterations: 
+ Largest element of residual vector :  0.45831339E-10.
+ Largest element of DIIS residual   :  0.21300315E-10.
+ anti,anti2 T T
+ Convergence information after    19 iterations: 
+ Largest element of residual vector : -0.13704593E-10.
+ Largest element of DIIS residual   : -0.11756697E-10.
+ anti,anti2 T T
+ Convergence information after    20 iterations: 
+ Largest element of residual vector : -0.75139894E-11.
+ Largest element of DIIS residual   : -0.63200607E-11.
+ anti,anti2 T T
+ Convergence information after    21 iterations: 
+ Largest element of residual vector : -0.35234038E-11.
+ Largest element of DIIS residual   : -0.12223344E-11.
+ anti,anti2 T T
+ Convergence information after    22 iterations: 
+ Largest element of residual vector : -0.82067686E-12.
+ Largest element of DIIS residual   :  0.25013126E-12.
+ anti,anti2 T T
+ Convergence information after    23 iterations: 
+ Largest element of residual vector :  0.15232260E-12.
+ Largest element of DIIS residual   :  0.13112863E-12.
+ anti,anti2 T T
+ Convergence information after    24 iterations: 
+ Largest element of residual vector :  0.86597396E-13.
+ Largest element of DIIS residual   :  0.62834978E-13.
+ Perturbed Lambda equations converged in    24 iterations.
+  Dominant contributions to perturbed wavefunction:
+    3    0   11    0  -4.6211128512 AA  
+    5    0    6    0  -2.8577881111 AA  
+    3    0   13    0  -2.4865705632 AA  
+    5    0    8    0   2.0673933195 AA  
+    5    0    7    0  -1.1671149794 AA  
+    3    0   12    0  -1.1047146877 AA  
+    3    3   11    6   0.4139072824 ABAB
+    3    3    6   11   0.4139072824 ABAB
+    5    5   11    6  -0.3064915778 ABAB
+    5    5    6   11  -0.3064915778 ABAB
+    2    0   13    0   0.2831683159 AA  
+    5    3    7    6  -0.2535899256 ABAB
+    3    5    6    7  -0.2535899256 ABAB
+    2    0   11    0   0.2499730808 AA  
+    5    0    9    0  -0.2361038042 AA  
+    5    3    6    6  -0.2350086316 ABAB
+    3    5    6    6  -0.2350086316 ABAB
+    5    3   11   13   0.2043711687 ABAB
+    3    5   13   11   0.2043711687 ABAB
+    5    5   11    8  -0.2032899025 ABAB
+  Memory requiremen in dtrprhf2                  7149
+  There are                    30  IJK combinations. 
+ First-order density matrix is being calculated  (Symmetry block 3, perturbation   2)
+ First derivative of the wavefunction is calculated (Symmetry block 3, perturbation   3)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+  add F(me) terms for ROHF and unrelaxed computations
+  add df/dx
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.57193240E-01.
+ Largest element of DIIS residual   : -0.57193240E-01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.26480427E-01.
+ Largest element of DIIS residual   :  0.39990679E-02.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.24668175E-02.
+ Largest element of DIIS residual   : -0.14954549E-02.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.66947566E-03.
+ Largest element of DIIS residual   : -0.20341987E-03.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.17081476E-03.
+ Largest element of DIIS residual   : -0.59356387E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.30986574E-04.
+ Largest element of DIIS residual   : -0.23692344E-04.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.11398280E-04.
+ Largest element of DIIS residual   : -0.33635000E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.17335146E-05.
+ Largest element of DIIS residual   : -0.75432219E-06.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.36923035E-06.
+ Largest element of DIIS residual   : -0.26709011E-06.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.17913788E-06.
+ Largest element of DIIS residual   : -0.11254461E-06.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.72717240E-07.
+ Largest element of DIIS residual   : -0.31735604E-07.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.22332006E-07.
+ Largest element of DIIS residual   : -0.12176612E-07.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.65695998E-08.
+ Largest element of DIIS residual   : -0.43903421E-08.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.24204546E-08.
+ Largest element of DIIS residual   : -0.66568233E-09.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector : -0.39858521E-09.
+ Largest element of DIIS residual   : -0.17167906E-09.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector : -0.96539974E-10.
+ Largest element of DIIS residual   :  0.47546659E-10.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.25594497E-10.
+ Largest element of DIIS residual   : -0.28517157E-10.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector : -0.17907953E-10.
+ Largest element of DIIS residual   : -0.10776180E-10.
+ Convergence information after    19 iterations: 
+ Largest element of residual vector : -0.59858091E-11.
+ Largest element of DIIS residual   : -0.41103733E-11.
+ Convergence information after    20 iterations: 
+ Largest element of residual vector : -0.24905078E-11.
+ Largest element of DIIS residual   : -0.16360449E-11.
+ Convergence information after    21 iterations: 
+ Largest element of residual vector : -0.96020414E-12.
+ Largest element of DIIS residual   : -0.34094830E-12.
+ Convergence information after    22 iterations: 
+ Largest element of residual vector : -0.20160262E-12.
+ Largest element of DIIS residual   : -0.91544159E-13.
+ Perturbed amplitude equations converged in    22 iterations.
+  Dominant contributions to perturbed wavefunction:
+    5    0    6    0  -0.2702695972 AA  
+    3    0   11    0  -0.1034331982 AA  
+    3    0   13    0  -0.0874951482 AA  
+    5    0    7    0  -0.0761456740 AA  
+    2    0   13    0  -0.0640402248 AA  
+    5    0    9    0  -0.0312310456 AA  
+    2    0   11    0   0.0288545936 AA  
+    1    0   13    0  -0.0258373443 AA  
+    5    5   11    6  -0.0249827103 ABAB
+    5    5    6   11  -0.0249827103 ABAB
+    2    0   12    0   0.0237902937 AA  
+    5    3   11   12   0.0123299882 ABAB
+    3    5   12   11   0.0123299882 ABAB
+    1    0   11    0  -0.0122316440 AA  
+    5    3   11   11   0.0114558781 ABAB
+    3    5   11   11   0.0114558781 ABAB
+    3    0   12    0   0.0107464665 AA  
+    5    3    7    6  -0.0105526155 ABAB
+    3    5    6    7  -0.0105526155 ABAB
+    5    2    7    6   0.0096051058 ABAB
+  norm of converged amps    6.3289148735367312E-002
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ anti,anti2 T T
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.57641187E-01.
+ Largest element of DIIS residual   :  0.57641187E-01.
+ anti,anti2 T T
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.26547911E-01.
+ Largest element of DIIS residual   : -0.40237046E-02.
+ anti,anti2 T T
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.25223289E-02.
+ Largest element of DIIS residual   :  0.14305623E-02.
+ anti,anti2 T T
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.64231703E-03.
+ Largest element of DIIS residual   :  0.20146547E-03.
+ anti,anti2 T T
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.16548721E-03.
+ Largest element of DIIS residual   :  0.62099034E-04.
+ anti,anti2 T T
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.32989885E-04.
+ Largest element of DIIS residual   :  0.25284077E-04.
+ anti,anti2 T T
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.12006947E-04.
+ Largest element of DIIS residual   :  0.35239899E-05.
+ anti,anti2 T T
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.18002433E-05.
+ Largest element of DIIS residual   :  0.72751070E-06.
+ anti,anti2 T T
+ Convergence information after     9 iterations: 
+ Largest element of residual vector :  0.37918515E-06.
+ Largest element of DIIS residual   :  0.29539030E-06.
+ anti,anti2 T T
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.20066616E-06.
+ Largest element of DIIS residual   :  0.11920453E-06.
+ anti,anti2 T T
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.74137275E-07.
+ Largest element of DIIS residual   :  0.29502152E-07.
+ anti,anti2 T T
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.21791470E-07.
+ Largest element of DIIS residual   :  0.12600021E-07.
+ anti,anti2 T T
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.69666619E-08.
+ Largest element of DIIS residual   :  0.47041962E-08.
+ anti,anti2 T T
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.25456959E-08.
+ Largest element of DIIS residual   :  0.64649270E-09.
+ anti,anti2 T T
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.40267034E-09.
+ Largest element of DIIS residual   :  0.17558118E-09.
+ anti,anti2 T T
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.96301885E-10.
+ Largest element of DIIS residual   : -0.47199435E-10.
+ anti,anti2 T T
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.29262093E-10.
+ Largest element of DIIS residual   :  0.33179124E-10.
+ anti,anti2 T T
+ Convergence information after    18 iterations: 
+ Largest element of residual vector :  0.20318414E-10.
+ Largest element of DIIS residual   :  0.10567081E-10.
+ anti,anti2 T T
+ Convergence information after    19 iterations: 
+ Largest element of residual vector :  0.60606103E-11.
+ Largest element of DIIS residual   :  0.42834151E-11.
+ anti,anti2 T T
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.26016550E-11.
+ Largest element of DIIS residual   :  0.17438406E-11.
+ anti,anti2 T T
+ Convergence information after    21 iterations: 
+ Largest element of residual vector :  0.99054098E-12.
+ Largest element of DIIS residual   :  0.30972872E-12.
+ anti,anti2 T T
+ Convergence information after    22 iterations: 
+ Largest element of residual vector :  0.18922364E-12.
+ Largest element of DIIS residual   :  0.85555382E-13.
+ Perturbed Lambda equations converged in    22 iterations.
+  Dominant contributions to perturbed wavefunction:
+    5    0    6    0   0.2714855715 AA  
+    3    0   11    0   0.1000966083 AA  
+    3    0   13    0   0.0888865426 AA  
+    5    0    7    0   0.0786371886 AA  
+    2    0   13    0   0.0648611709 AA  
+    5    0    9    0   0.0310747095 AA  
+    2    0   11    0  -0.0270468049 AA  
+    1    0   13    0   0.0253441607 AA  
+    5    5   11    6   0.0227640466 ABAB
+    5    5    6   11   0.0227640466 ABAB
+    2    0   12    0  -0.0201315232 AA  
+    3    0   12    0  -0.0142877078 AA  
+    5    3   11   12  -0.0121267179 ABAB
+    3    5   12   11  -0.0121267179 ABAB
+    1    0   11    0   0.0118129707 AA  
+    5    3    7    6   0.0113010253 ABAB
+    3    5    6    7   0.0113010253 ABAB
+    5    3   11   11  -0.0112969299 ABAB
+    3    5   11   11  -0.0112969299 ABAB
+    5    2    7    6  -0.0095548143 ABAB
+  Memory requiremen in dtrprhf2                  7149
+  There are                    30  IJK combinations. 
+ First-order density matrix is being calculated  (Symmetry block 3, perturbation   3)
+ First derivative of the wavefunction is calculated (Symmetry block 4, perturbation   2)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+  add F(me) terms for ROHF and unrelaxed computations
+  add df/dx
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.16806898E+01.
+ Largest element of DIIS residual   :  0.16806898E+01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.99339183E+00.
+ Largest element of DIIS residual   : -0.23881962E+00.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.16046003E+00.
+ Largest element of DIIS residual   : -0.27415809E-01.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.12322076E-01.
+ Largest element of DIIS residual   :  0.22049894E-02.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.13541963E-02.
+ Largest element of DIIS residual   :  0.29958781E-03.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.15816459E-03.
+ Largest element of DIIS residual   : -0.16586701E-03.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.10307474E-03.
+ Largest element of DIIS residual   : -0.51372727E-04.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.29423129E-04.
+ Largest element of DIIS residual   :  0.11176247E-04.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.43330867E-05.
+ Largest element of DIIS residual   :  0.21876241E-05.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.13299838E-05.
+ Largest element of DIIS residual   :  0.15295927E-05.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.90393841E-06.
+ Largest element of DIIS residual   :  0.21839383E-06.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.24325632E-06.
+ Largest element of DIIS residual   :  0.16015948E-06.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.10891953E-06.
+ Largest element of DIIS residual   :  0.64276312E-07.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.33705802E-07.
+ Largest element of DIIS residual   : -0.17466803E-07.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector : -0.10325651E-07.
+ Largest element of DIIS residual   :  0.40415574E-08.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector : -0.23905703E-08.
+ Largest element of DIIS residual   : -0.14453717E-08.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector : -0.57497340E-09.
+ Largest element of DIIS residual   :  0.46033610E-09.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector :  0.26907643E-09.
+ Largest element of DIIS residual   :  0.11387955E-09.
+ Convergence information after    19 iterations: 
+ Largest element of residual vector :  0.10153478E-09.
+ Largest element of DIIS residual   :  0.75366354E-10.
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.40927262E-10.
+ Largest element of DIIS residual   :  0.25118964E-10.
+ Convergence information after    21 iterations: 
+ Largest element of residual vector :  0.12535750E-10.
+ Largest element of DIIS residual   :  0.41365706E-11.
+ Convergence information after    22 iterations: 
+ Largest element of residual vector :  0.19744206E-11.
+ Largest element of DIIS residual   : -0.11757090E-11.
+ Convergence information after    23 iterations: 
+ Largest element of residual vector : -0.69078077E-12.
+ Largest element of DIIS residual   : -0.39284250E-12.
+ Convergence information after    24 iterations: 
+ Largest element of residual vector : -0.22820634E-12.
+ Largest element of DIIS residual   :  0.17756456E-12.
+ Convergence information after    25 iterations: 
+ Largest element of residual vector :  0.10391688E-12.
+ Largest element of DIIS residual   :  0.45051304E-13.
+ Perturbed amplitude equations converged in    25 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0   11    0   7.1074344457 AA  
+    4    0   13    0   3.2335938936 AA  
+    5    0   10    0  -2.1827561164 AA  
+    4    0   12    0   1.6209860174 AA  
+    5    4   11   11   0.5970302466 ABAB
+    4    5   11   11   0.5970302466 ABAB
+    4    3   11    6  -0.4405043355 ABAB
+    3    4    6   11  -0.4405043355 ABAB
+    4    3    6   11  -0.3672442990 ABAB
+    3    4   11    6  -0.3672442990 ABAB
+    5    4    6    6   0.3031100959 ABAB
+    4    5    6    6   0.3031100959 ABAB
+    4    2   11    6   0.2327536870 ABAB
+    2    4    6   11   0.2327536870 ABAB
+    4    4   13   10  -0.2265031413 ABAB
+    4    4   10   13  -0.2265031413 ABAB
+    5    4   12   11   0.2119525302 ABAB
+    4    5   11   12   0.2119525302 ABAB
+    4    3    6   12  -0.2063526555 ABAB
+    3    4   12    6  -0.2063526555 ABAB
+  norm of converged amps    1.7415714229685901     
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ anti,anti2 T T
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.16752603E+01.
+ Largest element of DIIS residual   : -0.16752603E+01.
+ anti,anti2 T T
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.98978607E+00.
+ Largest element of DIIS residual   :  0.23743532E+00.
+ anti,anti2 T T
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.16668183E+00.
+ Largest element of DIIS residual   :  0.28061615E-01.
+ anti,anti2 T T
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.13306033E-01.
+ Largest element of DIIS residual   : -0.24384053E-02.
+ anti,anti2 T T
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.14546643E-02.
+ Largest element of DIIS residual   :  0.25995389E-03.
+ anti,anti2 T T
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.16122072E-03.
+ Largest element of DIIS residual   :  0.16668616E-03.
+ anti,anti2 T T
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.10407201E-03.
+ Largest element of DIIS residual   :  0.50820940E-04.
+ anti,anti2 T T
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.29016023E-04.
+ Largest element of DIIS residual   : -0.46085963E-05.
+ anti,anti2 T T
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.20610121E-05.
+ Largest element of DIIS residual   : -0.23932470E-05.
+ anti,anti2 T T
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.15554606E-05.
+ Largest element of DIIS residual   : -0.15796834E-05.
+ anti,anti2 T T
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.10259684E-05.
+ Largest element of DIIS residual   : -0.37117718E-06.
+ anti,anti2 T T
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.32272826E-06.
+ Largest element of DIIS residual   : -0.18432588E-06.
+ anti,anti2 T T
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.10054710E-06.
+ Largest element of DIIS residual   : -0.40743307E-07.
+ anti,anti2 T T
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.19613754E-07.
+ Largest element of DIIS residual   :  0.13945071E-07.
+ anti,anti2 T T
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.83140230E-08.
+ Largest element of DIIS residual   :  0.27791985E-08.
+ anti,anti2 T T
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.16326301E-08.
+ Largest element of DIIS residual   : -0.81773858E-09.
+ anti,anti2 T T
+ Convergence information after    17 iterations: 
+ Largest element of residual vector : -0.51930915E-09.
+ Largest element of DIIS residual   : -0.41858822E-09.
+ anti,anti2 T T
+ Convergence information after    18 iterations: 
+ Largest element of residual vector : -0.23331292E-09.
+ Largest element of DIIS residual   : -0.14414396E-09.
+ anti,anti2 T T
+ Convergence information after    19 iterations: 
+ Largest element of residual vector : -0.92117425E-10.
+ Largest element of DIIS residual   : -0.68243548E-10.
+ anti,anti2 T T
+ Convergence information after    20 iterations: 
+ Largest element of residual vector : -0.41723069E-10.
+ Largest element of DIIS residual   : -0.21535180E-10.
+ anti,anti2 T T
+ Convergence information after    21 iterations: 
+ Largest element of residual vector : -0.14371615E-10.
+ Largest element of DIIS residual   : -0.37816499E-11.
+ anti,anti2 T T
+ Convergence information after    22 iterations: 
+ Largest element of residual vector : -0.22257751E-11.
+ Largest element of DIIS residual   :  0.15315793E-11.
+ anti,anti2 T T
+ Convergence information after    23 iterations: 
+ Largest element of residual vector :  0.88801189E-12.
+ Largest element of DIIS residual   :  0.47578367E-12.
+ anti,anti2 T T
+ Convergence information after    24 iterations: 
+ Largest element of residual vector : -0.29742875E-12.
+ Largest element of DIIS residual   : -0.23169314E-12.
+ anti,anti2 T T
+ Convergence information after    25 iterations: 
+ Largest element of residual vector : -0.12456702E-12.
+ Largest element of DIIS residual   : -0.49290588E-13.
+ Perturbed Lambda equations converged in    25 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0   11    0  -7.0440085435 AA  
+    4    0   13    0  -3.2357173817 AA  
+    5    0   10    0   2.2784420222 AA  
+    4    0   12    0  -1.6009918280 AA  
+    5    4   11   11  -0.5536959181 ABAB
+    4    5   11   11  -0.5536959181 ABAB
+    4    3   11    6   0.3625611432 ABAB
+    3    4    6   11   0.3625611432 ABAB
+    4    3    6   11   0.3483625794 ABAB
+    3    4   11    6   0.3483625794 ABAB
+    5    4    6    6  -0.2809712529 ABAB
+    4    5    6    6  -0.2809712529 ABAB
+    4    4   13   10   0.2287956676 ABAB
+    4    4   10   13   0.2287956676 ABAB
+    4    2   11    6  -0.2247678813 ABAB
+    2    4    6   11  -0.2247678813 ABAB
+    5    4   12   11  -0.2001089050 ABAB
+    4    5   11   12  -0.2001089050 ABAB
+    4    3    6   12   0.1997507242 ABAB
+    3    4   12    6   0.1997507242 ABAB
+  Memory requiremen in dtrprhf2                  6399
+  There are                    30  IJK combinations. 
+ First-order density matrix is being calculated  (Symmetry block 4, perturbation   2)
+ First derivative of the wavefunction is calculated (Symmetry block 4, perturbation   3)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+  add F(me) terms for ROHF and unrelaxed computations
+  add df/dx
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.93466041E-01.
+ Largest element of DIIS residual   :  0.93466041E-01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.55684699E-01.
+ Largest element of DIIS residual   : -0.66145325E-02.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.27316662E-02.
+ Largest element of DIIS residual   :  0.79579819E-03.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.36277660E-03.
+ Largest element of DIIS residual   : -0.15035861E-03.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.45161394E-04.
+ Largest element of DIIS residual   : -0.16194412E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.90745806E-05.
+ Largest element of DIIS residual   : -0.73757674E-05.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.46782171E-05.
+ Largest element of DIIS residual   : -0.28022729E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.15756328E-05.
+ Largest element of DIIS residual   : -0.77790082E-06.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.27068479E-06.
+ Largest element of DIIS residual   :  0.19986478E-06.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.90793516E-07.
+ Largest element of DIIS residual   :  0.80057533E-07.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.45645435E-07.
+ Largest element of DIIS residual   : -0.15774354E-07.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.47049048E-08.
+ Largest element of DIIS residual   : -0.45688867E-08.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector : -0.18370887E-08.
+ Largest element of DIIS residual   :  0.10940980E-08.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.55596051E-09.
+ Largest element of DIIS residual   : -0.35465180E-09.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector : -0.20773177E-09.
+ Largest element of DIIS residual   : -0.12459341E-09.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector : -0.59114675E-10.
+ Largest element of DIIS residual   :  0.36287197E-10.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.16203115E-10.
+ Largest element of DIIS residual   : -0.12678996E-10.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector :  0.78562712E-11.
+ Largest element of DIIS residual   :  0.33398324E-11.
+ Convergence information after    19 iterations: 
+ Largest element of residual vector :  0.15927121E-11.
+ Largest element of DIIS residual   :  0.76386880E-12.
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.34844350E-12.
+ Largest element of DIIS residual   :  0.25679393E-12.
+ Convergence information after    21 iterations: 
+ Largest element of residual vector :  0.14904744E-12.
+ Largest element of DIIS residual   :  0.69833823E-13.
+ Perturbed amplitude equations converged in    21 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0   11    0   0.4202089166 AA  
+    4    0   12    0   0.0930206005 AA  
+    4    0   13    0   0.0724175445 AA  
+    5    4   11   11   0.0436004682 ABAB
+    4    5   11   11   0.0436004682 ABAB
+    4    3   11    6  -0.0295708025 ABAB
+    3    4    6   11  -0.0295708025 ABAB
+    4    3    6   11  -0.0201475234 ABAB
+    3    4   11    6  -0.0201475234 ABAB
+    4    2   11    6   0.0178944424 ABAB
+    2    4    6   11   0.0178944424 ABAB
+    5    4    6    6   0.0166832604 ABAB
+    4    5    6    6   0.0166832604 ABAB
+    4    4   11   10   0.0150275638 ABAB
+    4    4   10   11   0.0150275638 ABAB
+    5    4   12   11   0.0140018665 ABAB
+    4    5   11   12   0.0140018665 ABAB
+    4    2    6   11   0.0114882984 ABAB
+    2    4   11    6   0.0114882984 ABAB
+    4    3   11    7  -0.0110848427 ABAB
+  norm of converged amps   0.10880824483312103     
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ anti,anti2 T T
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.92391730E-01.
+ Largest element of DIIS residual   : -0.92391730E-01.
+ anti,anti2 T T
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.54917011E-01.
+ Largest element of DIIS residual   :  0.66609646E-02.
+ anti,anti2 T T
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.27463694E-02.
+ Largest element of DIIS residual   : -0.77644308E-03.
+ anti,anti2 T T
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.35444633E-03.
+ Largest element of DIIS residual   :  0.14868851E-03.
+ anti,anti2 T T
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.41208531E-04.
+ Largest element of DIIS residual   :  0.14911013E-04.
+ anti,anti2 T T
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.83926125E-05.
+ Largest element of DIIS residual   : -0.75750006E-05.
+ anti,anti2 T T
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.48379192E-05.
+ Largest element of DIIS residual   :  0.26476311E-05.
+ anti,anti2 T T
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.15196855E-05.
+ Largest element of DIIS residual   :  0.94941022E-06.
+ anti,anti2 T T
+ Convergence information after     9 iterations: 
+ Largest element of residual vector :  0.33109767E-06.
+ Largest element of DIIS residual   : -0.18088419E-06.
+ anti,anti2 T T
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.80383365E-07.
+ Largest element of DIIS residual   : -0.76445498E-07.
+ anti,anti2 T T
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.42690144E-07.
+ Largest element of DIIS residual   :  0.15510540E-07.
+ anti,anti2 T T
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.41835919E-08.
+ Largest element of DIIS residual   :  0.34971044E-08.
+ anti,anti2 T T
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.12983278E-08.
+ Largest element of DIIS residual   : -0.88610365E-09.
+ anti,anti2 T T
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.39618844E-09.
+ Largest element of DIIS residual   :  0.32379415E-09.
+ anti,anti2 T T
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.18938894E-09.
+ Largest element of DIIS residual   :  0.13119769E-09.
+ anti,anti2 T T
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.48083426E-10.
+ Largest element of DIIS residual   :  0.27213125E-10.
+ anti,anti2 T T
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.12199408E-10.
+ Largest element of DIIS residual   :  0.95635249E-11.
+ anti,anti2 T T
+ Convergence information after    18 iterations: 
+ Largest element of residual vector : -0.56163962E-11.
+ Largest element of DIIS residual   : -0.25965390E-11.
+ anti,anti2 T T
+ Convergence information after    19 iterations: 
+ Largest element of residual vector : -0.12139248E-11.
+ Largest element of DIIS residual   :  0.42439343E-12.
+ anti,anti2 T T
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.17576218E-12.
+ Largest element of DIIS residual   : -0.13304759E-12.
+ anti,anti2 T T
+ Convergence information after    21 iterations: 
+ Largest element of residual vector : -0.72719608E-13.
+ Largest element of DIIS residual   : -0.43477019E-13.
+ Perturbed Lambda equations converged in    21 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0   11    0  -0.4142878262 AA  
+    4    0   12    0  -0.0915090512 AA  
+    4    0   13    0  -0.0717556345 AA  
+    5    4   11   11  -0.0405675675 ABAB
+    4    5   11   11  -0.0405675675 ABAB
+    4    3   11    6   0.0246266134 ABAB
+    3    4    6   11   0.0246266134 ABAB
+    4    3    6   11   0.0189722167 ABAB
+    3    4   11    6   0.0189722167 ABAB
+    4    2   11    6  -0.0172282889 ABAB
+    2    4    6   11  -0.0172282889 ABAB
+    5    4    6    6  -0.0153727459 ABAB
+    4    5    6    6  -0.0153727459 ABAB
+    4    4   11   10  -0.0149497692 ABAB
+    4    4   10   11  -0.0149497692 ABAB
+    5    4   12   11  -0.0132671660 ABAB
+    4    5   11   12  -0.0132671660 ABAB
+    4    2    6   11  -0.0112106548 ABAB
+    2    4   11    6  -0.0112106548 ABAB
+    4    3   11    8  -0.0110633466 ABAB
+  Memory requiremen in dtrprhf2                  6399
+  There are                    30  IJK combinations. 
+ First-order density matrix is being calculated  (Symmetry block 4, perturbation   3)
+ First derivative of the wavefunction is calculated (Symmetry block 4, perturbation   4)
+ Resorts of perturbed amplitudes and integrals required   0.0 seconds.
+  add F(me) terms for ROHF and unrelaxed computations
+  add df/dx
+ Construction of <Phi|(dH_N/dx exp(T))c|0> required   0.0 seconds.
+ Starting iterative solution of the perturbed CC equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ Convergence information after     1 iterations: 
+ Largest element of residual vector : -0.27935931E-01.
+ Largest element of DIIS residual   : -0.27935931E-01.
+ Convergence information after     2 iterations: 
+ Largest element of residual vector : -0.16346716E-01.
+ Largest element of DIIS residual   :  0.48192795E-02.
+ Convergence information after     3 iterations: 
+ Largest element of residual vector : -0.26213554E-02.
+ Largest element of DIIS residual   : -0.45488231E-03.
+ Convergence information after     4 iterations: 
+ Largest element of residual vector : -0.22431410E-03.
+ Largest element of DIIS residual   : -0.51657153E-04.
+ Convergence information after     5 iterations: 
+ Largest element of residual vector :  0.35416425E-04.
+ Largest element of DIIS residual   :  0.11812220E-04.
+ Convergence information after     6 iterations: 
+ Largest element of residual vector :  0.61640266E-05.
+ Largest element of DIIS residual   :  0.46139981E-05.
+ Convergence information after     7 iterations: 
+ Largest element of residual vector :  0.22775448E-05.
+ Largest element of DIIS residual   :  0.11572671E-05.
+ Convergence information after     8 iterations: 
+ Largest element of residual vector :  0.68064171E-06.
+ Largest element of DIIS residual   :  0.40310590E-06.
+ Convergence information after     9 iterations: 
+ Largest element of residual vector :  0.16332785E-06.
+ Largest element of DIIS residual   : -0.12812852E-06.
+ Convergence information after    10 iterations: 
+ Largest element of residual vector : -0.66300777E-07.
+ Largest element of DIIS residual   : -0.65119198E-07.
+ Convergence information after    11 iterations: 
+ Largest element of residual vector : -0.43091635E-07.
+ Largest element of DIIS residual   : -0.82558864E-08.
+ Convergence information after    12 iterations: 
+ Largest element of residual vector : -0.50264451E-08.
+ Largest element of DIIS residual   :  0.48683898E-08.
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.15401198E-08.
+ Largest element of DIIS residual   :  0.11862188E-08.
+ Convergence information after    14 iterations: 
+ Largest element of residual vector :  0.59594017E-09.
+ Largest element of DIIS residual   :  0.35006776E-09.
+ Convergence information after    15 iterations: 
+ Largest element of residual vector :  0.20193847E-09.
+ Largest element of DIIS residual   :  0.96062438E-10.
+ Convergence information after    16 iterations: 
+ Largest element of residual vector :  0.60270778E-10.
+ Largest element of DIIS residual   : -0.47088381E-10.
+ Convergence information after    17 iterations: 
+ Largest element of residual vector : -0.22403515E-10.
+ Largest element of DIIS residual   : -0.21312207E-10.
+ Convergence information after    18 iterations: 
+ Largest element of residual vector : -0.10671020E-10.
+ Largest element of DIIS residual   : -0.43881211E-11.
+ Convergence information after    19 iterations: 
+ Largest element of residual vector : -0.17372215E-11.
+ Largest element of DIIS residual   : -0.96960196E-12.
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.40518977E-12.
+ Largest element of DIIS residual   :  0.20369198E-12.
+ Convergence information after    21 iterations: 
+ Largest element of residual vector : -0.20532187E-12.
+ Largest element of DIIS residual   : -0.12949489E-12.
+ Convergence information after    22 iterations: 
+ Largest element of residual vector : -0.77202134E-13.
+ Largest element of DIIS residual   :  0.34521275E-13.
+ Perturbed amplitude equations converged in    22 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0   11    0  -0.1214910910 AA  
+    4    0   13    0  -0.0643199994 AA  
+    5    0   10    0  -0.0097381033 AA  
+    5    4   11   11  -0.0083552621 ABAB
+    4    5   11   11  -0.0083552621 ABAB
+    4    0   12    0   0.0062233380 AA  
+    4    3   11    6   0.0051986400 ABAB
+    3    4    6   11   0.0051986400 ABAB
+    4    2   11    6  -0.0040248018 ABAB
+    2    4    6   11  -0.0040248018 ABAB
+    4    4   11   10  -0.0035276636 ABAB
+    4    4   10   11  -0.0035276636 ABAB
+    4    3    6   11   0.0034475863 ABAB
+    3    4   11    6   0.0034475863 ABAB
+    5    4    6    6  -0.0032647580 ABAB
+    4    5    6    6  -0.0032647580 ABAB
+    4    4   12   10   0.0025794081 ABAB
+    4    4   10   12   0.0025794081 ABAB
+    4    4   13   10   0.0025043781 ABAB
+    4    4   10   13   0.0025043781 ABAB
+  norm of converged amps    2.2336514829510375E-002
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ anti,anti2 T T
+ Starting iterative solution of the perturbed Lambda equations.
+ The DIIS procedure is used to accelerate convergence.
+ Convergence criterion is 10**(-13).
+ Maximum number of iterations is 100.
+ anti,anti2 T T
+ Convergence information after     1 iterations: 
+ Largest element of residual vector :  0.27647510E-01.
+ Largest element of DIIS residual   :  0.27647510E-01.
+ anti,anti2 T T
+ Convergence information after     2 iterations: 
+ Largest element of residual vector :  0.16183229E-01.
+ Largest element of DIIS residual   : -0.48502766E-02.
+ anti,anti2 T T
+ Convergence information after     3 iterations: 
+ Largest element of residual vector :  0.26107596E-02.
+ Largest element of DIIS residual   :  0.48376418E-03.
+ anti,anti2 T T
+ Convergence information after     4 iterations: 
+ Largest element of residual vector :  0.23527400E-03.
+ Largest element of DIIS residual   :  0.47123821E-04.
+ anti,anti2 T T
+ Convergence information after     5 iterations: 
+ Largest element of residual vector : -0.30839402E-04.
+ Largest element of DIIS residual   : -0.10908521E-04.
+ anti,anti2 T T
+ Convergence information after     6 iterations: 
+ Largest element of residual vector : -0.56778767E-05.
+ Largest element of DIIS residual   : -0.41837830E-05.
+ anti,anti2 T T
+ Convergence information after     7 iterations: 
+ Largest element of residual vector : -0.20722921E-05.
+ Largest element of DIIS residual   : -0.11255415E-05.
+ anti,anti2 T T
+ Convergence information after     8 iterations: 
+ Largest element of residual vector : -0.66738466E-06.
+ Largest element of DIIS residual   : -0.39834076E-06.
+ anti,anti2 T T
+ Convergence information after     9 iterations: 
+ Largest element of residual vector : -0.16012923E-06.
+ Largest element of DIIS residual   :  0.12153986E-06.
+ anti,anti2 T T
+ Convergence information after    10 iterations: 
+ Largest element of residual vector :  0.62328132E-07.
+ Largest element of DIIS residual   :  0.63256275E-07.
+ anti,anti2 T T
+ Convergence information after    11 iterations: 
+ Largest element of residual vector :  0.42278622E-07.
+ Largest element of DIIS residual   :  0.98994154E-08.
+ anti,anti2 T T
+ Convergence information after    12 iterations: 
+ Largest element of residual vector :  0.49228229E-08.
+ Largest element of DIIS residual   : -0.44440911E-08.
+ anti,anti2 T T
+ Convergence information after    13 iterations: 
+ Largest element of residual vector :  0.14651611E-08.
+ Largest element of DIIS residual   : -0.11544861E-08.
+ anti,anti2 T T
+ Convergence information after    14 iterations: 
+ Largest element of residual vector : -0.59369040E-09.
+ Largest element of DIIS residual   : -0.38928674E-09.
+ anti,anti2 T T
+ Convergence information after    15 iterations: 
+ Largest element of residual vector : -0.22060253E-09.
+ Largest element of DIIS residual   : -0.12892020E-09.
+ anti,anti2 T T
+ Convergence information after    16 iterations: 
+ Largest element of residual vector : -0.69002742E-10.
+ Largest element of DIIS residual   :  0.53242087E-10.
+ anti,anti2 T T
+ Convergence information after    17 iterations: 
+ Largest element of residual vector :  0.25333918E-10.
+ Largest element of DIIS residual   :  0.21356418E-10.
+ anti,anti2 T T
+ Convergence information after    18 iterations: 
+ Largest element of residual vector :  0.11894138E-10.
+ Largest element of DIIS residual   :  0.49595864E-11.
+ anti,anti2 T T
+ Convergence information after    19 iterations: 
+ Largest element of residual vector :  0.20851654E-11.
+ Largest element of DIIS residual   :  0.12205101E-11.
+ anti,anti2 T T
+ Convergence information after    20 iterations: 
+ Largest element of residual vector :  0.53012109E-12.
+ Largest element of DIIS residual   : -0.24905352E-12.
+ anti,anti2 T T
+ Convergence information after    21 iterations: 
+ Largest element of residual vector : -0.13617276E-12.
+ Largest element of DIIS residual   : -0.11797264E-12.
+ anti,anti2 T T
+ Convergence information after    22 iterations: 
+ Largest element of residual vector : -0.65600737E-13.
+ Largest element of DIIS residual   : -0.41185079E-13.
+ Perturbed Lambda equations converged in    22 iterations.
+  Dominant contributions to perturbed wavefunction:
+    4    0   11    0   0.1198676530 AA  
+    4    0   13    0   0.0638126798 AA  
+    5    4   11   11   0.0076166471 ABAB
+    4    5   11   11   0.0076166471 ABAB
+    5    0   10    0   0.0073115092 AA  
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+    4    0   12    0  -0.0063501641 AA  
+    4    3   11    6  -0.0038887701 ABAB
+    3    4    6   11  -0.0038887701 ABAB
+    4    2   11    6   0.0038600400 ABAB
+    2    4    6   11   0.0038600400 ABAB
+    4    4   11   10   0.0035150255 ABAB
+    4    4   10   11   0.0035150255 ABAB
+    4    3    6   11  -0.0032099821 ABAB
+    3    4   11    6  -0.0032099821 ABAB
+    5    4    6    6   0.0029270339 ABAB
+    4    5    6    6   0.0029270339 ABAB
+    4    3   11    8   0.0026955061 ABAB
+    3    4    8   11   0.0026955061 ABAB
+    4    4   12   10  -0.0025878137 ABAB
+    4    4   10   12  -0.0025878137 ABAB
+  Memory requiremen in dtrprhf2                  6399
+  There are                    30  IJK combinations. 
+ First-order density matrix is being calculated  (Symmetry block 4, perturbation   4)
+  CONVERT OLD   26.625680984500850      CONVERT NEW   26.625677251984065     
+
+ CC3 contribution to the paramagnetic part of the shielding tensor:
+
+                        Bx          By          Bz
+
+      O #1    x -190.187783    0.000000    0.000000
+      O #1    y    0.000000 -174.516263    0.000000
+      O #1    z    0.000000    0.000000 -253.056366
+
+      H #21   x    3.293231    0.000000    0.000000
+      H #21   y    0.000000    1.452804   -8.480284
+      H #21   z    0.000000   -8.171947    2.147305
+
+      H #22   x    3.293231    0.000000    0.000000
+      H #22   y    0.000000    1.452804    8.480284
+      H #22   z    0.000000    8.171947    2.147305
+
+
+ Total shielding tensor at the CC3 level:
+
+                        Bx          By          Bz
+
+      O #1    x  222.230570    0.000000    0.000000
+      O #1    y    0.000000  238.936588    0.000000
+      O #1    z    0.000000    0.000000  159.919556
+
+      H #21   x   22.656336    0.000000    0.000000
+      H #21   y    0.000000   37.513093    6.158127
+      H #21   z    0.000000    2.440713   29.341733
+
+      H #22   x   22.656336    0.000000    0.000000
+      H #22   y    0.000000   37.513093   -6.158127
+      H #22   z    0.000000   -2.440713   29.341733
+
+
+ CC3 contribution to paramagnetic part of magnetizability tensor:
+
+                         Bx          By          Bz
+
+            Bx      0.00000000  0.00000000  0.00000000
+            By      0.00000000  0.00000000  0.00000000
+            Bz      0.00000000  0.00000000  0.00000000
+
+
+
+ Total CC3 magnetizability tensor:
+
+                         Bx          By          Bz
+
+            Bx     -3.52468237  0.00000000  0.00000000
+            By      0.00000000 -2.93389775  0.00000000
+            Bz      0.00000000  0.00000000 -3.16417375
+
+
+
+ Total CC3 magnetizability: -3.20758462
+
+
+ @CHECKOUT-I, Total execution time (CPU/WALL):        3.06/       3.27 seconds.
+--executable xsdcc finished with status     0 in        3.31 seconds (walltime).
+ --invoking executable--
+/nix/store/hzi9x6kwqsh61sbhvfcf7p11chm7x859-cfour-2.1/bin/xjoda
+  ---------------------------------------------------------------
+   CC3 Nuclear Magnetic Resonance Shieldings and Anisotropies
+  ---------------------------------------------------------------
+    Z-matrix      Atomic      Chemical Shielding    Anisotropy
+     Center       Symbol            (ppm)             (ppm)
+  ---------------------------------------------------------------
+       1            O              207.029            47.862
+       2            H               29.837            14.282
+       3            H               29.837            14.282
+  ---------------------------------------------------------------
+
+  ---------------------------------------------------------------
+     HF-SCF Nuclear Magnetic Resonance Shieldings and Anisotropies
+  ---------------------------------------------------------------
+    Z-matrix      Atomic      Chemical Shielding    Anisotropy
+     Center       Symbol            (ppm)             (ppm)
+  ---------------------------------------------------------------
+       1            O              412.707             0.991
+       2            H               26.724            27.161
+       3            H               26.724            27.161
+  ---------------------------------------------------------------
+
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.00/       0.01 seconds.
+--executable xjoda finished with status     0 in        0.04 seconds (walltime).
+  The final electronic energy is       -75.718103843167128 a.u. 
+  This computation required                            4.41 seconds (walltime).
